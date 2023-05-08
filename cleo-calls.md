@@ -1,925 +1,616 @@
-### plugin_II\game_II\CCamera.cpp
-
-#### CCamera::WorldToScreen2D
-
-<pre>
-plugin::CallMethod<0x4B90E0>(this, x, y, z, outX, outY);
-0AA6: call_method 0x4B90E0 struct [CCamera] num_params 5 pop 0 [x] [y] [z] [outX] [outY]
-</pre>
-
-### plugin_II\game_II\CCar.cpp
-
-#### CCar::SetPosition
-
-<pre>
-plugin::CallMethod<0x4207F0, CCar*, CEncodedVector>(this, pos);
-0AA6: call_method 0x4207F0 struct [CCar] num_params 1 pop 0 [pos]
-</pre>
-
-#### CCar::SetRemap
-
-<pre>
-plugin::CallMethod<0x421FD0, CCar*>(this, remap);
-0AA6: call_method 0x421FD0 struct [CCar] num_params 1 pop 0 [remap]
-</pre>
-
-### plugin_II\game_II\CChar.cpp
-
-#### CChar::CreatePed
-
-<pre>
-plugin::CallMethodAndReturn<CPed*, 0x43DB40, CChar*, CEncodedVector, char, int>(this, pos, remap, rotation);
-0AA8: call_method_return 0x43DB40 struct [CChar] num_params 3 pop 0 [pos] [remap] [rotation] func_ret [CPed*]
-</pre>
-
-#### CChar::FindPed
-
-<pre>
-plugin::CallMethodAndReturn<CPed*, 0x43AE10, CChar*, int>(this, id);
-0AA8: call_method_return 0x43AE10 struct [CChar] num_params 1 pop 0 [id] func_ret [CPed*]
-</pre>
-
-### plugin_II\game_II\cDMAudio.cpp
-
-#### cDMAudio::GetEffectsMasterVolume
-
-<pre>
-plugin::CallMethodAndReturn<char, 0x4105F0, cDMAudio*>(this);
-0AA8: call_method_return 0x4105F0 struct [cDMAudio] num_params 0 pop 0 func_ret [char]
-</pre>
-
-#### cDMAudio::GetMusicMasterVolume
-
-<pre>
-plugin::CallMethodAndReturn<char, 0x410630, cDMAudio*>(this);
-0AA8: call_method_return 0x410630 struct [cDMAudio] num_params 0 pop 0 func_ret [char]
-</pre>
-
-#### cDMAudio::SetMusicMasterVolume
-
-<pre>
-plugin::CallMethod<0x410600, cDMAudio*, unsigned char>(this, volume);
-0AA6: call_method 0x410600 struct [cDMAudio] num_params 1 pop 0 [volume]
-</pre>
-
-#### cDMAudio::SetEffectsMasterVolume
-
-<pre>
-plugin::CallMethod<0x4105C0, cDMAudio*, unsigned char>(this, volume);
-0AA6: call_method 0x4105C0 struct [cDMAudio] num_params 1 pop 0 [volume]
-</pre>
-
-#### cDMAudio::SetCurrent3DProvider
-
-<pre>
-plugin::CallMethod<0x410670, cDMAudio*, unsigned char>(this, provider);
-0AA6: call_method 0x410670 struct [cDMAudio] num_params 1 pop 0 [provider]
-</pre>
-
-#### cDMAudio::PlayVocal
-
-<pre>
-plugin::CallMethod<0x4105B0, cDMAudio*>(this, id);
-0AA6: call_method 0x4105B0 struct [cDMAudio] num_params 1 pop 0 [id]
-</pre>
-
-#### cDMAudio::ReleaseDigitalHandle
-
-<pre>
-plugin::CallMethod<0x410640, cDMAudio*>(this);
-0AA6: call_method 0x410640 struct [cDMAudio] num_params 0 pop 0
-</pre>
-
-#### cDMAudio::CreateEntity
-
-<pre>
-plugin::CallMethodAndReturn<int, 0x410530, cDMAudio*, void*>(this, e);
-0AA8: call_method_return 0x410530 struct [cDMAudio] num_params 1 pop 0 [e] func_ret [int]
-</pre>
-
-#### cDMAudio::DestroyEntity
-
-<pre>
-plugin::CallMethod<0x410540, cDMAudio*, int>(this, audioEntity);
-0AA6: call_method 0x410540 struct [cDMAudio] num_params 1 pop 0 [audioEntity]
-</pre>
-
-### plugin_II\game_II\CFileMgr.cpp
-
-#### CFileMgr::OpenFile
-
-<pre>
-plugin::CallStdAndReturn<int, 0x403160, const char*>(name);
-0AA7: call_function_return 0x403160 num_params 1 pop 0 [name] func_ret [int]
-</pre>
-
-#### CFileMgr::CloseFile
-
-<pre>
-plugin::CallStdAndReturn<int, 0x402EB0>();
-0AA7: call_function_return 0x402EB0 num_params 0 pop 0 func_ret [int]
-</pre>
-
-#### CFileMgr::Read
-
-<pre>
-plugin::CallStdAndReturn<size_t, 0x402FB0, void*, int const&>(buff, size);
-0AA7: call_function_return 0x402FB0 num_params 2 pop 0 [buff] [size] func_ret [size_t]
-</pre>
-
-#### CFileMgr::ReadLine
-
-<pre>
-plugin::CallStdAndReturn<bool, 0x403000, void*, int const&>(buff, size);
-0AA7: call_function_return 0x403000 num_params 2 pop 0 [buff] [size] func_ret [bool]
-</pre>
-
-#### CFileMgr::Seek
-
-<pre>
-plugin::CallStdAndReturn<int, 0x402F60, int const&>(size);
-0AA7: call_function_return 0x402F60 num_params 1 pop 0 [size] func_ret [int]
-</pre>
-
-### plugin_II\game_II\CFont.cpp
-
-#### CFont::GetStringWidth
-
-<pre>
-plugin::CallStdAndReturn<int, 0x4CB0C0, const wchar_t*, int>(str, style);
-0AA7: call_function_return 0x4CB0C0 num_params 2 pop 0 [str] [style] func_ret [int]
-</pre>
-
-#### CFont::GetNumberLines
-
-<pre>
-plugin::CallStdAndReturn<int, 0x4CC0C0, const wchar_t*, int>(str, style);
-0AA7: call_function_return 0x4CC0C0 num_params 2 pop 0 [str] [style] func_ret [int]
-</pre>
-
-#### CFont::GetCharHeight
-
-<pre>
-plugin::CallStdAndReturn<int, 0x4539B0, wchar_t>(c);
-0AA7: call_function_return 0x4539B0 num_params 1 pop 0 [c] func_ret [int]
-</pre>
-
-#### CFont::PrintString
-
-<pre>
-plugin::CallStd<0x4CC100, const wchar_t*, int, int, int, int, int const&, int, bool, int>(str, x, y, style, scale, mode, palette, enableAlpha, alpha);
-0AA5: call_function 0x4CC100 num_params 9 pop 0 [str] [x] [y] [style] [scale] [mode] [palette] [enableAlpha] [alpha]
-</pre>
-
-### plugin_II\game_II\CGame.cpp
-
-#### CGame::FindPlayerPed
-
-<pre>
-plugin::CallMethodAndReturn<CPlayerPed*, 0x4219E0, CGame*, unsigned char>(this, index);
-0AA8: call_method_return 0x4219E0 struct [CGame] num_params 1 pop 0 [index] func_ret [CPlayerPed*]
-</pre>
-
-#### CGame::SwitchUserPause
-
-<pre>
-plugin::CallMethod<0x45BAA0, CGame*>(this);
-0AA6: call_method 0x45BAA0 struct [CGame] num_params 0 pop 0
-</pre>
-
-#### CGame::Process
-
-<pre>
-plugin::CallMethod<0x45C1F0, CGame*>(this);
-0AA6: call_method 0x45C1F0 struct [CGame] num_params 0 pop 0
-</pre>
-
-#### CGame::SetState
-
-<pre>
-plugin::CallMethod<0x45A4B0, CGame*, int, int>(this, unk, state);
-0AA6: call_method 0x45A4B0 struct [CGame] num_params 2 pop 0 [unk] [state]
-</pre>
-
-#### CGame::GetIsUserPaused
-
-<pre>
-plugin::CallMethodAndReturn<bool, 0x416BC0, CGame*>(this);
-0AA8: call_method_return 0x416BC0 struct [CGame] num_params 0 pop 0 func_ret [bool]
-</pre>
-
-### plugin_II\game_II\CGeneral.cpp
-
-#### CGeneral::GetCycle
-
-<pre>
-plugin::CallMethodAndReturn<int, 0x41CFE0, CGeneral*>(this);
-0AA8: call_method_return 0x41CFE0 struct [CGeneral] num_params 0 pop 0 func_ret [int]
-</pre>
-
-#### CGeneral::GetRandomNumber
-
-<pre>
-plugin::CallMethodAndReturn<int, 0x45F9E0, CGeneral*>(this);
-0AA8: call_method_return 0x45F9E0 struct [CGeneral] num_params 0 pop 0 func_ret [int]
-</pre>
-
-#### CGeneral::Update
-
-<pre>
-plugin::CallMethod<0x44AA30, CGeneral*>(this);
-0AA6: call_method 0x44AA30 struct [CGeneral] num_params 0 pop 0
-</pre>
-
-#### CGeneral::PrintCycle
-
-<pre>
-plugin::CallMethod<0x44AA90, CGeneral*>(this);
-0AA6: call_method 0x44AA90 struct [CGeneral] num_params 0 pop 0
-</pre>
-
-### plugin_II\game_II\CHud.cpp
-
-#### CHudArrow::AreBothArrowTracesUsed
-
-<pre>
-plugin::CallMethodAndReturn<bool, 0x4C6F80>(this);
-0AA8: call_method_return 0x4C6F80 struct [CHudArrow] num_params 0 pop 0 func_ret [bool]
-</pre>
-
-#### CHudArrow::IsArrowVisible
-
-<pre>
-plugin::CallMethodAndReturn<bool, 0x4C7050>(this);
-0AA8: call_method_return 0x4C7050 struct [CHudArrow] num_params 0 pop 0 func_ret [bool]
-</pre>
-
-#### CHudArrow::SetSpriteId
-
-<pre>
-plugin::CallMethod<0x4C6FE0>(this, id);
-0AA6: call_method 0x4C6FE0 struct [CHudArrow] num_params 1 pop 0 [id]
-</pre>
-
-#### CHud::DrawSprite
-
-<pre>
-plugin::CallStd<0x4C71B0, int, int, int, int, char, int const&, int, int, char>(id1, id2, x, y, style, mode, enableAlpha, alpha, unk);
-0AA5: call_function 0x4C71B0 num_params 9 pop 0 [id1] [id2] [x] [y] [style] [mode] [enableAlpha] [alpha] [unk]
-</pre>
-
-#### CHudMessage::SetHudMessage
-
-<pre>
-plugin::CallMethod<0x4C6060>(this, str, priority);
-0AA6: call_method 0x4C6060 struct [CHudMessage] num_params 2 pop 0 [str] [priority]
-</pre>
-
-#### CHudBrief::SetHudBrief
-
-<pre>
-plugin::CallMethod<0x4C6750>(this, priority, str);
-0AA6: call_method 0x4C6750 struct [CHudBrief] num_params 2 pop 0 [priority] [str]
-</pre>
-
-#### CHudBrief::Clear
-
-<pre>
-plugin::CallMethod<0x4C6860>(this, priority);
-0AA6: call_method 0x4C6860 struct [CHudBrief] num_params 1 pop 0 [priority]
-</pre>
-
-### plugin_II\game_II\CKeybrd.cpp
-
-#### CKeybrd::Keydown
-
-<pre>
-plugin::CallMethodAndReturn<bool, 0x4611F0, CKeybrd*, unsigned short>(this, key);
-0AA8: call_method_return 0x4611F0 struct [CKeybrd] num_params 1 pop 0 [key] func_ret [bool]
-</pre>
-
-### plugin_II\game_II\CMenuManager.cpp
-
-#### CMenuManager::LoadTexture
-
-<pre>
-plugin::CallStd<0x452D50, unsigned short>(id);
-0AA5: call_function 0x452D50 num_params 1 pop 0 [id]
-</pre>
-
-#### CMenuManager::FindBackground
-
-<pre>
-plugin::CallStd<0x452E80, unsigned char, unsigned char*, unsigned char*>(screen, left, right);
-0AA5: call_function 0x452E80 num_params 3 pop 0 [screen] [left] [right]
-</pre>
-
-#### CMenuManager::GetKeyboardKeyStates
-
-<pre>
-plugin::CallMethodAndReturn<bool, 0x452000, CMenuManager*>(this);
-0AA8: call_method_return 0x452000 struct [CMenuManager] num_params 0 pop 0 func_ret [bool]
-</pre>
-
-#### CMenuManager::SwitchToNewScreen
-
-<pre>
-plugin::CallMethod<0x4587B0, CMenuManager*, unsigned short>(this, page);
-0AA6: call_method 0x4587B0 struct [CMenuManager] num_params 1 pop 0 [page]
-</pre>
-
-#### CMenuManager::Process
-
-<pre>
-plugin::CallMethodAndReturn<int, 0x45A320, CMenuManager*>(this);
-0AA8: call_method_return 0x45A320 struct [CMenuManager] num_params 0 pop 0 func_ret [int]
-</pre>
-
-#### CMenuManager::PopulateMenu
-
-<pre>
-plugin::CallMethod<0x453E20, CMenuManager*>(this);
-0AA6: call_method 0x453E20 struct [CMenuManager] num_params 0 pop 0
-</pre>
-
-### plugin_II\game_II\CObject.cpp
-
-#### CObject::GetPositionX
-
-<pre>
-plugin::CallMethodAndReturn<int const&, 0x4339C0, CObject*, int*>(this, x);
-0AA8: call_method_return 0x4339C0 struct [CObject] num_params 1 pop 0 [x] func_ret [int const&]
-</pre>
-
-#### CObject::GetPositionY
-
-<pre>
-plugin::CallMethodAndReturn<int const&, 0x4339E0, CObject*, int*>(this, y);
-0AA8: call_method_return 0x4339E0 struct [CObject] num_params 1 pop 0 [y] func_ret [int const&]
-</pre>
-
-#### CObject::GetPositionZ
-
-<pre>
-plugin::CallMethodAndReturn<int const&, 0x433A00, CObject*, int*>(this, z);
-0AA8: call_method_return 0x433A00 struct [CObject] num_params 1 pop 0 [z] func_ret [int const&]
-</pre>
-
-#### CObject::GetRotation
-
-<pre>
-plugin::CallMethodAndReturn<short const&, 0x433A40, CObject*, short*>(this, r);
-0AA8: call_method_return 0x433A40 struct [CObject] num_params 1 pop 0 [r] func_ret [short const&]
-</pre>
-
-#### CObject::SetPosition
-
-<pre>
-plugin::CallMethod<0x491E00, CObject*, CEncodedVector>(this, pos);
-0AA6: call_method 0x491E00 struct [CObject] num_params 1 pop 0 [pos]
-</pre>
-
-#### CObject::SetRotation
-
-<pre>
-plugin::CallMethod<0x433A30, CObject*, short>(this, rot);
-0AA6: call_method 0x433A30 struct [CObject] num_params 1 pop 0 [rot]
-</pre>
-
-### plugin_II\game_II\CPed.cpp
-
-#### CPed::GiveWeapon
-
-<pre>
-plugin::CallMethod<0x43E4B0, CPed*, int, int>(this, id, ammo);
-0AA6: call_method 0x43E4B0 struct [CPed] num_params 2 pop 0 [id] [ammo]
-</pre>
-
-#### CPed::SetWantedLevel
-
-<pre>
-plugin::CallMethod<0x434CD0, CPed*, char>(this, level);
-0AA6: call_method 0x434CD0 struct [CPed] num_params 1 pop 0 [level]
-</pre>
-
-#### CPed::ClearWantedLevel
-
-<pre>
-plugin::CallMethod<0x420B80, CPed*>(this);
-0AA6: call_method 0x420B80 struct [CPed] num_params 0 pop 0
-</pre>
-
-#### CPed::GetId
-
-<pre>
-plugin::CallMethodAndReturn<unsigned int, 0x420B60, CPed*>(this);
-0AA8: call_method_return 0x420B60 struct [CPed] num_params 0 pop 0 func_ret [unsigned int]
-</pre>
-
-#### CPed::SetHealth
-
-<pre>
-plugin::CallMethod<0x4039A0, CPed*>(this, health);
-0AA6: call_method 0x4039A0 struct [CPed] num_params 1 pop 0 [health]
-</pre>
-
-#### CPed::Clear
-
-<pre>
-plugin::CallMethod<0x435720, CPed*>(this);
-0AA6: call_method 0x435720 struct [CPed] num_params 0 pop 0
-</pre>
-
-#### CPed::SetSearchType
-
-<pre>
-plugin::CallMethod<0x403920, CPed*>(this, type);
-0AA6: call_method 0x403920 struct [CPed] num_params 1 pop 0 [type]
-</pre>
-
-#### CPed::GetSprite
-
-<pre>
-plugin::CallMethodAndReturn<CSprite*, 0x434B80, CPed*>(this);
-0AA8: call_method_return 0x434B80 struct [CPed] num_params 0 pop 0 func_ret [CSprite*]
-</pre>
-
-#### CPed::GetCar
-
-<pre>
-plugin::CallMethodAndReturn<CCar*, 0x416B60, CPed*>(this);
-0AA8: call_method_return 0x416B60 struct [CPed] num_params 0 pop 0 func_ret [CCar*]
-</pre>
-
-#### CPed::GetPositionX
-
-<pre>
-plugin::CallMethodAndReturn<int const&, 0x403A00, CPed*, int*>(this, x);
-0AA8: call_method_return 0x403A00 struct [CPed] num_params 1 pop 0 [x] func_ret [int const&]
-</pre>
-
-#### CPed::GetPositionY
-
-<pre>
-plugin::CallMethodAndReturn<int const&, 0x403A10, CPed*, int*>(this, y);
-0AA8: call_method_return 0x403A10 struct [CPed] num_params 1 pop 0 [y] func_ret [int const&]
-</pre>
-
-#### CPed::GetPositionZ
-
-<pre>
-plugin::CallMethodAndReturn<int const&, 0x416B50, CPed*, int*>(this, z);
-0AA8: call_method_return 0x416B50 struct [CPed] num_params 1 pop 0 [z] func_ret [int const&]
-</pre>
-
-#### CPed::GetRotation
-
-<pre>
-plugin::CallMethodAndReturn<short const&, 0x4361B0, CPed*, short*>(this, r);
-0AA8: call_method_return 0x4361B0 struct [CPed] num_params 1 pop 0 [r] func_ret [short const&]
-</pre>
-
-#### CPed::SetPosition2D
-
-<pre>
-plugin::CallMethod<0x435C80, CPed*, CEncodedVector2D>(this, pos);
-0AA6: call_method 0x435C80 struct [CPed] num_params 1 pop 0 [pos]
-</pre>
-
-#### CPed::SetRotation
-
-<pre>
-plugin::CallMethod<0x433C00, CPed*, short>(this, rot);
-0AA6: call_method 0x433C00 struct [CPed] num_params 1 pop 0 [rot]
-</pre>
-
-#### CPed::SetOccupation
-
-<pre>
-plugin::CallMethod<0x403970, CPed*, int>(this, occupation);
-0AA6: call_method 0x403970 struct [CPed] num_params 1 pop 0 [occupation]
-</pre>
-
-#### CPed::SetRemap
-
-<pre>
-plugin::CallMethod<0x433B90, CPed*, char>(this, remap);
-0AA6: call_method 0x433B90 struct [CPed] num_params 1 pop 0 [remap]
-</pre>
-
-#### CPed::GetRemap
-
-<pre>
-plugin::CallMethodAndReturn<char, 0x433BA0, CPed*>(this);
-0AA8: call_method_return 0x433BA0 struct [CPed] num_params 0 pop 0 func_ret [char]
-</pre>
-
-#### CPed::EnterCarAsPassenger
-
-<pre>
-plugin::CallMethod<0x43E350, CPed*, CCar*>(this, target);
-0AA6: call_method 0x43E350 struct [CPed] num_params 1 pop 0 [target]
-</pre>
-
-### plugin_II\game_II\CPlayerPed.cpp
-
-#### CPlayerPed::CPlayerPed
-
-<pre>
-plugin::CallMethod<0x4A83C0, CPlayerPed*, char>(this, index);
-0AA6: call_method 0x4A83C0 struct [CPlayerPed] num_params 1 pop 0 [index]
-</pre>
-
-#### CPlayerPed::SetInitialState
-
-<pre>
-plugin::CallMethod<0x4A81E0, CPlayerPed*>(this);
-0AA6: call_method 0x4A81E0 struct [CPlayerPed] num_params 0 pop 0
-</pre>
-
-#### CPlayerPed::Teleport
-
-<pre>
-plugin::CallMethod<0x4A5AD0, CPlayerPed*>(this);
-0AA6: call_method 0x4A5AD0 struct [CPlayerPed] num_params 0 pop 0
-</pre>
-
-#### CPlayerPed::ProcessKeyPresses
-
-<pre>
-plugin::CallMethod<0x4A7010, CPlayerPed*, unsigned short>(this, key);
-0AA6: call_method 0x4A7010 struct [CPlayerPed] num_params 1 pop 0 [key]
-</pre>
-
-#### CPlayerPed::ProcessActions
-
-<pre>
-plugin::CallMethod<0x41EA10, CPlayerPed*, char, char, char, char, char, char>(this, forward, backward, left, right, prevWeap, nextWeap);
-0AA6: call_method 0x41EA10 struct [CPlayerPed] num_params 6 pop 0 [forward] [backward] [left] [right] [prevWeap] [nextWeap]
-</pre>
-
-#### CPlayerPed::Process
-
-<pre>
-plugin::CallMethod<0x4A7E80, CPlayerPed*>(this);
-0AA6: call_method 0x4A7E80 struct [CPlayerPed] num_params 0 pop 0
-</pre>
-
-#### CPlayerPed::SetPed
-
-<pre>
-plugin::CallMethod<0x4A5B40, CPlayerPed*, CPed*>(this, ped);
-0AA6: call_method 0x4A5B40 struct [CPlayerPed] num_params 1 pop 0 [ped]
-</pre>
-
-#### CPlayerPed::GetPed
-
-<pre>
-plugin::CallMethodAndReturn<CPed*, 0x4A5130, CPlayerPed*>(this);
-0AA8: call_method_return 0x4A5130 struct [CPlayerPed] num_params 0 pop 0 func_ret [CPed*]
-</pre>
-
-#### CPlayerPed::SetAllControlStatusOn
-
-<pre>
-plugin::CallMethod<0x4A4E50, CPlayerPed*>(this);
-0AA6: call_method 0x4A4E50 struct [CPlayerPed] num_params 0 pop 0
-</pre>
-
-#### CPlayerPed::SetAllControlStatusOff
-
-<pre>
-plugin::CallMethod<0x4A69A0, CPlayerPed*>(this);
-0AA6: call_method 0x4A69A0 struct [CPlayerPed] num_params 0 pop 0
-</pre>
-
-#### CPlayerPed::SetEnterControlStatusOn
-
-<pre>
-plugin::CallMethod<0x4A4E90, CPlayerPed*>(this);
-0AA6: call_method 0x4A4E90 struct [CPlayerPed] num_params 0 pop 0
-</pre>
-
-#### CPlayerPed::SetEnterControlStatusOff
-
-<pre>
-plugin::CallMethod<0x4A4E80, CPlayerPed*>(this);
-0AA6: call_method 0x4A4E80 struct [CPlayerPed] num_params 0 pop 0
-</pre>
-
-#### CPlayerPed::GetAuxCamera
-
-<pre>
-plugin::CallMethodAndReturn<CCamera*, 0x434900, CPlayerPed*>(this);
-0AA8: call_method_return 0x434900 struct [CPlayerPed] num_params 0 pop 0 func_ret [CCamera*]
-</pre>
-
-### plugin_II\game_II\CPopulation.cpp
-
-#### CPopulation::SpawnCar
-
-<pre>
-plugin::CallMethodAndReturn<CCar*, 0x426E10, CPopulation*, int, int, int, short, int>(this, x, y, z, rot, model);
-0AA8: call_method_return 0x426E10 struct [CPopulation] num_params 5 pop 0 [x] [y] [z] [rot] [model] func_ret [CCar*]
-</pre>
-
-### plugin_II\game_II\CReplay.cpp
-
-#### CReplay::IsPlayingBack
-
-<pre>
-plugin::CallMethodAndReturn<bool, 0x44AA60, CReplay*>(this);
-0AA8: call_method_return 0x44AA60 struct [CReplay] num_params 0 pop 0 func_ret [bool]
-</pre>
-
-#### CReplay::SetButton
-
-<pre>
-plugin::CallMethod<0x45ED10, CReplay*>(this, button);
-0AA6: call_method 0x45ED10 struct [CReplay] num_params 1 pop 0 [button]
-</pre>
-
-#### CReplay::ClearButton
-
-<pre>
-plugin::CallMethod<0x45ED30, CReplay*>(this, button);
-0AA6: call_method 0x45ED30 struct [CReplay] num_params 1 pop 0 [button]
-</pre>
-
-#### CReplay::GetButton
-
-<pre>
-plugin::CallMethodAndReturn<bool, 0x44C050, CReplay*>(this, button);
-0AA8: call_method_return 0x44C050 struct [CReplay] num_params 1 pop 0 [button] func_ret [bool]
-</pre>
-
-### plugin_II\game_II\cSampleManager.cpp
-
-#### cSampleManager::PlayVocal
-
-<pre>
-plugin::CallMethod<0x4B70C0, cSampleManager*, int, int, bool>(this, stream, vocal, append);
-0AA6: call_method 0x4B70C0 struct [cSampleManager] num_params 3 pop 0 [stream] [vocal] [append]
-</pre>
-
-#### cSampleManager::CloseStream
-
-<pre>
-plugin::CallMethod<0x4B6860, cSampleManager*, int>(this, stream);
-0AA6: call_method 0x4B6860 struct [cSampleManager] num_params 1 pop 0 [stream]
-</pre>
-
-#### cSampleManager::SetStreamVolume
-
-<pre>
-plugin::CallMethod<0x4B6890, cSampleManager*, int, unsigned char>(this, stream, volume);
-0AA6: call_method 0x4B6890 struct [cSampleManager] num_params 2 pop 0 [stream] [volume]
-</pre>
-
-#### cSampleManager::PlaySample
-
-<pre>
-plugin::CallMethod<0x4B69B0, cSampleManager*, int>(this, sample);
-0AA6: call_method 0x4B69B0 struct [cSampleManager] num_params 1 pop 0 [sample]
-</pre>
-
-#### cSampleManager::SetSampleVolume
-
-<pre>
-plugin::CallMethod<0x4B6990, cSampleManager*, unsigned char>(this, vol);
-0AA6: call_method 0x4B6990 struct [cSampleManager] num_params 1 pop 0 [vol]
-</pre>
-
-#### cSampleManager::PlayFrontendTrack
-
-<pre>
-plugin::CallMethod<0x4B6700, cSampleManager*, unsigned char>(this, id);
-0AA6: call_method 0x4B6700 struct [cSampleManager] num_params 1 pop 0 [id]
-</pre>
-
-#### cSampleManager::StopFrontendTrack
-
-<pre>
-plugin::CallMethod<0x4B67B0, cSampleManager*>(this);
-0AA6: call_method 0x4B67B0 struct [cSampleManager] num_params 0 pop 0
-</pre>
-
-#### cSampleManager::IsFrontendTrackPlaying
-
-<pre>
-plugin::CallMethodAndReturn<bool, 0x4B66A0, cSampleManager*>(this);
-0AA8: call_method_return 0x4B66A0 struct [cSampleManager] num_params 0 pop 0 func_ret [bool]
-</pre>
-
-#### cSampleManager::IsSampleNotPlaying
-
-<pre>
-plugin::CallMethodAndReturn<bool, 0x4B6A40, cSampleManager*>(this);
-0AA8: call_method_return 0x4B6A40 struct [cSampleManager] num_params 0 pop 0 func_ret [bool]
-</pre>
-
-### plugin_II\game_II\CSprite.cpp
-
-#### CSprite::GetObject
-
-<pre>
-plugin::CallMethodAndReturn<CObject*, 0x40FEB0, CSprite*>(this);
-0AA8: call_method_return 0x40FEB0 struct [CSprite] num_params 0 pop 0 func_ret [CObject*]
-</pre>
-
-#### CSprite::SetPosition
-
-<pre>
-plugin::CallMethod<0x420600, CSprite*>(this, pos);
-0AA6: call_method 0x420600 struct [CSprite] num_params 1 pop 0 [pos]
-</pre>
-
-#### CSprite::SetRotation
-
-<pre>
-plugin::CallMethod<0x420690, CSprite*>(this, rot);
-0AA6: call_method 0x420690 struct [CSprite] num_params 1 pop 0 [rot]
-</pre>
-
-#### CSprite::SetRemap
-
-<pre>
-plugin::CallMethod<0x4B9B00, CSprite*>(this, remap);
-0AA6: call_method 0x4B9B00 struct [CSprite] num_params 1 pop 0 [remap]
-</pre>
-
-#### CSprite::Render
-
-<pre>
-plugin::CallMethod<0x4BE060, CSprite*>(this);
-0AA6: call_method 0x4BE060 struct [CSprite] num_params 0 pop 0
-</pre>
-
-#### CSprite::DrawSprite
-
-<pre>
-plugin::CallStd<0x4CBA50, int, int, int, int, int, int, int const&, int, int, int, int>(id1, id2, x, y, angle, scale, mode, enableAlpha, alpha, unk, lightFlag);
-0AA5: call_function 0x4CBA50 num_params 11 pop 0 [id1] [id2] [x] [y] [angle] [scale] [mode] [enableAlpha] [alpha] [unk] [lightFlag]
-</pre>
-
-### plugin_II\game_II\CStyle.cpp
-
-#### CStyle::CStyle
-
-<pre>
-plugin::CallMethod<0x4C08D0, CStyle*>(this);
-0AA6: call_method 0x4C08D0 struct [CStyle] num_params 0 pop 0
-</pre>
-
-#### CStyle::Load
-
-<pre>
-plugin::CallMethod<0x4C0820, CStyle*, const char*>(this, path);
-0AA6: call_method 0x4C0820 struct [CStyle] num_params 1 pop 0 [path]
-</pre>
-
-#### CStyle::Unload
-
-<pre>
-plugin::CallMethod<0x4C0130, CStyle*>(this);
-0AA6: call_method 0x4C0130 struct [CStyle] num_params 0 pop 0
-</pre>
-
-#### CStyle::GetBaseIndex
-
-<pre>
-plugin::CallMethodAndReturn<short, 0x4BF2A0, CStyle*, int, short>(this, base, texture);
-0AA8: call_method_return 0x4BF2A0 struct [CStyle] num_params 2 pop 0 [base] [texture] func_ret [short]
-</pre>
-
-#### CStyle::GetTileArray
-
-<pre>
-plugin::CallMethodAndReturn<int*, 0x4C2EB0, CStyle*, unsigned short>(this, id);
-0AA8: call_method_return 0x4C2EB0 struct [CStyle] num_params 1 pop 0 [id] func_ret [int*]
-</pre>
-
-#### CStyle::GetPhysPalette
-
-<pre>
-plugin::CallMethodAndReturn<short, 0x4BF530, CStyle*, unsigned short>(this, id);
-0AA8: call_method_return 0x4BF530 struct [CStyle] num_params 1 pop 0 [id] func_ret [short]
-</pre>
-
-#### CStyle::SetFontStyles
-
-<pre>
-plugin::CallStd<0x4BFCC0, int>(fonts);
-0AA5: call_function 0x4BFCC0 num_params 1 pop 0 [fonts]
-</pre>
-
-### plugin_II\game_II\CText.cpp
-
-#### CText::CText
-
-<pre>
-plugin::CallMethod<0x4C2620, CText*>(this);
-0AA6: call_method 0x4C2620 struct [CText] num_params 0 pop 0
-</pre>
-
-#### CText::Get
-
-<pre>
-plugin::CallMethodAndReturn<wchar_t*, 0x4C23A0, CText*>(this, str);
-0AA8: call_method_return 0x4C23A0 struct [CText] num_params 1 pop 0 [str] func_ret [wchar_t*]
-</pre>
-
-#### CText::Load
-
-<pre>
-plugin::CallMethod<0x4C2540, CText*>(this);
-0AA6: call_method 0x4C2540 struct [CText] num_params 0 pop 0
-</pre>
-
-#### CText::Unload
-
-<pre>
-plugin::CallMethod<0x4C26C0, CText*>(this);
-0AA6: call_method 0x4C26C0 struct [CText] num_params 0 pop 0
-</pre>
-
-#### CText::LoadChunk
-
-<pre>
-plugin::CallMethod<0x4C2330, CText*, const char*, int>(this, type, size);
-0AA6: call_method 0x4C2330 struct [CText] num_params 2 pop 0 [type] [size]
-</pre>
-
-#### CText::Update
-
-<pre>
-plugin::CallMethod<0x4C20B0, CText*, wchar_t*>(this, chars);
-0AA6: call_method 0x4C20B0 struct [CText] num_params 1 pop 0 [chars]
-</pre>
-
-### plugin_II\game_II\CTextureManager.cpp
-
-#### CTextureManager::CTextureManager
-
-<pre>
-plugin::CallMethod<0x4C3190, CTextureManager*>(this);
-0AA6: call_method 0x4C3190 struct [CTextureManager] num_params 0 pop 0
-</pre>
-
-#### CTextureManager::Load
-
-<pre>
-plugin::CallMethod<0x4C30A0, CTextureManager*>(this);
-0AA6: call_method 0x4C30A0 struct [CTextureManager] num_params 0 pop 0
-</pre>
-
-#### CTextureManager::Unload
-
-<pre>
-plugin::CallMethod<0x4C2D60, CTextureManager*>(this);
-0AA6: call_method 0x4C2D60 struct [CTextureManager] num_params 0 pop 0
-</pre>
-
-#### CTextureManager::GetTexture
-
-<pre>
-plugin::CallMethodAndReturn<tTexture*, 0x4C2AC0, CTextureManager*, int, int, int, int>(this, id1, id2, mode, enableAlpha);
-0AA8: call_method_return 0x4C2AC0 struct [CTextureManager] num_params 4 pop 0 [id1] [id2] [mode] [enableAlpha] func_ret [tTexture*]
-</pre>
-
-### plugin_II\game_II\CTheScripts.cpp
-
-#### CTheScripts::CTheScripts
-
-<pre>
-plugin::CallMethod<0x481960, CTheScripts*>(this);
-0AA6: call_method 0x481960 struct [CTheScripts] num_params 0 pop 0
-</pre>
-
-#### CTheScripts::Save
-
-<pre>
-plugin::CallMethod<0x47EF40, CTheScripts*, const char*>(this, saveName);
-0AA6: call_method 0x47EF40 struct [CTheScripts] num_params 1 pop 0 [saveName]
-</pre>
-
-### plugin_II\game_II\CWorld.cpp
-
-#### CWorld::FindGroundZForCoord
-
-<pre>
-plugin::CallMethodAndReturn<int, 0x46A420, CWorld*, int*, int, int>(this, z, x, y);
-0AA8: call_method_return 0x46A420 struct [CWorld] num_params 3 pop 0 [z] [x] [y] func_ret [int]
-</pre>
-
-### plugin_II\game_II\tVideo.cpp
-
-#### ResetVideoDevice
-
-<pre>
-plugin::Call<0x4CC5C0>();
-0AA5: call_function 0x4CC5C0 num_params 0 pop 0
-</pre>
+- plugin_III
+  - game_III
+    - [C_PcSave.cpp](#plugin_III\game_III\C_PcSave.cpp)
+    - [C2dEffect.cpp](#plugin_III\game_III\C2dEffect.cpp)
+    - [C3dMarker.cpp](#plugin_III\game_III\C3dMarker.cpp)
+    - [C3dMarkers.cpp](#plugin_III\game_III\C3dMarkers.cpp)
+    - [CAccidentManager.cpp](#plugin_III\game_III\CAccidentManager.cpp)
+    - [CAnimBlendAssocGroup.cpp](#plugin_III\game_III\CAnimBlendAssocGroup.cpp)
+    - [CAnimBlendAssociation.cpp](#plugin_III\game_III\CAnimBlendAssociation.cpp)
+    - [CAnimBlendClumpData.cpp](#plugin_III\game_III\CAnimBlendClumpData.cpp)
+    - [CAnimBlendHierarchy.cpp](#plugin_III\game_III\CAnimBlendHierarchy.cpp)
+    - [CAnimBlendNode.cpp](#plugin_III\game_III\CAnimBlendNode.cpp)
+    - [CAnimBlendSequence.cpp](#plugin_III\game_III\CAnimBlendSequence.cpp)
+    - [CAnimManager.cpp](#plugin_III\game_III\CAnimManager.cpp)
+    - [CAntenna.cpp](#plugin_III\game_III\CAntenna.cpp)
+    - [CAntennas.cpp](#plugin_III\game_III\CAntennas.cpp)
+    - [cAudioCollisionManager.cpp](#plugin_III\game_III\cAudioCollisionManager.cpp)
+    - [CAudioHydrant.cpp](#plugin_III\game_III\CAudioHydrant.cpp)
+    - [cAudioManager.cpp](#plugin_III\game_III\cAudioManager.cpp)
+    - [cAudioScriptObject.cpp](#plugin_III\game_III\cAudioScriptObject.cpp)
+    - [CAutomobile.cpp](#plugin_III\game_III\CAutomobile.cpp)
+    - [CAutoPilot.cpp](#plugin_III\game_III\CAutoPilot.cpp)
+    - [CBaseModelInfo.cpp](#plugin_III\game_III\CBaseModelInfo.cpp)
+    - [CBoat.cpp](#plugin_III\game_III\CBoat.cpp)
+    - [CBridge.cpp](#plugin_III\game_III\CBridge.cpp)
+    - [CBrightLights.cpp](#plugin_III\game_III\CBrightLights.cpp)
+    - [CBuilding.cpp](#plugin_III\game_III\CBuilding.cpp)
+    - [CBulletInfo.cpp](#plugin_III\game_III\CBulletInfo.cpp)
+    - [CBulletTrace.cpp](#plugin_III\game_III\CBulletTrace.cpp)
+    - [CBulletTraces.cpp](#plugin_III\game_III\CBulletTraces.cpp)
+    - [CCamera.cpp](#plugin_III\game_III\CCamera.cpp)
+    - [CCarAI.cpp](#plugin_III\game_III\CCarAI.cpp)
+    - [CCarCtrl.cpp](#plugin_III\game_III\CCarCtrl.cpp)
+    - [CCarGenerator.cpp](#plugin_III\game_III\CCarGenerator.cpp)
+    - [CCivilianPed.cpp](#plugin_III\game_III\CCivilianPed.cpp)
+    - [CClock.cpp](#plugin_III\game_III\CClock.cpp)
+    - [CClouds.cpp](#plugin_III\game_III\CClouds.cpp)
+    - [CClumpModelInfo.cpp](#plugin_III\game_III\CClumpModelInfo.cpp)
+    - [CColBox.cpp](#plugin_III\game_III\CColBox.cpp)
+    - [CColLine.cpp](#plugin_III\game_III\CColLine.cpp)
+    - [CCollision.cpp](#plugin_III\game_III\CCollision.cpp)
+    - [CColModel.cpp](#plugin_III\game_III\CColModel.cpp)
+    - [CColSphere.cpp](#plugin_III\game_III\CColSphere.cpp)
+    - [CColTriangle.cpp](#plugin_III\game_III\CColTriangle.cpp)
+    - [CColTrianglePlane.cpp](#plugin_III\game_III\CColTrianglePlane.cpp)
+    - [CControllerState.cpp](#plugin_III\game_III\CControllerState.cpp)
+    - [CCopPed.cpp](#plugin_III\game_III\CCopPed.cpp)
+    - [CCoronas.cpp](#plugin_III\game_III\CCoronas.cpp)
+    - [CCrane.cpp](#plugin_III\game_III\CCrane.cpp)
+    - [CCranes.cpp](#plugin_III\game_III\CCranes.cpp)
+    - [CCredits.cpp](#plugin_III\game_III\CCredits.cpp)
+    - [CCurrentVehicle.cpp](#plugin_III\game_III\CCurrentVehicle.cpp)
+    - [CCurves.cpp](#plugin_III\game_III\CCurves.cpp)
+    - [CCutsceneHead.cpp](#plugin_III\game_III\CCutsceneHead.cpp)
+    - [CCutsceneMgr.cpp](#plugin_III\game_III\CCutsceneMgr.cpp)
+    - [CCutsceneObject.cpp](#plugin_III\game_III\CCutsceneObject.cpp)
+    - [CDamageManager.cpp](#plugin_III\game_III\CDamageManager.cpp)
+    - [CDarkel.cpp](#plugin_III\game_III\CDarkel.cpp)
+    - [CDigitalClock.cpp](#plugin_III\game_III\CDigitalClock.cpp)
+    - [CDirectory.cpp](#plugin_III\game_III\CDirectory.cpp)
+    - [cDMAudio.cpp](#plugin_III\game_III\cDMAudio.cpp)
+    - [CDoor.cpp](#plugin_III\game_III\CDoor.cpp)
+    - [CDraw.cpp](#plugin_III\game_III\CDraw.cpp)
+    - [CDummy.cpp](#plugin_III\game_III\CDummy.cpp)
+    - [CEmergencyPed.cpp](#plugin_III\game_III\CEmergencyPed.cpp)
+    - [CEntity.cpp](#plugin_III\game_III\CEntity.cpp)
+    - [CEventList.cpp](#plugin_III\game_III\CEventList.cpp)
+    - [CExplosion.cpp](#plugin_III\game_III\CExplosion.cpp)
+    - [CFallingGlassPane.cpp](#plugin_III\game_III\CFallingGlassPane.cpp)
+    - [CFileLoader.cpp](#plugin_III\game_III\CFileLoader.cpp)
+    - [CFileMgr.cpp](#plugin_III\game_III\CFileMgr.cpp)
+    - [CFire.cpp](#plugin_III\game_III\CFire.cpp)
+    - [CFireManager.cpp](#plugin_III\game_III\CFireManager.cpp)
+    - [CFont.cpp](#plugin_III\game_III\CFont.cpp)
+    - [CFontDetails.cpp](#plugin_III\game_III\CFontDetails.cpp)
+    - [CGame.cpp](#plugin_III\game_III\CGame.cpp)
+    - [CGameLogic.cpp](#plugin_III\game_III\CGameLogic.cpp)
+    - [CGangs.cpp](#plugin_III\game_III\CGangs.cpp)
+    - [CGarage.cpp](#plugin_III\game_III\CGarage.cpp)
+    - [CGarages.cpp](#plugin_III\game_III\CGarages.cpp)
+    - [CGeneral.cpp](#plugin_III\game_III\CGeneral.cpp)
+    - [CGlass.cpp](#plugin_III\game_III\CGlass.cpp)
+    - [CHeli.cpp](#plugin_III\game_III\CHeli.cpp)
+    - [CHud.cpp](#plugin_III\game_III\CHud.cpp)
+    - [CInstance.cpp](#plugin_III\game_III\CInstance.cpp)
+    - [CKeyboardState.cpp](#plugin_III\game_III\CKeyboardState.cpp)
+    - [CLines.cpp](#plugin_III\game_III\CLines.cpp)
+    - [CMatrix.cpp](#plugin_III\game_III\CMatrix.cpp)
+    - [CMBlur.cpp](#plugin_III\game_III\CMBlur.cpp)
+    - [CMenuManager.cpp](#plugin_III\game_III\CMenuManager.cpp)
+    - [CMessages.cpp](#plugin_III\game_III\CMessages.cpp)
+    - [CMissionCleanup.cpp](#plugin_III\game_III\CMissionCleanup.cpp)
+    - [CMloModelInfo.cpp](#plugin_III\game_III\CMloModelInfo.cpp)
+    - [CModelInfo.cpp](#plugin_III\game_III\CModelInfo.cpp)
+    - [CMoneyMessage.cpp](#plugin_III\game_III\CMoneyMessage.cpp)
+    - [CMotionBlurStreaks.cpp](#plugin_III\game_III\CMotionBlurStreaks.cpp)
+    - [CMouseControllerState.cpp](#plugin_III\game_III\CMouseControllerState.cpp)
+    - [CMousePointerStateHelper.cpp](#plugin_III\game_III\CMousePointerStateHelper.cpp)
+    - [CMovingThing.cpp](#plugin_III\game_III\CMovingThing.cpp)
+    - [cMusicManager.cpp](#plugin_III\game_III\cMusicManager.cpp)
+    - [CObject.cpp](#plugin_III\game_III\CObject.cpp)
+    - [CObjectData.cpp](#plugin_III\game_III\CObjectData.cpp)
+    - [common.cpp](#plugin_III\game_III\common.cpp)
+    - [COneSheet.cpp](#plugin_III\game_III\COneSheet.cpp)
+    - [COnscreenTimer.cpp](#plugin_III\game_III\COnscreenTimer.cpp)
+    - [COnscreenTimerEntry.cpp](#plugin_III\game_III\COnscreenTimerEntry.cpp)
+    - [CPacManPickup.cpp](#plugin_III\game_III\CPacManPickup.cpp)
+    - [CPacManPickups.cpp](#plugin_III\game_III\CPacManPickups.cpp)
+    - [CPad.cpp](#plugin_III\game_III\CPad.cpp)
+    - [CPager.cpp](#plugin_III\game_III\CPager.cpp)
+    - [CParticle.cpp](#plugin_III\game_III\CParticle.cpp)
+    - [CParticleObject.cpp](#plugin_III\game_III\CParticleObject.cpp)
+    - [cParticleSystemMgr.cpp](#plugin_III\game_III\cParticleSystemMgr.cpp)
+    - [CPathFind.cpp](#plugin_III\game_III\CPathFind.cpp)
+    - [CPed.cpp](#plugin_III\game_III\CPed.cpp)
+    - [CPedIK.cpp](#plugin_III\game_III\CPedIK.cpp)
+    - [CPedModelInfo.cpp](#plugin_III\game_III\CPedModelInfo.cpp)
+    - [CPedPath.cpp](#plugin_III\game_III\CPedPath.cpp)
+    - [CPedPlacement.cpp](#plugin_III\game_III\CPedPlacement.cpp)
+    - [CPedStats.cpp](#plugin_III\game_III\CPedStats.cpp)
+    - [CPedType.cpp](#plugin_III\game_III\CPedType.cpp)
+    - [CPhoneInfo.cpp](#plugin_III\game_III\CPhoneInfo.cpp)
+    - [CPhysical.cpp](#plugin_III\game_III\CPhysical.cpp)
+    - [CPickup.cpp](#plugin_III\game_III\CPickup.cpp)
+    - [CPickups.cpp](#plugin_III\game_III\CPickups.cpp)
+    - [CPlaceable.cpp](#plugin_III\game_III\CPlaceable.cpp)
+    - [CPlaceName.cpp](#plugin_III\game_III\CPlaceName.cpp)
+    - [CPlane.cpp](#plugin_III\game_III\CPlane.cpp)
+    - [CPlayerInfo.cpp](#plugin_III\game_III\CPlayerInfo.cpp)
+    - [CPlayerPed.cpp](#plugin_III\game_III\CPlayerPed.cpp)
+    - [CPlayerSkin.cpp](#plugin_III\game_III\CPlayerSkin.cpp)
+    - [CPointLights.cpp](#plugin_III\game_III\CPointLights.cpp)
+    - [CPools.cpp](#plugin_III\game_III\CPools.cpp)
+    - [CPopulation.cpp](#plugin_III\game_III\CPopulation.cpp)
+    - [CProjectileInfo.cpp](#plugin_III\game_III\CProjectileInfo.cpp)
+    - [CQuaternion.cpp](#plugin_III\game_III\CQuaternion.cpp)
+    - [CRadar.cpp](#plugin_III\game_III\CRadar.cpp)
+    - [CRange2D.cpp](#plugin_III\game_III\CRange2D.cpp)
+    - [CRecordDataForChase.cpp](#plugin_III\game_III\CRecordDataForChase.cpp)
+    - [CRecordDataForGame.cpp](#plugin_III\game_III\CRecordDataForGame.cpp)
+    - [CRegisteredCorona.cpp](#plugin_III\game_III\CRegisteredCorona.cpp)
+    - [CRegisteredMotionBlurStreak.cpp](#plugin_III\game_III\CRegisteredMotionBlurStreak.cpp)
+    - [CRemote.cpp](#plugin_III\game_III\CRemote.cpp)
+    - [CRestart.cpp](#plugin_III\game_III\CRestart.cpp)
+    - [CRoadBlocks.cpp](#plugin_III\game_III\CRoadBlocks.cpp)
+    - [CRouteNode.cpp](#plugin_III\game_III\CRouteNode.cpp)
+    - [CRubbish.cpp](#plugin_III\game_III\CRubbish.cpp)
+    - [CRunningScript.cpp](#plugin_III\game_III\CRunningScript.cpp)
+    - [CSceneEdit.cpp](#plugin_III\game_III\CSceneEdit.cpp)
+    - [CScrollBar.cpp](#plugin_III\game_III\CScrollBar.cpp)
+    - [CShadows.cpp](#plugin_III\game_III\CShadows.cpp)
+    - [CShinyTexts.cpp](#plugin_III\game_III\CShinyTexts.cpp)
+    - [CShotInfo.cpp](#plugin_III\game_III\CShotInfo.cpp)
+    - [CSimpleModelInfo.cpp](#plugin_III\game_III\CSimpleModelInfo.cpp)
+    - [CSkidmarks.cpp](#plugin_III\game_III\CSkidmarks.cpp)
+    - [CSpecialFX.cpp](#plugin_III\game_III\CSpecialFX.cpp)
+    - [CSpecialParticleStuff.cpp](#plugin_III\game_III\CSpecialParticleStuff.cpp)
+    - [CSprite.cpp](#plugin_III\game_III\CSprite.cpp)
+    - [CSprite2d.cpp](#plugin_III\game_III\CSprite2d.cpp)
+    - [CStats.cpp](#plugin_III\game_III\CStats.cpp)
+    - [CStoredCar.cpp](#plugin_III\game_III\CStoredCar.cpp)
+    - [CStreaming.cpp](#plugin_III\game_III\CStreaming.cpp)
+    - [CStreamingInfo.cpp](#plugin_III\game_III\CStreamingInfo.cpp)
+    - [CStuckCarCheck.cpp](#plugin_III\game_III\CStuckCarCheck.cpp)
+    - [CSurfaceTable.cpp](#plugin_III\game_III\CSurfaceTable.cpp)
+    - [CText.cpp](#plugin_III\game_III\CText.cpp)
+    - [CTheCarGenerators.cpp](#plugin_III\game_III\CTheCarGenerators.cpp)
+    - [CTheScripts.cpp](#plugin_III\game_III\CTheScripts.cpp)
+    - [CTheZones.cpp](#plugin_III\game_III\CTheZones.cpp)
+    - [CTimeModelInfo.cpp](#plugin_III\game_III\CTimeModelInfo.cpp)
+    - [CTimer.cpp](#plugin_III\game_III\CTimer.cpp)
+    - [CTowerClock.cpp](#plugin_III\game_III\CTowerClock.cpp)
+    - [CTrafficLights.cpp](#plugin_III\game_III\CTrafficLights.cpp)
+    - [CTrain.cpp](#plugin_III\game_III\CTrain.cpp)
+    - [CTrainDoor.cpp](#plugin_III\game_III\CTrainDoor.cpp)
+    - [cTransmission.cpp](#plugin_III\game_III\cTransmission.cpp)
+    - [CTreadable.cpp](#plugin_III\game_III\CTreadable.cpp)
+    - [CTxdStore.cpp](#plugin_III\game_III\CTxdStore.cpp)
+    - [CUpsideDownCarCheck.cpp](#plugin_III\game_III\CUpsideDownCarCheck.cpp)
+    - [CVehicle.cpp](#plugin_III\game_III\CVehicle.cpp)
+    - [CVehicleModelInfo.cpp](#plugin_III\game_III\CVehicleModelInfo.cpp)
+    - [CVisibilityPlugins.cpp](#plugin_III\game_III\CVisibilityPlugins.cpp)
+    - [CWanted.cpp](#plugin_III\game_III\CWanted.cpp)
+    - [CWaterCannon.cpp](#plugin_III\game_III\CWaterCannon.cpp)
+    - [CWaterCannons.cpp](#plugin_III\game_III\CWaterCannons.cpp)
+    - [CWeapon.cpp](#plugin_III\game_III\CWeapon.cpp)
+    - [CWeaponEffects.cpp](#plugin_III\game_III\CWeaponEffects.cpp)
+    - [CWeaponInfo.cpp](#plugin_III\game_III\CWeaponInfo.cpp)
+    - [CWeather.cpp](#plugin_III\game_III\CWeather.cpp)
+    - [CWorld.cpp](#plugin_III\game_III\CWorld.cpp)
+    - [CXtraCompsModelInfo.cpp](#plugin_III\game_III\CXtraCompsModelInfo.cpp)
+    - [CZone.cpp](#plugin_III\game_III\CZone.cpp)
+    - [GenericGameStorage.cpp](#plugin_III\game_III\GenericGameStorage.cpp)
+    - [NodeName.cpp](#plugin_III\game_III\NodeName.cpp)
+    - [RenderBuffer.cpp](#plugin_III\game_III\RenderBuffer.cpp)
+    - [RpAnimBlend.cpp](#plugin_III\game_III\RpAnimBlend.cpp)
+    - [meta.C2deffectsModelInfo.h](#plugin_III\game_III\meta.C2deffectsModelInfo.h)
+    - [meta.C3dMarker.h](#plugin_III\game_III\meta.C3dMarker.h)
+    - [meta.CAccident.h](#plugin_III\game_III\meta.CAccident.h)
+    - [meta.CAccidentManager.h](#plugin_III\game_III\meta.CAccidentManager.h)
+    - [meta.CAnimBlendAssocGroup.h](#plugin_III\game_III\meta.CAnimBlendAssocGroup.h)
+    - [meta.CAnimBlendAssociation.h](#plugin_III\game_III\meta.CAnimBlendAssociation.h)
+    - [meta.CAnimBlendClumpData.h](#plugin_III\game_III\meta.CAnimBlendClumpData.h)
+    - [meta.CAnimBlendHierarchy.h](#plugin_III\game_III\meta.CAnimBlendHierarchy.h)
+    - [meta.CAnimBlendSequence.h](#plugin_III\game_III\meta.CAnimBlendSequence.h)
+    - [meta.CAntenna.h](#plugin_III\game_III\meta.CAntenna.h)
+    - [meta.cAudioCollision.h](#plugin_III\game_III\meta.cAudioCollision.h)
+    - [meta.CAudioHydrant.h](#plugin_III\game_III\meta.CAudioHydrant.h)
+    - [meta.cAudioScriptObject.h](#plugin_III\game_III\meta.cAudioScriptObject.h)
+    - [meta.CBaseModelInfo.h](#plugin_III\game_III\meta.CBaseModelInfo.h)
+    - [meta.CBrightLight.h](#plugin_III\game_III\meta.CBrightLight.h)
+    - [meta.CBulletInfo.h](#plugin_III\game_III\meta.CBulletInfo.h)
+    - [meta.CBulletTrace.h](#plugin_III\game_III\meta.CBulletTrace.h)
+    - [meta.CCamera.h](#plugin_III\game_III\meta.CCamera.h)
+    - [meta.CCarGenerator.h](#plugin_III\game_III\meta.CCarGenerator.h)
+    - [meta.CColLine.h](#plugin_III\game_III\meta.CColLine.h)
+    - [meta.CColPoint.h](#plugin_III\game_III\meta.CColPoint.h)
+    - [meta.CCurrentVehicle.h](#plugin_III\game_III\meta.CCurrentVehicle.h)
+    - [meta.CDate.h](#plugin_III\game_III\meta.CDate.h)
+    - [meta.CDigitalClock.h](#plugin_III\game_III\meta.CDigitalClock.h)
+    - [meta.CDirectory.h](#plugin_III\game_III\meta.CDirectory.h)
+    - [meta.cDMAudio.h](#plugin_III\game_III\meta.cDMAudio.h)
+    - [meta.CEntity.h](#plugin_III\game_III\meta.CEntity.h)
+    - [meta.CEventList.h](#plugin_III\game_III\meta.CEventList.h)
+    - [meta.CFallingGlassPane.h](#plugin_III\game_III\meta.CFallingGlassPane.h)
+    - [meta.CFire.h](#plugin_III\game_III\meta.CFire.h)
+    - [meta.CFireManager.h](#plugin_III\game_III\meta.CFireManager.h)
+    - [meta.CGangInfo.h](#plugin_III\game_III\meta.CGangInfo.h)
+    - [meta.CInstance.h](#plugin_III\game_III\meta.CInstance.h)
+    - [meta.CMissionCleanup.h](#plugin_III\game_III\meta.CMissionCleanup.h)
+    - [meta.CMoneyMessage.h](#plugin_III\game_III\meta.CMoneyMessage.h)
+    - [meta.CMovie.h](#plugin_III\game_III\meta.CMovie.h)
+    - [meta.CMovingThing.h](#plugin_III\game_III\meta.CMovingThing.h)
+    - [meta.cMusicManager.h](#plugin_III\game_III\meta.cMusicManager.h)
+    - [meta.CPacManPickup.h](#plugin_III\game_III\meta.CPacManPickup.h)
+    - [meta.CParticle.h](#plugin_III\game_III\meta.CParticle.h)
+    - [meta.CParticleObject.h](#plugin_III\game_III\meta.CParticleObject.h)
+    - [meta.CPathNode.h](#plugin_III\game_III\meta.CPathNode.h)
+    - [meta.CPhone.h](#plugin_III\game_III\meta.CPhone.h)
+    - [meta.CPhoneInfo.h](#plugin_III\game_III\meta.CPhoneInfo.h)
+    - [meta.CPickup.h](#plugin_III\game_III\meta.CPickup.h)
+    - [meta.CPlaceable.h](#plugin_III\game_III\meta.CPlaceable.h)
+    - [meta.CPlaceName.h](#plugin_III\game_III\meta.CPlaceName.h)
+    - [meta.CRadar.h](#plugin_III\game_III\meta.CRadar.h)
+    - [meta.CRegisteredCorona.h](#plugin_III\game_III\meta.CRegisteredCorona.h)
+    - [meta.CRegisteredMotionBlurStreak.h](#plugin_III\game_III\meta.CRegisteredMotionBlurStreak.h)
+    - [meta.CRegisteredShinyText.h](#plugin_III\game_III\meta.CRegisteredShinyText.h)
+    - [meta.CRouteNode.h](#plugin_III\game_III\meta.CRouteNode.h)
+    - [meta.CScrollBar.h](#plugin_III\game_III\meta.CScrollBar.h)
+    - [meta.CShotInfo.h](#plugin_III\game_III\meta.CShotInfo.h)
+    - [meta.CSkidmark.h](#plugin_III\game_III\meta.CSkidmark.h)
+    - [meta.CSprite2d.h](#plugin_III\game_III\meta.CSprite2d.h)
+    - [meta.CStoredCollPoly.h](#plugin_III\game_III\meta.CStoredCollPoly.h)
+    - [meta.CStuckCarCheck.h](#plugin_III\game_III\meta.CStuckCarCheck.h)
+    - [meta.CTempNode.h](#plugin_III\game_III\meta.CTempNode.h)
+    - [meta.CText.h](#plugin_III\game_III\meta.CText.h)
+    - [meta.CTowerClock.h](#plugin_III\game_III\meta.CTowerClock.h)
+    - [meta.CTrainCamNode.h](#plugin_III\game_III\meta.CTrainCamNode.h)
+    - [meta.CTrainDoor.h](#plugin_III\game_III\meta.CTrainDoor.h)
+    - [meta.CWanted.h](#plugin_III\game_III\meta.CWanted.h)
+    - [meta.CWaterCannon.h](#plugin_III\game_III\meta.CWaterCannon.h)
+    - [meta.CWeapon.h](#plugin_III\game_III\meta.CWeapon.h)
+- plugin_sa
+  - game_sa
+    - [C_PcSave.cpp](#plugin_sa\game_sa\C_PcSave.cpp)
+    - [C3dMarker.cpp](#plugin_sa\game_sa\C3dMarker.cpp)
+    - [C3dMarkers.cpp](#plugin_sa\game_sa\C3dMarkers.cpp)
+    - [CAEAudioHardware.cpp](#plugin_sa\game_sa\CAEAudioHardware.cpp)
+    - [CAECutsceneTrackManager.cpp](#plugin_sa\game_sa\CAECutsceneTrackManager.cpp)
+    - [CAERadioTrackManager.cpp](#plugin_sa\game_sa\CAERadioTrackManager.cpp)
+    - [CAEStreamThread.cpp](#plugin_sa\game_sa\CAEStreamThread.cpp)
+    - [CAEWeaponAudioEntity.cpp](#plugin_sa\game_sa\CAEWeaponAudioEntity.cpp)
+    - [CAnimatedBuilding.cpp](#plugin_sa\game_sa\CAnimatedBuilding.cpp)
+    - [CAnimBlendAssocGroup.cpp](#plugin_sa\game_sa\CAnimBlendAssocGroup.cpp)
+    - [CAnimBlendAssociation.cpp](#plugin_sa\game_sa\CAnimBlendAssociation.cpp)
+    - [CAnimBlendClumpData.cpp](#plugin_sa\game_sa\CAnimBlendClumpData.cpp)
+    - [CAnimBlendHierarchy.cpp](#plugin_sa\game_sa\CAnimBlendHierarchy.cpp)
+    - [CAnimBlendNode.cpp](#plugin_sa\game_sa\CAnimBlendNode.cpp)
+    - [CAnimBlendSequence.cpp](#plugin_sa\game_sa\CAnimBlendSequence.cpp)
+    - [CAnimBlendStaticAssociation.cpp](#plugin_sa\game_sa\CAnimBlendStaticAssociation.cpp)
+    - [CAnimManager.cpp](#plugin_sa\game_sa\CAnimManager.cpp)
+    - [CAudioEngine.cpp](#plugin_sa\game_sa\CAudioEngine.cpp)
+    - [CBaseModelInfo.cpp](#plugin_sa\game_sa\CBaseModelInfo.cpp)
+    - [CBirds.cpp](#plugin_sa\game_sa\CBirds.cpp)
+    - [CBouncingPanel.cpp](#plugin_sa\game_sa\CBouncingPanel.cpp)
+    - [CBoundingBox.cpp](#plugin_sa\game_sa\CBoundingBox.cpp)
+    - [CBrightLights.cpp](#plugin_sa\game_sa\CBrightLights.cpp)
+    - [CBuilding.cpp](#plugin_sa\game_sa\CBuilding.cpp)
+    - [CBulletInfo.cpp](#plugin_sa\game_sa\CBulletInfo.cpp)
+    - [CBulletTrace.cpp](#plugin_sa\game_sa\CBulletTrace.cpp)
+    - [CBulletTraces.cpp](#plugin_sa\game_sa\CBulletTraces.cpp)
+    - [CCamera.cpp](#plugin_sa\game_sa\CCamera.cpp)
+    - [CCarAI.cpp](#plugin_sa\game_sa\CCarAI.cpp)
+    - [CCarCtrl.cpp](#plugin_sa\game_sa\CCarCtrl.cpp)
+    - [CCarEnterExit.cpp](#plugin_sa\game_sa\CCarEnterExit.cpp)
+    - [CCarGenerator.cpp](#plugin_sa\game_sa\CCarGenerator.cpp)
+    - [CCarPathLink.cpp](#plugin_sa\game_sa\CCarPathLink.cpp)
+    - [CCheat.cpp](#plugin_sa\game_sa\CCheat.cpp)
+    - [CCheckpoint.cpp](#plugin_sa\game_sa\CCheckpoint.cpp)
+    - [CCheckpoints.cpp](#plugin_sa\game_sa\CCheckpoints.cpp)
+    - [CClock.cpp](#plugin_sa\game_sa\CClock.cpp)
+    - [CClothes.cpp](#plugin_sa\game_sa\CClothes.cpp)
+    - [CClothesBuilder.cpp](#plugin_sa\game_sa\CClothesBuilder.cpp)
+    - [CClouds.cpp](#plugin_sa\game_sa\CClouds.cpp)
+    - [CClumpModelInfo.cpp](#plugin_sa\game_sa\CClumpModelInfo.cpp)
+    - [CColAccel.cpp](#plugin_sa\game_sa\CColAccel.cpp)
+    - [CColDisk.cpp](#plugin_sa\game_sa\CColDisk.cpp)
+    - [CCollision.cpp](#plugin_sa\game_sa\CCollision.cpp)
+    - [CCollisionData.cpp](#plugin_sa\game_sa\CCollisionData.cpp)
+    - [CColModel.cpp](#plugin_sa\game_sa\CColModel.cpp)
+    - [CColourSet.cpp](#plugin_sa\game_sa\CColourSet.cpp)
+    - [CControllerConfigManager.cpp](#plugin_sa\game_sa\CControllerConfigManager.cpp)
+    - [CCover.cpp](#plugin_sa\game_sa\CCover.cpp)
+    - [CCoverPoint.cpp](#plugin_sa\game_sa\CCoverPoint.cpp)
+    - [CCredits.cpp](#plugin_sa\game_sa\CCredits.cpp)
+    - [CCullZones.cpp](#plugin_sa\game_sa\CCullZones.cpp)
+    - [CCustomCarEnvMapPipeline.cpp](#plugin_sa\game_sa\CCustomCarEnvMapPipeline.cpp)
+    - [CCustomCarPlateMgr.cpp](#plugin_sa\game_sa\CCustomCarPlateMgr.cpp)
+    - [CCutsceneMgr.cpp](#plugin_sa\game_sa\CCutsceneMgr.cpp)
+    - [CDarkel.cpp](#plugin_sa\game_sa\CDarkel.cpp)
+    - [CDate.cpp](#plugin_sa\game_sa\CDate.cpp)
+    - [CDecisionSimple.cpp](#plugin_sa\game_sa\CDecisionSimple.cpp)
+    - [CDirectory.cpp](#plugin_sa\game_sa\CDirectory.cpp)
+    - [CDoor.cpp](#plugin_sa\game_sa\CDoor.cpp)
+    - [CDraw.cpp](#plugin_sa\game_sa\CDraw.cpp)
+    - [CEntryExit.cpp](#plugin_sa\game_sa\CEntryExit.cpp)
+    - [CEntryExitManager.cpp](#plugin_sa\game_sa\CEntryExitManager.cpp)
+    - [CExplosion.cpp](#plugin_sa\game_sa\CExplosion.cpp)
+    - [CFileLoader.cpp](#plugin_sa\game_sa\CFileLoader.cpp)
+    - [CFormation.cpp](#plugin_sa\game_sa\CFormation.cpp)
+    - [CGame.cpp](#plugin_sa\game_sa\CGame.cpp)
+    - [CGameLogic.cpp](#plugin_sa\game_sa\CGameLogic.cpp)
+    - [CGangs.cpp](#plugin_sa\game_sa\CGangs.cpp)
+    - [CGangWars.cpp](#plugin_sa\game_sa\CGangWars.cpp)
+    - [CGangWarsSaveStructure.cpp](#plugin_sa\game_sa\CGangWarsSaveStructure.cpp)
+    - [CGenericGameStorage.cpp](#plugin_sa\game_sa\CGenericGameStorage.cpp)
+    - [CGridRef.cpp](#plugin_sa\game_sa\CGridRef.cpp)
+    - [CHud.cpp](#plugin_sa\game_sa\CHud.cpp)
+    - [CIplStore.cpp](#plugin_sa\game_sa\CIplStore.cpp)
+    - [CLoadedCarGroup.cpp](#plugin_sa\game_sa\CLoadedCarGroup.cpp)
+    - [CLoadingScreen.cpp](#plugin_sa\game_sa\CLoadingScreen.cpp)
+    - [CMatrix.cpp](#plugin_sa\game_sa\CMatrix.cpp)
+    - [CMatrixLink.cpp](#plugin_sa\game_sa\CMatrixLink.cpp)
+    - [CMenuManager.cpp](#plugin_sa\game_sa\CMenuManager.cpp)
+    - [CMirrors.cpp](#plugin_sa\game_sa\CMirrors.cpp)
+    - [CModelInfo.cpp](#plugin_sa\game_sa\CModelInfo.cpp)
+    - [CModelInfoAccelerator.cpp](#plugin_sa\game_sa\CModelInfoAccelerator.cpp)
+    - [CMotionBlurStreaks.cpp](#plugin_sa\game_sa\CMotionBlurStreaks.cpp)
+    - [COctTree.cpp](#plugin_sa\game_sa\COctTree.cpp)
+    - [COctTreeBase.cpp](#plugin_sa\game_sa\COctTreeBase.cpp)
+    - [common.cpp](#plugin_sa\game_sa\common.cpp)
+    - [COnscreenCounterEntry.cpp](#plugin_sa\game_sa\COnscreenCounterEntry.cpp)
+    - [COnscreenTimer.cpp](#plugin_sa\game_sa\COnscreenTimer.cpp)
+    - [COnscreenTimerEntry.cpp](#plugin_sa\game_sa\COnscreenTimerEntry.cpp)
+    - [CPad.cpp](#plugin_sa\game_sa\CPad.cpp)
+    - [CPathNode.cpp](#plugin_sa\game_sa\CPathNode.cpp)
+    - [CPedClothesDesc.cpp](#plugin_sa\game_sa\CPedClothesDesc.cpp)
+    - [CPedGroup.cpp](#plugin_sa\game_sa\CPedGroup.cpp)
+    - [CPedGroupIntelligence.cpp](#plugin_sa\game_sa\CPedGroupIntelligence.cpp)
+    - [CPedGroupMembership.cpp](#plugin_sa\game_sa\CPedGroupMembership.cpp)
+    - [CPedGroupPlacer.cpp](#plugin_sa\game_sa\CPedGroupPlacer.cpp)
+    - [CPedGroups.cpp](#plugin_sa\game_sa\CPedGroups.cpp)
+    - [CPedIK.cpp](#plugin_sa\game_sa\CPedIK.cpp)
+    - [CPedIntelligence.cpp](#plugin_sa\game_sa\CPedIntelligence.cpp)
+    - [CPedList.cpp](#plugin_sa\game_sa\CPedList.cpp)
+    - [CPedPlacement.cpp](#plugin_sa\game_sa\CPedPlacement.cpp)
+    - [CPedTaskPair.cpp](#plugin_sa\game_sa\CPedTaskPair.cpp)
+    - [CPickup.cpp](#plugin_sa\game_sa\CPickup.cpp)
+    - [CPickups.cpp](#plugin_sa\game_sa\CPickups.cpp)
+    - [CPlayerInfo.cpp](#plugin_sa\game_sa\CPlayerInfo.cpp)
+    - [CPlayerPed.cpp](#plugin_sa\game_sa\CPlayerPed.cpp)
+    - [CPointLights.cpp](#plugin_sa\game_sa\CPointLights.cpp)
+    - [CPointList.cpp](#plugin_sa\game_sa\CPointList.cpp)
+    - [CPools.cpp](#plugin_sa\game_sa\CPools.cpp)
+    - [CPopCycle.cpp](#plugin_sa\game_sa\CPopCycle.cpp)
+    - [CProjectileInfo.cpp](#plugin_sa\game_sa\CProjectileInfo.cpp)
+    - [CPtrList.cpp](#plugin_sa\game_sa\CPtrList.cpp)
+    - [CPtrListDoubleLink.cpp](#plugin_sa\game_sa\CPtrListDoubleLink.cpp)
+    - [CPtrListSingleLink.cpp](#plugin_sa\game_sa\CPtrListSingleLink.cpp)
+    - [CPtrNodeDoubleLink.cpp](#plugin_sa\game_sa\CPtrNodeDoubleLink.cpp)
+    - [CPtrNodeSingleLink.cpp](#plugin_sa\game_sa\CPtrNodeSingleLink.cpp)
+    - [CQuadTreeNode.cpp](#plugin_sa\game_sa\CQuadTreeNode.cpp)
+    - [CRegisteredMotionBlurStreak.cpp](#plugin_sa\game_sa\CRegisteredMotionBlurStreak.cpp)
+    - [CRenderer.cpp](#plugin_sa\game_sa\CRenderer.cpp)
+    - [CRoadBlocks.cpp](#plugin_sa\game_sa\CRoadBlocks.cpp)
+    - [CRunningScript.cpp](#plugin_sa\game_sa\CRunningScript.cpp)
+    - [CScriptResourceManager.cpp](#plugin_sa\game_sa\CScriptResourceManager.cpp)
+    - [CScriptsForBrains.cpp](#plugin_sa\game_sa\CScriptsForBrains.cpp)
+    - [CSetPiece.cpp](#plugin_sa\game_sa\CSetPiece.cpp)
+    - [CSetPieces.cpp](#plugin_sa\game_sa\CSetPieces.cpp)
+    - [CShinyTexts.cpp](#plugin_sa\game_sa\CShinyTexts.cpp)
+    - [CShotInfo.cpp](#plugin_sa\game_sa\CShotInfo.cpp)
+    - [CSpecialFX.cpp](#plugin_sa\game_sa\CSpecialFX.cpp)
+    - [CSpecialPlateHandler.cpp](#plugin_sa\game_sa\CSpecialPlateHandler.cpp)
+    - [CStats.cpp](#plugin_sa\game_sa\CStats.cpp)
+    - [CStreamedScripts.cpp](#plugin_sa\game_sa\CStreamedScripts.cpp)
+    - [CStreaming.cpp](#plugin_sa\game_sa\CStreaming.cpp)
+    - [CStreamingInfo.cpp](#plugin_sa\game_sa\CStreamingInfo.cpp)
+    - [CStuckCarCheck.cpp](#plugin_sa\game_sa\CStuckCarCheck.cpp)
+    - [CTaskComplex.cpp](#plugin_sa\game_sa\CTaskComplex.cpp)
+    - [CTaskComplexClimb.cpp](#plugin_sa\game_sa\CTaskComplexClimb.cpp)
+    - [CTaskComplexDie.cpp](#plugin_sa\game_sa\CTaskComplexDie.cpp)
+    - [CTaskComplexEnterBoatAsDriver.cpp](#plugin_sa\game_sa\CTaskComplexEnterBoatAsDriver.cpp)
+    - [CTaskComplexEnterCar.cpp](#plugin_sa\game_sa\CTaskComplexEnterCar.cpp)
+    - [CTaskComplexEnterCarAsDriver.cpp](#plugin_sa\game_sa\CTaskComplexEnterCarAsDriver.cpp)
+    - [CTaskComplexEnterCarAsPassenger.cpp](#plugin_sa\game_sa\CTaskComplexEnterCarAsPassenger.cpp)
+    - [CTaskComplexFacial.cpp](#plugin_sa\game_sa\CTaskComplexFacial.cpp)
+    - [CTaskComplexJump.cpp](#plugin_sa\game_sa\CTaskComplexJump.cpp)
+    - [CTaskComplexLeaveCar.cpp](#plugin_sa\game_sa\CTaskComplexLeaveCar.cpp)
+    - [CTaskComplexProstituteSolicit.cpp](#plugin_sa\game_sa\CTaskComplexProstituteSolicit.cpp)
+    - [CTaskComplexSequence.cpp](#plugin_sa\game_sa\CTaskComplexSequence.cpp)
+    - [CTaskComplexStuckInAir.cpp](#plugin_sa\game_sa\CTaskComplexStuckInAir.cpp)
+    - [CTaskComplexSunbathe.cpp](#plugin_sa\game_sa\CTaskComplexSunbathe.cpp)
+    - [CTaskComplexUseMobilePhone.cpp](#plugin_sa\game_sa\CTaskComplexUseMobilePhone.cpp)
+    - [CTaskComplexWander.cpp](#plugin_sa\game_sa\CTaskComplexWander.cpp)
+    - [CTaskComplexWanderStandard.cpp](#plugin_sa\game_sa\CTaskComplexWanderStandard.cpp)
+    - [CTaskSimpleAnim.cpp](#plugin_sa\game_sa\CTaskSimpleAnim.cpp)
+    - [CTaskSimpleCarSetPedInAsPassenger.cpp](#plugin_sa\game_sa\CTaskSimpleCarSetPedInAsPassenger.cpp)
+    - [CTaskSimpleCarSetPedOut.cpp](#plugin_sa\game_sa\CTaskSimpleCarSetPedOut.cpp)
+    - [CTaskSimpleChoking.cpp](#plugin_sa\game_sa\CTaskSimpleChoking.cpp)
+    - [CTaskSimpleClimb.cpp](#plugin_sa\game_sa\CTaskSimpleClimb.cpp)
+    - [CTaskSimpleDuck.cpp](#plugin_sa\game_sa\CTaskSimpleDuck.cpp)
+    - [CTaskSimpleDuckToggle.cpp](#plugin_sa\game_sa\CTaskSimpleDuckToggle.cpp)
+    - [CTaskSimpleFacial.cpp](#plugin_sa\game_sa\CTaskSimpleFacial.cpp)
+    - [CTaskSimpleFight.cpp](#plugin_sa\game_sa\CTaskSimpleFight.cpp)
+    - [CTaskSimpleGangDriveBy.cpp](#plugin_sa\game_sa\CTaskSimpleGangDriveBy.cpp)
+    - [CTaskSimpleIKChain.cpp](#plugin_sa\game_sa\CTaskSimpleIKChain.cpp)
+    - [CTaskSimpleIKLookAt.cpp](#plugin_sa\game_sa\CTaskSimpleIKLookAt.cpp)
+    - [CTaskSimpleIKManager.cpp](#plugin_sa\game_sa\CTaskSimpleIKManager.cpp)
+    - [CTaskSimpleInAir.cpp](#plugin_sa\game_sa\CTaskSimpleInAir.cpp)
+    - [CTaskSimpleJetPack.cpp](#plugin_sa\game_sa\CTaskSimpleJetPack.cpp)
+    - [CTaskSimpleJump.cpp](#plugin_sa\game_sa\CTaskSimpleJump.cpp)
+    - [CTaskSimplePlayerOnFoot.cpp](#plugin_sa\game_sa\CTaskSimplePlayerOnFoot.cpp)
+    - [CTaskSimpleRunAnim.cpp](#plugin_sa\game_sa\CTaskSimpleRunAnim.cpp)
+    - [CTaskSimpleRunNamedAnim.cpp](#plugin_sa\game_sa\CTaskSimpleRunNamedAnim.cpp)
+    - [CTaskSimpleStandStill.cpp](#plugin_sa\game_sa\CTaskSimpleStandStill.cpp)
+    - [CTaskSimpleStealthKill.cpp](#plugin_sa\game_sa\CTaskSimpleStealthKill.cpp)
+    - [CTaskSimpleSwim.cpp](#plugin_sa\game_sa\CTaskSimpleSwim.cpp)
+    - [CTaskSimpleThrowProjectile.cpp](#plugin_sa\game_sa\CTaskSimpleThrowProjectile.cpp)
+    - [CTaskSimpleTriggerLookAt.cpp](#plugin_sa\game_sa\CTaskSimpleTriggerLookAt.cpp)
+    - [CTaskSimpleUseGun.cpp](#plugin_sa\game_sa\CTaskSimpleUseGun.cpp)
+    - [CTaskUtilityLineUpPedWithCar.cpp](#plugin_sa\game_sa\CTaskUtilityLineUpPedWithCar.cpp)
+    - [CTheCarGenerators.cpp](#plugin_sa\game_sa\CTheCarGenerators.cpp)
+    - [CTheScripts.cpp](#plugin_sa\game_sa\CTheScripts.cpp)
+    - [CTimeCycle.cpp](#plugin_sa\game_sa\CTimeCycle.cpp)
+    - [CUpsideDownCarCheck.cpp](#plugin_sa\game_sa\CUpsideDownCarCheck.cpp)
+    - [CVisibilityPlugins.cpp](#plugin_sa\game_sa\CVisibilityPlugins.cpp)
+    - [CWanted.cpp](#plugin_sa\game_sa\CWanted.cpp)
+    - [CWeapon.cpp](#plugin_sa\game_sa\CWeapon.cpp)
+    - [CWeaponEffects.cpp](#plugin_sa\game_sa\CWeaponEffects.cpp)
+    - [CWeather.cpp](#plugin_sa\game_sa\CWeather.cpp)
+    - [CWorld.cpp](#plugin_sa\game_sa\CWorld.cpp)
+    - [D3DIndexDataBuffer.cpp](#plugin_sa\game_sa\D3DIndexDataBuffer.cpp)
+    - [D3DResourceSystem.cpp](#plugin_sa\game_sa\D3DResourceSystem.cpp)
+    - [D3DTextureBuffer.cpp](#plugin_sa\game_sa\D3DTextureBuffer.cpp)
+    - [JPegCompress.cpp](#plugin_sa\game_sa\JPegCompress.cpp)
+    - [List_c.cpp](#plugin_sa\game_sa\List_c.cpp)
+    - [ListItem_c.cpp](#plugin_sa\game_sa\ListItem_c.cpp)
+    - [PipelinePlugin.cpp](#plugin_sa\game_sa\PipelinePlugin.cpp)
+    - [RenderWare.cpp](#plugin_sa\game_sa\RenderWare.cpp)
+    - [meta.CAnimBlendAssociation.h](#plugin_sa\game_sa\meta.CAnimBlendAssociation.h)
+    - [meta.CAnimBlendStaticAssociation.h](#plugin_sa\game_sa\meta.CAnimBlendStaticAssociation.h)
+    - [meta.CCamera.h](#plugin_sa\game_sa\meta.CCamera.h)
+    - [meta.CEntryExit.h](#plugin_sa\game_sa\meta.CEntryExit.h)
+    - [meta.CGangInfo.h](#plugin_sa\game_sa\meta.CGangInfo.h)
+    - [meta.CMatrixLink.h](#plugin_sa\game_sa\meta.CMatrixLink.h)
+    - [meta.CPedGroup.h](#plugin_sa\game_sa\meta.CPedGroup.h)
+    - [meta.CPedGroupIntelligence.h](#plugin_sa\game_sa\meta.CPedGroupIntelligence.h)
+    - [meta.CPedGroupMembership.h](#plugin_sa\game_sa\meta.CPedGroupMembership.h)
+- plugin_vc
+  - game_vc
+    - [C_PcSave.cpp](#plugin_vc\game_vc\C_PcSave.cpp)
+    - [C3dMarker.cpp](#plugin_vc\game_vc\C3dMarker.cpp)
+    - [C3dMarkers.cpp](#plugin_vc\game_vc\C3dMarkers.cpp)
+    - [CAnimBlendAssociation.cpp](#plugin_vc\game_vc\CAnimBlendAssociation.cpp)
+    - [CAnimManager.cpp](#plugin_vc\game_vc\CAnimManager.cpp)
+    - [cAudioManager.cpp](#plugin_vc\game_vc\cAudioManager.cpp)
+    - [cAudioScriptObject.cpp](#plugin_vc\game_vc\cAudioScriptObject.cpp)
+    - [CAutomobile.cpp](#plugin_vc\game_vc\CAutomobile.cpp)
+    - [CBaseModelInfo.cpp](#plugin_vc\game_vc\CBaseModelInfo.cpp)
+    - [CBike.cpp](#plugin_vc\game_vc\CBike.cpp)
+    - [CBoat.cpp](#plugin_vc\game_vc\CBoat.cpp)
+    - [CBox.cpp](#plugin_vc\game_vc\CBox.cpp)
+    - [CBrightLights.cpp](#plugin_vc\game_vc\CBrightLights.cpp)
+    - [CBulletInfo.cpp](#plugin_vc\game_vc\CBulletInfo.cpp)
+    - [CBulletTraces.cpp](#plugin_vc\game_vc\CBulletTraces.cpp)
+    - [cBuoyancy.cpp](#plugin_vc\game_vc\cBuoyancy.cpp)
+    - [CCamera.cpp](#plugin_vc\game_vc\CCamera.cpp)
+    - [CCarAI.cpp](#plugin_vc\game_vc\CCarAI.cpp)
+    - [CCarCtrl.cpp](#plugin_vc\game_vc\CCarCtrl.cpp)
+    - [CCarGenerator.cpp](#plugin_vc\game_vc\CCarGenerator.cpp)
+    - [CCivilianPed.cpp](#plugin_vc\game_vc\CCivilianPed.cpp)
+    - [CClock.cpp](#plugin_vc\game_vc\CClock.cpp)
+    - [CClouds.cpp](#plugin_vc\game_vc\CClouds.cpp)
+    - [CClumpModelInfo.cpp](#plugin_vc\game_vc\CClumpModelInfo.cpp)
+    - [CColBox.cpp](#plugin_vc\game_vc\CColBox.cpp)
+    - [CColLine.cpp](#plugin_vc\game_vc\CColLine.cpp)
+    - [CColModel.cpp](#plugin_vc\game_vc\CColModel.cpp)
+    - [CColSphere.cpp](#plugin_vc\game_vc\CColSphere.cpp)
+    - [CControllerState.cpp](#plugin_vc\game_vc\CControllerState.cpp)
+    - [CCopPed.cpp](#plugin_vc\game_vc\CCopPed.cpp)
+    - [CCoronas.cpp](#plugin_vc\game_vc\CCoronas.cpp)
+    - [CCranes.cpp](#plugin_vc\game_vc\CCranes.cpp)
+    - [CCutsceneObject.cpp](#plugin_vc\game_vc\CCutsceneObject.cpp)
+    - [CCutsceneShadow.cpp](#plugin_vc\game_vc\CCutsceneShadow.cpp)
+    - [CDamageManager.cpp](#plugin_vc\game_vc\CDamageManager.cpp)
+    - [CDarkel.cpp](#plugin_vc\game_vc\CDarkel.cpp)
+    - [CDirectory.cpp](#plugin_vc\game_vc\CDirectory.cpp)
+    - [cDMAudio.cpp](#plugin_vc\game_vc\cDMAudio.cpp)
+    - [CDraw.cpp](#plugin_vc\game_vc\CDraw.cpp)
+    - [CEmergencyPed.cpp](#plugin_vc\game_vc\CEmergencyPed.cpp)
+    - [CEscalators.cpp](#plugin_vc\game_vc\CEscalators.cpp)
+    - [CFileLoader.cpp](#plugin_vc\game_vc\CFileLoader.cpp)
+    - [CFileMgr.cpp](#plugin_vc\game_vc\CFileMgr.cpp)
+    - [CFont.cpp](#plugin_vc\game_vc\CFont.cpp)
+    - [CGame.cpp](#plugin_vc\game_vc\CGame.cpp)
+    - [CGameLogic.cpp](#plugin_vc\game_vc\CGameLogic.cpp)
+    - [CGangs.cpp](#plugin_vc\game_vc\CGangs.cpp)
+    - [CGeneral.cpp](#plugin_vc\game_vc\CGeneral.cpp)
+    - [cHandlingDataMgr.cpp](#plugin_vc\game_vc\cHandlingDataMgr.cpp)
+    - [CHeli.cpp](#plugin_vc\game_vc\CHeli.cpp)
+    - [CHud.cpp](#plugin_vc\game_vc\CHud.cpp)
+    - [CKeyboardState.cpp](#plugin_vc\game_vc\CKeyboardState.cpp)
+    - [CMenuManager.cpp](#plugin_vc\game_vc\CMenuManager.cpp)
+    - [CMessages.cpp](#plugin_vc\game_vc\CMessages.cpp)
+    - [CModelInfo.cpp](#plugin_vc\game_vc\CModelInfo.cpp)
+    - [CMotionBlurStreaks.cpp](#plugin_vc\game_vc\CMotionBlurStreaks.cpp)
+    - [CMousePointerStateHelper.cpp](#plugin_vc\game_vc\CMousePointerStateHelper.cpp)
+    - [CMovie.cpp](#plugin_vc\game_vc\CMovie.cpp)
+    - [CObject.cpp](#plugin_vc\game_vc\CObject.cpp)
+    - [COcclusion.cpp](#plugin_vc\game_vc\COcclusion.cpp)
+    - [common.cpp](#plugin_vc\game_vc\common.cpp)
+    - [COnscreenTimer.cpp](#plugin_vc\game_vc\COnscreenTimer.cpp)
+    - [CPad.cpp](#plugin_vc\game_vc\CPad.cpp)
+    - [CParticle.cpp](#plugin_vc\game_vc\CParticle.cpp)
+    - [cParticleSystemMgr.cpp](#plugin_vc\game_vc\cParticleSystemMgr.cpp)
+    - [CPathFind.cpp](#plugin_vc\game_vc\CPathFind.cpp)
+    - [CPed.cpp](#plugin_vc\game_vc\CPed.cpp)
+    - [CPedAtmAttractor.cpp](#plugin_vc\game_vc\CPedAtmAttractor.cpp)
+    - [CPedAttractor.cpp](#plugin_vc\game_vc\CPedAttractor.cpp)
+    - [CPedAttractorManager.cpp](#plugin_vc\game_vc\CPedAttractorManager.cpp)
+    - [CPedIceCreamVanAttractor.cpp](#plugin_vc\game_vc\CPedIceCreamVanAttractor.cpp)
+    - [CPedIK.cpp](#plugin_vc\game_vc\CPedIK.cpp)
+    - [CPedModelInfo.cpp](#plugin_vc\game_vc\CPedModelInfo.cpp)
+    - [CPedPizzaAttractor.cpp](#plugin_vc\game_vc\CPedPizzaAttractor.cpp)
+    - [CPedPlacement.cpp](#plugin_vc\game_vc\CPedPlacement.cpp)
+    - [CPedSeatAttractor.cpp](#plugin_vc\game_vc\CPedSeatAttractor.cpp)
+    - [CPedShelterAttractor.cpp](#plugin_vc\game_vc\CPedShelterAttractor.cpp)
+    - [CPedStats.cpp](#plugin_vc\game_vc\CPedStats.cpp)
+    - [CPedStopAttractor.cpp](#plugin_vc\game_vc\CPedStopAttractor.cpp)
+    - [CPedType.cpp](#plugin_vc\game_vc\CPedType.cpp)
+    - [CPhoneInfo.cpp](#plugin_vc\game_vc\CPhoneInfo.cpp)
+    - [CPickups.cpp](#plugin_vc\game_vc\CPickups.cpp)
+    - [CPlane.cpp](#plugin_vc\game_vc\CPlane.cpp)
+    - [CPlayerPed.cpp](#plugin_vc\game_vc\CPlayerPed.cpp)
+    - [CPlayerSkin.cpp](#plugin_vc\game_vc\CPlayerSkin.cpp)
+    - [CPointLights.cpp](#plugin_vc\game_vc\CPointLights.cpp)
+    - [CPools.cpp](#plugin_vc\game_vc\CPools.cpp)
+    - [CPopulation.cpp](#plugin_vc\game_vc\CPopulation.cpp)
+    - [CProjectile.cpp](#plugin_vc\game_vc\CProjectile.cpp)
+    - [CProjectileInfo.cpp](#plugin_vc\game_vc\CProjectileInfo.cpp)
+    - [CQuaternion.cpp](#plugin_vc\game_vc\CQuaternion.cpp)
+    - [CRadar.cpp](#plugin_vc\game_vc\CRadar.cpp)
+    - [CRegisteredMotionBlurStreak.cpp](#plugin_vc\game_vc\CRegisteredMotionBlurStreak.cpp)
+    - [CRestart.cpp](#plugin_vc\game_vc\CRestart.cpp)
+    - [CRouteNode.cpp](#plugin_vc\game_vc\CRouteNode.cpp)
+    - [CRubbish.cpp](#plugin_vc\game_vc\CRubbish.cpp)
+    - [CRunningScript.cpp](#plugin_vc\game_vc\CRunningScript.cpp)
+    - [cSampleManager.cpp](#plugin_vc\game_vc\cSampleManager.cpp)
+    - [CSceneEdit.cpp](#plugin_vc\game_vc\CSceneEdit.cpp)
+    - [CShadowCamera.cpp](#plugin_vc\game_vc\CShadowCamera.cpp)
+    - [CShinyTexts.cpp](#plugin_vc\game_vc\CShinyTexts.cpp)
+    - [CShotInfo.cpp](#plugin_vc\game_vc\CShotInfo.cpp)
+    - [CSimpleModelInfo.cpp](#plugin_vc\game_vc\CSimpleModelInfo.cpp)
+    - [CSprite.cpp](#plugin_vc\game_vc\CSprite.cpp)
+    - [CStinger.cpp](#plugin_vc\game_vc\CStinger.cpp)
+    - [CStreaming.cpp](#plugin_vc\game_vc\CStreaming.cpp)
+    - [CText.cpp](#plugin_vc\game_vc\CText.cpp)
+    - [CTheScripts.cpp](#plugin_vc\game_vc\CTheScripts.cpp)
+    - [CTheZones.cpp](#plugin_vc\game_vc\CTheZones.cpp)
+    - [CTimeCycle.cpp](#plugin_vc\game_vc\CTimeCycle.cpp)
+    - [CTimeModelInfo.cpp](#plugin_vc\game_vc\CTimeModelInfo.cpp)
+    - [CTimer.cpp](#plugin_vc\game_vc\CTimer.cpp)
+    - [CTrafficLights.cpp](#plugin_vc\game_vc\CTrafficLights.cpp)
+    - [CTrain.cpp](#plugin_vc\game_vc\CTrain.cpp)
+    - [cTransmission.cpp](#plugin_vc\game_vc\cTransmission.cpp)
+    - [CTxdStore.cpp](#plugin_vc\game_vc\CTxdStore.cpp)
+    - [CUserDisplay.cpp](#plugin_vc\game_vc\CUserDisplay.cpp)
+    - [CVehicle.cpp](#plugin_vc\game_vc\CVehicle.cpp)
+    - [CVehicleModelInfo.cpp](#plugin_vc\game_vc\CVehicleModelInfo.cpp)
+    - [CVisibilityPlugins.cpp](#plugin_vc\game_vc\CVisibilityPlugins.cpp)
+    - [CWanted.cpp](#plugin_vc\game_vc\CWanted.cpp)
+    - [CWaterCannons.cpp](#plugin_vc\game_vc\CWaterCannons.cpp)
+    - [CWeaponEffects.cpp](#plugin_vc\game_vc\CWeaponEffects.cpp)
+    - [CWeaponInfo.cpp](#plugin_vc\game_vc\CWeaponInfo.cpp)
+    - [CWeaponModelInfo.cpp](#plugin_vc\game_vc\CWeaponModelInfo.cpp)
+    - [CWeather.cpp](#plugin_vc\game_vc\CWeather.cpp)
+    - [CWindModifiers.cpp](#plugin_vc\game_vc\CWindModifiers.cpp)
+    - [CWorld.cpp](#plugin_vc\game_vc\CWorld.cpp)
+    - [CZone.cpp](#plugin_vc\game_vc\CZone.cpp)
+    - [NodeName.cpp](#plugin_vc\game_vc\NodeName.cpp)
+    - [meta.cAudioScriptObject.h](#plugin_vc\game_vc\meta.cAudioScriptObject.h)
+    - [meta.CBulletTrace.h](#plugin_vc\game_vc\meta.CBulletTrace.h)
+    - [meta.CCutsceneShadow.h](#plugin_vc\game_vc\meta.CCutsceneShadow.h)
+    - [meta.CDirectory.h](#plugin_vc\game_vc\meta.CDirectory.h)
+    - [meta.CPad.h](#plugin_vc\game_vc\meta.CPad.h)
+    - [meta.CParticle.h](#plugin_vc\game_vc\meta.CParticle.h)
+    - [meta.CPedAttractor.h](#plugin_vc\game_vc\meta.CPedAttractor.h)
+    - [meta.CPhone.h](#plugin_vc\game_vc\meta.CPhone.h)
+    - [meta.CPhoneInfo.h](#plugin_vc\game_vc\meta.CPhoneInfo.h)
+    - [meta.CPointLight.h](#plugin_vc\game_vc\meta.CPointLight.h)
+    - [meta.CRouteNode.h](#plugin_vc\game_vc\meta.CRouteNode.h)
+    - [meta.CWindModifiers.h](#plugin_vc\game_vc\meta.CWindModifiers.h)
 
 ### plugin_III\game_III\C_PcSave.cpp
 

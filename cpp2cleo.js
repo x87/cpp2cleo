@@ -6,9 +6,12 @@ const lines = file.split("\n");
 let output = "";
 let curFile = "";
 let isPreOpen = false;
+let skipFile = false;
+let toc = {};
+
 for (let i = 0; i < lines.length; i++) {
   const line = lines[i];
-  if (line.includes("plugin::")) {
+  if (line.includes("plugin::") && !skipFile) {
     const prevLine = lines[i - 1];
     let name = "";
     let className = "";
@@ -149,6 +152,23 @@ for (let i = 0; i < lines.length; i++) {
       isPreOpen = false;
     }
     curFile = line.substring(line.indexOf("plugin_")).replace(":", "");
+
+    const paths = curFile.split('\\');
+    if (paths.length < 3) {
+      throw new Error(`Invalid path ${curFile}`);
+    }
+    const [namespace,game] = paths;
+    if (namespace === "plugin_II") {
+      skipFile = true;
+      continue;
+    } else {
+      skipFile = false;
+    }
+    const file= paths.at(-1);
+    toc[namespace] ??= {};
+    toc[namespace][game] ??= [];
+    toc[namespace][game].push(file);
+    
     output += "\n### " + curFile;
   } else {
     continue;
@@ -157,7 +177,18 @@ for (let i = 0; i < lines.length; i++) {
   output += "\n";
 }
 
-fs.writeFileSync("cleo-calls.md", output, "utf8");
+// console.log(toc);
+let tocs = "";
+for (const n of Object.keys(toc)) {
+  tocs += `- ${n}\n`;
+  for (const g of Object.keys(toc[n])) {
+    tocs += `  - ${g}\n`;
+    for (const f of toc[n][g]) {
+      tocs += `    - [${f}](#${n}\\${g}\\${f})\n`;
+    }
+  }
+}
+fs.writeFileSync("cleo-calls.md", tocs+output, "utf8");
 
 function assertAddress(s) {
   if (!s.startsWith("0x")) {
