@@ -71,7 +71,7 @@ plugin_II\game_II\CFileMgr.cpp:
 
 	// CFileMgr::CloseFile
 	// plugin::CallStdAndReturn<int, 0x402EB0>();
-	0AA7: call_function_return 0x402EB0 num_params 1 pop 0 [] func_ret [int]
+	0AA7: call_function_return 0x402EB0 num_params 0 pop 0 func_ret [int]
 
 	// CFileMgr::Read
 	// plugin::CallStdAndReturn<size_t, 0x402FB0, void*, int const&>(buff, size);
@@ -545,7 +545,7 @@ plugin_II\game_II\tVideo.cpp:
 
 	// ResetVideoDevice
 	// plugin::Call<0x4CC5C0>();
-	0AA5: call_function 0x4CC5C0 num_params 1 pop 1 []
+	0AA5: call_function 0x4CC5C0 num_params 0 pop 0
 
 plugin_III\game_III\C_PcSave.cpp:
 
@@ -1712,15 +1712,15 @@ plugin_III\game_III\CCollision.cpp:
 
 	// CCollision::Init
 	// plugin::Call<0x40B380>();
-	0AA5: call_function 0x40B380 num_params 1 pop 1 []
+	0AA5: call_function 0x40B380 num_params 0 pop 0
 
 	// CCollision::Shutdown
 	// plugin::Call<0x40B3A0>();
-	0AA5: call_function 0x40B3A0 num_params 1 pop 1 []
+	0AA5: call_function 0x40B3A0 num_params 0 pop 0
 
 	// CCollision::Update
 	// plugin::Call<0x40B3B0>();
-	0AA5: call_function 0x40B3B0 num_params 1 pop 1 []
+	0AA5: call_function 0x40B3B0 num_params 0 pop 0
 
 	// CCollision::LoadCollisionScreen
 	// plugin::Call<0x40B580, eLevelName>(levelName);
@@ -1732,7 +1732,7 @@ plugin_III\game_III\CCollision.cpp:
 
 	// CCollision::SortOutCollisionAfterLoad
 	// plugin::Call<0x40B900>();
-	0AA5: call_function 0x40B900 num_params 1 pop 1 []
+	0AA5: call_function 0x40B900 num_params 0 pop 0
 
 	// CCollision::CalculateTrianglePlanes
 	// plugin::Call<0x40B960, CColModel*>(colModel);
@@ -2032,23 +2032,23 @@ plugin_III\game_III\CCutsceneMgr.cpp:
 
 	// CCutsceneMgr::DeleteCutsceneData
 	// plugin::Call<0x4048E0>();
-	0AA5: call_function 0x4048E0 num_params 1 pop 1 []
+	0AA5: call_function 0x4048E0 num_params 0 pop 0
 
 	// CCutsceneMgr::FinishCutscene
 	// plugin::Call<0x405140>();
-	0AA5: call_function 0x405140 num_params 1 pop 1 []
+	0AA5: call_function 0x405140 num_params 0 pop 0
 
 	// CCutsceneMgr::GetCutsceneTimeInMilleseconds
 	// plugin::CallAndReturn<int, 0x4051B0>();
-	0AA7: call_function_return 0x4051B0 num_params 1 pop 1 [] func_ret [int]
+	0AA7: call_function_return 0x4051B0 num_params 0 pop 0 func_ret [int]
 
 	// CCutsceneMgr::HasCutsceneFinished
 	// plugin::CallAndReturn<bool, 0x4051F0>();
-	0AA7: call_function_return 0x4051F0 num_params 1 pop 1 [] func_ret [bool]
+	0AA7: call_function_return 0x4051F0 num_params 0 pop 0 func_ret [bool]
 
 	// CCutsceneMgr::Initialise
 	// plugin::Call<0x4045D0>();
-	0AA5: call_function 0x4045D0 num_params 1 pop 1 []
+	0AA5: call_function 0x4045D0 num_params 0 pop 0
 
 	// CCutsceneMgr::LoadCutsceneData
 	// plugin::Call<0x404650, char const*>(cutsceneName);
@@ -2064,15 +2064,15 @@ plugin_III\game_III\CCutsceneMgr.cpp:
 
 	// CCutsceneMgr::SetupCutsceneToStart
 	// plugin::Call<0x404DC0>();
-	0AA5: call_function 0x404DC0 num_params 1 pop 1 []
+	0AA5: call_function 0x404DC0 num_params 0 pop 0
 
 	// CCutsceneMgr::Shutdown
 	// plugin::Call<0x404630>();
-	0AA5: call_function 0x404630 num_params 1 pop 1 []
+	0AA5: call_function 0x404630 num_params 0 pop 0
 
 	// CCutsceneMgr::Update
 	// plugin::Call<0x404EE0>();
-	0AA5: call_function 0x404EE0 num_params 1 pop 1 []
+	0AA5: call_function 0x404EE0 num_params 0 pop 0
 
 	// FindCutsceneAudioTrackId
 	// plugin::CallAndReturn<int, 0x404530, char const*>(cutsceneName);
@@ -2598,7 +2598,7 @@ plugin_III\game_III\CExplosion.cpp:
 
 	// CExplosion::Initialise
 	// plugin::Call<0x559030>();
-	0AA5: call_function 0x559030 num_params 1 pop 1 []
+	0AA5: call_function 0x559030 num_params 0 pop 0
 
 	// CExplosion::RemoveAllExplosionsInArea
 	// plugin::Call<0x55AD40, CVector, float>(posn, radius);
@@ -2610,7 +2610,7 @@ plugin_III\game_III\CExplosion.cpp:
 
 	// CExplosion::Shutdown
 	// plugin::Call<0x559100>();
-	0AA5: call_function 0x559100 num_params 1 pop 1 []
+	0AA5: call_function 0x559100 num_params 0 pop 0
 
 	// CExplosion::TestForExplosionInArea
 	// plugin::CallAndReturn<bool, 0x55AC80, eExplosionType, float, float, float, float, float, float>(explosionType, x1, y1, z1, x2, y2, z2);
@@ -2618,7 +2618,7 @@ plugin_III\game_III\CExplosion.cpp:
 
 	// CExplosion::Update
 	// plugin::Call<0x55A0C0>();
-	0AA5: call_function 0x55A0C0 num_params 1 pop 1 []
+	0AA5: call_function 0x55A0C0 num_params 0 pop 0
 
 plugin_III\game_III\CFallingGlassPane.cpp:
 
@@ -2887,7 +2887,7 @@ plugin_III\game_III\CFont.cpp:
 
 	// CFont::DrawFonts
 	// plugin::Call<0x501B50>();
-	0AA5: call_function 0x501B50 num_params 1 pop 1 []
+	0AA5: call_function 0x501B50 num_params 0 pop 0
 
 	// CFont::GetNextSpace
 	// plugin::CallAndReturn<wchar_t*, 0x501960, const wchar_t*>(str);
@@ -2907,11 +2907,11 @@ plugin_III\game_III\CFont.cpp:
 
 	// CFont::InitPerFrame
 	// plugin::Call<0x500BE0>();
-	0AA5: call_function 0x500BE0 num_params 1 pop 1 []
+	0AA5: call_function 0x500BE0 num_params 0 pop 0
 
 	// CFont::Initialise
 	// plugin::Call<0x500A40>();
-	0AA5: call_function 0x500A40 num_params 1 pop 1 []
+	0AA5: call_function 0x500A40 num_params 0 pop 0
 
 	// CFont::ParseToken
 	// plugin::CallAndReturn<wchar_t*, 0x5019A0, wchar_t*>(str);
@@ -2935,11 +2935,11 @@ plugin_III\game_III\CFont.cpp:
 
 	// CFont::SetBackGroundOnlyTextOff
 	// plugin::Call<0x501D40>();
-	0AA5: call_function 0x501D40 num_params 1 pop 1 []
+	0AA5: call_function 0x501D40 num_params 0 pop 0
 
 	// CFont::SetBackGroundOnlyTextOn
 	// plugin::Call<0x501D30>();
-	0AA5: call_function 0x501D30 num_params 1 pop 1 []
+	0AA5: call_function 0x501D30 num_params 0 pop 0
 
 	// CFont::SetBackgroundColor
 	// plugin::Call<0x501D00, CRGBA*>(&color);
@@ -2947,19 +2947,19 @@ plugin_III\game_III\CFont.cpp:
 
 	// CFont::SetBackgroundOff
 	// plugin::Call<0x501CF0>();
-	0AA5: call_function 0x501CF0 num_params 1 pop 1 []
+	0AA5: call_function 0x501CF0 num_params 0 pop 0
 
 	// CFont::SetBackgroundOn
 	// plugin::Call<0x501CE0>();
-	0AA5: call_function 0x501CE0 num_params 1 pop 1 []
+	0AA5: call_function 0x501CE0 num_params 0 pop 0
 
 	// CFont::SetCentreOff
 	// plugin::Call<0x501CB0>();
-	0AA5: call_function 0x501CB0 num_params 1 pop 1 []
+	0AA5: call_function 0x501CB0 num_params 0 pop 0
 
 	// CFont::SetCentreOn
 	// plugin::Call<0x501C90>();
-	0AA5: call_function 0x501C90 num_params 1 pop 1 []
+	0AA5: call_function 0x501C90 num_params 0 pop 0
 
 	// CFont::SetCentreSize
 	// plugin::Call<0x501CD0, float>(size);
@@ -2983,27 +2983,27 @@ plugin_III\game_III\CFont.cpp:
 
 	// CFont::SetJustifyOff
 	// plugin::Call<0x501C80>();
-	0AA5: call_function 0x501C80 num_params 1 pop 1 []
+	0AA5: call_function 0x501C80 num_params 0 pop 0
 
 	// CFont::SetJustifyOn
 	// plugin::Call<0x501C60>();
-	0AA5: call_function 0x501C60 num_params 1 pop 1 []
+	0AA5: call_function 0x501C60 num_params 0 pop 0
 
 	// CFont::SetPropOff
 	// plugin::Call<0x501D90>();
-	0AA5: call_function 0x501D90 num_params 1 pop 1 []
+	0AA5: call_function 0x501D90 num_params 0 pop 0
 
 	// CFont::SetPropOn
 	// plugin::Call<0x501DA0>();
-	0AA5: call_function 0x501DA0 num_params 1 pop 1 []
+	0AA5: call_function 0x501DA0 num_params 0 pop 0
 
 	// CFont::SetRightJustifyOff
 	// plugin::Call<0x501D70>();
-	0AA5: call_function 0x501D70 num_params 1 pop 1 []
+	0AA5: call_function 0x501D70 num_params 0 pop 0
 
 	// CFont::SetRightJustifyOn
 	// plugin::Call<0x501D50>();
-	0AA5: call_function 0x501D50 num_params 1 pop 1 []
+	0AA5: call_function 0x501D50 num_params 0 pop 0
 
 	// CFont::SetRightJustifyWrap
 	// plugin::Call<0x501DC0, float>(value);
@@ -3027,7 +3027,7 @@ plugin_III\game_III\CFont.cpp:
 
 	// CFont::Shutdown
 	// plugin::Call<0x500BA0>();
-	0AA5: call_function 0x500BA0 num_params 1 pop 1 []
+	0AA5: call_function 0x500BA0 num_params 0 pop 0
 
 	// CFont::character_code
 	// plugin::CallAndReturn<short, 0x501E80, unsigned char>(character);
@@ -3247,7 +3247,7 @@ plugin_III\game_III\CGarages.cpp:
 
 	// CGarages::CameraShouldBeOutside
 	// plugin::CallAndReturn<bool, 0x427BC0>();
-	0AA7: call_function_return 0x427BC0 num_params 1 pop 1 [] func_ret [bool]
+	0AA7: call_function_return 0x427BC0 num_params 0 pop 0 func_ret [bool]
 
 	// CGarages::ChangeGarageType
 	// plugin::Call<0x4222A0, short, unsigned char, unsigned int>(index, type, vehicleModelIndex);
@@ -3255,7 +3255,7 @@ plugin_III\game_III\CGarages.cpp:
 
 	// CGarages::CloseHideOutGaragesBeforeSave
 	// plugin::Call<0x428130>();
-	0AA5: call_function 0x428130 num_params 1 pop 1 []
+	0AA5: call_function 0x428130 num_params 0 pop 0
 
 	// CGarages::CountCarsInHideoutGarage
 	// plugin::CallAndReturn<int, 0x4281E0, unsigned char>(type);
@@ -3275,7 +3275,7 @@ plugin_III\game_III\CGarages.cpp:
 
 	// CGarages::GivePlayerDetonator
 	// plugin::Call<0x427BD0>();
-	0AA5: call_function 0x427BD0 num_params 1 pop 1 []
+	0AA5: call_function 0x427BD0 num_params 0 pop 0
 
 	// CGarages::HasCarBeenCrushed
 	// plugin::CallAndReturn<bool, 0x4275A0, int>(vehicleModelIndex);
@@ -3299,7 +3299,7 @@ plugin_III\game_III\CGarages.cpp:
 
 	// CGarages::Init
 	// plugin::Call<0x421C60>();
-	0AA5: call_function 0x421C60 num_params 1 pop 1 []
+	0AA5: call_function 0x421C60 num_params 0 pop 0
 
 	// CGarages::IsCarSprayable
 	// plugin::CallAndReturn<bool, 0x426700, CAutomobile*>(car);
@@ -3339,11 +3339,11 @@ plugin_III\game_III\CGarages.cpp:
 
 	// CGarages::PlayerArrestedOrDied
 	// plugin::Call<0x427F60>();
-	0AA5: call_function 0x427F60 num_params 1 pop 1 []
+	0AA5: call_function 0x427F60 num_params 0 pop 0
 
 	// CGarages::PrintMessages
 	// plugin::Call<0x426310>();
-	0AA5: call_function 0x426310 num_params 1 pop 1 []
+	0AA5: call_function 0x426310 num_params 0 pop 0
 
 	// CGarages::QueryCarsCollected
 	// plugin::CallAndReturn<int, 0x426CA0, short>(index);
@@ -3355,7 +3355,7 @@ plugin_III\game_III\CGarages.cpp:
 
 	// CGarages::SetAllDoorsBackToOriginalHeight
 	// plugin::Call<0x4283D0>();
-	0AA5: call_function 0x4283D0 num_params 1 pop 1 []
+	0AA5: call_function 0x4283D0 num_params 0 pop 0
 
 	// CGarages::SetGarageDoorToRotate
 	// plugin::Call<0x427510, short>(index);
@@ -3371,7 +3371,7 @@ plugin_III\game_III\CGarages.cpp:
 
 	// CGarages::Shutdown
 	// plugin::Call<0x421E10>();
-	0AA5: call_function 0x421E10 num_params 1 pop 1 []
+	0AA5: call_function 0x421E10 num_params 0 pop 0
 
 	// CGarages::TriggerMessage
 	// plugin::Call<0x426B20, char*, short, unsigned short, short>(text, numberInString, time, numberInString2);
@@ -3379,7 +3379,7 @@ plugin_III\game_III\CGarages.cpp:
 
 	// CGarages::Update
 	// plugin::Call<0x421E40>();
-	0AA5: call_function 0x421E40 num_params 1 pop 1 []
+	0AA5: call_function 0x421E40 num_params 0 pop 0
 
 plugin_III\game_III\CGeneral.cpp:
 
@@ -3476,23 +3476,23 @@ plugin_III\game_III\CHud.cpp:
 
 	// CHud::Draw
 	// plugin::Call<0x5052A0>();
-	0AA5: call_function 0x5052A0 num_params 1 pop 1 []
+	0AA5: call_function 0x5052A0 num_params 0 pop 0
 
 	// CHud::DrawAfterFade
 	// plugin::Call<0x509030>();
-	0AA5: call_function 0x509030 num_params 1 pop 1 []
+	0AA5: call_function 0x509030 num_params 0 pop 0
 
 	// CHud::GetRidOfAllHudMessages
 	// plugin::Call<0x504F90>();
-	0AA5: call_function 0x504F90 num_params 1 pop 1 []
+	0AA5: call_function 0x504F90 num_params 0 pop 0
 
 	// CHud::Initialise
 	// plugin::Call<0x5048F0>();
-	0AA5: call_function 0x5048F0 num_params 1 pop 1 []
+	0AA5: call_function 0x5048F0 num_params 0 pop 0
 
 	// CHud::ReInitialise
 	// plugin::Call<0x504CC0>();
-	0AA5: call_function 0x504CC0 num_params 1 pop 1 []
+	0AA5: call_function 0x504CC0 num_params 0 pop 0
 
 	// CHud::SetBigMessage
 	// plugin::Call<0x50A250, wchar_t *, char>(message, style);
@@ -3520,7 +3520,7 @@ plugin_III\game_III\CHud.cpp:
 
 	// CHud::Shutdown
 	// plugin::Call<0x504C50>();
-	0AA5: call_function 0x504C50 num_params 1 pop 1 []
+	0AA5: call_function 0x504C50 num_params 0 pop 0
 
 plugin_III\game_III\CInstance.cpp:
 
@@ -3652,7 +3652,7 @@ plugin_III\game_III\CMenuManager.cpp:
 
 	// CMenuManager::CentreMousePointer
 	// plugin::Call<0x48ACE0>();
-	0AA5: call_function 0x48ACE0 num_params 1 pop 1 []
+	0AA5: call_function 0x48ACE0 num_params 0 pop 0
 
 	// CMenuManager::CheckCodesForControls
 	// plugin::CallMethodAndReturn<int, 0x483870, CMenuManager *, int>(this, type);
@@ -3724,7 +3724,7 @@ plugin_III\game_III\CMenuManager.cpp:
 
 	// CMenuManager::InitialiseChangedLanguageSettings
 	// plugin::Call<0x47A4D0>();
-	0AA5: call_function 0x47A4D0 num_params 1 pop 1 []
+	0AA5: call_function 0x47A4D0 num_params 0 pop 0
 
 	// CMenuManager::LoadAllTextures
 	// plugin::CallMethod<0x47A230, CMenuManager *>(this);
@@ -3740,7 +3740,7 @@ plugin_III\game_III\CMenuManager.cpp:
 
 	// CMenuManager::PickNewPlayerColour
 	// plugin::Call<0x488C40>();
-	0AA5: call_function 0x488C40 num_params 1 pop 1 []
+	0AA5: call_function 0x488C40 num_params 0 pop 0
 
 	// CMenuManager::PrintBriefs
 	// plugin::CallMethod<0x484D60, CMenuManager *>(this);
@@ -3748,7 +3748,7 @@ plugin_III\game_III\CMenuManager.cpp:
 
 	// CMenuManager::PrintErrorMessage
 	// plugin::Call<0x484F70>();
-	0AA5: call_function 0x484F70 num_params 1 pop 1 []
+	0AA5: call_function 0x484F70 num_params 0 pop 0
 
 	// CMenuManager::PrintStats
 	// plugin::CallMethod<0x482100, CMenuManager *>(this);
@@ -3768,11 +3768,11 @@ plugin_III\game_III\CMenuManager.cpp:
 
 	// CMenuManager::RequestFrontEndShutDown
 	// plugin::Call<0x488750>();
-	0AA5: call_function 0x488750 num_params 1 pop 1 []
+	0AA5: call_function 0x488750 num_params 0 pop 0
 
 	// CMenuManager::RequestFrontEndStartUp
 	// plugin::Call<0x488770>();
-	0AA5: call_function 0x488770 num_params 1 pop 1 []
+	0AA5: call_function 0x488770 num_params 0 pop 0
 
 	// CMenuManager::ResetHelperText
 	// plugin::CallMethod<0x48B470, CMenuManager *>(this);
@@ -3818,7 +3818,7 @@ plugin_III\game_III\CMessages.cpp:
 
 	// CMessages::Init
 	// plugin::Call<0x529310>();
-	0AA5: call_function 0x529310 num_params 1 pop 1 []
+	0AA5: call_function 0x529310 num_params 0 pop 0
 
 	// CMessages::GetWideStringLength
 	// plugin::CallAndReturn<int, 0x529490, wchar_t*>(str);
@@ -3834,11 +3834,11 @@ plugin_III\game_III\CMessages.cpp:
 
 	// CMessages::Process
 	// plugin::Call<0x529580>();
-	0AA5: call_function 0x529580 num_params 1 pop 1 []
+	0AA5: call_function 0x529580 num_params 0 pop 0
 
 	// CMessages::Display
 	// plugin::Call<0x529800>();
-	0AA5: call_function 0x529800 num_params 1 pop 1 []
+	0AA5: call_function 0x529800 num_params 0 pop 0
 
 	// CMessages::AddMessage
 	// plugin::Call<0x529900, wchar_t*, unsigned int, unsigned short>(text, time, flag);
@@ -3854,11 +3854,11 @@ plugin_III\game_III\CMessages.cpp:
 
 	// CMessages::ClearMessages
 	// plugin::Call<0x529CE0>();
-	0AA5: call_function 0x529CE0 num_params 1 pop 1 []
+	0AA5: call_function 0x529CE0 num_params 0 pop 0
 
 	// CMessages::ClearSmallMessagesOnly
 	// plugin::Call<0x529E00>();
-	0AA5: call_function 0x529E00 num_params 1 pop 1 []
+	0AA5: call_function 0x529E00 num_params 0 pop 0
 
 	// CMessages::AddBigMessage
 	// plugin::Call<0x529EB0, wchar_t*, unsigned int, unsigned short>(text, time, flag);
@@ -3922,7 +3922,7 @@ plugin_III\game_III\CMessages.cpp:
 
 	// CMessages::ClearAllMessagesDisplayedByGame
 	// plugin::Call<0x52B670>();
-	0AA5: call_function 0x52B670 num_params 1 pop 1 []
+	0AA5: call_function 0x52B670 num_params 0 pop 0
 
 plugin_III\game_III\CMissionCleanup.cpp:
 
@@ -4152,11 +4152,11 @@ plugin_III\game_III\common.cpp:
 
 	// FindPlayerHeading
 	// plugin::CallAndReturn<float, 0x4A1220>();
-	0AA7: call_function_return 0x4A1220 num_params 1 pop 1 [] func_ret [float]
+	0AA7: call_function_return 0x4A1220 num_params 0 pop 0 func_ret [float]
 
 	// FindPlayerCentreOfWorld_NoSniperShift
 	// plugin::CallAndReturn<CVector&, 0x4A11C0>();
-	0AA7: call_function_return 0x4A11C0 num_params 1 pop 1 [] func_ret [CVector&]
+	0AA7: call_function_return 0x4A11C0 num_params 0 pop 0 func_ret [CVector&]
 
 	// FindPlayerCentreOfWorld
 	// plugin::CallAndReturn<CVector&, 0x4A1170, int>(playerId);
@@ -4164,27 +4164,27 @@ plugin_III\game_III\common.cpp:
 
 	// FindPlayerPed
 	// plugin::CallAndReturn<CPlayerPed*, 0x4A1150>();
-	0AA7: call_function_return 0x4A1150 num_params 1 pop 1 [] func_ret [CPlayerPed*]
+	0AA7: call_function_return 0x4A1150 num_params 0 pop 0 func_ret [CPlayerPed*]
 
 	// FindPlayerTrain
 	// plugin::CallAndReturn<CTrain*, 0x4A1120>();
-	0AA7: call_function_return 0x4A1120 num_params 1 pop 1 [] func_ret [CTrain*]
+	0AA7: call_function_return 0x4A1120 num_params 0 pop 0 func_ret [CTrain*]
 
 	// FindPlayerEntity
 	// plugin::CallAndReturn<CEntity*, 0x4A10F0>();
-	0AA7: call_function_return 0x4A10F0 num_params 1 pop 1 [] func_ret [CEntity*]
+	0AA7: call_function_return 0x4A10F0 num_params 0 pop 0 func_ret [CEntity*]
 
 	// FindPlayerVehicle
 	// plugin::CallAndReturn<CVehicle*, 0x4A10C0>();
-	0AA7: call_function_return 0x4A10C0 num_params 1 pop 1 [] func_ret [CVehicle*]
+	0AA7: call_function_return 0x4A10C0 num_params 0 pop 0 func_ret [CVehicle*]
 
 	// FindPlayerSpeed
 	// plugin::CallAndReturn<CVector&, 0x4A1090>();
-	0AA7: call_function_return 0x4A1090 num_params 1 pop 1 [] func_ret [CVector&]
+	0AA7: call_function_return 0x4A1090 num_params 0 pop 0 func_ret [CVector&]
 
 	// FindPlayerCoors
 	// plugin::CallAndReturn<CVector&, 0x4A1030>();
-	0AA7: call_function_return 0x4A1030 num_params 1 pop 1 [] func_ret [CVector&]
+	0AA7: call_function_return 0x4A1030 num_params 0 pop 0 func_ret [CVector&]
 
 	// GetFirstTexture
 	// plugin::CallAndReturn<RwTexture*, 0x5264E0, RwTexDictionary*>(texDictionary);
@@ -4204,23 +4204,23 @@ plugin_III\game_III\common.cpp:
 
 	// SetAmbientColoursForPedsCarsAndObjects
 	// plugin::Call<0x526F80>();
-	0AA5: call_function 0x526F80 num_params 1 pop 1 []
+	0AA5: call_function 0x526F80 num_params 0 pop 0
 
 	// SetAmbientColours
 	// plugin::Call<0x526F60>();
-	0AA5: call_function 0x526F60 num_params 1 pop 1 []
+	0AA5: call_function 0x526F60 num_params 0 pop 0
 
 	// ActivateDirectional
 	// plugin::Call<0x526F50>();
-	0AA5: call_function 0x526F50 num_params 1 pop 1 []
+	0AA5: call_function 0x526F50 num_params 0 pop 0
 
 	// DeActivateDirectional
 	// plugin::Call<0x526F40>();
-	0AA5: call_function 0x526F40 num_params 1 pop 1 []
+	0AA5: call_function 0x526F40 num_params 0 pop 0
 
 	// ReSetAmbientAndDirectionalColours
 	// plugin::Call<0x526F10>();
-	0AA5: call_function 0x526F10 num_params 1 pop 1 []
+	0AA5: call_function 0x526F10 num_params 0 pop 0
 
 	// SetBrightMarkerColours
 	// plugin::Call<0x526E60, float>(power);
@@ -4280,19 +4280,19 @@ plugin_III\game_III\common.cpp:
 
 	// CreateDebugFont
 	// plugin::Call<0x526300>();
-	0AA5: call_function 0x526300 num_params 1 pop 1 []
+	0AA5: call_function 0x526300 num_params 0 pop 0
 
 	// DestroyDebugFont
 	// plugin::Call<0x526310>();
-	0AA5: call_function 0x526310 num_params 1 pop 1 []
+	0AA5: call_function 0x526310 num_params 0 pop 0
 
 	// FlushObrsPrintfs
 	// plugin::Call<0x526320>();
-	0AA5: call_function 0x526320 num_params 1 pop 1 []
+	0AA5: call_function 0x526320 num_params 0 pop 0
 
 	// DefinedState
 	// plugin::Call<0x526330>();
-	0AA5: call_function 0x526330 num_params 1 pop 1 []
+	0AA5: call_function 0x526330 num_params 0 pop 0
 
 	// RpAnimBlendClumpGetAssociation
 	// plugin::CallAndReturn<CAnimBlendAssociation*, 0x4055C0>(clump, animId);
@@ -4420,7 +4420,7 @@ plugin_III\game_III\CPad.cpp:
 
 	// CPad::DoCheats
 	// plugin::Call<0x492F00>();
-	0AA5: call_function 0x492F00 num_params 1 pop 1 []
+	0AA5: call_function 0x492F00 num_params 0 pop 0
 
 	// CPad::EditCodesForControls
 	// plugin::Call<0x494690, int*>(arg0);
@@ -4444,27 +4444,27 @@ plugin_III\game_III\CPad.cpp:
 
 	// CPad::GetAnaloguePadDown
 	// plugin::CallAndReturn<bool, 0x493BA0>();
-	0AA7: call_function_return 0x493BA0 num_params 1 pop 1 [] func_ret [bool]
+	0AA7: call_function_return 0x493BA0 num_params 0 pop 0 func_ret [bool]
 
 	// CPad::GetAnaloguePadLeft
 	// plugin::CallAndReturn<bool, 0x493C00>();
-	0AA7: call_function_return 0x493C00 num_params 1 pop 1 [] func_ret [bool]
+	0AA7: call_function_return 0x493C00 num_params 0 pop 0 func_ret [bool]
 
 	// CPad::GetAnaloguePadLeftJustUp
 	// plugin::CallAndReturn<bool, 0x493CC0>();
-	0AA7: call_function_return 0x493CC0 num_params 1 pop 1 [] func_ret [bool]
+	0AA7: call_function_return 0x493CC0 num_params 0 pop 0 func_ret [bool]
 
 	// CPad::GetAnaloguePadRight
 	// plugin::CallAndReturn<bool, 0x493C60>();
-	0AA7: call_function_return 0x493C60 num_params 1 pop 1 [] func_ret [bool]
+	0AA7: call_function_return 0x493C60 num_params 0 pop 0 func_ret [bool]
 
 	// CPad::GetAnaloguePadRightJustUp
 	// plugin::CallAndReturn<bool, 0x493D20>();
-	0AA7: call_function_return 0x493D20 num_params 1 pop 1 [] func_ret [bool]
+	0AA7: call_function_return 0x493D20 num_params 0 pop 0 func_ret [bool]
 
 	// CPad::GetAnaloguePadUp
 	// plugin::CallAndReturn<bool, 0x493B40>();
-	0AA7: call_function_return 0x493B40 num_params 1 pop 1 [] func_ret [bool]
+	0AA7: call_function_return 0x493B40 num_params 0 pop 0 func_ret [bool]
 
 	// CPad::GetAnalogueUpDown
 	// plugin::CallMethodAndReturn<short, 0x493210, CPad *>(this);
@@ -4564,7 +4564,7 @@ plugin_III\game_III\CPad.cpp:
 
 	// CPad::PrintErrorMessage
 	// plugin::Call<0x4942B0>();
-	0AA5: call_function 0x4942B0 num_params 1 pop 1 []
+	0AA5: call_function 0x4942B0 num_params 0 pop 0
 
 	// CPad::ProcessPCSpecificStuff
 	// plugin::CallMethod<0x492C60, CPad *>(this);
@@ -4580,7 +4580,7 @@ plugin_III\game_III\CPad.cpp:
 
 	// CPad::ResetCheats
 	// plugin::Call<0x494450>();
-	0AA5: call_function 0x494450 num_params 1 pop 1 []
+	0AA5: call_function 0x494450 num_params 0 pop 0
 
 	// CPad::ShiftTargetLeftJustDown
 	// plugin::CallMethodAndReturn<bool, 0x493AE0, CPad *>(this);
@@ -4620,7 +4620,7 @@ plugin_III\game_III\CPad.cpp:
 
 	// CPad::StopPadsShaking
 	// plugin::Call<0x492F30>();
-	0AA5: call_function 0x492F30 num_params 1 pop 1 []
+	0AA5: call_function 0x492F30 num_params 0 pop 0
 
 	// CPad::StopShaking
 	// plugin::CallMethod<0x492F50, CPad *, short>(this, arg0);
@@ -4640,7 +4640,7 @@ plugin_III\game_III\CPad.cpp:
 
 	// CPad::UpdatePads
 	// plugin::Call<0x492720>();
-	0AA5: call_function 0x492720 num_params 1 pop 1 []
+	0AA5: call_function 0x492720 num_params 0 pop 0
 
 	// CPad::WeaponJustDown
 	// plugin::CallMethodAndReturn<bool, 0x493700, CPad *>(this);
@@ -5799,7 +5799,7 @@ plugin_III\game_III\CPedType.cpp:
 
 	// CPedType::Initialise
 	// plugin::Call<0x4EE7E0>();
-	0AA5: call_function 0x4EE7E0 num_params 1 pop 1 []
+	0AA5: call_function 0x4EE7E0 num_params 0 pop 0
 
 	// CPedType::Load
 	// plugin::Call<0x4EF3D0, unsigned char*, unsigned int>(bufferPointer, structSize);
@@ -5807,7 +5807,7 @@ plugin_III\game_III\CPedType.cpp:
 
 	// CPedType::LoadPedData
 	// plugin::Call<0x4EE8D0>();
-	0AA5: call_function 0x4EE8D0 num_params 1 pop 1 []
+	0AA5: call_function 0x4EE8D0 num_params 0 pop 0
 
 	// CPedType::Save
 	// plugin::Call<0x4EF320, unsigned char*, unsigned int*>(bufferPointer, structSize);
@@ -5815,7 +5815,7 @@ plugin_III\game_III\CPedType.cpp:
 
 	// CPedType::Shutdown
 	// plugin::Call<0x4EE890>();
-	0AA5: call_function 0x4EE890 num_params 1 pop 1 []
+	0AA5: call_function 0x4EE890 num_params 0 pop 0
 
 plugin_III\game_III\CPhoneInfo.cpp:
 
@@ -6339,11 +6339,11 @@ plugin_III\game_III\CPointLights.cpp:
 
 	// CPointLights::RemoveLightsAffectingObject
 	// plugin::Call<0x510C20>();
-	0AA5: call_function 0x510C20 num_params 1 pop 1 []
+	0AA5: call_function 0x510C20 num_params 0 pop 0
 
 	// CPointLights::RenderFogEffect
 	// plugin::Call<0x510C30>();
-	0AA5: call_function 0x510C30 num_params 1 pop 1 []
+	0AA5: call_function 0x510C30 num_params 0 pop 0
 
 	// CPointLight::CPointLight
 	// plugin::CallMethod<0x511930, CPointLight *>(this);
@@ -6471,7 +6471,7 @@ plugin_III\game_III\CProjectileInfo.cpp:
 
 	// CProjectileInfo::Initialise
 	// plugin::Call<0x55ADF0>();
-	0AA5: call_function 0x55ADF0 num_params 1 pop 1 []
+	0AA5: call_function 0x55ADF0 num_params 0 pop 0
 
 	// CProjectileInfo::IsProjectileInRange
 	// plugin::CallAndReturn<bool, 0x55BA50, float, float, float, float, float, float, bool>(x1, y1, z1, x2, y2, z2, bDestroy);
@@ -6479,7 +6479,7 @@ plugin_III\game_III\CProjectileInfo.cpp:
 
 	// CProjectileInfo::RemoveAllProjectiles
 	// plugin::Call<0x55BB80>();
-	0AA5: call_function 0x55BB80 num_params 1 pop 1 []
+	0AA5: call_function 0x55BB80 num_params 0 pop 0
 
 	// CProjectileInfo::RemoveIfThisIsAProjectile
 	// plugin::CallAndReturn<bool, 0x55BBD0, CObject*>(object);
@@ -6495,11 +6495,11 @@ plugin_III\game_III\CProjectileInfo.cpp:
 
 	// CProjectileInfo::Shutdown
 	// plugin::Call<0x55AFF0>();
-	0AA5: call_function 0x55AFF0 num_params 1 pop 1 []
+	0AA5: call_function 0x55AFF0 num_params 0 pop 0
 
 	// CProjectileInfo::Update
 	// plugin::Call<0x55B7C0>();
-	0AA5: call_function 0x55B7C0 num_params 1 pop 1 []
+	0AA5: call_function 0x55B7C0 num_params 0 pop 0
 
 plugin_III\game_III\CQuaternion.cpp:
 
@@ -6746,59 +6746,59 @@ plugin_III\game_III\CSceneEdit.cpp:
 
 	// CSceneEdit::LoadMovie
 	// plugin::Call<0x5850A0>();
-	0AA5: call_function 0x5850A0 num_params 1 pop 1 []
+	0AA5: call_function 0x5850A0 num_params 0 pop 0
 
 	// CSceneEdit::SaveMovie
 	// plugin::Call<0x585110>();
-	0AA5: call_function 0x585110 num_params 1 pop 1 []
+	0AA5: call_function 0x585110 num_params 0 pop 0
 
 	// CSceneEdit::Initialise
 	// plugin::Call<0x585170>();
-	0AA5: call_function 0x585170 num_params 1 pop 1 []
+	0AA5: call_function 0x585170 num_params 0 pop 0
 
 	// CSceneEdit::InitPlayBack
 	// plugin::Call<0x5852C0>();
-	0AA5: call_function 0x5852C0 num_params 1 pop 1 []
+	0AA5: call_function 0x5852C0 num_params 0 pop 0
 
 	// CSceneEdit::ReInitialise
 	// plugin::Call<0x5853F0>();
-	0AA5: call_function 0x5853F0 num_params 1 pop 1 []
+	0AA5: call_function 0x5853F0 num_params 0 pop 0
 
 	// CSceneEdit::Update
 	// plugin::Call<0x585570>();
-	0AA5: call_function 0x585570 num_params 1 pop 1 []
+	0AA5: call_function 0x585570 num_params 0 pop 0
 
 	// CSceneEdit::Draw
 	// plugin::Call<0x5855F0>();
-	0AA5: call_function 0x5855F0 num_params 1 pop 1 []
+	0AA5: call_function 0x5855F0 num_params 0 pop 0
 
 	// CSceneEdit::ProcessCommand
 	// plugin::Call<0x585BB0>();
-	0AA5: call_function 0x585BB0 num_params 1 pop 1 []
+	0AA5: call_function 0x585BB0 num_params 0 pop 0
 
 	// CSceneEdit::PlayBack
 	// plugin::Call<0x587200>();
-	0AA5: call_function 0x587200 num_params 1 pop 1 []
+	0AA5: call_function 0x587200 num_params 0 pop 0
 
 	// CSceneEdit::ClearForNewCommand
 	// plugin::Call<0x587AF0>();
-	0AA5: call_function 0x587AF0 num_params 1 pop 1 []
+	0AA5: call_function 0x587AF0 num_params 0 pop 0
 
 	// CSceneEdit::SelectActor
 	// plugin::CallAndReturn<bool, 0x587B30>();
-	0AA7: call_function_return 0x587B30 num_params 1 pop 1 [] func_ret [bool]
+	0AA7: call_function_return 0x587B30 num_params 0 pop 0 func_ret [bool]
 
 	// CSceneEdit::SelectActor2
 	// plugin::CallAndReturn<bool, 0x587DC0>();
-	0AA7: call_function_return 0x587DC0 num_params 1 pop 1 [] func_ret [bool]
+	0AA7: call_function_return 0x587DC0 num_params 0 pop 0 func_ret [bool]
 
 	// CSceneEdit::SelectVehicle
 	// plugin::CallAndReturn<bool, 0x588040>();
-	0AA7: call_function_return 0x588040 num_params 1 pop 1 [] func_ret [bool]
+	0AA7: call_function_return 0x588040 num_params 0 pop 0 func_ret [bool]
 
 	// CSceneEdit::SelectWeapon
 	// plugin::CallAndReturn<bool, 0x588220>();
-	0AA7: call_function_return 0x588220 num_params 1 pop 1 [] func_ret [bool]
+	0AA7: call_function_return 0x588220 num_params 0 pop 0 func_ret [bool]
 
 	// NextValidModelId
 	// plugin::CallAndReturn<int, 0x585050, int, int>(currentModelIndex, PrevOrNextModelIndex);
@@ -6849,11 +6849,11 @@ plugin_III\game_III\CShadows.cpp:
 
 	// CShadows::Init
 	// plugin::Call<0x512AB0>();
-	0AA5: call_function 0x512AB0 num_params 1 pop 1 []
+	0AA5: call_function 0x512AB0 num_params 0 pop 0
 
 	// CShadows::Shutdown
 	// plugin::Call<0x512F20>();
-	0AA5: call_function 0x512F20 num_params 1 pop 1 []
+	0AA5: call_function 0x512F20 num_params 0 pop 0
 
 	// CShadows::AddPermanentShadow
 	// plugin::Call<0x512FD0, unsigned char, RwTexture*, CVector*, float, float, float, float, short, unsigned char, unsigned char, unsigned char, float, unsigned int, float>(type, texture, posn, frontX, frontY, sideX, sideY, intensity, red, green, blue, zDistance, time, upDistance);
@@ -6901,11 +6901,11 @@ plugin_III\game_III\CShadows.cpp:
 
 	// CShadows::RenderStoredShadows
 	// plugin::Call<0x514010>();
-	0AA5: call_function 0x514010 num_params 1 pop 1 []
+	0AA5: call_function 0x514010 num_params 0 pop 0
 
 	// CShadows::RenderStaticShadows
 	// plugin::Call<0x5145F0>();
-	0AA5: call_function 0x5145F0 num_params 1 pop 1 []
+	0AA5: call_function 0x5145F0 num_params 0 pop 0
 
 	// CShadows::GeneratePolysForStaticShadow
 	// plugin::Call<0x514910, short>(staticShadowIndex);
@@ -6921,11 +6921,11 @@ plugin_III\game_III\CShadows.cpp:
 
 	// CShadows::UpdateStaticShadows
 	// plugin::Call<0x516BE0>();
-	0AA5: call_function 0x516BE0 num_params 1 pop 1 []
+	0AA5: call_function 0x516BE0 num_params 0 pop 0
 
 	// CShadows::UpdatePermanentShadows
 	// plugin::Call<0x516C40>();
-	0AA5: call_function 0x516C40 num_params 1 pop 1 []
+	0AA5: call_function 0x516C40 num_params 0 pop 0
 
 	// CShadows::CalcPedShadowValues
 	// plugin::Call<0x516EB0, CVector, float*, float*, float*, float*, float*, float*>(sunPosn, displacementX, displacementY, frontX, frontY, sideX, sideY);
@@ -6933,11 +6933,11 @@ plugin_III\game_III\CShadows.cpp:
 
 	// CShadows::RenderExtraPlayerShadows
 	// plugin::Call<0x516F90>();
-	0AA5: call_function 0x516F90 num_params 1 pop 1 []
+	0AA5: call_function 0x516F90 num_params 0 pop 0
 
 	// CShadows::TidyUpShadows
 	// plugin::Call<0x517570>();
-	0AA5: call_function 0x517570 num_params 1 pop 1 []
+	0AA5: call_function 0x517570 num_params 0 pop 0
 
 plugin_III\game_III\CShinyTexts.cpp:
 
@@ -7121,39 +7121,39 @@ plugin_III\game_III\CStats.cpp:
 
 	// CStats::AnotherCriminalCaught
 	// plugin::Call<0x4AB050>();
-	0AA5: call_function 0x4AB050 num_params 1 pop 1 []
+	0AA5: call_function 0x4AB050 num_params 0 pop 0
 
 	// CStats::AnotherFireExtinguished
 	// plugin::Call<0x4AB080>();
-	0AA5: call_function 0x4AB080 num_params 1 pop 1 []
+	0AA5: call_function 0x4AB080 num_params 0 pop 0
 
 	// CStats::AnotherKillFrenzyPassed
 	// plugin::Call<0x4AB240>();
-	0AA5: call_function 0x4AB240 num_params 1 pop 1 []
+	0AA5: call_function 0x4AB240 num_params 0 pop 0
 
 	// CStats::AnotherLifeSavedWithAmbulance
 	// plugin::Call<0x4AB040>();
-	0AA5: call_function 0x4AB040 num_params 1 pop 1 []
+	0AA5: call_function 0x4AB040 num_params 0 pop 0
 
 	// CStats::CheckPointReachedSuccessfully
 	// plugin::Call<0x4AB270>();
-	0AA5: call_function 0x4AB270 num_params 1 pop 1 []
+	0AA5: call_function 0x4AB270 num_params 0 pop 0
 
 	// CStats::CheckPointReachedUnsuccessfully
 	// plugin::Call<0x4AB290>();
-	0AA5: call_function 0x4AB290 num_params 1 pop 1 []
+	0AA5: call_function 0x4AB290 num_params 0 pop 0
 
 	// CStats::FindCriminalRatingNumber
 	// plugin::CallAndReturn<int, 0x4AB2A0>();
-	0AA7: call_function_return 0x4AB2A0 num_params 1 pop 1 [] func_ret [int]
+	0AA7: call_function_return 0x4AB2A0 num_params 0 pop 0 func_ret [int]
 
 	// CStats::FindCriminalRatingString
 	// plugin::CallAndReturn<wchar_t*, 0x4AB090>();
-	0AA7: call_function_return 0x4AB090 num_params 1 pop 1 [] func_ret [wchar_t*]
+	0AA7: call_function_return 0x4AB090 num_params 0 pop 0 func_ret [wchar_t*]
 
 	// CStats::Init
 	// plugin::Call<0x4AAC60>();
-	0AA5: call_function 0x4AAC60 num_params 1 pop 1 []
+	0AA5: call_function 0x4AAC60 num_params 0 pop 0
 
 	// CStats::LoadStats
 	// plugin::Call<0x4AB670, unsigned char*, unsigned int>(bufferPointer, structSize);
@@ -7231,23 +7231,23 @@ plugin_III\game_III\CStreaming.cpp:
 
 	// CStreaming::LoadRequestedModels
 	// plugin::Call<0x40A390>();
-	0AA5: call_function 0x40A390 num_params 1 pop 1 []
+	0AA5: call_function 0x40A390 num_params 0 pop 0
 
 	// CStreaming::Init
 	// plugin::Call<0x406430>();
-	0AA5: call_function 0x406430 num_params 1 pop 1 []
+	0AA5: call_function 0x406430 num_params 0 pop 0
 
 	// CStreaming::FlushChannels
 	// plugin::Call<0x40A610>();
-	0AA5: call_function 0x40A610 num_params 1 pop 1 []
+	0AA5: call_function 0x40A610 num_params 0 pop 0
 
 	// CStreaming::FlushRequestList
 	// plugin::Call<0x40A680>();
-	0AA5: call_function 0x40A680 num_params 1 pop 1 []
+	0AA5: call_function 0x40A680 num_params 0 pop 0
 
 	// CStreaming::GetAvailableVehicleSlot
 	// plugin::CallAndReturn<int, 0x40B160>();
-	0AA7: call_function_return 0x40B160 num_params 1 pop 1 [] func_ret [int]
+	0AA7: call_function_return 0x40B160 num_params 0 pop 0 func_ret [int]
 
 	// CStreaming::IsTxdUsedByRequestedModels
 	// plugin::CallAndReturn<bool, 0x4094C0, int>(index);
@@ -7263,23 +7263,23 @@ plugin_III\game_III\CStreaming.cpp:
 
 	// CStreaming::RemoveLeastUsedModel
 	// plugin::CallAndReturn<bool, 0x4089B0>();
-	0AA7: call_function_return 0x4089B0 num_params 1 pop 1 [] func_ret [bool]
+	0AA7: call_function_return 0x4089B0 num_params 0 pop 0 func_ret [bool]
 
 	// CStreaming::RemoveLoadedVehicle
 	// plugin::CallAndReturn<bool, 0x40B180>();
-	0AA7: call_function_return 0x40B180 num_params 1 pop 1 [] func_ret [bool]
+	0AA7: call_function_return 0x40B180 num_params 0 pop 0 func_ret [bool]
 
 	// CStreaming::RemoveAllUnusedModels
 	// plugin::Call<0x408940>();
-	0AA5: call_function 0x408940 num_params 1 pop 1 []
+	0AA5: call_function 0x408940 num_params 0 pop 0
 
 	// CStreaming::RemoveCurrentZonesModels
 	// plugin::Call<0x40AD00>();
-	0AA5: call_function 0x40AD00 num_params 1 pop 1 []
+	0AA5: call_function 0x40AD00 num_params 0 pop 0
 
 	// CStreaming::RemoveUnusedModelsInLoadedList
 	// plugin::Call<0x4089A0>();
-	0AA5: call_function 0x4089A0 num_params 1 pop 1 []
+	0AA5: call_function 0x4089A0 num_params 0 pop 0
 
 	// CStreaming::RequestModelStream
 	// plugin::Call<0x40A060, int>(streamnum);
@@ -7295,7 +7295,7 @@ plugin_III\game_III\CStreaming.cpp:
 
 	// CStreaming::RequestSubway
 	// plugin::Call<0x407FD0>();
-	0AA5: call_function 0x407FD0 num_params 1 pop 1 []
+	0AA5: call_function 0x407FD0 num_params 0 pop 0
 
 	// CStreaming::SetMissionDoesntRequireModel
 	// plugin::Call<0x40A820, int>(modelIndex);
@@ -7315,19 +7315,19 @@ plugin_III\game_III\CStreaming.cpp:
 
 	// CStreaming::Shutdown
 	// plugin::Call<0x406C80>();
-	0AA5: call_function 0x406C80 num_params 1 pop 1 []
+	0AA5: call_function 0x406C80 num_params 0 pop 0
 
 	// CStreaming::StreamVehiclesAndPeds
 	// plugin::Call<0x40AE60>();
-	0AA5: call_function 0x40AE60 num_params 1 pop 1 []
+	0AA5: call_function 0x40AE60 num_params 0 pop 0
 
 	// CStreaming::Update
 	// plugin::Call<0x4076C0>();
-	0AA5: call_function 0x4076C0 num_params 1 pop 1 []
+	0AA5: call_function 0x4076C0 num_params 0 pop 0
 
 	// CStreaming::UpdateMemoryUsed
 	// plugin::Call<0x4076B0>();
-	0AA5: call_function 0x4076B0 num_params 1 pop 1 []
+	0AA5: call_function 0x4076B0 num_params 0 pop 0
 
 	// CStreaming::AddModelsToRequestList
 	// plugin::Call<0x4078F0, CVector const&>(point);
@@ -7343,7 +7343,7 @@ plugin_III\game_III\CStreaming.cpp:
 
 	// CStreaming::DeleteAllRwObjects
 	// plugin::Call<0x407390>();
-	0AA5: call_function 0x407390 num_params 1 pop 1 []
+	0AA5: call_function 0x407390 num_params 0 pop 0
 
 	// CStreaming::DeleteFarAwayRwObjects
 	// plugin::Call<0x407070, CVector const&>(point);
@@ -7395,11 +7395,11 @@ plugin_III\game_III\CStreaming.cpp:
 
 	// CStreaming::IHaveUsedStreamingMemory
 	// plugin::Call<0x409BD0>();
-	0AA5: call_function 0x409BD0 num_params 1 pop 1 []
+	0AA5: call_function 0x409BD0 num_params 0 pop 0
 
 	// CStreaming::ImGonnaUseStreamingMemory
 	// plugin::Call<0x409BC0>();
-	0AA5: call_function 0x409BC0 num_params 1 pop 1 []
+	0AA5: call_function 0x409BC0 num_params 0 pop 0
 
 	// CStreaming::IsObjectInCdImage
 	// plugin::CallAndReturn<bool, 0x407E70, int>(modelIndex);
@@ -7411,15 +7411,15 @@ plugin_III\game_III\CStreaming.cpp:
 
 	// CStreaming::LoadCdDirectory
 	// plugin::Call<0x406CC0>();
-	0AA5: call_function 0x406CC0 num_params 1 pop 1 []
+	0AA5: call_function 0x406CC0 num_params 0 pop 0
 
 	// CStreaming::LoadInitialPeds
 	// plugin::Call<0x40AA00>();
-	0AA5: call_function 0x40AA00 num_params 1 pop 1 []
+	0AA5: call_function 0x40AA00 num_params 0 pop 0
 
 	// CStreaming::LoadInitialVehicles
 	// plugin::Call<0x40ADF0>();
-	0AA5: call_function 0x40ADF0 num_params 1 pop 1 []
+	0AA5: call_function 0x40ADF0 num_params 0 pop 0
 
 	// CStreaming::LoadScene
 	// plugin::Call<0x40A6D0, CVector const&>(point);
@@ -7613,7 +7613,7 @@ plugin_III\game_III\CTheScripts.cpp:
 
 	// CTheScripts::Init
 	// plugin::Call<0x438790>();
-	0AA5: call_function 0x438790 num_params 1 pop 1 []
+	0AA5: call_function 0x438790 num_params 0 pop 0
 
 	// CTheScripts::IsPedStopped
 	// plugin::CallAndReturn<bool, 0x454670, CPed*>(ped);
@@ -7621,7 +7621,7 @@ plugin_III\game_III\CTheScripts.cpp:
 
 	// CTheScripts::IsPlayerOnAMission
 	// plugin::CallAndReturn<bool, 0x439410>();
-	0AA7: call_function_return 0x439410 num_params 1 pop 1 [] func_ret [bool]
+	0AA7: call_function_return 0x439410 num_params 0 pop 0 func_ret [bool]
 
 	// CTheScripts::IsPlayerStopped
 	// plugin::CallAndReturn<bool, 0x4546C0, CPlayerInfo*>(info);
@@ -7789,15 +7789,15 @@ plugin_III\game_III\CTxdStore.cpp:
 
 	// CTxdStore::Initialise
 	// plugin::Call<0x527440>();
-	0AA5: call_function 0x527440 num_params 1 pop 1 []
+	0AA5: call_function 0x527440 num_params 0 pop 0
 
 	// CTxdStore::Shutdown
 	// plugin::Call<0x527470>();
-	0AA5: call_function 0x527470 num_params 1 pop 1 []
+	0AA5: call_function 0x527470 num_params 0 pop 0
 
 	// CTxdStore::GameShutdown
 	// plugin::Call<0x527490>();
-	0AA5: call_function 0x527490 num_params 1 pop 1 []
+	0AA5: call_function 0x527490 num_params 0 pop 0
 
 	// CTxdStore::AddTxdSlot
 	// plugin::CallAndReturn<int, 0x5274E0, char const*>(name);
@@ -7845,11 +7845,11 @@ plugin_III\game_III\CTxdStore.cpp:
 
 	// CTxdStore::PushCurrentTxd
 	// plugin::Call<0x527900>();
-	0AA5: call_function 0x527900 num_params 1 pop 1 []
+	0AA5: call_function 0x527900 num_params 0 pop 0
 
 	// CTxdStore::PopCurrentTxd
 	// plugin::Call<0x527910>();
-	0AA5: call_function 0x527910 num_params 1 pop 1 []
+	0AA5: call_function 0x527910 num_params 0 pop 0
 
 	// CTxdStore::AddRef
 	// plugin::Call<0x527930, int>(id);
@@ -8529,11 +8529,11 @@ plugin_III\game_III\CWeaponEffects.cpp:
 
 	// CWeaponEffects::ClearCrossHair
 	// plugin::Call<0x564D60>();
-	0AA5: call_function 0x564D60 num_params 1 pop 1 []
+	0AA5: call_function 0x564D60 num_params 0 pop 0
 
 	// CWeaponEffects::Init
 	// plugin::Call<0x564C60>();
-	0AA5: call_function 0x564C60 num_params 1 pop 1 []
+	0AA5: call_function 0x564C60 num_params 0 pop 0
 
 	// CWeaponEffects::MarkTarget
 	// plugin::Call<0x564D00, CVector, unsigned char, unsigned char, unsigned char, unsigned char, float>(pos, red, green, blue, alpha, size);
@@ -8541,11 +8541,11 @@ plugin_III\game_III\CWeaponEffects.cpp:
 
 	// CWeaponEffects::Render
 	// plugin::Call<0x564D70>();
-	0AA5: call_function 0x564D70 num_params 1 pop 1 []
+	0AA5: call_function 0x564D70 num_params 0 pop 0
 
 	// CWeaponEffects::Shutdown
 	// plugin::Call<0x564CF0>();
-	0AA5: call_function 0x564CF0 num_params 1 pop 1 []
+	0AA5: call_function 0x564CF0 num_params 0 pop 0
 
 	// CWeaponEffects::~CWeaponEffects
 	// plugin::CallMethod<0x564C50, CWeaponEffects *>(this);
@@ -8563,15 +8563,15 @@ plugin_III\game_III\CWeaponInfo.cpp:
 
 	// CWeaponInfo::Initialise
 	// plugin::Call<0x564EA0>();
-	0AA5: call_function 0x564EA0 num_params 1 pop 1 []
+	0AA5: call_function 0x564EA0 num_params 0 pop 0
 
 	// CWeaponInfo::LoadWeaponData
 	// plugin::Call<0x564FE0>();
-	0AA5: call_function 0x564FE0 num_params 1 pop 1 []
+	0AA5: call_function 0x564FE0 num_params 0 pop 0
 
 	// CWeaponInfo::Shutdown
 	// plugin::Call<0x564FB0>();
-	0AA5: call_function 0x564FB0 num_params 1 pop 1 []
+	0AA5: call_function 0x564FB0 num_params 0 pop 0
 
 	// CWeaponInfo::~CWeaponInfo
 	// plugin::CallMethod<0x5654E0, CWeaponInfo *>(this);
@@ -8596,7 +8596,7 @@ plugin_III\game_III\CWorld.cpp:
 
 	// CWorld::AddParticles
 	// plugin::Call<0x4B4010>();
-	0AA5: call_function 0x4B4010 num_params 1 pop 1 []
+	0AA5: call_function 0x4B4010 num_params 0 pop 0
 
 	// CWorld::CallOffChaseForArea
 	// plugin::Call<0x4B5530, float, float, float, float>(x1, y1, x2, y2);
@@ -8624,7 +8624,7 @@ plugin_III\game_III\CWorld.cpp:
 
 	// CWorld::ClearForRestart
 	// plugin::Call<0x4AE850>();
-	0AA5: call_function 0x4AE850 num_params 1 pop 1 []
+	0AA5: call_function 0x4AE850 num_params 0 pop 0
 
 	// CWorld::ClearPedsFromArea
 	// plugin::Call<0x4B52B0, float, float, float, float, float, float>(x1, y1, z1, x2, y2, z2);
@@ -8632,7 +8632,7 @@ plugin_III\game_III\CWorld.cpp:
 
 	// CWorld::ClearScanCodes
 	// plugin::Call<0x4B1F60>();
-	0AA5: call_function 0x4B1F60 num_params 1 pop 1 []
+	0AA5: call_function 0x4B1F60 num_params 0 pop 0
 
 	// CWorld::ExtinguishAllCarFiresInArea
 	// plugin::Call<0x4B5460, CVector, float>(point, radius);
@@ -8712,11 +8712,11 @@ plugin_III\game_III\CWorld.cpp:
 
 	// CWorld::Initialise
 	// plugin::Call<0x4AE410>();
-	0AA5: call_function 0x4AE410 num_params 1 pop 1 []
+	0AA5: call_function 0x4AE410 num_params 0 pop 0
 
 	// CWorld::Process
 	// plugin::Call<0x4B1A60>();
-	0AA5: call_function 0x4B1A60 num_params 1 pop 1 []
+	0AA5: call_function 0x4B1A60 num_params 0 pop 0
 
 	// CWorld::ProcessLineOfSight
 	// plugin::CallAndReturn<bool, 0x4AF970, CVector const&, CVector const&, CColPoint&, CEntity*&, bool, bool, bool, bool, bool, bool, bool>(origin, target, outColPoint, outEntity, buildings, vehicles, peds, objects, dummies, doSeeThroughCheck, doCameraIgnoreCheck);
@@ -8752,11 +8752,11 @@ plugin_III\game_III\CWorld.cpp:
 
 	// CWorld::RemoveFallenCars
 	// plugin::Call<0x4B4170>();
-	0AA5: call_function 0x4B4170 num_params 1 pop 1 []
+	0AA5: call_function 0x4B4170 num_params 0 pop 0
 
 	// CWorld::RemoveFallenPeds
 	// plugin::Call<0x4B4060>();
-	0AA5: call_function 0x4B4060 num_params 1 pop 1 []
+	0AA5: call_function 0x4B4060 num_params 0 pop 0
 
 	// CWorld::RemoveReferencesToDeletedObject
 	// plugin::Call<0x4B3BF0, CEntity*>(entity);
@@ -8764,11 +8764,11 @@ plugin_III\game_III\CWorld.cpp:
 
 	// CWorld::RemoveStaticObjects
 	// plugin::Call<0x4B4D50>();
-	0AA5: call_function 0x4B4D50 num_params 1 pop 1 []
+	0AA5: call_function 0x4B4D50 num_params 0 pop 0
 
 	// CWorld::RepositionCertainDynamicObjects
 	// plugin::Call<0x4B42B0>();
-	0AA5: call_function 0x4B42B0 num_params 1 pop 1 []
+	0AA5: call_function 0x4B42B0 num_params 0 pop 0
 
 	// CWorld::RepositionOneObject
 	// plugin::Call<0x4B4300, CEntity*>(entity);
@@ -8788,11 +8788,11 @@ plugin_III\game_III\CWorld.cpp:
 
 	// CWorld::ShutDown
 	// plugin::Call<0x4AE450>();
-	0AA5: call_function 0x4AE450 num_params 1 pop 1 []
+	0AA5: call_function 0x4AE450 num_params 0 pop 0
 
 	// CWorld::StopAllLawEnforcersInTheirTracks
 	// plugin::Call<0x4B5BC0>();
-	0AA5: call_function 0x4B5BC0 num_params 1 pop 1 []
+	0AA5: call_function 0x4B5BC0 num_params 0 pop 0
 
 	// CWorld::TestSphereAgainstSectorList
 	// plugin::CallAndReturn<CEntity*, 0x4B4AC0, CPtrList&, CVector, float, CEntity*, bool>(list, sphereCenter, sphereRadius, ignoreEntity, doCameraIgnoreCheck);
@@ -10015,7 +10015,7 @@ plugin_sa\game_sa\C3dMarkers.cpp:
 
 	// C3dMarkers::DirectionArrowFindFirstFreeSlot
 	// plugin::CallAndReturn<int, 0x721120>();
-	0AA7: call_function_return 0x721120 num_params 1 pop 1 [] func_ret [int]
+	0AA7: call_function_return 0x721120 num_params 0 pop 0 func_ret [int]
 
 	// C3dMarkers::DirectionArrowSet
 	// plugin::Call<0x721140, CVector, float, int, int, int, int, float, float, float>(posn, size, red, green, blue, alpha, dir_x, dir_y, dir_z);
@@ -10023,11 +10023,11 @@ plugin_sa\game_sa\C3dMarkers.cpp:
 
 	// C3dMarkers::DirectionArrowsDraw
 	// plugin::Call<0x7211F0>();
-	0AA5: call_function 0x7211F0 num_params 1 pop 1 []
+	0AA5: call_function 0x7211F0 num_params 0 pop 0
 
 	// C3dMarkers::DirectionArrowsInit
 	// plugin::Call<0x721100>();
-	0AA5: call_function 0x721100 num_params 1 pop 1 []
+	0AA5: call_function 0x721100 num_params 0 pop 0
 
 	// C3dMarkers::ForceRender
 	// plugin::Call<0x722870, unsigned char>(bEnable);
@@ -10035,7 +10035,7 @@ plugin_sa\game_sa\C3dMarkers.cpp:
 
 	// C3dMarkers::Init
 	// plugin::Call<0x724E40>();
-	0AA5: call_function 0x724E40 num_params 1 pop 1 []
+	0AA5: call_function 0x724E40 num_params 0 pop 0
 
 	// C3dMarkers::LoadMarker
 	// plugin::CallAndReturn<RpClump*, 0x722810, char const*>(modelName);
@@ -10043,7 +10043,7 @@ plugin_sa\game_sa\C3dMarkers.cpp:
 
 	// C3dMarkers::LoadUser3dMarkers
 	// plugin::CallAndReturn<bool, 0x5D42E0>();
-	0AA7: call_function_return 0x5D42E0 num_params 1 pop 1 [] func_ret [bool]
+	0AA7: call_function_return 0x5D42E0 num_params 0 pop 0 func_ret [bool]
 
 	// C3dMarkers::PlaceMarker
 	// plugin::CallAndReturn<C3dMarker*, 0x725120, unsigned int, unsigned short, CVector&, float, unsigned char, unsigned char, unsigned char, unsigned char, unsigned short, float, short, float, float, float, bool>(id, type, posn, size, red, green, blue, alpha, pulsePeriod, pulseFraction, rotateRate, nrm_x, nrm_y, nrm_z, zCheck);
@@ -10059,19 +10059,19 @@ plugin_sa\game_sa\C3dMarkers.cpp:
 
 	// C3dMarkers::Render
 	// plugin::Call<0x725040>();
-	0AA5: call_function 0x725040 num_params 1 pop 1 []
+	0AA5: call_function 0x725040 num_params 0 pop 0
 
 	// C3dMarkers::SaveUser3dMarkers
 	// plugin::Call<0x5D4300>();
-	0AA5: call_function 0x5D4300 num_params 1 pop 1 []
+	0AA5: call_function 0x5D4300 num_params 0 pop 0
 
 	// C3dMarkers::Shutdown
 	// plugin::Call<0x722710>();
-	0AA5: call_function 0x722710 num_params 1 pop 1 []
+	0AA5: call_function 0x722710 num_params 0 pop 0
 
 	// C3dMarkers::Update
 	// plugin::Call<0x7227B0>();
-	0AA5: call_function 0x7227B0 num_params 1 pop 1 []
+	0AA5: call_function 0x7227B0 num_params 0 pop 0
 
 	// C3dMarkers::User3dMarkerAtomicCB
 	// plugin::CallAndReturn<RpAtomic*, 0x7210D0, RpAtomic*, void*>(atomic, data);
@@ -10083,11 +10083,11 @@ plugin_sa\game_sa\C3dMarkers.cpp:
 
 	// C3dMarkers::User3dMarkerDeleteAll
 	// plugin::Call<0x7210B0>();
-	0AA5: call_function 0x7210B0 num_params 1 pop 1 []
+	0AA5: call_function 0x7210B0 num_params 0 pop 0
 
 	// C3dMarkers::User3dMarkerFindFirstFreeSlot
 	// plugin::CallAndReturn<int, 0x720FB0>();
-	0AA7: call_function_return 0x720FB0 num_params 1 pop 1 [] func_ret [int]
+	0AA7: call_function_return 0x720FB0 num_params 0 pop 0 func_ret [int]
 
 	// C3dMarkers::User3dMarkerSet
 	// plugin::CallAndReturn<int, 0x720FD0, float, float, float, int>(x, y, z, colour);
@@ -10095,7 +10095,7 @@ plugin_sa\game_sa\C3dMarkers.cpp:
 
 	// C3dMarkers::User3dMarkersDraw
 	// plugin::Call<0x723240>();
-	0AA5: call_function 0x723240 num_params 1 pop 1 []
+	0AA5: call_function 0x723240 num_params 0 pop 0
 
 	// MarkerAtomicCB
 	// plugin::CallAndReturn<RpAtomic*, 0x722220, RpAtomic*, void*>(atomic, data);
@@ -10584,7 +10584,7 @@ plugin_sa\game_sa\CAnimManager.cpp:
 
 	// CAnimManager::CreateAnimAssocGroups
 	// plugin::Call<0x4D3CC0>();
-	0AA5: call_function 0x4D3CC0 num_params 1 pop 1 []
+	0AA5: call_function 0x4D3CC0 num_params 0 pop 0
 
 	// CAnimManager::RegisterAnimBlock
 	// plugin::CallAndReturn<int, 0x4D3E50, char const*>(name);
@@ -10592,7 +10592,7 @@ plugin_sa\game_sa\CAnimManager.cpp:
 
 	// CAnimManager::RemoveLastAnimFile
 	// plugin::Call<0x4D3ED0>();
-	0AA5: call_function 0x4D3ED0 num_params 1 pop 1 []
+	0AA5: call_function 0x4D3ED0 num_params 0 pop 0
 
 	// CAnimManager::RemoveAnimBlock
 	// plugin::Call<0x4D3F40, int>(index);
@@ -10616,7 +10616,7 @@ plugin_sa\game_sa\CAnimManager.cpp:
 
 	// CAnimManager::Shutdown
 	// plugin::Call<0x4D4130>();
-	0AA5: call_function 0x4D4130 num_params 1 pop 1 []
+	0AA5: call_function 0x4D4130 num_params 0 pop 0
 
 	// CAnimManager::UncompressAnimation
 	// plugin::Call<0x4D41C0, CAnimBlendHierarchy*>(pAnimBlendHier);
@@ -10640,15 +10640,15 @@ plugin_sa\game_sa\CAnimManager.cpp:
 
 	// CAnimManager::LoadAnimFiles
 	// plugin::Call<0x4D5620>();
-	0AA5: call_function 0x4D5620 num_params 1 pop 1 []
+	0AA5: call_function 0x4D5620 num_params 0 pop 0
 
 	// CAnimManager::ReadAnimAssociationDefinitions
 	// plugin::Call<0x5BC910>();
-	0AA5: call_function 0x5BC910 num_params 1 pop 1 []
+	0AA5: call_function 0x5BC910 num_params 0 pop 0
 
 	// CAnimManager::Initialise
 	// plugin::Call<0x5BF6B0>();
-	0AA5: call_function 0x5BF6B0 num_params 1 pop 1 []
+	0AA5: call_function 0x5BF6B0 num_params 0 pop 0
 
 plugin_sa\game_sa\CAudioEngine.cpp:
 
@@ -10798,7 +10798,7 @@ plugin_sa\game_sa\CBirds.cpp:
 
 	// CBirds::Init
 	// plugin::Call<0x711EC0>();
-	0AA5: call_function 0x711EC0 num_params 1 pop 1 []
+	0AA5: call_function 0x711EC0 num_params 0 pop 0
 
 	// CBirds::CreateNumberOfBirds
 	// plugin::CallAndReturn<int, 0x711EF0, CVector, CVector, int, int, bool>(pos, destination, count, birdType, checkObstacles);
@@ -10806,15 +10806,15 @@ plugin_sa\game_sa\CBirds.cpp:
 
 	// CBirds::Shutdown
 	// plugin::Call<0x712300>();
-	0AA5: call_function 0x712300 num_params 1 pop 1 []
+	0AA5: call_function 0x712300 num_params 0 pop 0
 
 	// CBirds::Update
 	// plugin::Call<0x712330>();
-	0AA5: call_function 0x712330 num_params 1 pop 1 []
+	0AA5: call_function 0x712330 num_params 0 pop 0
 
 	// CBirds::Render
 	// plugin::Call<0x712810>();
-	0AA5: call_function 0x712810 num_params 1 pop 1 []
+	0AA5: call_function 0x712810 num_params 0 pop 0
 
 	// CBirds::HandleGunShot
 	// plugin::Call<0x712E40, CVector const*, CVector const*>(pointA, pointB);
@@ -10844,11 +10844,11 @@ plugin_sa\game_sa\CBrightLights.cpp:
 
 	// CBrightLights::RenderOutGeometryBuffer
 	// plugin::Call<0x722150>();
-	0AA5: call_function 0x722150 num_params 1 pop 1 []
+	0AA5: call_function 0x722150 num_params 0 pop 0
 
 	// CBrightLights::Render
 	// plugin::Call<0x7241C0>();
-	0AA5: call_function 0x7241C0 num_params 1 pop 1 []
+	0AA5: call_function 0x7241C0 num_params 0 pop 0
 
 	// CBrightLights::RegisterOne
 	// plugin::Call<0x724770, CVector, CVector, CVector, CVector, unsigned char, unsigned char, unsigned char, unsigned char>(posn, top, right, at, color, arg5, arg6, arg7);
@@ -10856,7 +10856,7 @@ plugin_sa\game_sa\CBrightLights.cpp:
 
 	// CBrightLights::Init
 	// plugin::Call<0x722140>();
-	0AA5: call_function 0x722140 num_params 1 pop 1 []
+	0AA5: call_function 0x722140 num_params 0 pop 0
 
 plugin_sa\game_sa\CBuilding.cpp:
 
@@ -10876,11 +10876,11 @@ plugin_sa\game_sa\CBulletInfo.cpp:
 
 	// CBulletInfo::Initialise
 	// plugin::Call<0x735FD0>();
-	0AA5: call_function 0x735FD0 num_params 1 pop 1 []
+	0AA5: call_function 0x735FD0 num_params 0 pop 0
 
 	// CBulletInfo::Shutdown
 	// plugin::Call<0x736000>();
-	0AA5: call_function 0x736000 num_params 1 pop 1 []
+	0AA5: call_function 0x736000 num_params 0 pop 0
 
 	// CBulletInfo::AddBullet
 	// plugin::CallAndReturn<bool, 0x736010, CEntity*, eWeaponType, CVector, CVector>(creator, weaponType, position, velocity);
@@ -10888,7 +10888,7 @@ plugin_sa\game_sa\CBulletInfo.cpp:
 
 	// CBulletInfo::Update
 	// plugin::Call<0x7360D0>();
-	0AA5: call_function 0x7360D0 num_params 1 pop 1 []
+	0AA5: call_function 0x7360D0 num_params 0 pop 0
 
 plugin_sa\game_sa\CBulletTrace.cpp:
 
@@ -10904,7 +10904,7 @@ plugin_sa\game_sa\CBulletTraces.cpp:
 
 	// CBulletTraces::Init
 	// plugin::Call<0x721D50>();
-	0AA5: call_function 0x721D50 num_params 1 pop 1 []
+	0AA5: call_function 0x721D50 num_params 0 pop 0
 
 plugin_sa\game_sa\CCamera.cpp:
 
@@ -11321,11 +11321,11 @@ plugin_sa\game_sa\CCarAI.cpp:
 
 	// CCarAI::FindPoliceBikeMissionForWantedLevel
 	// plugin::CallAndReturn<char, 0x41CA40>();
-	0AA7: call_function_return 0x41CA40 num_params 1 pop 1 [] func_ret [char]
+	0AA7: call_function_return 0x41CA40 num_params 0 pop 0 func_ret [char]
 
 	// CCarAI::FindPoliceBoatMissionForWantedLevel
 	// plugin::CallAndReturn<char, 0x41CA50>();
-	0AA7: call_function_return 0x41CA50 num_params 1 pop 1 [] func_ret [char]
+	0AA7: call_function_return 0x41CA50 num_params 0 pop 0 func_ret [char]
 
 	// CCarAI::FindPoliceCarSpeedForWantedLevel
 	// plugin::CallAndReturn<int, 0x41CAA0, CVehicle*>(pVehicle);
@@ -11353,13 +11353,13 @@ plugin_sa\game_sa\CCarAI.cpp:
 
 	// CCarAI::FindPoliceCarMissionForWantedLevel
 	// plugin::CallAndReturn<char, 0x41C9D0>();
-	0AA7: call_function_return 0x41C9D0 num_params 1 pop 1 [] func_ret [char]
+	0AA7: call_function_return 0x41C9D0 num_params 0 pop 0 func_ret [char]
 
 plugin_sa\game_sa\CCarCtrl.cpp:
 
 	// CCarCtrl::ChooseBoatModel
 	// plugin::CallAndReturn<int, 0x421970>();
-	0AA7: call_function_return 0x421970 num_params 1 pop 1 [] func_ret [int]
+	0AA7: call_function_return 0x421970 num_params 0 pop 0 func_ret [int]
 
 	// CCarCtrl::ChooseCarModelToLoad
 	// plugin::CallAndReturn<int, 0x421900, int>(arg1);
@@ -11379,7 +11379,7 @@ plugin_sa\game_sa\CCarCtrl.cpp:
 
 	// CCarCtrl::ClearInterestingVehicleList
 	// plugin::Call<0x423F00>();
-	0AA5: call_function 0x423F00 num_params 1 pop 1 []
+	0AA5: call_function 0x423F00 num_params 0 pop 0
 
 	// CCarCtrl::ClipTargetOrientationToLink
 	// plugin::Call<0x422760, CVehicle*, CCarPathLinkAddress, char, float*, float, float>(pVehicle, arg2, arg3, arg4, arg5, arg6);
@@ -11467,7 +11467,7 @@ plugin_sa\game_sa\CCarCtrl.cpp:
 
 	// CCarCtrl::GenerateEmergencyServicesCar
 	// plugin::Call<0x42F9C0>();
-	0AA5: call_function 0x42F9C0 num_params 1 pop 1 []
+	0AA5: call_function 0x42F9C0 num_params 0 pop 0
 
 	// CCarCtrl::GenerateOneEmergencyServicesCar
 	// plugin::CallAndReturn<bool, 0x42B7D0, unsigned int, CVector>(modelID, posn);
@@ -11475,11 +11475,11 @@ plugin_sa\game_sa\CCarCtrl.cpp:
 
 	// CCarCtrl::GenerateOneRandomCar
 	// plugin::Call<0x430050>();
-	0AA5: call_function 0x430050 num_params 1 pop 1 []
+	0AA5: call_function 0x430050 num_params 0 pop 0
 
 	// CCarCtrl::GenerateRandomCars
 	// plugin::Call<0x4341C0>();
-	0AA5: call_function 0x4341C0 num_params 1 pop 1 []
+	0AA5: call_function 0x4341C0 num_params 0 pop 0
 
 	// CCarCtrl::GetAIHeliToAttackPlayer
 	// plugin::Call<0x42F3C0, CAutomobile*>(pAutomobile);
@@ -11507,7 +11507,7 @@ plugin_sa\game_sa\CCarCtrl.cpp:
 
 	// CCarCtrl::Init
 	// plugin::Call<0x4212E0>();
-	0AA5: call_function 0x4212E0 num_params 1 pop 1 []
+	0AA5: call_function 0x4212E0 num_params 0 pop 0
 
 	// CCarCtrl::InitSequence
 	// plugin::Call<0x421740, int>(SequenceElements);
@@ -11515,7 +11515,7 @@ plugin_sa\game_sa\CCarCtrl.cpp:
 
 	// CCarCtrl::IsAnyoneParking
 	// plugin::CallAndReturn<bool, 0x42C250>();
-	0AA7: call_function_return 0x42C250 num_params 1 pop 1 [] func_ret [bool]
+	0AA7: call_function_return 0x42C250 num_params 0 pop 0 func_ret [bool]
 
 	// CCarCtrl::IsThisAnAppropriateNode
 	// plugin::CallAndReturn<bool, 0x42DAB0, CVehicle*, CNodeAddress, CNodeAddress, CNodeAddress, bool>(pVehicle, NodeAddress1, NodeAddress2, NodeAddress3, arg5);
@@ -11563,11 +11563,11 @@ plugin_sa\game_sa\CCarCtrl.cpp:
 
 	// CCarCtrl::PruneVehiclesOfInterest
 	// plugin::Call<0x423F10>();
-	0AA5: call_function 0x423F10 num_params 1 pop 1 []
+	0AA5: call_function 0x423F10 num_params 0 pop 0
 
 	// CCarCtrl::ReInit
 	// plugin::Call<0x4213B0>();
-	0AA5: call_function 0x4213B0 num_params 1 pop 1 []
+	0AA5: call_function 0x4213B0 num_params 0 pop 0
 
 	// CCarCtrl::ReconsiderRoute
 	// plugin::Call<0x42FC40, CVehicle*>(pVehicle);
@@ -11579,11 +11579,11 @@ plugin_sa\game_sa\CCarCtrl.cpp:
 
 	// CCarCtrl::RemoveCarsIfThePoolGetsFull
 	// plugin::Call<0x4322B0>();
-	0AA5: call_function 0x4322B0 num_params 1 pop 1 []
+	0AA5: call_function 0x4322B0 num_params 0 pop 0
 
 	// CCarCtrl::RemoveDistantCars
 	// plugin::Call<0x42CD10>();
-	0AA5: call_function 0x42CD10 num_params 1 pop 1 []
+	0AA5: call_function 0x42CD10 num_params 0 pop 0
 
 	// CCarCtrl::RemoveFromInterestingVehicleList
 	// plugin::Call<0x423ED0, CVehicle*>(pVehicle);
@@ -11934,7 +11934,7 @@ plugin_sa\game_sa\CCheat.cpp:
 
 	// CCheat::ResetCheats
 	// plugin::Call<0x438450>();
-	0AA5: call_function 0x438450 num_params 1 pop 1 []
+	0AA5: call_function 0x438450 num_params 0 pop 0
 
 plugin_sa\game_sa\CCheckpoint.cpp:
 
@@ -11950,7 +11950,7 @@ plugin_sa\game_sa\CCheckpoints.cpp:
 
 	// CCheckpoints::Init
 	// plugin::Call<0x722880>();
-	0AA5: call_function 0x722880 num_params 1 pop 1 []
+	0AA5: call_function 0x722880 num_params 0 pop 0
 
 	// CCheckpoints::PlaceMarker
 	// plugin::CallAndReturn<CCheckpoint*, 0x722C40, unsigned int, unsigned short, CVector&, CVector&, float, unsigned char, unsigned char, unsigned char, unsigned char, unsigned short, float, short>(id, type, posn, direction, size, red, green, blue, alpha, pulsePeriod, pulseFraction, rotateRate);
@@ -11958,7 +11958,7 @@ plugin_sa\game_sa\CCheckpoints.cpp:
 
 	// CCheckpoints::Render
 	// plugin::Call<0x726060>();
-	0AA5: call_function 0x726060 num_params 1 pop 1 []
+	0AA5: call_function 0x726060 num_params 0 pop 0
 
 	// CCheckpoints::SetHeading
 	// plugin::Call<0x722970, unsigned int, float>(id, angle);
@@ -11966,11 +11966,11 @@ plugin_sa\game_sa\CCheckpoints.cpp:
 
 	// CCheckpoints::Shutdown
 	// plugin::Call<0x7228F0>();
-	0AA5: call_function 0x7228F0 num_params 1 pop 1 []
+	0AA5: call_function 0x7228F0 num_params 0 pop 0
 
 	// CCheckpoints::Update
 	// plugin::Call<0x7229C0>();
-	0AA5: call_function 0x7229C0 num_params 1 pop 1 []
+	0AA5: call_function 0x7229C0 num_params 0 pop 0
 
 	// CCheckpoints::UpdatePos
 	// plugin::Call<0x722900, unsigned int, CVector&>(id, posn);
@@ -12001,7 +12001,7 @@ plugin_sa\game_sa\CClothes.cpp:
 
 	// CClothes::RequestMotionGroupAnims
 	// plugin::Call<0x5A8120>();
-	0AA5: call_function 0x5A8120 num_params 1 pop 1 []
+	0AA5: call_function 0x5A8120 num_params 0 pop 0
 
 	// CClothes::RebuildPlayerIfNeeded
 	// plugin::Call<0x5A8390, CPlayerPed*>(player);
@@ -12017,19 +12017,19 @@ plugin_sa\game_sa\CClothes.cpp:
 
 	// CClothes::LoadClothesFile
 	// plugin::Call<0x5A7B30>();
-	0AA5: call_function 0x5A7B30 num_params 1 pop 1 []
+	0AA5: call_function 0x5A7B30 num_params 0 pop 0
 
 	// CClothes::Init
 	// plugin::Call<0x5A80D0>();
-	0AA5: call_function 0x5A80D0 num_params 1 pop 1 []
+	0AA5: call_function 0x5A80D0 num_params 0 pop 0
 
 	// CClothes::GetPlayerMotionGroupToLoad
 	// plugin::CallAndReturn<int, 0x5A7FB0>();
-	0AA7: call_function_return 0x5A7FB0 num_params 1 pop 1 [] func_ret [int]
+	0AA7: call_function_return 0x5A7FB0 num_params 0 pop 0 func_ret [int]
 
 	// CClothes::GetDefaultPlayerMotionGroup
 	// plugin::CallAndReturn<int, 0x5A81B0>();
-	0AA7: call_function_return 0x5A81B0 num_params 1 pop 1 [] func_ret [int]
+	0AA7: call_function_return 0x5A81B0 num_params 0 pop 0 func_ret [int]
 
 plugin_sa\game_sa\CClothesBuilder.cpp:
 
@@ -12083,7 +12083,7 @@ plugin_sa\game_sa\CClothesBuilder.cpp:
 
 	// CClothesBuilder::LoadCdDirectory
 	// plugin::Call<0x5A4190>();
-	0AA5: call_function 0x5A4190 num_params 1 pop 1 []
+	0AA5: call_function 0x5A4190 num_params 0 pop 0
 
 	// CClothesBuilder::PlaceTextureOnTopOfTexture
 	// plugin::Call<0x5A57B0, RwTexture*, RwTexture*>(texture1, texture2);
@@ -12123,7 +12123,7 @@ plugin_sa\game_sa\CClothesBuilder.cpp:
 
 	// CClothesBuilder::ShutdownPaletteOctTree
 	// plugin::Call<0x5A5EE0>();
-	0AA5: call_function 0x5A5EE0 num_params 1 pop 1 []
+	0AA5: call_function 0x5A5EE0 num_params 0 pop 0
 
 	// CClothesBuilder::ReducePaletteOctTree
 	// plugin::Call<0x5A5EF0, int>(numColorsToReduce);
@@ -12141,11 +12141,11 @@ plugin_sa\game_sa\CClouds.cpp:
 
 	// CClouds::Shutdown
 	// plugin::Call<0x712FA0>();
-	0AA5: call_function 0x712FA0 num_params 1 pop 1 []
+	0AA5: call_function 0x712FA0 num_params 0 pop 0
 
 	// CClouds::Update
 	// plugin::Call<0x712FF0>();
-	0AA5: call_function 0x712FF0 num_params 1 pop 1 []
+	0AA5: call_function 0x712FF0 num_params 0 pop 0
 
 	// CClouds::SetUpOneSkyPoly
 	// plugin::Call<0x713060, CVector, CVector, CVector, CVector, unsigned char, unsigned char, unsigned char, unsigned char, unsigned char, unsigned char>(vert1pos, vert2pos, vert3pos, vert4pos, topRed, topGreen, topBlue, bottomRed, bottomGreen, bottomBlue);
@@ -12153,11 +12153,11 @@ plugin_sa\game_sa\CClouds.cpp:
 
 	// CClouds::VolumetricCloudsInit
 	// plugin::Call<0x7131C0>();
-	0AA5: call_function 0x7131C0 num_params 1 pop 1 []
+	0AA5: call_function 0x7131C0 num_params 0 pop 0
 
 	// CClouds::VolumetricClouds_GetFirstFreeSlot
 	// plugin::CallAndReturn<int, 0x7135C0>();
-	0AA7: call_function_return 0x7135C0 num_params 1 pop 1 [] func_ret [int]
+	0AA7: call_function_return 0x7135C0 num_params 0 pop 0 func_ret [int]
 
 	// CClouds::VolumetricClouds_Delete
 	// plugin::Call<0x7135F0, int>(vcSlotIndex);
@@ -12165,19 +12165,19 @@ plugin_sa\game_sa\CClouds.cpp:
 
 	// CClouds::VolumetricCloudsGetMaxDistance
 	// plugin::CallAndReturn<float, 0x713630>();
-	0AA7: call_function_return 0x713630 num_params 1 pop 1 [] func_ret [float]
+	0AA7: call_function_return 0x713630 num_params 0 pop 0 func_ret [float]
 
 	// CClouds::MovingFogInit
 	// plugin::Call<0x713660>();
-	0AA5: call_function 0x713660 num_params 1 pop 1 []
+	0AA5: call_function 0x713660 num_params 0 pop 0
 
 	// CClouds::MovingFog_GetFXIntensity
 	// plugin::CallAndReturn<float, 0x7136D0>();
-	0AA7: call_function_return 0x7136D0 num_params 1 pop 1 [] func_ret [float]
+	0AA7: call_function_return 0x7136D0 num_params 0 pop 0 func_ret [float]
 
 	// CClouds::MovingFog_GetFirstFreeSlot
 	// plugin::CallAndReturn<int, 0x713710>();
-	0AA7: call_function_return 0x713710 num_params 1 pop 1 [] func_ret [int]
+	0AA7: call_function_return 0x713710 num_params 0 pop 0 func_ret [int]
 
 	// CClouds::MovingFog_Delete
 	// plugin::Call<0x713730, int>(fogSlotIndex);
@@ -12189,19 +12189,19 @@ plugin_sa\game_sa\CClouds.cpp:
 
 	// CClouds::Init
 	// plugin::Call<0x7138D0>();
-	0AA5: call_function 0x7138D0 num_params 1 pop 1 []
+	0AA5: call_function 0x7138D0 num_params 0 pop 0
 
 	// CClouds::Render
 	// plugin::Call<0x713950>();
-	0AA5: call_function 0x713950 num_params 1 pop 1 []
+	0AA5: call_function 0x713950 num_params 0 pop 0
 
 	// CClouds::RenderSkyPolys
 	// plugin::Call<0x714650>();
-	0AA5: call_function 0x714650 num_params 1 pop 1 []
+	0AA5: call_function 0x714650 num_params 0 pop 0
 
 	// CClouds::RenderBottomFromHeight
 	// plugin::Call<0x7154B0>();
-	0AA5: call_function 0x7154B0 num_params 1 pop 1 []
+	0AA5: call_function 0x7154B0 num_params 0 pop 0
 
 	// CClouds::VolumetricClouds_Create
 	// plugin::Call<0x715F40, CVector*>(posn);
@@ -12209,15 +12209,15 @@ plugin_sa\game_sa\CClouds.cpp:
 
 	// CClouds::VolumetricCloudsRender
 	// plugin::Call<0x716380>();
-	0AA5: call_function 0x716380 num_params 1 pop 1 []
+	0AA5: call_function 0x716380 num_params 0 pop 0
 
 	// CClouds::MovingFog_Update
 	// plugin::Call<0x716B10>();
-	0AA5: call_function 0x716B10 num_params 1 pop 1 []
+	0AA5: call_function 0x716B10 num_params 0 pop 0
 
 	// CClouds::MovingFogRender
 	// plugin::Call<0x716C90>();
-	0AA5: call_function 0x716C90 num_params 1 pop 1 []
+	0AA5: call_function 0x716C90 num_params 0 pop 0
 
 plugin_sa\game_sa\CClumpModelInfo.cpp:
 
@@ -12229,7 +12229,7 @@ plugin_sa\game_sa\CColAccel.cpp:
 
 	// CColAccel::IsCacheLoading
 	// plugin::CallAndReturn<bool, 0x5B2AC0>();
-	0AA7: call_function_return 0x5B2AC0 num_params 1 pop 1 [] func_ret [bool]
+	0AA7: call_function_return 0x5B2AC0 num_params 0 pop 0 func_ret [bool]
 
 plugin_sa\game_sa\CColDisk.cpp:
 
@@ -12241,11 +12241,11 @@ plugin_sa\game_sa\CCollision.cpp:
 
 	// CCollision::Update
 	// plugin::Call<0x411E20>();
-	0AA5: call_function 0x411E20 num_params 1 pop 1 []
+	0AA5: call_function 0x411E20 num_params 0 pop 0
 
 	// CCollision::SortOutCollisionAfterLoad
 	// plugin::Call<0x411E30>();
-	0AA5: call_function 0x411E30 num_params 1 pop 1 []
+	0AA5: call_function 0x411E30 num_params 0 pop 0
 
 	// CCollision::TestSphereSphere
 	// plugin::CallAndReturn<bool, 0x411E70, CColSphere const&, CColSphere const&>(sphere1, sphere2);
@@ -12345,7 +12345,7 @@ plugin_sa\game_sa\CCollision.cpp:
 
 	// ResetMadeInvisibleObjects
 	// plugin::Call<0x415540>();
-	0AA5: call_function 0x415540 num_params 1 pop 1 []
+	0AA5: call_function 0x415540 num_params 0 pop 0
 
 	// CCollision::SphereCastVsBBox
 	// plugin::CallAndReturn<bool, 0x415590, CColSphere*, CColSphere*, CColBox*>(sphere1, sphere2, box);
@@ -12377,11 +12377,11 @@ plugin_sa\game_sa\CCollision.cpp:
 
 	// CCollision::Init
 	// plugin::Call<0x416260>();
-	0AA5: call_function 0x416260 num_params 1 pop 1 []
+	0AA5: call_function 0x416260 num_params 0 pop 0
 
 	// CCollision::Shutdown
 	// plugin::Call<0x4162E0>();
-	0AA5: call_function 0x4162E0 num_params 1 pop 1 []
+	0AA5: call_function 0x4162E0 num_params 0 pop 0
 
 	// CCollision::CalculateTrianglePlanes
 	// plugin::Call<0x416330, CCollisionData*>(colData);
@@ -12649,7 +12649,7 @@ plugin_sa\game_sa\CCredits.cpp:
 
 	// CCredits::Render
 	// plugin::Call<0x53D5B0>();
-	0AA5: call_function 0x53D5B0 num_params 1 pop 1 []
+	0AA5: call_function 0x53D5B0 num_params 0 pop 0
 
 	// CCredits::PrintCreditText
 	// plugin::Call<0x5A8660, float, float, unsigned short*, unsigned int&, float, bool>(scaleX, scaleY, text, position, currentOffset, highlighted);
@@ -12661,15 +12661,15 @@ plugin_sa\game_sa\CCredits.cpp:
 
 	// CCredits::RenderCredits
 	// plugin::Call<0x5A87F0>();
-	0AA5: call_function 0x5A87F0 num_params 1 pop 1 []
+	0AA5: call_function 0x5A87F0 num_params 0 pop 0
 
 	// CCredits::Start
 	// plugin::Call<0x7170E0>();
-	0AA5: call_function 0x7170E0 num_params 1 pop 1 []
+	0AA5: call_function 0x7170E0 num_params 0 pop 0
 
 	// CCredits::Stop
 	// plugin::Call<0x717100>();
-	0AA5: call_function 0x717100 num_params 1 pop 1 []
+	0AA5: call_function 0x717100 num_params 0 pop 0
 
 plugin_sa\game_sa\CCullZones.cpp:
 
@@ -12679,51 +12679,51 @@ plugin_sa\game_sa\CCullZones.cpp:
 
 	// CCullZones::Init
 	// plugin::Call<0x72D6B0>();
-	0AA5: call_function 0x72D6B0 num_params 1 pop 1 []
+	0AA5: call_function 0x72D6B0 num_params 0 pop 0
 
 	// CCullZones::Update
 	// plugin::Call<0x72DEC0>();
-	0AA5: call_function 0x72DEC0 num_params 1 pop 1 []
+	0AA5: call_function 0x72DEC0 num_params 0 pop 0
 
 	// CCullZones::AddCullZone
 	// plugin::Call<0x72DF70>();
-	0AA5: call_function 0x72DF70 num_params 1 pop 1 []
+	0AA5: call_function 0x72DF70 num_params 0 pop 0
 
 	// CCullZones::AddTunnelAttributeZone
 	// plugin::Call<0x72DB50>();
-	0AA5: call_function 0x72DB50 num_params 1 pop 1 []
+	0AA5: call_function 0x72DB50 num_params 0 pop 0
 
 	// CCullZones::AddMirrorAttributeZone
 	// plugin::Call<0x72DC10>();
-	0AA5: call_function 0x72DC10 num_params 1 pop 1 []
+	0AA5: call_function 0x72DC10 num_params 0 pop 0
 
 	// CCullZones::InRoomForAudio
 	// plugin::CallAndReturn<bool, 0x72DD70>();
-	0AA7: call_function_return 0x72DD70 num_params 1 pop 1 [] func_ret [bool]
+	0AA7: call_function_return 0x72DD70 num_params 0 pop 0 func_ret [bool]
 
 	// CCullZones::FewerCars
 	// plugin::CallAndReturn<bool, 0x72DD80>();
-	0AA7: call_function_return 0x72DD80 num_params 1 pop 1 [] func_ret [bool]
+	0AA7: call_function_return 0x72DD80 num_params 0 pop 0 func_ret [bool]
 
 	// CCullZones::CamNoRain
 	// plugin::CallAndReturn<bool, 0x72DDB0>();
-	0AA7: call_function_return 0x72DDB0 num_params 1 pop 1 [] func_ret [bool]
+	0AA7: call_function_return 0x72DDB0 num_params 0 pop 0 func_ret [bool]
 
 	// CCullZones::PlayerNoRain
 	// plugin::CallAndReturn<bool, 0x72DDC0>();
-	0AA7: call_function_return 0x72DDC0 num_params 1 pop 1 [] func_ret [bool]
+	0AA7: call_function_return 0x72DDC0 num_params 0 pop 0 func_ret [bool]
 
 	// CCullZones::FewerPeds
 	// plugin::CallAndReturn<bool, 0x72DD90>();
-	0AA7: call_function_return 0x72DD90 num_params 1 pop 1 [] func_ret [bool]
+	0AA7: call_function_return 0x72DD90 num_params 0 pop 0 func_ret [bool]
 
 	// CCullZones::NoPolice
 	// plugin::CallAndReturn<bool, 0x72DD50>();
-	0AA7: call_function_return 0x72DD50 num_params 1 pop 1 [] func_ret [bool]
+	0AA7: call_function_return 0x72DD50 num_params 0 pop 0 func_ret [bool]
 
 	// CCullZones::DoExtraAirResistanceForPlayer
 	// plugin::CallAndReturn<bool, 0x72DDD0>();
-	0AA7: call_function_return 0x72DDD0 num_params 1 pop 1 [] func_ret [bool]
+	0AA7: call_function_return 0x72DDD0 num_params 0 pop 0 func_ret [bool]
 
 	// CCullZones::FindTunnelAttributesForCoors
 	// plugin::CallAndReturn<eZoneAttributes, 0x72D9F0>(point);
@@ -12735,7 +12735,7 @@ plugin_sa\game_sa\CCullZones.cpp:
 
 	// CCullZones::FindZoneWithStairsAttributeForPlayer
 	// plugin::CallAndReturn<CCullZone*, 0x72DAD0>();
-	0AA7: call_function_return 0x72DAD0 num_params 1 pop 1 [] func_ret [CCullZone*]
+	0AA7: call_function_return 0x72DAD0 num_params 0 pop 0 func_ret [CCullZone*]
 
 	// CCullZones::FindAttributesForCoors
 	// plugin::CallAndReturn<eZoneAttributes, 0x72D970>(pos);
@@ -12749,7 +12749,7 @@ plugin_sa\game_sa\CCustomCarEnvMapPipeline.cpp:
 
 	// CCustomCarEnvMapPipeline::PreRenderUpdate
 	// plugin::Call<0x5D8870>();
-	0AA5: call_function 0x5D8870 num_params 1 pop 1 []
+	0AA5: call_function 0x5D8870 num_params 0 pop 0
 
 	// CCustomCarEnvMapPipeline::pluginEnvMatConstructorCB
 	// plugin::CallAndReturn<void*, 0x5D8BD0, void*, int>(object, offset);
@@ -12777,7 +12777,7 @@ plugin_sa\game_sa\CCustomCarEnvMapPipeline.cpp:
 
 	// CCustomCarEnvMapPipeline::pluginSpecMatStreamGetSizeCB
 	// plugin::CallAndReturn<signed int, 0x5D8DD0>();
-	0AA7: call_function_return 0x5D8DD0 num_params 1 pop 1 [] func_ret [signed int]
+	0AA7: call_function_return 0x5D8DD0 num_params 0 pop 0 func_ret [signed int]
 
 	// CCustomCarEnvMapPipeline::DuplicateCustomEnvMapPipeMaterialData
 	// plugin::CallAndReturn<CustomEnvMapPipeMaterialData*, 0x5D9570, CustomEnvMapPipeMaterialData**>(arg0);
@@ -12821,15 +12821,15 @@ plugin_sa\game_sa\CCustomCarEnvMapPipeline.cpp:
 
 	// CCustomCarEnvMapPipeline::CreateCustomOpenGLObjPipe
 	// plugin::CallAndReturn<RxPipeline*, 0x5D9F80>();
-	0AA7: call_function_return 0x5D9F80 num_params 1 pop 1 [] func_ret [RxPipeline*]
+	0AA7: call_function_return 0x5D9F80 num_params 0 pop 0 func_ret [RxPipeline*]
 
 	// CCustomCarEnvMapPipeline::CreatePipe
 	// plugin::CallAndReturn<char, 0x5DA020>();
-	0AA7: call_function_return 0x5DA020 num_params 1 pop 1 [] func_ret [char]
+	0AA7: call_function_return 0x5DA020 num_params 0 pop 0 func_ret [char]
 
 	// CCustomCarEnvMapPipeline::DestroyPipe
 	// plugin::Call<0x5DA130>();
-	0AA5: call_function 0x5DA130 num_params 1 pop 1 []
+	0AA5: call_function 0x5DA130 num_params 0 pop 0
 
 	// CCustomCarEnvMapPipeline::SetFxEnvTexture
 	// plugin::Call<0x5DA230, RpMaterial*, RwTexture*>(material, texture);
@@ -12837,7 +12837,7 @@ plugin_sa\game_sa\CCustomCarEnvMapPipeline.cpp:
 
 	// CCustomCarEnvMapPipeline::RegisterPlugin
 	// plugin::CallAndReturn<char, 0x5DA450>();
-	0AA7: call_function_return 0x5DA450 num_params 1 pop 1 [] func_ret [char]
+	0AA7: call_function_return 0x5DA450 num_params 0 pop 0 func_ret [char]
 
 	// CCustomCarEnvMapPipeline::CustomPipeMaterialSetup
 	// plugin::CallAndReturn<RpMaterial*, 0x5DA560, RpMaterial*, void*>(arg0, arg1);
@@ -12851,7 +12851,7 @@ plugin_sa\game_sa\CCustomCarPlateMgr.cpp:
 
 	// CCustomCarPlateMgr::Initialise
 	// plugin::CallAndReturn<bool, 0x6FD500>();
-	0AA7: call_function_return 0x6FD500 num_params 1 pop 1 [] func_ret [bool]
+	0AA7: call_function_return 0x6FD500 num_params 0 pop 0 func_ret [bool]
 
 	// CCustomCarPlateMgr::GeneratePlateText
 	// plugin::CallAndReturn<bool, 0x6FD5B0, char*, int>(plateTextBuf, length);
@@ -12859,11 +12859,11 @@ plugin_sa\game_sa\CCustomCarPlateMgr.cpp:
 
 	// CCustomCarPlateMgr::Shutdown
 	// plugin::CallAndReturn<bool, 0x6FD720>();
-	0AA7: call_function_return 0x6FD720 num_params 1 pop 1 [] func_ret [bool]
+	0AA7: call_function_return 0x6FD720 num_params 0 pop 0 func_ret [bool]
 
 	// CCustomCarPlateMgr::GetMapRegionPlateDesign
 	// plugin::CallAndReturn<unsigned char, 0x6FD7A0>();
-	0AA7: call_function_return 0x6FD7A0 num_params 1 pop 1 [] func_ret [unsigned char]
+	0AA7: call_function_return 0x6FD7A0 num_params 0 pop 0 func_ret [unsigned char]
 
 	// CCustomCarPlateMgr::LoadPlatecharsetDat
 	// plugin::CallAndReturn<bool, 0x6FDC00, char const*, unsigned char*, int, int>(filename, data, arg2, arg3);
@@ -12933,7 +12933,7 @@ plugin_sa\game_sa\CCutsceneMgr.cpp:
 
 	// CCutsceneMgr::BuildCutscenePlayer
 	// plugin::Call<0x4D5E20>();
-	0AA5: call_function 0x4D5E20 num_params 1 pop 1 []
+	0AA5: call_function 0x4D5E20 num_params 0 pop 0
 
 	// CCutsceneMgr::CreateCutsceneObject
 	// plugin::CallAndReturn<CCutsceneObject*, 0x5B02A0, int>(modelId);
@@ -12941,35 +12941,35 @@ plugin_sa\game_sa\CCutsceneMgr.cpp:
 
 	// CCutsceneMgr::DeleteCutsceneData
 	// plugin::Call<0x4D5ED0>();
-	0AA5: call_function 0x4D5ED0 num_params 1 pop 1 []
+	0AA5: call_function 0x4D5ED0 num_params 0 pop 0
 
 	// CCutsceneMgr::DeleteCutsceneData_overlay
 	// plugin::Call<0x5AFD60>();
-	0AA5: call_function 0x5AFD60 num_params 1 pop 1 []
+	0AA5: call_function 0x5AFD60 num_params 0 pop 0
 
 	// CCutsceneMgr::FinishCutscene
 	// plugin::Call<0x5B04D0>();
-	0AA5: call_function 0x5B04D0 num_params 1 pop 1 []
+	0AA5: call_function 0x5B04D0 num_params 0 pop 0
 
 	// CCutsceneMgr::GetCutsceneTimeInMilleseconds
 	// plugin::CallAndReturn<long long, 0x5B0550>();
-	0AA7: call_function_return 0x5B0550 num_params 1 pop 1 [] func_ret [long long]
+	0AA7: call_function_return 0x5B0550 num_params 0 pop 0 func_ret [long long]
 
 	// CCutsceneMgr::HasCutsceneFinished
 	// plugin::CallAndReturn<bool, 0x5B0570>();
-	0AA7: call_function_return 0x5B0570 num_params 1 pop 1 [] func_ret [bool]
+	0AA7: call_function_return 0x5B0570 num_params 0 pop 0 func_ret [bool]
 
 	// CCutsceneMgr::HideRequestedObjects
 	// plugin::Call<0x5AFAD0>();
-	0AA5: call_function 0x5AFAD0 num_params 1 pop 1 []
+	0AA5: call_function 0x5AFAD0 num_params 0 pop 0
 
 	// CCutsceneMgr::Initialise
 	// plugin::Call<0x4D5A20>();
-	0AA5: call_function 0x4D5A20 num_params 1 pop 1 []
+	0AA5: call_function 0x4D5A20 num_params 0 pop 0
 
 	// CCutsceneMgr::IsCutsceneSkipButtonBeingPressed
 	// plugin::Call<0x4D5D10>();
-	0AA5: call_function 0x4D5D10 num_params 1 pop 1 []
+	0AA5: call_function 0x4D5D10 num_params 0 pop 0
 
 	// CCutsceneMgr::LoadAnimationUncompressed
 	// plugin::Call<0x4D5AB0, char const*>(animName);
@@ -12981,7 +12981,7 @@ plugin_sa\game_sa\CCutsceneMgr.cpp:
 
 	// CCutsceneMgr::LoadCutsceneData_loading
 	// plugin::Call<0x5B11C0>();
-	0AA5: call_function 0x5B11C0 num_params 1 pop 1 []
+	0AA5: call_function 0x5B11C0 num_params 0 pop 0
 
 	// CCutsceneMgr::LoadCutsceneData_overlay
 	// plugin::Call<0x5B13F0, char const*>(cutsceneName);
@@ -12989,23 +12989,23 @@ plugin_sa\game_sa\CCutsceneMgr.cpp:
 
 	// CCutsceneMgr::LoadCutsceneData_postload
 	// plugin::Call<0x5AFBC0>();
-	0AA5: call_function 0x5AFBC0 num_params 1 pop 1 []
+	0AA5: call_function 0x5AFBC0 num_params 0 pop 0
 
 	// CCutsceneMgr::LoadCutsceneData_preload
 	// plugin::Call<0x5B05A0>();
-	0AA5: call_function 0x5B05A0 num_params 1 pop 1 []
+	0AA5: call_function 0x5B05A0 num_params 0 pop 0
 
 	// CCutsceneMgr::LoadEverythingBecauseCutsceneDeletedAllOfIt
 	// plugin::Call<0x4D5C10>();
-	0AA5: call_function 0x4D5C10 num_params 1 pop 1 []
+	0AA5: call_function 0x4D5C10 num_params 0 pop 0
 
 	// CCutsceneMgr::RemoveCutscenePlayer
 	// plugin::Call<0x4D5E50>();
-	0AA5: call_function 0x4D5E50 num_params 1 pop 1 []
+	0AA5: call_function 0x4D5E50 num_params 0 pop 0
 
 	// CCutsceneMgr::RemoveEverythingBecauseCutsceneDoesntFitInMemory
 	// plugin::Call<0x4D5AF0>();
-	0AA5: call_function 0x4D5AF0 num_params 1 pop 1 []
+	0AA5: call_function 0x4D5AF0 num_params 0 pop 0
 
 	// CCutsceneMgr::SetCutsceneAnim
 	// plugin::Call<0x5B0390, char const*, CObject*>(animName, object);
@@ -13021,27 +13021,27 @@ plugin_sa\game_sa\CCutsceneMgr.cpp:
 
 	// CCutsceneMgr::SetupCutsceneToStart
 	// plugin::Call<0x5B14D0>();
-	0AA5: call_function 0x5B14D0 num_params 1 pop 1 []
+	0AA5: call_function 0x5B14D0 num_params 0 pop 0
 
 	// CCutsceneMgr::Shutdown
 	// plugin::Call<0x4D5E60>();
-	0AA5: call_function 0x4D5E60 num_params 1 pop 1 []
+	0AA5: call_function 0x4D5E60 num_params 0 pop 0
 
 	// CCutsceneMgr::SkipCutscene
 	// plugin::Call<0x5B1700>();
-	0AA5: call_function 0x5B1700 num_params 1 pop 1 []
+	0AA5: call_function 0x5B1700 num_params 0 pop 0
 
 	// CCutsceneMgr::StartCutscene
 	// plugin::Call<0x5B1460>();
-	0AA5: call_function 0x5B1460 num_params 1 pop 1 []
+	0AA5: call_function 0x5B1460 num_params 0 pop 0
 
 	// CCutsceneMgr::Update
 	// plugin::Call<0x4D5D00>();
-	0AA5: call_function 0x4D5D00 num_params 1 pop 1 []
+	0AA5: call_function 0x4D5D00 num_params 0 pop 0
 
 	// CCutsceneMgr::Update_overlay
 	// plugin::Call<0x5B1720>();
-	0AA5: call_function 0x5B1720 num_params 1 pop 1 []
+	0AA5: call_function 0x5B1720 num_params 0 pop 0
 
 	// FindCutsceneAudioTrackId
 	// plugin::CallAndReturn<short, 0x5AFA50, char const*>(cutsceneName);
@@ -13055,15 +13055,15 @@ plugin_sa\game_sa\CDarkel.cpp:
 
 	// CDarkel::Init
 	// plugin::Call<0x43CEB0>();
-	0AA5: call_function 0x43CEB0 num_params 1 pop 1 []
+	0AA5: call_function 0x43CEB0 num_params 0 pop 0
 
 	// CDarkel::DrawMessages
 	// plugin::Call<0x43CEC0>();
-	0AA5: call_function 0x43CEC0 num_params 1 pop 1 []
+	0AA5: call_function 0x43CEC0 num_params 0 pop 0
 
 	// CDarkel::ReadStatus
 	// plugin::CallAndReturn<short, 0x43D1E0>();
-	0AA7: call_function_return 0x43D1E0 num_params 1 pop 1 [] func_ret [short]
+	0AA7: call_function_return 0x43D1E0 num_params 0 pop 0 func_ret [short]
 
 	// CDarkel::RegisterKillNotByPlayer
 	// plugin::Call<0x43D210, CPed const*>(pKilledPed);
@@ -13095,7 +13095,7 @@ plugin_sa\game_sa\CDarkel.cpp:
 
 	// CDarkel::DealWithWeaponChangeAtEndOfFrenzy
 	// plugin::Call<0x43D7A0>();
-	0AA5: call_function 0x43D7A0 num_params 1 pop 1 []
+	0AA5: call_function 0x43D7A0 num_params 0 pop 0
 
 	// CDarkel::CheckDamagedWeaponType
 	// plugin::CallAndReturn<bool, 0x43D9E0, int, int>(damageWeaponID, expectedDamageWeaponID);
@@ -13103,15 +13103,15 @@ plugin_sa\game_sa\CDarkel.cpp:
 
 	// CDarkel::Update
 	// plugin::Call<0x43DAC0>();
-	0AA5: call_function 0x43DAC0 num_params 1 pop 1 []
+	0AA5: call_function 0x43DAC0 num_params 0 pop 0
 
 	// CDarkel::ResetOnPlayerDeath
 	// plugin::Call<0x43DC10>();
-	0AA5: call_function 0x43DC10 num_params 1 pop 1 []
+	0AA5: call_function 0x43DC10 num_params 0 pop 0
 
 	// CDarkel::FailKillFrenzy
 	// plugin::Call<0x43DC60>();
-	0AA5: call_function 0x43DC60 num_params 1 pop 1 []
+	0AA5: call_function 0x43DC60 num_params 0 pop 0
 
 	// CDarkel::RegisterKillByPlayer
 	// plugin::Call<0x43DCD0, CPed const*, eWeaponType, bool, int>(pKilledPed, damageWeaponID, bHeadShotted, arg4);
@@ -13231,7 +13231,7 @@ plugin_sa\game_sa\CDraw.cpp:
 
 	// CDraw::CalculateAspectRatio
 	// plugin::CallAndReturn<float, 0x6FF420>();
-	0AA7: call_function_return 0x6FF420 num_params 1 pop 1 [] func_ret [float]
+	0AA7: call_function_return 0x6FF420 num_params 0 pop 0 func_ret [float]
 
 plugin_sa\game_sa\CEntryExit.cpp:
 
@@ -13329,11 +13329,11 @@ plugin_sa\game_sa\CExplosion.cpp:
 
 	// CExplosion::ClearAllExplosions
 	// plugin::Call<0x736840>();
-	0AA5: call_function 0x736840 num_params 1 pop 1 []
+	0AA5: call_function 0x736840 num_params 0 pop 0
 
 	// CExplosion::Shutdown
 	// plugin::Call<0x7368F0>();
-	0AA5: call_function 0x7368F0 num_params 1 pop 1 []
+	0AA5: call_function 0x7368F0 num_params 0 pop 0
 
 	// CExplosion::GetExplosionActiveCounter
 	// plugin::CallAndReturn<unsigned char, 0x736900, unsigned char>(explosionId);
@@ -13365,7 +13365,7 @@ plugin_sa\game_sa\CExplosion.cpp:
 
 	// CExplosion::Initialise
 	// plugin::Call<0x736A40>();
-	0AA5: call_function 0x736A40 num_params 1 pop 1 []
+	0AA5: call_function 0x736A40 num_params 0 pop 0
 
 	// CExplosion::AddExplosion
 	// plugin::CallAndReturn<bool, 0x736A50, CEntity*, CEntity*, eExplosionType, CVector const&, unsigned int, unsigned char, float, unsigned char>(victim, creator, explosionType, posn, time, makeSound, camShake, visibility);
@@ -13373,7 +13373,7 @@ plugin_sa\game_sa\CExplosion.cpp:
 
 	// CExplosion::Update
 	// plugin::Call<0x737620>();
-	0AA5: call_function 0x737620 num_params 1 pop 1 []
+	0AA5: call_function 0x737620 num_params 0 pop 0
 
 plugin_sa\game_sa\CFileLoader.cpp:
 
@@ -13637,15 +13637,15 @@ plugin_sa\game_sa\CGameLogic.cpp:
 
 	// CGameLogic::InitAtStartOfGame
 	// plugin::Call<0x441210>();
-	0AA5: call_function 0x441210 num_params 1 pop 1 []
+	0AA5: call_function 0x441210 num_params 0 pop 0
 
 	// CGameLogic::IsCoopGameGoingOn
 	// plugin::CallAndReturn<bool, 0x441390>();
-	0AA7: call_function_return 0x441390 num_params 1 pop 1 [] func_ret [bool]
+	0AA7: call_function_return 0x441390 num_params 0 pop 0 func_ret [bool]
 
 	// CGameLogic::Remove2ndPlayerIfPresent
 	// plugin::Call<0x4413C0>();
-	0AA5: call_function 0x4413C0 num_params 1 pop 1 []
+	0AA5: call_function 0x4413C0 num_params 0 pop 0
 
 	// CGameLogic::SortOutStreamingAndMemory
 	// plugin::Call<0x441440, CVector*, float>(translation, angle);
@@ -13661,7 +13661,7 @@ plugin_sa\game_sa\CGameLogic.cpp:
 
 	// CGameLogic::SkipCanBeActivated
 	// plugin::CallAndReturn<bool, 0x4415C0>();
-	0AA7: call_function_return 0x4415C0 num_params 1 pop 1 [] func_ret [bool]
+	0AA7: call_function_return 0x4415C0 num_params 0 pop 0 func_ret [bool]
 
 	// CGameLogic::IsPointWithinLineArea
 	// plugin::CallAndReturn<int, 0x4416E0, RwV3d*, signed int, float, float>(vectors, sizeofvectors, x, y);
@@ -13677,7 +13677,7 @@ plugin_sa\game_sa\CGameLogic.cpp:
 
 	// CGameLogic::LaRiotsActiveHere
 	// plugin::CallAndReturn<bool, 0x441C10>();
-	0AA7: call_function_return 0x441C10 num_params 1 pop 1 [] func_ret [bool]
+	0AA7: call_function_return 0x441C10 num_params 0 pop 0 func_ret [bool]
 
 	// CGameLogic::RestorePedsWeapons
 	// plugin::CallAndReturn<signed int, 0x441D30, int>(a1);
@@ -13693,19 +13693,19 @@ plugin_sa\game_sa\CGameLogic.cpp:
 
 	// CGameLogic::UpdateSkip
 	// plugin::Call<0x442480>();
-	0AA5: call_function 0x442480 num_params 1 pop 1 []
+	0AA5: call_function 0x442480 num_params 0 pop 0
 
 	// CGameLogic::ResetStuffUponResurrection
 	// plugin::Call<0x442980>();
-	0AA5: call_function 0x442980 num_params 1 pop 1 []
+	0AA5: call_function 0x442980 num_params 0 pop 0
 
 	// CGameLogic::Update
 	// plugin::Call<0x442AD0>();
-	0AA5: call_function 0x442AD0 num_params 1 pop 1 []
+	0AA5: call_function 0x442AD0 num_params 0 pop 0
 
 	// CGameLogic::Save
 	// plugin::Call<0x5D33C0>();
-	0AA5: call_function 0x5D33C0 num_params 1 pop 1 []
+	0AA5: call_function 0x5D33C0 num_params 0 pop 0
 
 plugin_sa\game_sa\CGangs.cpp:
 
@@ -13871,23 +13871,23 @@ plugin_sa\game_sa\CHud.cpp:
 
 	// CHud::Draw
 	// plugin::Call<0x58FAE0>();
-	0AA5: call_function 0x58FAE0 num_params 1 pop 1 []
+	0AA5: call_function 0x58FAE0 num_params 0 pop 0
 
 	// CHud::DrawAfterFade
 	// plugin::Call<0x58D490>();
-	0AA5: call_function 0x58D490 num_params 1 pop 1 []
+	0AA5: call_function 0x58D490 num_params 0 pop 0
 
 	// CHud::DrawAreaName
 	// plugin::Call<0x58AA50>();
-	0AA5: call_function 0x58AA50 num_params 1 pop 1 []
+	0AA5: call_function 0x58AA50 num_params 0 pop 0
 
 	// CHud::DrawBustedWastedMessage
 	// plugin::Call<0x58CA50>();
-	0AA5: call_function 0x58CA50 num_params 1 pop 1 []
+	0AA5: call_function 0x58CA50 num_params 0 pop 0
 
 	// CHud::DrawCrossHairs
 	// plugin::Call<0x58E020>();
-	0AA5: call_function 0x58E020 num_params 1 pop 1 []
+	0AA5: call_function 0x58E020 num_params 0 pop 0
 
 	// CHud::DrawFadeState
 	// plugin::CallAndReturn<float, 0x58D580, DRAW_FADE_STATE, int>(fadeState, arg1);
@@ -13895,15 +13895,15 @@ plugin_sa\game_sa\CHud.cpp:
 
 	// CHud::DrawHelpText
 	// plugin::Call<0x58B6E0>();
-	0AA5: call_function 0x58B6E0 num_params 1 pop 1 []
+	0AA5: call_function 0x58B6E0 num_params 0 pop 0
 
 	// CHud::DrawMissionTimers
 	// plugin::Call<0x58B180>();
-	0AA5: call_function 0x58B180 num_params 1 pop 1 []
+	0AA5: call_function 0x58B180 num_params 0 pop 0
 
 	// CHud::DrawMissionTitle
 	// plugin::Call<0x58D240>();
-	0AA5: call_function 0x58D240 num_params 1 pop 1 []
+	0AA5: call_function 0x58D240 num_params 0 pop 0
 
 	// CHud::DrawOddJobMessage
 	// plugin::Call<0x58CC80, unsigned char>(priority);
@@ -13911,7 +13911,7 @@ plugin_sa\game_sa\CHud.cpp:
 
 	// CHud::DrawRadar
 	// plugin::Call<0x58A330>();
-	0AA5: call_function 0x58A330 num_params 1 pop 1 []
+	0AA5: call_function 0x58A330 num_params 0 pop 0
 
 	// CHud::DrawScriptText
 	// plugin::Call<0x58C080, unsigned char>(priority);
@@ -13919,19 +13919,19 @@ plugin_sa\game_sa\CHud.cpp:
 
 	// CHud::DrawSubtitles
 	// plugin::Call<0x58C250>();
-	0AA5: call_function 0x58C250 num_params 1 pop 1 []
+	0AA5: call_function 0x58C250 num_params 0 pop 0
 
 	// CHud::DrawSuccessFailedMessage
 	// plugin::Call<0x58C6A0>();
-	0AA5: call_function 0x58C6A0 num_params 1 pop 1 []
+	0AA5: call_function 0x58C6A0 num_params 0 pop 0
 
 	// CHud::DrawVehicleName
 	// plugin::Call<0x58AEA0>();
-	0AA5: call_function 0x58AEA0 num_params 1 pop 1 []
+	0AA5: call_function 0x58AEA0 num_params 0 pop 0
 
 	// CHud::DrawVitalStats
 	// plugin::Call<0x589650>();
-	0AA5: call_function 0x589650 num_params 1 pop 1 []
+	0AA5: call_function 0x589650 num_params 0 pop 0
 
 	// CHud::GetRidOfAllHudMessages
 	// plugin::Call<0x588A50, unsigned char>(arg0);
@@ -13943,19 +13943,19 @@ plugin_sa\game_sa\CHud.cpp:
 
 	// CHud::HelpMessageDisplayed
 	// plugin::CallAndReturn<bool, 0x588B50>();
-	0AA7: call_function_return 0x588B50 num_params 1 pop 1 [] func_ret [bool]
+	0AA7: call_function_return 0x588B50 num_params 0 pop 0 func_ret [bool]
 
 	// CHud::Initialise
 	// plugin::Call<0x5BA850>();
-	0AA5: call_function 0x5BA850 num_params 1 pop 1 []
+	0AA5: call_function 0x5BA850 num_params 0 pop 0
 
 	// CHud::ReInitialise
 	// plugin::Call<0x588880>();
-	0AA5: call_function 0x588880 num_params 1 pop 1 []
+	0AA5: call_function 0x588880 num_params 0 pop 0
 
 	// CHud::ResetWastedText
 	// plugin::Call<0x589070>();
-	0AA5: call_function 0x589070 num_params 1 pop 1 []
+	0AA5: call_function 0x589070 num_params 0 pop 0
 
 	// CHud::SetBigMessage
 	// plugin::Call<0x588FC0, char*, unsigned short>(text, style);
@@ -13987,7 +13987,7 @@ plugin_sa\game_sa\CHud.cpp:
 
 	// CHud::Shutdown
 	// plugin::Call<0x588850>();
-	0AA5: call_function 0x588850 num_params 1 pop 1 []
+	0AA5: call_function 0x588850 num_params 0 pop 0
 
 	// CHud::DrawAmmo
 	// plugin::Call<0x5893B0, CPed*, int, int, float>(ped, x, y, alpha);
@@ -13995,15 +13995,15 @@ plugin_sa\game_sa\CHud.cpp:
 
 	// CHud::DrawPlayerInfo
 	// plugin::Call<0x58EAF0>();
-	0AA5: call_function 0x58EAF0 num_params 1 pop 1 []
+	0AA5: call_function 0x58EAF0 num_params 0 pop 0
 
 	// CHud::DrawTripSkip
 	// plugin::Call<0x58A160>();
-	0AA5: call_function 0x58A160 num_params 1 pop 1 []
+	0AA5: call_function 0x58A160 num_params 0 pop 0
 
 	// CHud::DrawWanted
 	// plugin::Call<0x58D9A0>();
-	0AA5: call_function 0x58D9A0 num_params 1 pop 1 []
+	0AA5: call_function 0x58D9A0 num_params 0 pop 0
 
 	// CHud::DrawWeaponIcon
 	// plugin::Call<0x58D7D0, CPed*, int, int, float>(ped, x, y, alpha);
@@ -14033,7 +14033,7 @@ plugin_sa\game_sa\CIplStore.cpp:
 
 	// CIplStore::ClearIplsNeededAtPosn
 	// plugin::Call<0x4045E0>();
-	0AA5: call_function 0x4045E0 num_params 1 pop 1 []
+	0AA5: call_function 0x4045E0 num_params 0 pop 0
 
 	// CIplStore::EnableDynamicStreaming
 	// plugin::Call<0x404D30, int, bool>(iplSlotIndex, enable);
@@ -14073,15 +14073,15 @@ plugin_sa\game_sa\CIplStore.cpp:
 
 	// CIplStore::Initialise
 	// plugin::Call<0x405EC0>();
-	0AA5: call_function 0x405EC0 num_params 1 pop 1 []
+	0AA5: call_function 0x405EC0 num_params 0 pop 0
 
 	// CIplStore::Load
 	// plugin::CallAndReturn<bool, 0x5D54A0>();
-	0AA7: call_function_return 0x5D54A0 num_params 1 pop 1 [] func_ret [bool]
+	0AA7: call_function_return 0x5D54A0 num_params 0 pop 0 func_ret [bool]
 
 	// CIplStore::LoadAllRemainingIpls
 	// plugin::Call<0x405780>();
-	0AA5: call_function 0x405780 num_params 1 pop 1 []
+	0AA5: call_function 0x405780 num_params 0 pop 0
 
 	// CIplStore::LoadIpl
 	// plugin::CallAndReturn<bool, 0x406080, int, unsigned char*, int>(iplSlotIndex, data, dataSize);
@@ -14097,7 +14097,7 @@ plugin_sa\game_sa\CIplStore.cpp:
 
 	// CIplStore::RemoveAllIpls
 	// plugin::Call<0x405720>();
-	0AA5: call_function 0x405720 num_params 1 pop 1 []
+	0AA5: call_function 0x405720 num_params 0 pop 0
 
 	// CIplStore::RemoveIpl
 	// plugin::Call<0x404B20, int>(iplSlotIndex);
@@ -14129,7 +14129,7 @@ plugin_sa\game_sa\CIplStore.cpp:
 
 	// CIplStore::Save
 	// plugin::CallAndReturn<bool, 0x5D5420>();
-	0AA7: call_function_return 0x5D5420 num_params 1 pop 1 [] func_ret [bool]
+	0AA7: call_function_return 0x5D5420 num_params 0 pop 0 func_ret [bool]
 
 	// CIplStore::SetIplsRequired
 	// plugin::Call<0x404700, CVector const&, int>(posn, playerNumber);
@@ -14145,7 +14145,7 @@ plugin_sa\game_sa\CIplStore.cpp:
 
 	// CIplStore::Shutdown
 	// plugin::Call<0x405FA0>();
-	0AA5: call_function 0x405FA0 num_params 1 pop 1 []
+	0AA5: call_function 0x405FA0 num_params 0 pop 0
 
 	// SetIfInteriorIplIsRequired
 	// plugin::Call<0x4045F0, CVector2D const&, void*>(posn, data);
@@ -14197,11 +14197,11 @@ plugin_sa\game_sa\CLoadingScreen.cpp:
 
 	// CLoadingScreen::Shutdown
 	// plugin::Call<0x58FF10>();
-	0AA5: call_function 0x58FF10 num_params 1 pop 1 []
+	0AA5: call_function 0x58FF10 num_params 0 pop 0
 
 	// CLoadingScreen::RenderSplash
 	// plugin::Call<0x58FF60>();
-	0AA5: call_function 0x58FF60 num_params 1 pop 1 []
+	0AA5: call_function 0x58FF60 num_params 0 pop 0
 
 	// CLoadingScreen::LoadSplashes
 	// plugin::Call<0x5900B0, unsigned char, unsigned char>(bStarting, bNvidia);
@@ -14225,35 +14225,35 @@ plugin_sa\game_sa\CLoadingScreen.cpp:
 
 	// CLoadingScreen::Continue
 	// plugin::Call<0x590320>();
-	0AA5: call_function 0x590320 num_params 1 pop 1 []
+	0AA5: call_function 0x590320 num_params 0 pop 0
 
 	// CLoadingScreen::RenderLoadingBar
 	// plugin::Call<0x590370>();
-	0AA5: call_function 0x590370 num_params 1 pop 1 []
+	0AA5: call_function 0x590370 num_params 0 pop 0
 
 	// CLoadingScreen::DisplayNextSplash
 	// plugin::Call<0x5904D0>();
-	0AA5: call_function 0x5904D0 num_params 1 pop 1 []
+	0AA5: call_function 0x5904D0 num_params 0 pop 0
 
 	// CLoadingScreen::StartFading
 	// plugin::Call<0x590530>();
-	0AA5: call_function 0x590530 num_params 1 pop 1 []
+	0AA5: call_function 0x590530 num_params 0 pop 0
 
 	// CLoadingScreen::DisplayPCScreen
 	// plugin::Call<0x590570>();
-	0AA5: call_function 0x590570 num_params 1 pop 1 []
+	0AA5: call_function 0x590570 num_params 0 pop 0
 
 	// CLoadingScreen::Update
 	// plugin::Call<0x5905E0>();
-	0AA5: call_function 0x5905E0 num_params 1 pop 1 []
+	0AA5: call_function 0x5905E0 num_params 0 pop 0
 
 	// CLoadingScreen::DoPCTitleFadeOut
 	// plugin::Call<0x590990>();
-	0AA5: call_function 0x590990 num_params 1 pop 1 []
+	0AA5: call_function 0x590990 num_params 0 pop 0
 
 	// CLoadingScreen::DoPCTitleFadeIn
 	// plugin::Call<0x590860>();
-	0AA5: call_function 0x590860 num_params 1 pop 1 []
+	0AA5: call_function 0x590860 num_params 0 pop 0
 
 	// CLoadingScreen::DoPCScreenChange
 	// plugin::Call<0x590AC0, unsigned int>(bFinish);
@@ -14261,7 +14261,7 @@ plugin_sa\game_sa\CLoadingScreen.cpp:
 
 	// CLoadingScreen::NewChunkLoaded
 	// plugin::Call<0x590D00>();
-	0AA5: call_function 0x590D00 num_params 1 pop 1 []
+	0AA5: call_function 0x590D00 num_params 0 pop 0
 
 plugin_sa\game_sa\CMatrix.cpp:
 
@@ -14527,11 +14527,11 @@ plugin_sa\game_sa\CMirrors.cpp:
 
 	// CMirrors::BeforeConstructRenderList
 	// plugin::Call<0x726DF0>();
-	0AA5: call_function 0x726DF0 num_params 1 pop 1 []
+	0AA5: call_function 0x726DF0 num_params 0 pop 0
 
 	// CMirrors::BeforeMainRender
 	// plugin::Call<0x727140>();
-	0AA5: call_function 0x727140 num_params 1 pop 1 []
+	0AA5: call_function 0x727140 num_params 0 pop 0
 
 	// CMirrors::BuildCamMatrix
 	// plugin::Call<0x723150, CMatrix*, CVector, CVector>(mat, pointA, pointB);
@@ -14543,19 +14543,19 @@ plugin_sa\game_sa\CMirrors.cpp:
 
 	// CMirrors::CreateBuffer
 	// plugin::Call<0x7230A0>();
-	0AA5: call_function 0x7230A0 num_params 1 pop 1 []
+	0AA5: call_function 0x7230A0 num_params 0 pop 0
 
 	// CMirrors::Init
 	// plugin::Call<0x723000>();
-	0AA5: call_function 0x723000 num_params 1 pop 1 []
+	0AA5: call_function 0x723000 num_params 0 pop 0
 
 	// CMirrors::RenderMirrorBuffer
 	// plugin::Call<0x726090>();
-	0AA5: call_function 0x726090 num_params 1 pop 1 []
+	0AA5: call_function 0x726090 num_params 0 pop 0
 
 	// CMirrors::ShutDown
 	// plugin::Call<0x723050>();
-	0AA5: call_function 0x723050 num_params 1 pop 1 []
+	0AA5: call_function 0x723050 num_params 0 pop 0
 
 plugin_sa\game_sa\CModelInfo.cpp:
 
@@ -14613,11 +14613,11 @@ plugin_sa\game_sa\CMotionBlurStreaks.cpp:
 
 	// CMotionBlurStreaks::Update
 	// plugin::Call<0x7240C0>();
-	0AA5: call_function 0x7240C0 num_params 1 pop 1 []
+	0AA5: call_function 0x7240C0 num_params 0 pop 0
 
 	// CMotionBlurStreaks::Render
 	// plugin::Call<0x7240E0>();
-	0AA5: call_function 0x7240E0 num_params 1 pop 1 []
+	0AA5: call_function 0x7240E0 num_params 0 pop 0
 
 	// CMotionBlurStreaks::RegisterStreak
 	// plugin::Call<0x721DC0, unsigned int, unsigned char, unsigned char, unsigned char, CVector, CVector>(id, red, green, blue, leftPoint, rightPoint);
@@ -14625,7 +14625,7 @@ plugin_sa\game_sa\CMotionBlurStreaks.cpp:
 
 	// CMotionBlurStreaks::Init
 	// plugin::Call<0x721D90>();
-	0AA5: call_function 0x721D90 num_params 1 pop 1 []
+	0AA5: call_function 0x721D90 num_params 0 pop 0
 
 plugin_sa\game_sa\COctTree.cpp:
 
@@ -14841,7 +14841,7 @@ plugin_sa\game_sa\common.cpp:
 
 	// RpAnimBlendPluginAttach
 	// plugin::CallAndReturn<bool, 0x4D6150>();
-	0AA7: call_function_return 0x4D6150 num_params 1 pop 1 [] func_ret [bool]
+	0AA7: call_function_return 0x4D6150 num_params 0 pop 0 func_ret [bool]
 
 	// AsciiToGxtChar
 	// plugin::Call<0x718600, char const *, char *>(src, dst);
@@ -14857,7 +14857,7 @@ plugin_sa\game_sa\common.cpp:
 
 	// DoRWStuffEndOfFrame
 	// plugin::Call<0x53D840>();
-	0AA5: call_function 0x53D840 num_params 1 pop 1 []
+	0AA5: call_function 0x53D840 num_params 0 pop 0
 
 	// RsCameraShowRaster
 	// plugin::Call<0x619440>(camera);
@@ -15139,11 +15139,11 @@ plugin_sa\game_sa\CPad.cpp:
 
 	// CPad::UpdatePads
 	// plugin::Call<0x541DD0>();
-	0AA5: call_function 0x541DD0 num_params 1 pop 1 []
+	0AA5: call_function 0x541DD0 num_params 0 pop 0
 
 	// CPad::ClearMouseHistory
 	// plugin::Call<0x541BD0>();
-	0AA5: call_function 0x541BD0 num_params 1 pop 1 []
+	0AA5: call_function 0x541BD0 num_params 0 pop 0
 
 plugin_sa\game_sa\CPathNode.cpp:
 
@@ -15827,7 +15827,7 @@ plugin_sa\game_sa\CPickups.cpp:
 
 	// CPickups::Init
 	// plugin::Call<0x454A70>();
-	0AA5: call_function 0x454A70 num_params 1 pop 1 []
+	0AA5: call_function 0x454A70 num_params 0 pop 0
 
 	// CPickups::IsPickUpPickedUp
 	// plugin::CallAndReturn<bool, 0x454B40, int>(pickupHandle);
@@ -15835,7 +15835,7 @@ plugin_sa\game_sa\CPickups.cpp:
 
 	// CPickups::Load
 	// plugin::CallAndReturn<bool, 0x5D35A0>();
-	0AA7: call_function_return 0x5D35A0 num_params 1 pop 1 [] func_ret [bool]
+	0AA7: call_function_return 0x5D35A0 num_params 0 pop 0 func_ret [bool]
 
 	// CPickups::ModelForWeapon
 	// plugin::CallAndReturn<int, 0x454AC0, eWeaponType>(weaponType);
@@ -15847,15 +15847,15 @@ plugin_sa\game_sa\CPickups.cpp:
 
 	// CPickups::PickedUpHorseShoe
 	// plugin::Call<0x455390>();
-	0AA5: call_function 0x455390 num_params 1 pop 1 []
+	0AA5: call_function 0x455390 num_params 0 pop 0
 
 	// CPickups::PickedUpOyster
 	// plugin::Call<0x4552D0>();
-	0AA5: call_function 0x4552D0 num_params 1 pop 1 []
+	0AA5: call_function 0x4552D0 num_params 0 pop 0
 
 	// CPickups::PictureTaken
 	// plugin::Call<0x456A70>();
-	0AA5: call_function 0x456A70 num_params 1 pop 1 []
+	0AA5: call_function 0x456A70 num_params 0 pop 0
 
 	// CPickups::PlayerCanPickUpThisWeaponTypeAtThisMoment
 	// plugin::CallAndReturn<bool, 0x4554C0, eWeaponType>(weaponType);
@@ -15863,11 +15863,11 @@ plugin_sa\game_sa\CPickups.cpp:
 
 	// CPickups::ReInit
 	// plugin::Call<0x456E60>();
-	0AA5: call_function 0x456E60 num_params 1 pop 1 []
+	0AA5: call_function 0x456E60 num_params 0 pop 0
 
 	// CPickups::RemoveMissionPickUps
 	// plugin::Call<0x456DE0>();
-	0AA5: call_function 0x456DE0 num_params 1 pop 1 []
+	0AA5: call_function 0x456DE0 num_params 0 pop 0
 
 	// CPickups::RemovePickUp
 	// plugin::Call<0x4573D0, int>(pickupHandle);
@@ -15879,7 +15879,7 @@ plugin_sa\game_sa\CPickups.cpp:
 
 	// CPickups::RemovePickupObjects
 	// plugin::Call<0x455470>();
-	0AA5: call_function 0x455470 num_params 1 pop 1 []
+	0AA5: call_function 0x455470 num_params 0 pop 0
 
 	// CPickups::RemoveUnnecessaryPickups
 	// plugin::Call<0x4563A0, CVector const&, float>(posn, radius);
@@ -15887,11 +15887,11 @@ plugin_sa\game_sa\CPickups.cpp:
 
 	// CPickups::RenderPickUpText
 	// plugin::Call<0x455000>();
-	0AA5: call_function 0x455000 num_params 1 pop 1 []
+	0AA5: call_function 0x455000 num_params 0 pop 0
 
 	// CPickups::Save
 	// plugin::CallAndReturn<bool, 0x5D3540>();
-	0AA7: call_function_return 0x5D3540 num_params 1 pop 1 [] func_ret [bool]
+	0AA7: call_function_return 0x5D3540 num_params 0 pop 0 func_ret [bool]
 
 	// CPickups::TestForPickupsInBubble
 	// plugin::CallAndReturn<bool, 0x456450, CVector, float>(posn, radius);
@@ -15903,7 +15903,7 @@ plugin_sa\game_sa\CPickups.cpp:
 
 	// CPickups::Update
 	// plugin::Call<0x458DE0>();
-	0AA5: call_function 0x458DE0 num_params 1 pop 1 []
+	0AA5: call_function 0x458DE0 num_params 0 pop 0
 
 	// CPickups::UpdateMoneyPerDay
 	// plugin::Call<0x455680, int, unsigned short>(pickupHandle, money);
@@ -16173,7 +16173,7 @@ plugin_sa\game_sa\CPointLights.cpp:
 
 	// CPointLights::Init
 	// plugin::Call<0x6FFB40>();
-	0AA5: call_function 0x6FFB40 num_params 1 pop 1 []
+	0AA5: call_function 0x6FFB40 num_params 0 pop 0
 
 	// CPointLights::GenerateLightsAffectingObject
 	// plugin::CallAndReturn<float, 0x6FFBB0, CVector const*, float*, CEntity*>(point, totalLighting, entity);
@@ -16185,7 +16185,7 @@ plugin_sa\game_sa\CPointLights.cpp:
 
 	// CPointLights::RemoveLightsAffectingObject
 	// plugin::Call<0x6FFFE0>();
-	0AA5: call_function 0x6FFFE0 num_params 1 pop 1 []
+	0AA5: call_function 0x6FFFE0 num_params 0 pop 0
 
 	// CPointLights::ProcessVerticalLineUsingCache
 	// plugin::CallAndReturn<bool, 0x6FFFF0, CVector, float*>(point, outZ);
@@ -16197,7 +16197,7 @@ plugin_sa\game_sa\CPointLights.cpp:
 
 	// CPointLights::RenderFogEffect
 	// plugin::Call<0x7002D0>();
-	0AA5: call_function 0x7002D0 num_params 1 pop 1 []
+	0AA5: call_function 0x7002D0 num_params 0 pop 0
 
 plugin_sa\game_sa\CPointList.cpp:
 
@@ -16208,11 +16208,11 @@ plugin_sa\game_sa\CPools.cpp:
 
 	// CPools::CheckBuildingAtomics
 	// plugin::CallAndReturn<int, 0x550170>();
-	0AA7: call_function_return 0x550170 num_params 1 pop 1 [] func_ret [int]
+	0AA7: call_function_return 0x550170 num_params 0 pop 0 func_ret [int]
 
 	// CPools::CheckPoolsEmpty
 	// plugin::Call<0x551950>();
-	0AA5: call_function 0x551950 num_params 1 pop 1 []
+	0AA5: call_function 0x551950 num_params 0 pop 0
 
 	// CPools::GetObject
 	// plugin::CallAndReturn<CObject*, 0x550050, int>(handle);
@@ -16240,23 +16240,23 @@ plugin_sa\game_sa\CPools.cpp:
 
 	// CPools::Initialise
 	// plugin::Call<0x550F10>();
-	0AA5: call_function 0x550F10 num_params 1 pop 1 []
+	0AA5: call_function 0x550F10 num_params 0 pop 0
 
 	// CPools::Load
 	// plugin::CallAndReturn<bool, 0x5D0890>();
-	0AA7: call_function_return 0x5D0890 num_params 1 pop 1 [] func_ret [bool]
+	0AA7: call_function_return 0x5D0890 num_params 0 pop 0 func_ret [bool]
 
 	// CPools::LoadObjectPool
 	// plugin::CallAndReturn<bool, 0x5D4A40>();
-	0AA7: call_function_return 0x5D4A40 num_params 1 pop 1 [] func_ret [bool]
+	0AA7: call_function_return 0x5D4A40 num_params 0 pop 0 func_ret [bool]
 
 	// CPools::LoadPedPool
 	// plugin::CallAndReturn<bool, 0x5D2D70>();
-	0AA7: call_function_return 0x5D2D70 num_params 1 pop 1 [] func_ret [bool]
+	0AA7: call_function_return 0x5D2D70 num_params 0 pop 0 func_ret [bool]
 
 	// CPools::LoadVehiclePool
 	// plugin::CallAndReturn<bool, 0x5D2A20>();
-	0AA7: call_function_return 0x5D2A20 num_params 1 pop 1 [] func_ret [bool]
+	0AA7: call_function_return 0x5D2A20 num_params 0 pop 0 func_ret [bool]
 
 	// CPools::MakeSureSlotInObjectPoolIsEmpty
 	// plugin::Call<0x550080, int>(slot);
@@ -16264,23 +16264,23 @@ plugin_sa\game_sa\CPools.cpp:
 
 	// CPools::Save
 	// plugin::CallAndReturn<bool, 0x5D0880>();
-	0AA7: call_function_return 0x5D0880 num_params 1 pop 1 [] func_ret [bool]
+	0AA7: call_function_return 0x5D0880 num_params 0 pop 0 func_ret [bool]
 
 	// CPools::SaveObjectPool
 	// plugin::CallAndReturn<bool, 0x5D4940>();
-	0AA7: call_function_return 0x5D4940 num_params 1 pop 1 [] func_ret [bool]
+	0AA7: call_function_return 0x5D4940 num_params 0 pop 0 func_ret [bool]
 
 	// CPools::SavePedPool
 	// plugin::CallAndReturn<bool, 0x5D4B40>();
-	0AA7: call_function_return 0x5D4B40 num_params 1 pop 1 [] func_ret [bool]
+	0AA7: call_function_return 0x5D4B40 num_params 0 pop 0 func_ret [bool]
 
 	// CPools::SaveVehiclePool
 	// plugin::CallAndReturn<bool, 0x5D4800>();
-	0AA7: call_function_return 0x5D4800 num_params 1 pop 1 [] func_ret [bool]
+	0AA7: call_function_return 0x5D4800 num_params 0 pop 0 func_ret [bool]
 
 	// CPools::ShutDown
 	// plugin::Call<0x5519F0>();
-	0AA5: call_function 0x5519F0 num_params 1 pop 1 []
+	0AA5: call_function 0x5519F0 num_params 0 pop 0
 
 plugin_sa\game_sa\CPopCycle.cpp:
 
@@ -16290,11 +16290,11 @@ plugin_sa\game_sa\CPopCycle.cpp:
 
 	// CPopCycle::GetCurrentPercOther_Peds
 	// plugin::CallAndReturn<float, 0x610310>();
-	0AA7: call_function_return 0x610310 num_params 1 pop 1 [] func_ret [float]
+	0AA7: call_function_return 0x610310 num_params 0 pop 0 func_ret [float]
 
 	// CPopCycle::Initialise
 	// plugin::Call<0x5BC090>();
-	0AA5: call_function 0x5BC090 num_params 1 pop 1 []
+	0AA5: call_function 0x5BC090 num_params 0 pop 0
 
 	// CPopCycle::IsPedAppropriateForCurrentZone
 	// plugin::CallAndReturn<bool, 0x610150, int>(modelindex);
@@ -16310,33 +16310,33 @@ plugin_sa\game_sa\CPopCycle.cpp:
 
 	// CPopCycle::PickARandomGroupOfOtherPeds
 	// plugin::CallAndReturn<int, 0x610420>();
-	0AA7: call_function_return 0x610420 num_params 1 pop 1 [] func_ret [int]
+	0AA7: call_function_return 0x610420 num_params 0 pop 0 func_ret [int]
 
 	// CPopCycle::PlayerKilledADealer
 	// plugin::Call<0x610490>();
-	0AA5: call_function 0x610490 num_params 1 pop 1 []
+	0AA5: call_function 0x610490 num_params 0 pop 0
 
 	// CPopCycle::Update
 	// plugin::Call<0x610BF0>();
-	0AA5: call_function 0x610BF0 num_params 1 pop 1 []
+	0AA5: call_function 0x610BF0 num_params 0 pop 0
 
 	// CPopCycle::UpdateAreaDodgyness
 	// plugin::Call<0x610560>();
-	0AA5: call_function 0x610560 num_params 1 pop 1 []
+	0AA5: call_function 0x610560 num_params 0 pop 0
 
 	// CPopCycle::UpdateDealerStrengths
 	// plugin::Call<0x6104B0>();
-	0AA5: call_function 0x6104B0 num_params 1 pop 1 []
+	0AA5: call_function 0x6104B0 num_params 0 pop 0
 
 	// CPopCycle::UpdatePercentages
 	// plugin::Call<0x610770>();
-	0AA5: call_function 0x610770 num_params 1 pop 1 []
+	0AA5: call_function 0x610770 num_params 0 pop 0
 
 plugin_sa\game_sa\CProjectileInfo.cpp:
 
 	// CProjectileInfo::Initialise
 	// plugin::Call<0x737B40>();
-	0AA5: call_function 0x737B40 num_params 1 pop 1 []
+	0AA5: call_function 0x737B40 num_params 0 pop 0
 
 	// CProjectileInfo::RemoveFXSystem
 	// plugin::Call<0x737B80, unsigned char>(bInstantly);
@@ -16344,7 +16344,7 @@ plugin_sa\game_sa\CProjectileInfo.cpp:
 
 	// CProjectileInfo::Shutdown
 	// plugin::Call<0x737BC0>();
-	0AA5: call_function 0x737BC0 num_params 1 pop 1 []
+	0AA5: call_function 0x737BC0 num_params 0 pop 0
 
 	// CProjectileInfo::GetProjectileInfo
 	// plugin::CallAndReturn<CProjectileInfo*, 0x737BF0, int>(infoId);
@@ -16360,7 +16360,7 @@ plugin_sa\game_sa\CProjectileInfo.cpp:
 
 	// CProjectileInfo::RemoveDetonatorProjectiles
 	// plugin::Call<0x738860>();
-	0AA5: call_function 0x738860 num_params 1 pop 1 []
+	0AA5: call_function 0x738860 num_params 0 pop 0
 
 	// CProjectileInfo::RemoveProjectile
 	// plugin::Call<0x7388F0, CProjectileInfo*, CProjectile*>(projectileInfo, projectileObject);
@@ -16368,7 +16368,7 @@ plugin_sa\game_sa\CProjectileInfo.cpp:
 
 	// CProjectileInfo::Update
 	// plugin::Call<0x738B20>();
-	0AA5: call_function 0x738B20 num_params 1 pop 1 []
+	0AA5: call_function 0x738B20 num_params 0 pop 0
 
 	// CProjectileInfo::IsProjectileInRange
 	// plugin::CallAndReturn<bool, 0x739860, float, float, float, float, float, float, bool>(x1, y1, z1, x2, y2, z2, bDestroy);
@@ -16376,7 +16376,7 @@ plugin_sa\game_sa\CProjectileInfo.cpp:
 
 	// CProjectileInfo::RemoveAllProjectiles
 	// plugin::Call<0x7399B0>();
-	0AA5: call_function 0x7399B0 num_params 1 pop 1 []
+	0AA5: call_function 0x7399B0 num_params 0 pop 0
 
 	// CProjectileInfo::RemoveIfThisIsAProjectile
 	// plugin::CallAndReturn<bool, 0x739A40, CObject*>(object);
@@ -16520,19 +16520,19 @@ plugin_sa\game_sa\CRenderer.cpp:
 
 	// CRenderer::Init
 	// plugin::Call<0x5531C0>();
-	0AA5: call_function 0x5531C0 num_params 1 pop 1 []
+	0AA5: call_function 0x5531C0 num_params 0 pop 0
 
 	// CRenderer::Shutdown
 	// plugin::Call<0x5531D0>();
-	0AA5: call_function 0x5531D0 num_params 1 pop 1 []
+	0AA5: call_function 0x5531D0 num_params 0 pop 0
 
 	// CRenderer::RenderFadingInEntities
 	// plugin::Call<0x5531E0>();
-	0AA5: call_function 0x5531E0 num_params 1 pop 1 []
+	0AA5: call_function 0x5531E0 num_params 0 pop 0
 
 	// CRenderer::RenderFadingInUnderwaterEntities
 	// plugin::Call<0x553220>();
-	0AA5: call_function 0x553220 num_params 1 pop 1 []
+	0AA5: call_function 0x553220 num_params 0 pop 0
 
 	// CRenderer::RenderOneRoad
 	// plugin::Call<0x553230, CEntity*>(entity);
@@ -16560,15 +16560,15 @@ plugin_sa\game_sa\CRenderer.cpp:
 
 	// CRenderer::GetLodRenderListBase
 	// plugin::CallAndReturn<tRenderListEntry*, 0x5536D0>();
-	0AA7: call_function_return 0x5536D0 num_params 1 pop 1 [] func_ret [tRenderListEntry*]
+	0AA7: call_function_return 0x5536D0 num_params 0 pop 0 func_ret [tRenderListEntry*]
 
 	// CRenderer::GetLodDontRenderListBase
 	// plugin::CallAndReturn<tRenderListEntry*, 0x5536E0>();
-	0AA7: call_function_return 0x5536E0 num_params 1 pop 1 [] func_ret [tRenderListEntry*]
+	0AA7: call_function_return 0x5536E0 num_params 0 pop 0 func_ret [tRenderListEntry*]
 
 	// CRenderer::ResetLodRenderLists
 	// plugin::Call<0x5536F0>();
-	0AA5: call_function 0x5536F0 num_params 1 pop 1 []
+	0AA5: call_function 0x5536F0 num_params 0 pop 0
 
 	// CRenderer::AddToLodRenderList
 	// plugin::Call<0x553710, CEntity*, float>(entity, distance);
@@ -16580,23 +16580,23 @@ plugin_sa\game_sa\CRenderer.cpp:
 
 	// CRenderer::ProcessLodRenderLists
 	// plugin::Call<0x553770>();
-	0AA5: call_function 0x553770 num_params 1 pop 1 []
+	0AA5: call_function 0x553770 num_params 0 pop 0
 
 	// CRenderer::PreRender
 	// plugin::Call<0x553910>();
-	0AA5: call_function 0x553910 num_params 1 pop 1 []
+	0AA5: call_function 0x553910 num_params 0 pop 0
 
 	// CRenderer::RenderRoads
 	// plugin::Call<0x553A10>();
-	0AA5: call_function 0x553A10 num_params 1 pop 1 []
+	0AA5: call_function 0x553A10 num_params 0 pop 0
 
 	// CRenderer::RenderEverythingBarRoads
 	// plugin::Call<0x553AA0>();
-	0AA5: call_function 0x553AA0 num_params 1 pop 1 []
+	0AA5: call_function 0x553AA0 num_params 0 pop 0
 
 	// CRenderer::RenderFirstPersonVehicle
 	// plugin::Call<0x553D00>();
-	0AA5: call_function 0x553D00 num_params 1 pop 1 []
+	0AA5: call_function 0x553D00 num_params 0 pop 0
 
 	// CRenderer::SetupLightingForEntity
 	// plugin::CallAndReturn<bool, 0x553E40, CEntity*>(entity);
@@ -16632,7 +16632,7 @@ plugin_sa\game_sa\CRenderer.cpp:
 
 	// CRenderer::ScanWorld
 	// plugin::Call<0x554FE0>();
-	0AA5: call_function 0x554FE0 num_params 1 pop 1 []
+	0AA5: call_function 0x554FE0 num_params 0 pop 0
 
 	// CRenderer::ScanPtrList_RequestModels
 	// plugin::Call<0x555680, CPtrList&>(ptrList);
@@ -16640,7 +16640,7 @@ plugin_sa\game_sa\CRenderer.cpp:
 
 	// CRenderer::ConstructRenderList
 	// plugin::Call<0x5556E0>();
-	0AA5: call_function 0x5556E0 num_params 1 pop 1 []
+	0AA5: call_function 0x5556E0 num_params 0 pop 0
 
 	// CRenderer::ScanSectorList_RequestModels
 	// plugin::Call<0x555900, int, int>(sector_x, sector_y);
@@ -17071,33 +17071,33 @@ plugin_sa\game_sa\CSetPieces.cpp:
 
 	// CSetPieces::Init
 	// plugin::Call<0x4994F0>();
-	0AA5: call_function 0x4994F0 num_params 1 pop 1 []
+	0AA5: call_function 0x4994F0 num_params 0 pop 0
 
 	// CSetPieces::Load
 	// plugin::CallAndReturn<bool, 0x5D3CA0>();
-	0AA7: call_function_return 0x5D3CA0 num_params 1 pop 1 [] func_ret [bool]
+	0AA7: call_function_return 0x5D3CA0 num_params 0 pop 0 func_ret [bool]
 
 	// CSetPieces::Save
 	// plugin::CallAndReturn<bool, 0x5D3C70>();
-	0AA7: call_function_return 0x5D3C70 num_params 1 pop 1 [] func_ret [bool]
+	0AA7: call_function_return 0x5D3C70 num_params 0 pop 0 func_ret [bool]
 
 	// CSetPieces::Update
 	// plugin::Call<0x49AA00>();
-	0AA5: call_function 0x49AA00 num_params 1 pop 1 []
+	0AA5: call_function 0x49AA00 num_params 0 pop 0
 
 plugin_sa\game_sa\CShinyTexts.cpp:
 
 	// CShinyTexts::Init
 	// plugin::Call<0x7221B0>();
-	0AA5: call_function 0x7221B0 num_params 1 pop 1 []
+	0AA5: call_function 0x7221B0 num_params 0 pop 0
 
 	// CShinyTexts::RenderOutGeometryBuffer
 	// plugin::Call<0x7221C0>();
-	0AA5: call_function 0x7221C0 num_params 1 pop 1 []
+	0AA5: call_function 0x7221C0 num_params 0 pop 0
 
 	// CShinyTexts::Render
 	// plugin::Call<0x724890>();
-	0AA5: call_function 0x724890 num_params 1 pop 1 []
+	0AA5: call_function 0x724890 num_params 0 pop 0
 
 	// CShinyTexts::RegisterOne
 	// plugin::Call<0x724B60, CVector, CVector, CVector, CVector, float, float, float, float, float, float, float, float, unsigned char, unsigned char, unsigned char, unsigned char, float>(cornerAA, cornerBA, cornerBB, cornerAB, u1, v1, u2, v2, u3, v3, u4, v4, red, green, blue, alpha, maxDistance);
@@ -17107,11 +17107,11 @@ plugin_sa\game_sa\CShotInfo.cpp:
 
 	// CShotInfo::Initialise
 	// plugin::Call<0x739B60>();
-	0AA5: call_function 0x739B60 num_params 1 pop 1 []
+	0AA5: call_function 0x739B60 num_params 0 pop 0
 
 	// CShotInfo::Shutdown
 	// plugin::Call<0x739C20>();
-	0AA5: call_function 0x739C20 num_params 1 pop 1 []
+	0AA5: call_function 0x739C20 num_params 0 pop 0
 
 	// CShotInfo::AddShot
 	// plugin::CallAndReturn<bool, 0x739C30, CEntity*, eWeaponType, CVector, CVector>(creator, weaponType, origin, target);
@@ -17123,7 +17123,7 @@ plugin_sa\game_sa\CShotInfo.cpp:
 
 	// CShotInfo::Update
 	// plugin::Call<0x739E60>();
-	0AA5: call_function 0x739E60 num_params 1 pop 1 []
+	0AA5: call_function 0x739E60 num_params 0 pop 0
 
 plugin_sa\game_sa\CSpecialFX.cpp:
 
@@ -17133,27 +17133,27 @@ plugin_sa\game_sa\CSpecialFX.cpp:
 
 	// CSpecialFX::Init
 	// plugin::Call<0x7268F0>();
-	0AA5: call_function 0x7268F0 num_params 1 pop 1 []
+	0AA5: call_function 0x7268F0 num_params 0 pop 0
 
 	// CSpecialFX::Render
 	// plugin::Call<0x726AD0>();
-	0AA5: call_function 0x726AD0 num_params 1 pop 1 []
+	0AA5: call_function 0x726AD0 num_params 0 pop 0
 
 	// CSpecialFX::Render2DFXs
 	// plugin::Call<0x721660>();
-	0AA5: call_function 0x721660 num_params 1 pop 1 []
+	0AA5: call_function 0x721660 num_params 0 pop 0
 
 	// CSpecialFX::ReplayStarted
 	// plugin::Call<0x721D30>();
-	0AA5: call_function 0x721D30 num_params 1 pop 1 []
+	0AA5: call_function 0x721D30 num_params 0 pop 0
 
 	// CSpecialFX::Shutdown
 	// plugin::Call<0x723390>();
-	0AA5: call_function 0x723390 num_params 1 pop 1 []
+	0AA5: call_function 0x723390 num_params 0 pop 0
 
 	// CSpecialFX::Update
 	// plugin::Call<0x726AA0>();
-	0AA5: call_function 0x726AA0 num_params 1 pop 1 []
+	0AA5: call_function 0x726AA0 num_params 0 pop 0
 
 plugin_sa\game_sa\CSpecialPlateHandler.cpp:
 
@@ -17201,27 +17201,27 @@ plugin_sa\game_sa\CStats.cpp:
 
 	// CStats::PopulateFavoriteRadioStationList
 	// plugin::CallAndReturn<bool, 0x558EC0>();
-	0AA7: call_function_return 0x558EC0 num_params 1 pop 1 [] func_ret [bool]
+	0AA7: call_function_return 0x558EC0 num_params 0 pop 0 func_ret [bool]
 
 	// *CStats::GetFullFavoriteRadioStationList
 	// plugin::CallAndReturn<int*, 0x558F90>();
-	0AA7: call_function_return 0x558F90 num_params 1 pop 1 [] func_ret [int*]
+	0AA7: call_function_return 0x558F90 num_params 0 pop 0 func_ret [int*]
 
 	// CStats::FindMostFavoriteRadioStation
 	// plugin::CallAndReturn<int, 0x558FA0>();
-	0AA7: call_function_return 0x558FA0 num_params 1 pop 1 [] func_ret [int]
+	0AA7: call_function_return 0x558FA0 num_params 0 pop 0 func_ret [int]
 
 	// CStats::FindLeastFavoriteRadioStation
 	// plugin::CallAndReturn<int, 0x559010>();
-	0AA7: call_function_return 0x559010 num_params 1 pop 1 [] func_ret [int]
+	0AA7: call_function_return 0x559010 num_params 0 pop 0 func_ret [int]
 
 	// CStats::FindCriminalRatingNumber
 	// plugin::CallAndReturn<int, 0x559080>();
-	0AA7: call_function_return 0x559080 num_params 1 pop 1 [] func_ret [int]
+	0AA7: call_function_return 0x559080 num_params 0 pop 0 func_ret [int]
 
 	// CStats::GetPercentageProgress
 	// plugin::CallAndReturn<float, 0x5591E0>();
-	0AA7: call_function_return 0x5591E0 num_params 1 pop 1 [] func_ret [float]
+	0AA7: call_function_return 0x5591E0 num_params 0 pop 0 func_ret [float]
 
 	// CStats::BuildStatLine
 	// plugin::Call<0x559230, char*, void*, int, void*, int>(line, pValue1, metrics, pValue2, type);
@@ -17253,19 +17253,19 @@ plugin_sa\game_sa\CStats.cpp:
 
 	// CStats::CheckForStatsMessage
 	// plugin::Call<0x559760>();
-	0AA5: call_function 0x559760 num_params 1 pop 1 []
+	0AA5: call_function 0x559760 num_params 0 pop 0
 
 	// CStats::LoadStatUpdateConditions
 	// plugin::Call<0x559860>();
-	0AA5: call_function 0x559860 num_params 1 pop 1 []
+	0AA5: call_function 0x559860 num_params 0 pop 0
 
 	// CStats::LoadActionReactionStats
 	// plugin::Call<0x5599B0>();
-	0AA5: call_function 0x5599B0 num_params 1 pop 1 []
+	0AA5: call_function 0x5599B0 num_params 0 pop 0
 
 	// CStats::FindMaxNumberOfGroupMembers
 	// plugin::CallAndReturn<int, 0x559A50>();
-	0AA7: call_function_return 0x559A50 num_params 1 pop 1 [] func_ret [int]
+	0AA7: call_function_return 0x559A50 num_params 0 pop 0 func_ret [int]
 
 	// CStats::GetFatAndMuscleModifier
 	// plugin::CallAndReturn<float, 0x559AF0, eStatModAbilities>(statMod);
@@ -17289,7 +17289,7 @@ plugin_sa\game_sa\CStats.cpp:
 
 	// CStats::FindCriminalRatingString
 	// plugin::CallAndReturn<char*, 0x55A210>();
-	0AA7: call_function_return 0x55A210 num_params 1 pop 1 [] func_ret [char*]
+	0AA7: call_function_return 0x55A210 num_params 0 pop 0 func_ret [char*]
 
 	// CStats::ConstructStatLine
 	// plugin::CallAndReturn<int, 0x55A780, int, unsigned char>(arg0, arg1);
@@ -17309,11 +17309,11 @@ plugin_sa\game_sa\CStats.cpp:
 
 	// CStats::UpdateSexAppealStat
 	// plugin::Call<0x55BF20>();
-	0AA5: call_function 0x55BF20 num_params 1 pop 1 []
+	0AA5: call_function 0x55BF20 num_params 0 pop 0
 
 	// CStats::Init
 	// plugin::Call<0x55C0C0>();
-	0AA5: call_function 0x55C0C0 num_params 1 pop 1 []
+	0AA5: call_function 0x55C0C0 num_params 0 pop 0
 
 	// CStats::IncrementStat
 	// plugin::Call<0x55C180, unsigned short, float>(stat, value);
@@ -17329,11 +17329,11 @@ plugin_sa\game_sa\CStats.cpp:
 
 	// CStats::UpdateStatsWhenSprinting
 	// plugin::Call<0x55C660>();
-	0AA5: call_function 0x55C660 num_params 1 pop 1 []
+	0AA5: call_function 0x55C660 num_params 0 pop 0
 
 	// CStats::UpdateStatsWhenRunning
 	// plugin::Call<0x55C6F0>();
-	0AA5: call_function 0x55C6F0 num_params 1 pop 1 []
+	0AA5: call_function 0x55C6F0 num_params 0 pop 0
 
 	// CStats::UpdateStatsWhenCycling
 	// plugin::Call<0x55C780, bool, CBmx*>(arg0, bmx);
@@ -17361,11 +17361,11 @@ plugin_sa\game_sa\CStats.cpp:
 
 	// CStats::UpdateStatsWhenFighting
 	// plugin::Call<0x55CFA0>();
-	0AA5: call_function 0x55CFA0 num_params 1 pop 1 []
+	0AA5: call_function 0x55CFA0 num_params 0 pop 0
 
 	// CStats::UpdateStatsOnRespawn
 	// plugin::Call<0x55CFC0>();
-	0AA5: call_function 0x55CFC0 num_params 1 pop 1 []
+	0AA5: call_function 0x55CFC0 num_params 0 pop 0
 
 	// CStats::UpdateStatsAddToHealth
 	// plugin::Call<0x55D030, unsigned int>(addToHealth);
@@ -17377,11 +17377,11 @@ plugin_sa\game_sa\CStats.cpp:
 
 	// CStats::Save
 	// plugin::CallAndReturn<bool, 0x5D3B40>();
-	0AA7: call_function_return 0x5D3B40 num_params 1 pop 1 [] func_ret [bool]
+	0AA7: call_function_return 0x5D3B40 num_params 0 pop 0 func_ret [bool]
 
 	// CStats::Load
 	// plugin::CallAndReturn<bool, 0x5D3BF0>();
-	0AA7: call_function_return 0x5D3BF0 num_params 1 pop 1 [] func_ret [bool]
+	0AA7: call_function_return 0x5D3BF0 num_params 0 pop 0 func_ret [bool]
 
 plugin_sa\game_sa\CStreamedScripts.cpp:
 
@@ -17781,7 +17781,7 @@ plugin_sa\game_sa\CTaskComplexProstituteSolicit.cpp:
 
 	// CTaskComplexProstituteSolicit::GetRidOfPlayerProstitute
 	// plugin::Call<0x661D30>();
-	0AA5: call_function 0x661D30 num_params 1 pop 1 []
+	0AA5: call_function 0x661D30 num_params 0 pop 0
 
 	// CTaskComplexProstituteSolicit::IsTaskValid
 	// plugin::CallAndReturn<bool, 0x661BB0, CPed*, CPed*>(pProstitute, pClient);
@@ -18046,55 +18046,55 @@ plugin_sa\game_sa\CTimeCycle.cpp:
 
 	// CTimeCycle::GetAmbientBlue
 	// plugin::CallAndReturn<float, 0x560350>();
-	0AA7: call_function_return 0x560350 num_params 1 pop 1 [] func_ret [float]
+	0AA7: call_function_return 0x560350 num_params 0 pop 0 func_ret [float]
 
 	// CTimeCycle::GetAmbientBlue_BeforeBrightness
 	// plugin::CallAndReturn<float, 0x5603B0>();
-	0AA7: call_function_return 0x5603B0 num_params 1 pop 1 [] func_ret [float]
+	0AA7: call_function_return 0x5603B0 num_params 0 pop 0 func_ret [float]
 
 	// CTimeCycle::GetAmbientBlue_Obj
 	// plugin::CallAndReturn<float, 0x560380>();
-	0AA7: call_function_return 0x560380 num_params 1 pop 1 [] func_ret [float]
+	0AA7: call_function_return 0x560380 num_params 0 pop 0 func_ret [float]
 
 	// CTimeCycle::GetAmbientGreen
 	// plugin::CallAndReturn<float, 0x560340>();
-	0AA7: call_function_return 0x560340 num_params 1 pop 1 [] func_ret [float]
+	0AA7: call_function_return 0x560340 num_params 0 pop 0 func_ret [float]
 
 	// CTimeCycle::GetAmbientGreen_BeforeBrightness
 	// plugin::CallAndReturn<float, 0x5603A0>();
-	0AA7: call_function_return 0x5603A0 num_params 1 pop 1 [] func_ret [float]
+	0AA7: call_function_return 0x5603A0 num_params 0 pop 0 func_ret [float]
 
 	// CTimeCycle::GetAmbientGreen_Obj
 	// plugin::CallAndReturn<float, 0x560370>();
-	0AA7: call_function_return 0x560370 num_params 1 pop 1 [] func_ret [float]
+	0AA7: call_function_return 0x560370 num_params 0 pop 0 func_ret [float]
 
 	// CTimeCycle::GetAmbientRed
 	// plugin::CallAndReturn<float, 0x560330>();
-	0AA7: call_function_return 0x560330 num_params 1 pop 1 [] func_ret [float]
+	0AA7: call_function_return 0x560330 num_params 0 pop 0 func_ret [float]
 
 	// CTimeCycle::GetAmbientRed_BeforeBrightness
 	// plugin::CallAndReturn<float, 0x560390>();
-	0AA7: call_function_return 0x560390 num_params 1 pop 1 [] func_ret [float]
+	0AA7: call_function_return 0x560390 num_params 0 pop 0 func_ret [float]
 
 	// CTimeCycle::GetAmbientRed_Obj
 	// plugin::CallAndReturn<float, 0x560360>();
-	0AA7: call_function_return 0x560360 num_params 1 pop 1 [] func_ret [float]
+	0AA7: call_function_return 0x560360 num_params 0 pop 0 func_ret [float]
 
 	// CTimeCycle::InitForRestart
 	// plugin::Call<0x5601F0>();
-	0AA5: call_function 0x5601F0 num_params 1 pop 1 []
+	0AA5: call_function 0x5601F0 num_params 0 pop 0
 
 	// CTimeCycle::Initialise
 	// plugin::Call<0x5BBAC0>();
-	0AA5: call_function 0x5BBAC0 num_params 1 pop 1 []
+	0AA5: call_function 0x5BBAC0 num_params 0 pop 0
 
 	// CTimeCycle::SetConstantParametersForPostFX
 	// plugin::Call<0x560210>();
-	0AA5: call_function 0x560210 num_params 1 pop 1 []
+	0AA5: call_function 0x560210 num_params 0 pop 0
 
 	// CTimeCycle::Shutdown
 	// plugin::Call<0x5601E0>();
-	0AA5: call_function 0x5601E0 num_params 1 pop 1 []
+	0AA5: call_function 0x5601E0 num_params 0 pop 0
 
 	// CTimeCycle::StartExtraColour
 	// plugin::Call<0x55FEC0, int, bool>(colour, bNoExtraColorInterior);
@@ -18106,7 +18106,7 @@ plugin_sa\game_sa\CTimeCycle.cpp:
 
 	// CTimeCycle::Update
 	// plugin::Call<0x561760>();
-	0AA5: call_function 0x561760 num_params 1 pop 1 []
+	0AA5: call_function 0x561760 num_params 0 pop 0
 
 plugin_sa\game_sa\CUpsideDownCarCheck.cpp:
 
@@ -18180,7 +18180,7 @@ plugin_sa\game_sa\CVisibilityPlugins.cpp:
 
 	// CVisibilityPlugins::DefaultVisibilityCB
 	// plugin::CallAndReturn<int, 0x732A30>();
-	0AA7: call_function_return 0x732A30 num_params 1 pop 1 [] func_ret [int]
+	0AA7: call_function_return 0x732A30 num_params 0 pop 0 func_ret [int]
 
 	// CVisibilityPlugins::FrameConstructor
 	// plugin::Call<0x7321B0, void*>(object);
@@ -18240,15 +18240,15 @@ plugin_sa\game_sa\CVisibilityPlugins.cpp:
 
 	// CVisibilityPlugins::InitAlphaAtomicList
 	// plugin::Call<0x734530>();
-	0AA5: call_function 0x734530 num_params 1 pop 1 []
+	0AA5: call_function 0x734530 num_params 0 pop 0
 
 	// CVisibilityPlugins::InitAlphaEntityList
 	// plugin::Call<0x734540>();
-	0AA5: call_function 0x734540 num_params 1 pop 1 []
+	0AA5: call_function 0x734540 num_params 0 pop 0
 
 	// CVisibilityPlugins::Initialise
 	// plugin::Call<0x733A20>();
-	0AA5: call_function 0x733A20 num_params 1 pop 1 []
+	0AA5: call_function 0x733A20 num_params 0 pop 0
 
 	// CVisibilityPlugins::InsertAtomicIntoReallyDrawLastList
 	// plugin::CallAndReturn<bool, 0x733E10, RpAtomic*, float>(pRpAtomic, arg2);
@@ -18272,7 +18272,7 @@ plugin_sa\game_sa\CVisibilityPlugins.cpp:
 
 	// CVisibilityPlugins::PluginAttach
 	// plugin::CallAndReturn<bool, 0x732E30>();
-	0AA7: call_function_return 0x732E30 num_params 1 pop 1 [] func_ret [bool]
+	0AA7: call_function_return 0x732E30 num_params 0 pop 0 func_ret [bool]
 
 	// CVisibilityPlugins::RenderAlphaAtomic
 	// plugin::Call<0x732480, RpAtomic*, int>(pRpAtomic, dwAlpha);
@@ -18280,7 +18280,7 @@ plugin_sa\game_sa\CVisibilityPlugins.cpp:
 
 	// CVisibilityPlugins::RenderAlphaAtomics
 	// plugin::Call<0x733E90>();
-	0AA5: call_function 0x733E90 num_params 1 pop 1 []
+	0AA5: call_function 0x733E90 num_params 0 pop 0
 
 	// CVisibilityPlugins::RenderAtomicWithAlphaCB
 	// plugin::Call<0x732660, RpAtomic*, void*>(pRpAtomic, pData);
@@ -18288,7 +18288,7 @@ plugin_sa\game_sa\CVisibilityPlugins.cpp:
 
 	// CVisibilityPlugins::RenderBoatAlphaAtomics
 	// plugin::Call<0x733EC0>();
-	0AA5: call_function 0x733EC0 num_params 1 pop 1 []
+	0AA5: call_function 0x733EC0 num_params 0 pop 0
 
 	// CVisibilityPlugins::RenderEntity
 	// plugin::Call<0x732B40, void*, bool, float>(entity, unused, arg3);
@@ -18308,11 +18308,11 @@ plugin_sa\game_sa\CVisibilityPlugins.cpp:
 
 	// CVisibilityPlugins::RenderFadingEntities
 	// plugin::Call<0x733F10>();
-	0AA5: call_function 0x733F10 num_params 1 pop 1 []
+	0AA5: call_function 0x733F10 num_params 0 pop 0
 
 	// CVisibilityPlugins::RenderFadingUnderwaterEntities
 	// plugin::Call<0x7337D0>();
-	0AA5: call_function 0x7337D0 num_params 1 pop 1 []
+	0AA5: call_function 0x7337D0 num_params 0 pop 0
 
 	// CVisibilityPlugins::RenderHeliRotorAlphaCB
 	// plugin::Call<0x7340B0, RpAtomic*>(pRpAtomic);
@@ -18339,7 +18339,7 @@ plugin_sa\game_sa\CVisibilityPlugins.cpp:
 
 	// CVisibilityPlugins::RenderReallyDrawLastObjects
 	// plugin::Call<0x733800>();
-	0AA5: call_function 0x733800 num_params 1 pop 1 []
+	0AA5: call_function 0x733800 num_params 0 pop 0
 
 	// CVisibilityPlugins::RenderTrainHiDetailAlphaCB
 	// plugin::Call<0x734240, RpAtomic*>(pRpAtomic);
@@ -18391,7 +18391,7 @@ plugin_sa\game_sa\CVisibilityPlugins.cpp:
 
 	// CVisibilityPlugins::RenderWeaponPedsForPC
 	// plugin::Call<0x732F30>();
-	0AA5: call_function 0x732F30 num_params 1 pop 1 []
+	0AA5: call_function 0x732F30 num_params 0 pop 0
 
 	// CVisibilityPlugins::SetAtomicFlag
 	// plugin::Call<0x7322D0, RpAtomic*, int>(pRpAtomic, flag);
@@ -18435,7 +18435,7 @@ plugin_sa\game_sa\CVisibilityPlugins.cpp:
 
 	// CVisibilityPlugins::Shutdown
 	// plugin::Call<0x732EB0>();
-	0AA5: call_function 0x732EB0 num_params 1 pop 1 []
+	0AA5: call_function 0x732EB0 num_params 0 pop 0
 
 	// CVisibilityPlugins::VehicleVisibilityCB
 	// plugin::CallAndReturn<bool, 0x7336F0, RpClump*>(pRpClump);
@@ -18449,7 +18449,7 @@ plugin_sa\game_sa\CWanted.cpp:
 
 	// CWanted::InitialiseStaticVariables
 	// plugin::Call<0x561C70>();
-	0AA5: call_function 0x561C70 num_params 1 pop 1 []
+	0AA5: call_function 0x561C70 num_params 0 pop 0
 
 	// CWanted::UpdateWantedLevel
 	// plugin::CallMethod<0x561C90, CWanted *>(this);
@@ -18481,7 +18481,7 @@ plugin_sa\game_sa\CWanted.cpp:
 
 	// CWanted::ResetPolicePursuit
 	// plugin::Call<0x561FD0>();
-	0AA5: call_function 0x561FD0 num_params 1 pop 1 []
+	0AA5: call_function 0x561FD0 num_params 0 pop 0
 
 	// CWanted::ClearQdCrimes
 	// plugin::CallMethod<0x561FE0, CWanted *>(this);
@@ -18505,7 +18505,7 @@ plugin_sa\game_sa\CWanted.cpp:
 
 	// CWanted::UpdateEachFrame
 	// plugin::Call<0x562360>();
-	0AA5: call_function 0x562360 num_params 1 pop 1 []
+	0AA5: call_function 0x562360 num_params 0 pop 0
 
 	// CWanted::Initialise
 	// plugin::CallMethod<0x562390, CWanted *>(this);
@@ -18583,15 +18583,15 @@ plugin_sa\game_sa\CWeapon.cpp:
 
 	// CWeapon::InitialiseWeapons
 	// plugin::Call<0x73A300>();
-	0AA5: call_function 0x73A300 num_params 1 pop 1 []
+	0AA5: call_function 0x73A300 num_params 0 pop 0
 
 	// CWeapon::ShutdownWeapons
 	// plugin::Call<0x73A330>();
-	0AA5: call_function 0x73A330 num_params 1 pop 1 []
+	0AA5: call_function 0x73A330 num_params 0 pop 0
 
 	// CWeapon::UpdateWeapons
 	// plugin::Call<0x73A360>();
-	0AA5: call_function 0x73A360 num_params 1 pop 1 []
+	0AA5: call_function 0x73A360 num_params 0 pop 0
 
 	// CWeapon::Shutdown
 	// plugin::CallMethod<0x73A380, CWeapon *>(this);
@@ -18757,11 +18757,11 @@ plugin_sa\game_sa\CWeaponEffects.cpp:
 
 	// CWeaponEffects::Init
 	// plugin::Call<0x742AB0>();
-	0AA5: call_function 0x742AB0 num_params 1 pop 1 []
+	0AA5: call_function 0x742AB0 num_params 0 pop 0
 
 	// CWeaponEffects::Shutdown
 	// plugin::Call<0x742B80>();
-	0AA5: call_function 0x742B80 num_params 1 pop 1 []
+	0AA5: call_function 0x742B80 num_params 0 pop 0
 
 	// CWeaponEffects::IsLockedOn
 	// plugin::CallAndReturn<bool, 0x742BD0, int>(crosshairId);
@@ -18777,7 +18777,7 @@ plugin_sa\game_sa\CWeaponEffects.cpp:
 
 	// CWeaponEffects::ClearCrossHairs
 	// plugin::Call<0x742C80>();
-	0AA5: call_function 0x742C80 num_params 1 pop 1 []
+	0AA5: call_function 0x742C80 num_params 0 pop 0
 
 	// CWeaponEffects::ClearCrossHairImmediately
 	// plugin::Call<0x742CA0, int>(crosshairId);
@@ -18785,25 +18785,25 @@ plugin_sa\game_sa\CWeaponEffects.cpp:
 
 	// CWeaponEffects::ClearCrossHairsImmediately
 	// plugin::Call<0x742CC0>();
-	0AA5: call_function 0x742CC0 num_params 1 pop 1 []
+	0AA5: call_function 0x742CC0 num_params 0 pop 0
 
 	// CWeaponEffects::Render
 	// plugin::Call<0x742CF0>();
-	0AA5: call_function 0x742CF0 num_params 1 pop 1 []
+	0AA5: call_function 0x742CF0 num_params 0 pop 0
 
 plugin_sa\game_sa\CWeather.cpp:
 
 	// CWeather::AddRain
 	// plugin::Call<0x72A9A0>();
-	0AA5: call_function 0x72A9A0 num_params 1 pop 1 []
+	0AA5: call_function 0x72A9A0 num_params 0 pop 0
 
 	// CWeather::AddSandStormParticles
 	// plugin::Call<0x72A820>();
-	0AA5: call_function 0x72A820 num_params 1 pop 1 []
+	0AA5: call_function 0x72A820 num_params 0 pop 0
 
 	// CWeather::FindWeatherTypesList
 	// plugin::CallAndReturn<unsigned char*, 0x72A520>();
-	0AA7: call_function_return 0x72A520 num_params 1 pop 1 [] func_ret [unsigned char*]
+	0AA7: call_function_return 0x72A520 num_params 0 pop 0 func_ret [unsigned char*]
 
 	// CWeather::ForceWeather
 	// plugin::Call<0x72A4E0, short>(weatherType);
@@ -18819,27 +18819,27 @@ plugin_sa\game_sa\CWeather.cpp:
 
 	// CWeather::Init
 	// plugin::Call<0x72A480>();
-	0AA5: call_function 0x72A480 num_params 1 pop 1 []
+	0AA5: call_function 0x72A480 num_params 0 pop 0
 
 	// CWeather::ReleaseWeather
 	// plugin::Call<0x72A510>();
-	0AA5: call_function 0x72A510 num_params 1 pop 1 []
+	0AA5: call_function 0x72A510 num_params 0 pop 0
 
 	// CWeather::RenderRainStreaks
 	// plugin::Call<0x72AF70>();
-	0AA5: call_function 0x72AF70 num_params 1 pop 1 []
+	0AA5: call_function 0x72AF70 num_params 0 pop 0
 
 	// CWeather::SetWeatherToAppropriateTypeNow
 	// plugin::Call<0x72A790>();
-	0AA5: call_function 0x72A790 num_params 1 pop 1 []
+	0AA5: call_function 0x72A790 num_params 0 pop 0
 
 	// CWeather::Update
 	// plugin::Call<0x72B850>();
-	0AA5: call_function 0x72B850 num_params 1 pop 1 []
+	0AA5: call_function 0x72B850 num_params 0 pop 0
 
 	// CWeather::UpdateInTunnelness
 	// plugin::Call<0x72B630>();
-	0AA5: call_function 0x72B630 num_params 1 pop 1 []
+	0AA5: call_function 0x72B630 num_params 0 pop 0
 
 	// CWeather::UpdateWeatherRegion
 	// plugin::Call<0x72A640, CVector*>(posn);
@@ -18849,11 +18849,11 @@ plugin_sa\game_sa\CWorld.cpp:
 
 	// CWorld::ResetLineTestOptions
 	// plugin::Call<0x5631C0>();
-	0AA5: call_function 0x5631C0 num_params 1 pop 1 []
+	0AA5: call_function 0x5631C0 num_params 0 pop 0
 
 	// CWorld::Initialise
 	// plugin::Call<0x5631E0>();
-	0AA5: call_function 0x5631E0 num_params 1 pop 1 []
+	0AA5: call_function 0x5631E0 num_params 0 pop 0
 
 	// CWorld::Add
 	// plugin::Call<0x563220, CEntity*>(entity);
@@ -18873,15 +18873,15 @@ plugin_sa\game_sa\CWorld.cpp:
 
 	// CWorld::ProcessForAnimViewer
 	// plugin::Call<0x5633D0>();
-	0AA5: call_function 0x5633D0 num_params 1 pop 1 []
+	0AA5: call_function 0x5633D0 num_params 0 pop 0
 
 	// CWorld::ProcessPedsAfterPreRender
 	// plugin::Call<0x563430>();
-	0AA5: call_function 0x563430 num_params 1 pop 1 []
+	0AA5: call_function 0x563430 num_params 0 pop 0
 
 	// CWorld::ClearScanCodes
 	// plugin::Call<0x563470>();
-	0AA5: call_function 0x563470 num_params 1 pop 1 []
+	0AA5: call_function 0x563470 num_params 0 pop 0
 
 	// CWorld::FindObjectsInRangeSectorList
 	// plugin::Call<0x563500, CPtrList&, CVector const&, float, bool, short*, short, CEntity**>(arg0, point, radius, b2D, outCount, maxCount, outEntities);
@@ -18897,7 +18897,7 @@ plugin_sa\game_sa\CWorld.cpp:
 
 	// CWorld::RemoveStaticObjects
 	// plugin::Call<0x563840>();
-	0AA5: call_function 0x563840 num_params 1 pop 1 []
+	0AA5: call_function 0x563840 num_params 0 pop 0
 
 	// CWorld::TestForBuildingsOnTopOfEachOther
 	// plugin::Call<0x563950, CPtrList&>(ptrList);
@@ -18937,11 +18937,11 @@ plugin_sa\game_sa\CWorld.cpp:
 
 	// CWorld::ShutDown
 	// plugin::Call<0x564050>();
-	0AA5: call_function 0x564050 num_params 1 pop 1 []
+	0AA5: call_function 0x564050 num_params 0 pop 0
 
 	// CWorld::ClearForRestart
 	// plugin::Call<0x564360>();
-	0AA5: call_function 0x564360 num_params 1 pop 1 []
+	0AA5: call_function 0x564360 num_params 0 pop 0
 
 	// CWorld::ProcessVerticalLineSector_FillGlobeColPoints
 	// plugin::CallAndReturn<bool, 0x564420, CSector&, CRepeatSector&, CColLine const&, CEntity*&, bool, bool, bool, bool, bool, bool, CStoredCollPoly*>(sector, repeatSector, colLine, outEntity, buildings, vehicles, peds, objects, dummies, doSeeThroughCheck, outCollPoly);
@@ -18957,7 +18957,7 @@ plugin_sa\game_sa\CWorld.cpp:
 
 	// CWorld::ProcessAttachedEntities
 	// plugin::Call<0x5647F0>();
-	0AA5: call_function 0x5647F0 num_params 1 pop 1 []
+	0AA5: call_function 0x5647F0 num_params 0 pop 0
 
 	// CWorld::GetIsLineOfSightSectorListClear
 	// plugin::CallAndReturn<bool, 0x564970, CPtrList&, CColLine const&, bool, bool>(ptrList, colLine, doSeeThroughCheck, doCameraIgnoreCheck);
@@ -19017,11 +19017,11 @@ plugin_sa\game_sa\CWorld.cpp:
 
 	// CWorld::RemoveFallenPeds
 	// plugin::Call<0x565CB0>();
-	0AA5: call_function 0x565CB0 num_params 1 pop 1 []
+	0AA5: call_function 0x565CB0 num_params 0 pop 0
 
 	// CWorld::RemoveFallenCars
 	// plugin::Call<0x565E80>();
-	0AA5: call_function 0x565E80 num_params 1 pop 1 []
+	0AA5: call_function 0x565E80 num_params 0 pop 0
 
 	// CWorld::UseDetonator
 	// plugin::Call<0x5660B0, CEntity*>(creator);
@@ -19033,15 +19033,15 @@ plugin_sa\game_sa\CWorld.cpp:
 
 	// CWorld::PrintCarChanges
 	// plugin::Call<0x566420>();
-	0AA5: call_function 0x566420 num_params 1 pop 1 []
+	0AA5: call_function 0x566420 num_params 0 pop 0
 
 	// CWorld::TestForBuildingsOnTopOfEachOther
 	// plugin::Call<0x5664A0>();
-	0AA5: call_function 0x5664A0 num_params 1 pop 1 []
+	0AA5: call_function 0x5664A0 num_params 0 pop 0
 
 	// CWorld::TestForUnusedModels
 	// plugin::Call<0x566510>();
-	0AA5: call_function 0x566510 num_params 1 pop 1 []
+	0AA5: call_function 0x566510 num_params 0 pop 0
 
 	// CWorld::ClearCarsFromArea
 	// plugin::Call<0x566610, float, float, float, float, float, float>(x1, y1, z1, x2, y2, z2);
@@ -19065,7 +19065,7 @@ plugin_sa\game_sa\CWorld.cpp:
 
 	// CWorld::StopAllLawEnforcersInTheirTracks
 	// plugin::Call<0x566C10>();
-	0AA5: call_function 0x566C10 num_params 1 pop 1 []
+	0AA5: call_function 0x566C10 num_params 0 pop 0
 
 	// CWorld::FindUnsuspectingTargetCar
 	// plugin::CallAndReturn<CVehicle*, 0x566C90, CVector, CVector>(point, playerPosn);
@@ -19093,7 +19093,7 @@ plugin_sa\game_sa\CWorld.cpp:
 
 	// CWorld::Process
 	// plugin::Call<0x5684A0>();
-	0AA5: call_function 0x5684A0 num_params 1 pop 1 []
+	0AA5: call_function 0x5684A0 num_params 0 pop 0
 
 	// CWorld::GetIsLineOfSightSectorClear
 	// plugin::CallAndReturn<bool, 0x568AD0, CSector&, CRepeatSector&, CColLine const&, bool, bool, bool, bool, bool, bool, bool>(sector, repeatSector, colLine, buildings, vehicles, peds, objects, dummies, doSeeThroughCheck, doIgnoreCameraCheck);
@@ -19165,7 +19165,7 @@ plugin_sa\game_sa\CWorld.cpp:
 
 	// CWorld::RepositionCertainDynamicObjects
 	// plugin::Call<0x56B9C0>();
-	0AA5: call_function 0x56B9C0 num_params 1 pop 1 []
+	0AA5: call_function 0x56B9C0 num_params 0 pop 0
 
 	// CWorld::ProcessLineOfSight
 	// plugin::CallAndReturn<bool, 0x56BA00, CVector const&, CVector const&, CColPoint&, CEntity*&, bool, bool, bool, bool, bool, bool, bool, bool>(origin, target, outColPoint, outEntity, buildings, vehicles, peds, objects, dummies, doSeeThroughCheck, doCameraIgnoreCheck, doShootThroughCheck);
@@ -19173,7 +19173,7 @@ plugin_sa\game_sa\CWorld.cpp:
 
 	// GetCurrentScanCode
 	// plugin::CallAndReturn<short, 0x407250>();
-	0AA7: call_function_return 0x407250 num_params 1 pop 1 [] func_ret [short]
+	0AA7: call_function_return 0x407250 num_params 0 pop 0 func_ret [short]
 
 	// GetSector
 	// plugin::CallAndReturn<CSector*, 0x407260, int, int>(x, y);
@@ -19189,7 +19189,7 @@ plugin_sa\game_sa\CWorld.cpp:
 
 	// SetNextScanCode
 	// plugin::Call<0x4072E0>();
-	0AA5: call_function 0x4072E0 num_params 1 pop 1 []
+	0AA5: call_function 0x4072E0 num_params 0 pop 0
 
 plugin_sa\game_sa\D3DIndexDataBuffer.cpp:
 
@@ -19249,19 +19249,19 @@ plugin_sa\game_sa\D3DResourceSystem.cpp:
 
 	// D3DResourceSystem::CancelBuffering
 	// plugin::Call<0x730900>();
-	0AA5: call_function 0x730900 num_params 1 pop 1 []
+	0AA5: call_function 0x730900 num_params 0 pop 0
 
 	// D3DResourceSystem::GetTotalIndexDataSize
 	// plugin::CallAndReturn<unsigned int, 0x7307F0>();
-	0AA7: call_function_return 0x7307F0 num_params 1 pop 1 [] func_ret [unsigned int]
+	0AA7: call_function_return 0x7307F0 num_params 0 pop 0 func_ret [unsigned int]
 
 	// D3DResourceSystem::GetTotalPixelsSize
 	// plugin::CallAndReturn<unsigned int, 0x730660>();
-	0AA7: call_function_return 0x730660 num_params 1 pop 1 [] func_ret [unsigned int]
+	0AA7: call_function_return 0x730660 num_params 0 pop 0 func_ret [unsigned int]
 
 	// D3DResourceSystem::Init
 	// plugin::Call<0x730830>();
-	0AA5: call_function 0x730830 num_params 1 pop 1 []
+	0AA5: call_function 0x730830 num_params 0 pop 0
 
 	// D3DResourceSystem::SetUseD3DResourceBuffering
 	// plugin::Call<0x730AC0, bool>(bUse);
@@ -19269,7 +19269,7 @@ plugin_sa\game_sa\D3DResourceSystem.cpp:
 
 	// D3DResourceSystem::Shutdown
 	// plugin::Call<0x730A00>();
-	0AA5: call_function 0x730A00 num_params 1 pop 1 []
+	0AA5: call_function 0x730A00 num_params 0 pop 0
 
 	// D3DResourceSystem::TidyUpD3DIndexBuffers
 	// plugin::Call<0x730740, unsigned int>(count);
@@ -19417,7 +19417,7 @@ plugin_sa\game_sa\PipelinePlugin.cpp:
 
 	// PipelinePluginAttach
 	// plugin::CallAndReturn<RwBool, 0x0072FBD0>();
-	0AA7: call_function_return 0x0072FBD0 num_params 1 pop 1 [] func_ret [RwBool]
+	0AA7: call_function_return 0x0072FBD0 num_params 0 pop 0 func_ret [RwBool]
 
 	// assert
 	// plugin::CallAndReturn<RwUInt32, 0x0072FC40>(pAtomic);
@@ -19455,7 +19455,7 @@ plugin_sa\game_sa\RenderWare.cpp:
 
 	// _rwD3D9RenderStateIsVertexAlphaEnable
 	// plugin::CallAndReturn<RwBool, 0x7FE190>();
-	0AA7: call_function_return 0x7FE190 num_params 1 pop 1 [] func_ret [RwBool]
+	0AA7: call_function_return 0x7FE190 num_params 0 pop 0 func_ret [RwBool]
 
 	// _rwD3D9CheckValidCameraTextureFormat
 	// plugin::CallAndReturn<RwBool, 0x4CBE20, RwUInt32>(format);
@@ -19747,7 +19747,7 @@ plugin_vc\game_vc\cAudioManager.cpp:
 
 	// cAudioManager::FindVehicleOfPlayer
 	// plugin::CallAndReturn<CVehicle*, 0x5F5A60>();
-	0AA7: call_function_return 0x5F5A60 num_params 1 pop 1 [] func_ret [CVehicle*]
+	0AA7: call_function_return 0x5F5A60 num_params 0 pop 0 func_ret [CVehicle*]
 
 plugin_vc\game_vc\cAudioScriptObject.cpp:
 
@@ -20051,7 +20051,7 @@ plugin_vc\game_vc\CBoat.cpp:
 
 	// CBoat::FillBoatList
 	// plugin::Call<0x59F360>();
-	0AA5: call_function 0x59F360 num_params 1 pop 1 []
+	0AA5: call_function 0x59F360 num_params 0 pop 0
 
 	// CBoat::PruneWakeTrail
 	// plugin::CallMethod<0x59F6F0, CBoat *>(this);
@@ -20075,7 +20075,7 @@ plugin_vc\game_vc\CBrightLights.cpp:
 
 	// CBrightLights::Render
 	// plugin::Call<0x5719B0>();
-	0AA5: call_function 0x5719B0 num_params 1 pop 1 []
+	0AA5: call_function 0x5719B0 num_params 0 pop 0
 
 plugin_vc\game_vc\CBulletInfo.cpp:
 
@@ -20089,11 +20089,11 @@ plugin_vc\game_vc\CBulletInfo.cpp:
 
 	// CBulletInfo::Initialise
 	// plugin::Call<0x5C48C0>();
-	0AA5: call_function 0x5C48C0 num_params 1 pop 1 []
+	0AA5: call_function 0x5C48C0 num_params 0 pop 0
 
 	// CBulletInfo::Shutdown
 	// plugin::Call<0x5C48A0>();
-	0AA5: call_function 0x5C48A0 num_params 1 pop 1 []
+	0AA5: call_function 0x5C48A0 num_params 0 pop 0
 
 	// CBulletInfo::TestForSniperBullet
 	// plugin::Call<0x5C3B20, float, float, float, float, float, float>(x1, y1, z1, x2, y2, z2);
@@ -20101,7 +20101,7 @@ plugin_vc\game_vc\CBulletInfo.cpp:
 
 	// CBulletInfo::Update
 	// plugin::Call<0x5C3DE0>();
-	0AA5: call_function 0x5C3DE0 num_params 1 pop 1 []
+	0AA5: call_function 0x5C3DE0 num_params 0 pop 0
 
 plugin_vc\game_vc\CBulletTraces.cpp:
 
@@ -20145,7 +20145,7 @@ plugin_vc\game_vc\CCamera.cpp:
 
 	// CCamera::DontProcessObbeCinemaCamera
 	// plugin::Call<0x46FE13>();
-	0AA5: call_function 0x46FE13 num_params 1 pop 1 []
+	0AA5: call_function 0x46FE13 num_params 0 pop 0
 
 	// CCamera::DrawBordersForWideScreen
 	// plugin::CallMethod<0x46FC1C, CCamera *>(this);
@@ -20441,11 +20441,11 @@ plugin_vc\game_vc\CCarCtrl.cpp:
 
 	// CCarCtrl::ChoosePoliceCarModel
 	// plugin::CallAndReturn<int, 0x426850>();
-	0AA7: call_function_return 0x426850 num_params 1 pop 1 [] func_ret [int]
+	0AA7: call_function_return 0x426850 num_params 0 pop 0 func_ret [int]
 
 	// CCarCtrl::ClearInterestingVehicleList
 	// plugin::Call<0x41D300>();
-	0AA5: call_function 0x41D300 num_params 1 pop 1 []
+	0AA5: call_function 0x41D300 num_params 0 pop 0
 
 	// CCarCtrl::DragCarToPoint
 	// plugin::Call<0x4208B0, CVehicle*, CVector*>(vehicle, coords);
@@ -20469,7 +20469,7 @@ plugin_vc\game_vc\CCarCtrl.cpp:
 
 	// CCarCtrl::GenerateEmergencyServicesCar
 	// plugin::Call<0x41C940>();
-	0AA5: call_function 0x41C940 num_params 1 pop 1 []
+	0AA5: call_function 0x41C940 num_params 0 pop 0
 
 	// CCarCtrl::GenerateOneEmergencyServicesCar
 	// plugin::CallAndReturn<bool, 0x41C460, unsigned int, CVector>(model, driveToCoord);
@@ -20477,15 +20477,15 @@ plugin_vc\game_vc\CCarCtrl.cpp:
 
 	// CCarCtrl::GenerateOneRandomCar
 	// plugin::Call<0x426DB0>();
-	0AA5: call_function 0x426DB0 num_params 1 pop 1 []
+	0AA5: call_function 0x426DB0 num_params 0 pop 0
 
 	// CCarCtrl::GenerateRandomCars
 	// plugin::Call<0x4292A0>();
-	0AA5: call_function 0x4292A0 num_params 1 pop 1 []
+	0AA5: call_function 0x4292A0 num_params 0 pop 0
 
 	// CCarCtrl::Init
 	// plugin::Call<0x4293D0>();
-	0AA5: call_function 0x4293D0 num_params 1 pop 1 []
+	0AA5: call_function 0x4293D0 num_params 0 pop 0
 
 	// CCarCtrl::IsThisVehicleInteresting
 	// plugin::CallAndReturn<bool, 0x41D350, CVehicle*>(vehicle);
@@ -20525,7 +20525,7 @@ plugin_vc\game_vc\CCarCtrl.cpp:
 
 	// CCarCtrl::ReInit
 	// plugin::Call<0x429320>();
-	0AA5: call_function 0x429320 num_params 1 pop 1 []
+	0AA5: call_function 0x429320 num_params 0 pop 0
 
 	// CCarCtrl::RegisterVehicleOfInterest
 	// plugin::Call<0x41D370, CVehicle*>(vehicle);
@@ -20533,11 +20533,11 @@ plugin_vc\game_vc\CCarCtrl.cpp:
 
 	// CCarCtrl::RemoveCarsIfThePoolGetsFull
 	// plugin::Call<0x4264C0>();
-	0AA5: call_function 0x4264C0 num_params 1 pop 1 []
+	0AA5: call_function 0x4264C0 num_params 0 pop 0
 
 	// CCarCtrl::RemoveDistantCars
 	// plugin::Call<0x426640>();
-	0AA5: call_function 0x426640 num_params 1 pop 1 []
+	0AA5: call_function 0x426640 num_params 0 pop 0
 
 	// CCarCtrl::RemoveFromInterestingVehicleList
 	// plugin::Call<0x41D320, CVehicle*>(vehicle);
@@ -20701,11 +20701,11 @@ plugin_vc\game_vc\CClouds.cpp:
 
 	// CClouds::Init
 	// plugin::Call<0x540FB0>();
-	0AA5: call_function 0x540FB0 num_params 1 pop 1 []
+	0AA5: call_function 0x540FB0 num_params 0 pop 0
 
 	// CClouds::Render
 	// plugin::Call<0x53FC50>();
-	0AA5: call_function 0x53FC50 num_params 1 pop 1 []
+	0AA5: call_function 0x53FC50 num_params 0 pop 0
 
 	// CClouds::RenderBackground
 	// plugin::Call<0x53F650, short, short, short, short, short, short, short>(arg0, arg1, arg2, arg3, arg4, arg5, arg6);
@@ -20713,15 +20713,15 @@ plugin_vc\game_vc\CClouds.cpp:
 
 	// CClouds::RenderHorizon
 	// plugin::Call<0x53F380>();
-	0AA5: call_function 0x53F380 num_params 1 pop 1 []
+	0AA5: call_function 0x53F380 num_params 0 pop 0
 
 	// CClouds::Shutdown
 	// plugin::Call<0x540F40>();
-	0AA5: call_function 0x540F40 num_params 1 pop 1 []
+	0AA5: call_function 0x540F40 num_params 0 pop 0
 
 	// CClouds::Update
 	// plugin::Call<0x540E90>();
-	0AA5: call_function 0x540E90 num_params 1 pop 1 []
+	0AA5: call_function 0x540E90 num_params 0 pop 0
 
 plugin_vc\game_vc\CClumpModelInfo.cpp:
 
@@ -20876,7 +20876,7 @@ plugin_vc\game_vc\CCoronas.cpp:
 
 	// CCoronas::DoSunAndMoon
 	// plugin::Call<0x542210>();
-	0AA5: call_function 0x542210 num_params 1 pop 1 []
+	0AA5: call_function 0x542210 num_params 0 pop 0
 
 	// CCoronas::UpdateCoronaCoors
 	// plugin::Call<0x5423E0, unsigned int, CVector const&, float, float>(id, posn, farClip, angle);
@@ -20892,27 +20892,27 @@ plugin_vc\game_vc\CCoronas.cpp:
 
 	// CCoronas::Shutdown
 	// plugin::Call<0x542800>();
-	0AA5: call_function 0x542800 num_params 1 pop 1 []
+	0AA5: call_function 0x542800 num_params 0 pop 0
 
 	// CCoronas::Init
 	// plugin::Call<0x542830>();
-	0AA5: call_function 0x542830 num_params 1 pop 1 []
+	0AA5: call_function 0x542830 num_params 0 pop 0
 
 	// CCoronas::RenderSunReflection
 	// plugin::Call<0x542970>();
-	0AA5: call_function 0x542970 num_params 1 pop 1 []
+	0AA5: call_function 0x542970 num_params 0 pop 0
 
 	// CCoronas::RenderReflections
 	// plugin::Call<0x542FF0>();
-	0AA5: call_function 0x542FF0 num_params 1 pop 1 []
+	0AA5: call_function 0x542FF0 num_params 0 pop 0
 
 	// CCoronas::Render
 	// plugin::Call<0x543500>();
-	0AA5: call_function 0x543500 num_params 1 pop 1 []
+	0AA5: call_function 0x543500 num_params 0 pop 0
 
 	// CCoronas::Update
 	// plugin::Call<0x544130>();
-	0AA5: call_function 0x544130 num_params 1 pop 1 []
+	0AA5: call_function 0x544130 num_params 0 pop 0
 
 plugin_vc\game_vc\CCranes.cpp:
 
@@ -21032,19 +21032,19 @@ plugin_vc\game_vc\CDarkel.cpp:
 
 	// CDarkel::DealWithWeaponChangeAtEndOfFrenzy
 	// plugin::Call<0x429910>();
-	0AA5: call_function 0x429910 num_params 1 pop 1 []
+	0AA5: call_function 0x429910 num_params 0 pop 0
 
 	// CDarkel::DrawMessages
 	// plugin::Call<0x429FE0>();
-	0AA5: call_function 0x429FE0 num_params 1 pop 1 []
+	0AA5: call_function 0x429FE0 num_params 0 pop 0
 
 	// CDarkel::FrenzyOnGoing
 	// plugin::CallAndReturn<bool, 0x429FC0>();
-	0AA7: call_function_return 0x429FC0 num_params 1 pop 1 [] func_ret [bool]
+	0AA7: call_function_return 0x429FC0 num_params 0 pop 0 func_ret [bool]
 
 	// CDarkel::Init
 	// plugin::Call<0x42A7A0>();
-	0AA5: call_function 0x42A7A0 num_params 1 pop 1 []
+	0AA5: call_function 0x42A7A0 num_params 0 pop 0
 
 	// CDarkel::QueryModelsKilledByPlayer
 	// plugin::CallAndReturn<short, 0x429AF0, int>(arg0);
@@ -21052,7 +21052,7 @@ plugin_vc\game_vc\CDarkel.cpp:
 
 	// CDarkel::ReadStatus
 	// plugin::CallAndReturn<short, 0x429FD0>();
-	0AA7: call_function_return 0x429FD0 num_params 1 pop 1 [] func_ret [short]
+	0AA7: call_function_return 0x429FD0 num_params 0 pop 0 func_ret [short]
 
 	// CDarkel::RegisterCarBlownUpByPlayer
 	// plugin::CallAndReturn<int, 0x429DF0, CVehicle*>(vehicle);
@@ -21068,11 +21068,11 @@ plugin_vc\game_vc\CDarkel.cpp:
 
 	// CDarkel::ResetModelsKilledByPlayer
 	// plugin::Call<0x429B00>();
-	0AA5: call_function 0x429B00 num_params 1 pop 1 []
+	0AA5: call_function 0x429B00 num_params 0 pop 0
 
 	// CDarkel::ResetOnPlayerDeath
 	// plugin::Call<0x429F90>();
-	0AA5: call_function 0x429F90 num_params 1 pop 1 []
+	0AA5: call_function 0x429F90 num_params 0 pop 0
 
 	// CDarkel::StartFrenzy
 	// plugin::Call<0x429B60, eWeaponType, int, unsigned short, int, unsigned short*, int, int, int, bool, bool>(weaponType, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
@@ -21080,7 +21080,7 @@ plugin_vc\game_vc\CDarkel.cpp:
 
 	// CDarkel::Update
 	// plugin::Call<0x42A650>();
-	0AA5: call_function 0x42A650 num_params 1 pop 1 []
+	0AA5: call_function 0x42A650 num_params 0 pop 0
 
 plugin_vc\game_vc\CDirectory.cpp:
 
@@ -21140,7 +21140,7 @@ plugin_vc\game_vc\CDraw.cpp:
 
 	// CDraw::CalculateAspectRatio
 	// plugin::Call<0x54A270>();
-	0AA5: call_function 0x54A270 num_params 1 pop 1 []
+	0AA5: call_function 0x54A270 num_params 0 pop 0
 
 	// CDraw::SetFOV
 	// plugin::Call<0x54A2E0, float>(fov);
@@ -21168,11 +21168,11 @@ plugin_vc\game_vc\CEscalators.cpp:
 
 	// CEscalators::Init
 	// plugin::Call<0x54B460>();
-	0AA5: call_function 0x54B460 num_params 1 pop 1 []
+	0AA5: call_function 0x54B460 num_params 0 pop 0
 
 	// CEscalators::Shutdown
 	// plugin::Call<0x54B3A0>();
-	0AA5: call_function 0x54B3A0 num_params 1 pop 1 []
+	0AA5: call_function 0x54B3A0 num_params 0 pop 0
 
 	// CEscalators::Update
 	// plugin::CallMethod<0x54A9B0, CEscalators *>(this);
@@ -21224,7 +21224,7 @@ plugin_vc\game_vc\CFileMgr.cpp:
 
 	// CFileMgr::SetDirMyDocuments
 	// plugin::Call<0x48E020>();
-	0AA5: call_function 0x48E020 num_params 1 pop 1 []
+	0AA5: call_function 0x48E020 num_params 0 pop 0
 
 	// CFileMgr::SetDir
 	// plugin::Call<0x48E030, char const*>(dir);
@@ -21236,7 +21236,7 @@ plugin_vc\game_vc\CFileMgr.cpp:
 
 	// CFileMgr::Initialise
 	// plugin::Call<0x48E100>();
-	0AA5: call_function 0x48E100 num_params 1 pop 1 []
+	0AA5: call_function 0x48E100 num_params 0 pop 0
 
 plugin_vc\game_vc\CFont.cpp:
 
@@ -21270,27 +21270,27 @@ plugin_vc\game_vc\CFont.cpp:
 
 	// CFont::SetPropOn
 	// plugin::Call<0x550020>();
-	0AA5: call_function 0x550020 num_params 1 pop 1 []
+	0AA5: call_function 0x550020 num_params 0 pop 0
 
 	// CFont::SetPropOff
 	// plugin::Call<0x550030>();
-	0AA5: call_function 0x550030 num_params 1 pop 1 []
+	0AA5: call_function 0x550030 num_params 0 pop 0
 
 	// CFont::SetRightJustifyOff
 	// plugin::Call<0x550040>();
-	0AA5: call_function 0x550040 num_params 1 pop 1 []
+	0AA5: call_function 0x550040 num_params 0 pop 0
 
 	// CFont::SetRightJustifyOn
 	// plugin::Call<0x550060>();
-	0AA5: call_function 0x550060 num_params 1 pop 1 []
+	0AA5: call_function 0x550060 num_params 0 pop 0
 
 	// CFont::SetBackGroundOnlyTextOff
 	// plugin::Call<0x550080>();
-	0AA5: call_function 0x550080 num_params 1 pop 1 []
+	0AA5: call_function 0x550080 num_params 0 pop 0
 
 	// CFont::SetBackGroundOnlyTextOn
 	// plugin::Call<0x550090>();
-	0AA5: call_function 0x550090 num_params 1 pop 1 []
+	0AA5: call_function 0x550090 num_params 0 pop 0
 
 	// CFont::SetBackgroundColor
 	// plugin::Call<0x5500A0, CRGBA *>(&color);
@@ -21298,11 +21298,11 @@ plugin_vc\game_vc\CFont.cpp:
 
 	// CFont::SetBackgroundOff
 	// plugin::Call<0x5500D0>();
-	0AA5: call_function 0x5500D0 num_params 1 pop 1 []
+	0AA5: call_function 0x5500D0 num_params 0 pop 0
 
 	// CFont::SetBackgroundOn
 	// plugin::Call<0x5500E0>();
-	0AA5: call_function 0x5500E0 num_params 1 pop 1 []
+	0AA5: call_function 0x5500E0 num_params 0 pop 0
 
 	// CFont::SetCentreSize
 	// plugin::Call<0x5500F0, float>(size);
@@ -21314,19 +21314,19 @@ plugin_vc\game_vc\CFont.cpp:
 
 	// CFont::SetCentreOff
 	// plugin::Call<0x550110>();
-	0AA5: call_function 0x550110 num_params 1 pop 1 []
+	0AA5: call_function 0x550110 num_params 0 pop 0
 
 	// CFont::SetCentreOn
 	// plugin::Call<0x550120>();
-	0AA5: call_function 0x550120 num_params 1 pop 1 []
+	0AA5: call_function 0x550120 num_params 0 pop 0
 
 	// CFont::SetJustifyOff
 	// plugin::Call<0x550140>();
-	0AA5: call_function 0x550140 num_params 1 pop 1 []
+	0AA5: call_function 0x550140 num_params 0 pop 0
 
 	// CFont::SetJustifyOn
 	// plugin::Call<0x550150>();
-	0AA5: call_function 0x550150 num_params 1 pop 1 []
+	0AA5: call_function 0x550150 num_params 0 pop 0
 
 	// CFont::SetColor
 	// plugin::Call<0x550170, CRGBA *>(&color);
@@ -21346,7 +21346,7 @@ plugin_vc\game_vc\CFont.cpp:
 
 	// CFont::DrawFonts
 	// plugin::Call<0x550250>();
-	0AA5: call_function 0x550250 num_params 1 pop 1 []
+	0AA5: call_function 0x550250 num_params 0 pop 0
 
 	// CFont::FilterOutTokensFromString
 	// plugin::Call<0x550260, const wchar_t*>(str);
@@ -21386,7 +21386,7 @@ plugin_vc\game_vc\CFont.cpp:
 
 	// CFont::RenderFontBuffer
 	// plugin::Call<0x551A30>();
-	0AA5: call_function 0x551A30 num_params 1 pop 1 []
+	0AA5: call_function 0x551A30 num_params 0 pop 0
 
 	// CFont::PrintChar
 	// plugin::Call<0x551E70, float, float, short>(x, y, character);
@@ -21394,15 +21394,15 @@ plugin_vc\game_vc\CFont.cpp:
 
 	// CFont::InitPerFrame
 	// plugin::Call<0x5522B0>();
-	0AA5: call_function 0x5522B0 num_params 1 pop 1 []
+	0AA5: call_function 0x5522B0 num_params 0 pop 0
 
 	// CFont::Shutdown
 	// plugin::Call<0x5522E0>();
-	0AA5: call_function 0x5522E0 num_params 1 pop 1 []
+	0AA5: call_function 0x5522E0 num_params 0 pop 0
 
 	// CFont::Initialise
 	// plugin::Call<0x552310>();
-	0AA5: call_function 0x552310 num_params 1 pop 1 []
+	0AA5: call_function 0x552310 num_params 0 pop 0
 
 	// UnicodeMakeUpperCase
 	// plugin::Call<0x552470, wchar_t*, wchar_t const*>(str_out, str_in);
@@ -21476,11 +21476,11 @@ plugin_vc\game_vc\CGameLogic.cpp:
 
 	// CGameLogic::InitAtStartOfGame
 	// plugin::Call<0x42C480>();
-	0AA5: call_function 0x42C480 num_params 1 pop 1 []
+	0AA5: call_function 0x42C480 num_params 0 pop 0
 
 	// CGameLogic::Update
 	// plugin::Call<0x42BB70>();
-	0AA5: call_function 0x42BB70 num_params 1 pop 1 []
+	0AA5: call_function 0x42BB70 num_params 0 pop 0
 
 	// CGameLogic::RestorePlayerStuffDuringResurrection
 	// plugin::Call<0x42B900, CPlayerPed*, CVector, float>(arg1, arg2, arg3);
@@ -21488,19 +21488,19 @@ plugin_vc\game_vc\CGameLogic.cpp:
 
 	// CGameLogic::ClearShortCut
 	// plugin::Call<0x42B730>();
-	0AA5: call_function 0x42B730 num_params 1 pop 1 []
+	0AA5: call_function 0x42B730 num_params 0 pop 0
 
 	// CGameLogic::UpdateShortCut
 	// plugin::Call<0x42AE70>();
-	0AA5: call_function 0x42AE70 num_params 1 pop 1 []
+	0AA5: call_function 0x42AE70 num_params 0 pop 0
 
 	// CGameLogic::AfterDeathArrestSetUpShortCutTaxi
 	// plugin::Call<0x42AC10>();
-	0AA5: call_function 0x42AC10 num_params 1 pop 1 []
+	0AA5: call_function 0x42AC10 num_params 0 pop 0
 
 	// CGameLogic::RemoveShortCutDropOffPointForMission
 	// plugin::Call<0x42ADE0>();
-	0AA5: call_function 0x42ADE0 num_params 1 pop 1 []
+	0AA5: call_function 0x42ADE0 num_params 0 pop 0
 
 plugin_vc\game_vc\CGangs.cpp:
 
@@ -21526,7 +21526,7 @@ plugin_vc\game_vc\CGangs.cpp:
 
 	// CGangs::Initialise
 	// plugin::Call<0x4EEDF0>();
-	0AA5: call_function 0x4EEDF0 num_params 1 pop 1 []
+	0AA5: call_function 0x4EEDF0 num_params 0 pop 0
 
 	// CGangs::ChooseGangPedModel
 	// plugin::CallAndReturn<int, 0x4EED20, short>(gangId);
@@ -21601,7 +21601,7 @@ plugin_vc\game_vc\CHeli.cpp:
 
 	// CHeli::InitHelis
 	// plugin::Call<0x5AD4A0>();
-	0AA5: call_function 0x5AD4A0 num_params 1 pop 1 []
+	0AA5: call_function 0x5AD4A0 num_params 0 pop 0
 
 	// CHeli::PreRenderAlways
 	// plugin::CallMethod<0x5AF2E0, CHeli *>(this);
@@ -21617,7 +21617,7 @@ plugin_vc\game_vc\CHeli.cpp:
 
 	// CHeli::SpecialHeliPreRender
 	// plugin::CallAndReturn<bool, 0x5AC500>();
-	0AA7: call_function_return 0x5AC500 num_params 1 pop 1 [] func_ret [bool]
+	0AA7: call_function_return 0x5AC500 num_params 0 pop 0 func_ret [bool]
 
 	// CHeli::TestBulletCollision
 	// plugin::CallAndReturn<bool, 0x5AC6C0, CVector*, CVector*, CVector*, int>(arg0, arg1, arg2, arg3);
@@ -21633,7 +21633,7 @@ plugin_vc\game_vc\CHeli.cpp:
 
 	// CHeli::UpdateHelis
 	// plugin::Call<0x5ACDA0>();
-	0AA5: call_function 0x5ACDA0 num_params 1 pop 1 []
+	0AA5: call_function 0x5ACDA0 num_params 0 pop 0
 
 	// GenerateHeli
 	// plugin::Call<0x5ACB30, bool>(enable);
@@ -21641,7 +21641,7 @@ plugin_vc\game_vc\CHeli.cpp:
 
 	// StartCatalinaFlyBy
 	// plugin::Call<0x5ACAF0>();
-	0AA5: call_function 0x5ACAF0 num_params 1 pop 1 []
+	0AA5: call_function 0x5ACAF0 num_params 0 pop 0
 
 	// GetHeliAtomicObjectCB
 	// plugin::CallAndReturn<RwObject*, 0x5AC4E0, RwObject*, void*>(object, data);
@@ -21752,15 +21752,15 @@ plugin_vc\game_vc\CMessages.cpp:
 
 	// CMessages::ClearAllMessagesDisplayedByGame
 	// plugin::Call<0x582C70>();
-	0AA5: call_function 0x582C70 num_params 1 pop 1 []
+	0AA5: call_function 0x582C70 num_params 0 pop 0
 
 	// CMessages::ClearMessages
 	// plugin::Call<0x5841E0>();
-	0AA5: call_function 0x5841E0 num_params 1 pop 1 []
+	0AA5: call_function 0x5841E0 num_params 0 pop 0
 
 	// CMessages::ClearSmallMessagesOnly
 	// plugin::Call<0x584130>();
-	0AA5: call_function 0x584130 num_params 1 pop 1 []
+	0AA5: call_function 0x584130 num_params 0 pop 0
 
 	// CMessages::ClearThisBigPrint
 	// plugin::Call<0x582CF0, wchar_t*>(pString);
@@ -21772,7 +21772,7 @@ plugin_vc\game_vc\CMessages.cpp:
 
 	// CMessages::Display
 	// plugin::Call<0x584550>();
-	0AA5: call_function 0x584550 num_params 1 pop 1 []
+	0AA5: call_function 0x584550 num_params 0 pop 0
 
 	// CMessages::GetWideStringLength
 	// plugin::CallAndReturn<unsigned short, 0x5849A0, wchar_t*>(pString);
@@ -21780,7 +21780,7 @@ plugin_vc\game_vc\CMessages.cpp:
 
 	// CMessages::Init
 	// plugin::Call<0x5849C0>();
-	0AA5: call_function 0x5849C0 num_params 1 pop 1 []
+	0AA5: call_function 0x5849C0 num_params 0 pop 0
 
 	// CMessages::InsertNumberInString
 	// plugin::Call<0x583C80, wchar_t*, int, int, int, int, int, int, wchar_t*>(pString, number, number1, number2, number3, number4, number5, arg8);
@@ -21796,7 +21796,7 @@ plugin_vc\game_vc\CMessages.cpp:
 
 	// CMessages::Process
 	// plugin::Call<0x584650>();
-	0AA5: call_function 0x584650 num_params 1 pop 1 []
+	0AA5: call_function 0x584650 num_params 0 pop 0
 
 	// CMessages::WideStringCompare
 	// plugin::CallAndReturn<bool, 0x5848D0, wchar_t*, wchar_t*, unsigned short>(pString1, pString2, lengthToCompare);
@@ -21834,7 +21834,7 @@ plugin_vc\game_vc\CModelInfo.cpp:
 
 	// CModelInfo::Get2dEffectStore
 	// plugin::CallAndReturn<void*, 0x55F570>();
-	0AA7: call_function_return 0x55F570 num_params 1 pop 1 [] func_ret [void*]
+	0AA7: call_function_return 0x55F570 num_params 0 pop 0 func_ret [void*]
 
 	// CModelInfo::GetModelInfo
 	// plugin::CallAndReturn<CBaseModelInfo*, 0x55F7D0, char const*, int*>(name, index);
@@ -21846,7 +21846,7 @@ plugin_vc\game_vc\CModelInfo.cpp:
 
 	// CModelInfo::Initialise
 	// plugin::Call<0x55FA40>();
-	0AA5: call_function 0x55FA40 num_params 1 pop 1 []
+	0AA5: call_function 0x55FA40 num_params 0 pop 0
 
 	// CModelInfo::IsBikeModel
 	// plugin::CallAndReturn<bool, 0x55F4E0, int>(index);
@@ -21862,7 +21862,7 @@ plugin_vc\game_vc\CModelInfo.cpp:
 
 	// CModelInfo::ShutDown
 	// plugin::Call<0x55F820>();
-	0AA5: call_function 0x55F820 num_params 1 pop 1 []
+	0AA5: call_function 0x55F820 num_params 0 pop 0
 
 plugin_vc\game_vc\CMotionBlurStreaks.cpp:
 
@@ -21872,7 +21872,7 @@ plugin_vc\game_vc\CMotionBlurStreaks.cpp:
 
 	// CMotionBlurStreaks::Render
 	// plugin::Call<0x572920>();
-	0AA5: call_function 0x572920 num_params 1 pop 1 []
+	0AA5: call_function 0x572920 num_params 0 pop 0
 
 plugin_vc\game_vc\CMousePointerStateHelper.cpp:
 
@@ -21902,11 +21902,11 @@ plugin_vc\game_vc\CObject.cpp:
 
 	// CObject::DeleteAllMissionObjects
 	// plugin::Call<0x4E0820>();
-	0AA5: call_function 0x4E0820 num_params 1 pop 1 []
+	0AA5: call_function 0x4E0820 num_params 0 pop 0
 
 	// CObject::DeleteAllTempObjects
 	// plugin::Call<0x4E08A0>();
-	0AA5: call_function 0x4E08A0 num_params 1 pop 1 []
+	0AA5: call_function 0x4E08A0 num_params 0 pop 0
 
 	// CObject::DeleteAllTempObjectsInArea
 	// plugin::Call<0x4E0720, CVector, float>(point, radius);
@@ -21962,11 +21962,11 @@ plugin_vc\game_vc\common.cpp:
 
 	// FindPlayerHeading
 	// plugin::CallAndReturn<float, 0x4BBF70>();
-	0AA7: call_function_return 0x4BBF70 num_params 1 pop 1 [] func_ret [float]
+	0AA7: call_function_return 0x4BBF70 num_params 0 pop 0 func_ret [float]
 
 	// FindPlayerCentreOfWorld_NoSniperShift
 	// plugin::CallAndReturn<CVector&, 0x4BC020>();
-	0AA7: call_function_return 0x4BC020 num_params 1 pop 1 [] func_ret [CVector&]
+	0AA7: call_function_return 0x4BC020 num_params 0 pop 0 func_ret [CVector&]
 
 	// FindPlayerCentreOfWorld
 	// plugin::CallAndReturn<CVector&, 0x4BC0A0, int>(playerId);
@@ -21974,23 +21974,23 @@ plugin_vc\game_vc\common.cpp:
 
 	// FindPlayerPed
 	// plugin::CallAndReturn<CPlayerPed*, 0x4BC120>();
-	0AA7: call_function_return 0x4BC120 num_params 1 pop 1 [] func_ret [CPlayerPed*]
+	0AA7: call_function_return 0x4BC120 num_params 0 pop 0 func_ret [CPlayerPed*]
 
 	// FindPlayerTrain
 	// plugin::CallAndReturn<CTrain*, 0x4BC140>();
-	0AA7: call_function_return 0x4BC140 num_params 1 pop 1 [] func_ret [CTrain*]
+	0AA7: call_function_return 0x4BC140 num_params 0 pop 0 func_ret [CTrain*]
 
 	// FindPlayerEntity
 	// plugin::CallAndReturn<CEntity*, 0x4BC1B0>();
-	0AA7: call_function_return 0x4BC1B0 num_params 1 pop 1 [] func_ret [CEntity*]
+	0AA7: call_function_return 0x4BC1B0 num_params 0 pop 0 func_ret [CEntity*]
 
 	// FindPlayerVehicle
 	// plugin::CallAndReturn<CVehicle*, 0x4BC1E0>();
-	0AA7: call_function_return 0x4BC1E0 num_params 1 pop 1 [] func_ret [CVehicle*]
+	0AA7: call_function_return 0x4BC1E0 num_params 0 pop 0 func_ret [CVehicle*]
 
 	// FindPlayerSpeed
 	// plugin::CallAndReturn<CVector&, 0x4BC210>();
-	0AA7: call_function_return 0x4BC210 num_params 1 pop 1 [] func_ret [CVector&]
+	0AA7: call_function_return 0x4BC210 num_params 0 pop 0 func_ret [CVector&]
 
 	// GetFirstTexture
 	// plugin::CallAndReturn<RwTexture*, 0x57F900, RwTexDictionary*>(texDictionary);
@@ -22010,27 +22010,27 @@ plugin_vc\game_vc\common.cpp:
 
 	// SetAmbientColoursForPedsCarsAndObjects
 	// plugin::Call<0x57FAF0>();
-	0AA5: call_function 0x57FAF0 num_params 1 pop 1 []
+	0AA5: call_function 0x57FAF0 num_params 0 pop 0
 
 	// SetAmbientColours
 	// plugin::Call<0x57FB10>();
-	0AA5: call_function 0x57FB10 num_params 1 pop 1 []
+	0AA5: call_function 0x57FB10 num_params 0 pop 0
 
 	// SetFullAmbient
 	// plugin::Call<0x57FB30>();
-	0AA5: call_function 0x57FB30 num_params 1 pop 1 []
+	0AA5: call_function 0x57FB30 num_params 0 pop 0
 
 	// ActivateDirectional
 	// plugin::Call<0x57FB50>();
-	0AA5: call_function 0x57FB50 num_params 1 pop 1 []
+	0AA5: call_function 0x57FB50 num_params 0 pop 0
 
 	// DeActivateDirectional
 	// plugin::Call<0x57FB60>();
-	0AA5: call_function 0x57FB60 num_params 1 pop 1 []
+	0AA5: call_function 0x57FB60 num_params 0 pop 0
 
 	// ReSetAmbientAndDirectionalColours
 	// plugin::Call<0x57FB70>();
-	0AA5: call_function 0x57FB70 num_params 1 pop 1 []
+	0AA5: call_function 0x57FB70 num_params 0 pop 0
 
 	// SetBrightMarkerColours
 	// plugin::Call<0x57FBA0, float>(power);
@@ -22122,7 +22122,7 @@ plugin_vc\game_vc\common.cpp:
 
 	// RpAnimBlendPluginAttach
 	// plugin::CallAndReturn<bool, 0x4074D0>();
-	0AA7: call_function_return 0x4074D0 num_params 1 pop 1 [] func_ret [bool]
+	0AA7: call_function_return 0x4074D0 num_params 0 pop 0 func_ret [bool]
 
 plugin_vc\game_vc\COnscreenTimer.cpp:
 
@@ -22783,7 +22783,7 @@ plugin_vc\game_vc\CPed.cpp:
 
 	// CPed::Initialise
 	// plugin::Call<0x50D9F0>();
-	0AA5: call_function 0x50D9F0 num_params 1 pop 1 []
+	0AA5: call_function 0x50D9F0 num_params 0 pop 0
 
 	// CPed::InvestigateEvent
 	// plugin::CallMethod<0x526C60, CPed *>(this);
@@ -22839,7 +22839,7 @@ plugin_vc\game_vc\CPed.cpp:
 
 	// CPed::LoadFightData
 	// plugin::Call<0x527570>();
-	0AA5: call_function 0x527570 num_params 1 pop 1 []
+	0AA5: call_function 0x527570 num_params 0 pop 0
 
 	// CPed::LookForInterestingNodes
 	// plugin::CallMethod<0x4F3540, CPed *>(this);
@@ -23051,7 +23051,7 @@ plugin_vc\game_vc\CPed.cpp:
 
 	// CPed::SetAnimOffsetForEnterOrExitVehicle
 	// plugin::Call<0x5155E0>();
-	0AA5: call_function 0x5155E0 num_params 1 pop 1 []
+	0AA5: call_function 0x5155E0 num_params 0 pop 0
 
 	// CPed::SetAnswerMobile
 	// plugin::CallMethod<0x4F59C0, CPed *>(this);
@@ -23582,15 +23582,15 @@ plugin_vc\game_vc\CPedStats.cpp:
 
 	// CPedStats::Initialise
 	// plugin::Call<0x530260>();
-	0AA5: call_function 0x530260 num_params 1 pop 1 []
+	0AA5: call_function 0x530260 num_params 0 pop 0
 
 	// CPedStats::Shutdown
 	// plugin::Call<0x530220>();
-	0AA5: call_function 0x530220 num_params 1 pop 1 []
+	0AA5: call_function 0x530220 num_params 0 pop 0
 
 	// CPedStats::LoadPedStats
 	// plugin::Call<0x530020>();
-	0AA5: call_function 0x530020 num_params 1 pop 1 []
+	0AA5: call_function 0x530020 num_params 0 pop 0
 
 	// CPedStats::GetPedStatType
 	// plugin::CallAndReturn<unsigned int, 0x52FFC0, char*>(pedStatName);
@@ -23608,15 +23608,15 @@ plugin_vc\game_vc\CPedType.cpp:
 
 	// CPedType::Initialise
 	// plugin::Call<0x530F00>();
-	0AA5: call_function 0x530F00 num_params 1 pop 1 []
+	0AA5: call_function 0x530F00 num_params 0 pop 0
 
 	// CPedType::Shutdown
 	// plugin::Call<0x530EC0>();
-	0AA5: call_function 0x530EC0 num_params 1 pop 1 []
+	0AA5: call_function 0x530EC0 num_params 0 pop 0
 
 	// CPedType::LoadPedData
 	// plugin::Call<0x530B90>();
-	0AA5: call_function 0x530B90 num_params 1 pop 1 []
+	0AA5: call_function 0x530B90 num_params 0 pop 0
 
 	// CPedType::FindPedType
 	// plugin::CallAndReturn<unsigned int, 0x530860, char*>(pedName);
@@ -23716,7 +23716,7 @@ plugin_vc\game_vc\CPickups.cpp:
 
 	// CPickups::Init
 	// plugin::Call<0x441D30>();
-	0AA5: call_function 0x441D30 num_params 1 pop 1 []
+	0AA5: call_function 0x441D30 num_params 0 pop 0
 
 	// CPickups::IsPickUpPickedUp
 	// plugin::CallAndReturn<bool, 0x441880, int>(handle);
@@ -23748,7 +23748,7 @@ plugin_vc\game_vc\CPickups.cpp:
 
 	// CPickups::RenderPickUpText
 	// plugin::Call<0x43E5E0>();
-	0AA5: call_function 0x43E5E0 num_params 1 pop 1 []
+	0AA5: call_function 0x43E5E0 num_params 0 pop 0
 
 	// CPickups::Save
 	// plugin::Call<0x43D0D0, unsigned char*, unsigned int*>(arg0, arg1);
@@ -23756,7 +23756,7 @@ plugin_vc\game_vc\CPickups.cpp:
 
 	// CPickups::Update
 	// plugin::Call<0x441BB0>();
-	0AA5: call_function 0x441BB0 num_params 1 pop 1 []
+	0AA5: call_function 0x441BB0 num_params 0 pop 0
 
 plugin_vc\game_vc\CPlane.cpp:
 
@@ -23766,11 +23766,11 @@ plugin_vc\game_vc\CPlane.cpp:
 
 	// CPlane::InitPlanes
 	// plugin::Call<0x5B21E0>();
-	0AA5: call_function 0x5B21E0 num_params 1 pop 1 []
+	0AA5: call_function 0x5B21E0 num_params 0 pop 0
 
 	// CPlane::Load
 	// plugin::CallAndReturn<bool, 0x5AFAD0>();
-	0AA7: call_function_return 0x5AFAD0 num_params 1 pop 1 [] func_ret [bool]
+	0AA7: call_function_return 0x5AFAD0 num_params 0 pop 0 func_ret [bool]
 
 	// CPlane::LoadPath
 	// plugin::Call<0x5B1FF0, char const*, int&, float&, bool>(arg0, arg1, arg2, arg3);
@@ -23778,11 +23778,11 @@ plugin_vc\game_vc\CPlane.cpp:
 
 	// CPlane::Save
 	// plugin::CallAndReturn<bool, 0x5AFB80>();
-	0AA7: call_function_return 0x5AFB80 num_params 1 pop 1 [] func_ret [bool]
+	0AA7: call_function_return 0x5AFB80 num_params 0 pop 0 func_ret [bool]
 
 	// CPlane::Shutdown
 	// plugin::Call<0x5B2160>();
-	0AA5: call_function 0x5B2160 num_params 1 pop 1 []
+	0AA5: call_function 0x5B2160 num_params 0 pop 0
 
 	// CPlane::TestRocketCollision
 	// plugin::CallAndReturn<bool, 0x5AFC90, CVector*>(arg0);
@@ -23790,7 +23790,7 @@ plugin_vc\game_vc\CPlane.cpp:
 
 	// CPlane::UpdatePlanes
 	// plugin::Call<0x5B19D0>();
-	0AA5: call_function 0x5B19D0 num_params 1 pop 1 []
+	0AA5: call_function 0x5B19D0 num_params 0 pop 0
 
 plugin_vc\game_vc\CPlayerPed.cpp:
 
@@ -23954,11 +23954,11 @@ plugin_vc\game_vc\CPlayerSkin.cpp:
 
 	// CPlayerSkin::BeginFrontendSkinEdit
 	// plugin::Call<0x627D10>();
-	0AA5: call_function 0x627D10 num_params 1 pop 1 []
+	0AA5: call_function 0x627D10 num_params 0 pop 0
 
 	// CPlayerSkin::EndFrontendSkinEdit
 	// plugin::Call<0x627CE0>();
-	0AA5: call_function 0x627CE0 num_params 1 pop 1 []
+	0AA5: call_function 0x627CE0 num_params 0 pop 0
 
 	// CPlayerSkin::GetSkinTexture
 	// plugin::CallAndReturn<int, 0x627E60, char const*>(arg0);
@@ -23966,15 +23966,15 @@ plugin_vc\game_vc\CPlayerSkin.cpp:
 
 	// CPlayerSkin::Initialise
 	// plugin::Call<0x627FB0>();
-	0AA5: call_function 0x627FB0 num_params 1 pop 1 []
+	0AA5: call_function 0x627FB0 num_params 0 pop 0
 
 	// CPlayerSkin::RenderFrontendSkinEdit
 	// plugin::Call<0x627BC0>();
-	0AA5: call_function 0x627BC0 num_params 1 pop 1 []
+	0AA5: call_function 0x627BC0 num_params 0 pop 0
 
 	// CPlayerSkin::Shutdown
 	// plugin::Call<0x627FA0>();
-	0AA5: call_function 0x627FA0 num_params 1 pop 1 []
+	0AA5: call_function 0x627FA0 num_params 0 pop 0
 
 plugin_vc\game_vc\CPointLights.cpp:
 
@@ -24069,7 +24069,7 @@ plugin_vc\game_vc\CPopulation.cpp:
 
 	// CPopulation::ConvertAllObjectsToDummyObjects
 	// plugin::Call<0x53D430>();
-	0AA5: call_function 0x53D430 num_params 1 pop 1 []
+	0AA5: call_function 0x53D430 num_params 0 pop 0
 
 	// CPopulation::ConvertToDummyObject
 	// plugin::Call<0x53D290, CObject*>(object);
@@ -24081,11 +24081,11 @@ plugin_vc\game_vc\CPopulation.cpp:
 
 	// CPopulation::GeneratePedsAtStartOfGame
 	// plugin::Call<0x53E3E0>();
-	0AA5: call_function 0x53E3E0 num_params 1 pop 1 []
+	0AA5: call_function 0x53E3E0 num_params 0 pop 0
 
 	// CPopulation::Initialise
 	// plugin::Call<0x53EAF0>();
-	0AA5: call_function 0x53EAF0 num_params 1 pop 1 []
+	0AA5: call_function 0x53EAF0 num_params 0 pop 0
 
 	// CPopulation::IsFemale
 	// plugin::CallAndReturn<bool, 0x53AD50, int>(modelIndex);
@@ -24105,11 +24105,11 @@ plugin_vc\game_vc\CPopulation.cpp:
 
 	// CPopulation::LoadPedGroups
 	// plugin::Call<0x53E9C0>();
-	0AA5: call_function 0x53E9C0 num_params 1 pop 1 []
+	0AA5: call_function 0x53E9C0 num_params 0 pop 0
 
 	// CPopulation::ManagePopulation
 	// plugin::Call<0x53D690>();
-	0AA5: call_function 0x53D690 num_params 1 pop 1 []
+	0AA5: call_function 0x53D690 num_params 0 pop 0
 
 	// CPopulation::PlaceCouple
 	// plugin::Call<0x5388F0, ePedType, int, ePedType, int, CVector>(pedType1, modelIndex1, pedType2, modelIndex2, posn);
@@ -24133,7 +24133,7 @@ plugin_vc\game_vc\CPopulation.cpp:
 
 	// CPopulation::RemovePedsIfThePoolGetsFull
 	// plugin::Call<0x53D560>();
-	0AA5: call_function 0x53D560 num_params 1 pop 1 []
+	0AA5: call_function 0x53D560 num_params 0 pop 0
 
 	// CPopulation::TestSafeForRealObject
 	// plugin::CallAndReturn<bool, 0x53CF80, CDummyObject*>(dummyObject);
@@ -24157,11 +24157,11 @@ plugin_vc\game_vc\CProjectileInfo.cpp:
 
 	// CProjectileInfo::Shutdown
 	// plugin::Call<0x5C7C10>();
-	0AA5: call_function 0x5C7C10 num_params 1 pop 1 []
+	0AA5: call_function 0x5C7C10 num_params 0 pop 0
 
 	// CProjectileInfo::Update
 	// plugin::Call<0x5C6A20>();
-	0AA5: call_function 0x5C6A20 num_params 1 pop 1 []
+	0AA5: call_function 0x5C6A20 num_params 0 pop 0
 
 	// CProjectileInfo::RemoveNotAdd
 	// plugin::Call<0x5C7180, CEntity*, eWeaponType, CVector>(pEntity, weapontype, posn);
@@ -24173,15 +24173,15 @@ plugin_vc\game_vc\CProjectileInfo.cpp:
 
 	// CProjectileInfo::RemoveDetonatorProjectiles
 	// plugin::Call<0x5C71D0>();
-	0AA5: call_function 0x5C71D0 num_params 1 pop 1 []
+	0AA5: call_function 0x5C71D0 num_params 0 pop 0
 
 	// CProjectileInfo::RemoveAllProjectiles
 	// plugin::Call<0x5C69D0>();
-	0AA5: call_function 0x5C69D0 num_params 1 pop 1 []
+	0AA5: call_function 0x5C69D0 num_params 0 pop 0
 
 	// CProjectileInfo::Initialise
 	// plugin::Call<0x5C7C30>();
-	0AA5: call_function 0x5C7C30 num_params 1 pop 1 []
+	0AA5: call_function 0x5C7C30 num_params 0 pop 0
 
 	// CProjectileInfo::GetProjectileInfo
 	// plugin::CallAndReturn<CProjectileInfo*, 0x5C7BF0, int>(ProjIndex);
@@ -24209,7 +24209,7 @@ plugin_vc\game_vc\CRadar.cpp:
 
 	// CRadar::CalculateCachedSinCos
 	// plugin::Call<0x4C3D80>();
-	0AA5: call_function 0x4C3D80 num_params 1 pop 1 []
+	0AA5: call_function 0x4C3D80 num_params 0 pop 0
 
 	// CRadar::ChangeBlipBrightness
 	// plugin::Call<0x4C38B0, int, int>(i, bright);
@@ -24241,11 +24241,11 @@ plugin_vc\game_vc\CRadar.cpp:
 
 	// CRadar::Draw3dMarkers
 	// plugin::Call<0x4C3F20>();
-	0AA5: call_function 0x4C3F20 num_params 1 pop 1 []
+	0AA5: call_function 0x4C3F20 num_params 0 pop 0
 
 	// CRadar::DrawBlips
 	// plugin::Call<0x4C4200>();
-	0AA5: call_function 0x4C4200 num_params 1 pop 1 []
+	0AA5: call_function 0x4C4200 num_params 0 pop 0
 
 	// CRadar::DrawCoordBlip
 	// plugin::Call<0x4C5680, int>(i);
@@ -24261,19 +24261,19 @@ plugin_vc\game_vc\CRadar.cpp:
 
 	// CRadar::DrawMap
 	// plugin::Call<0x4C5C60 >();
-	0AA5: call_function 0x4C5C60 num_params 1 pop 1 []
+	0AA5: call_function 0x4C5C60 num_params 0 pop 0
 
 	// CRadar::DrawRadarMap
 	// plugin::Call<0x4C17C0>();
-	0AA5: call_function 0x4C17C0 num_params 1 pop 1 []
+	0AA5: call_function 0x4C17C0 num_params 0 pop 0
 
 	// CRadar::DrawRadarMask
 	// plugin::Call<0x4C1A20>();
-	0AA5: call_function 0x4C1A20 num_params 1 pop 1 []
+	0AA5: call_function 0x4C1A20 num_params 0 pop 0
 
 	// CRadar::DrawRadarSection
 	// plugin::Call<0x4C1D60>();
-	0AA5: call_function 0x4C1D60 num_params 1 pop 1 []
+	0AA5: call_function 0x4C1D60 num_params 0 pop 0
 
 	// CRadar::DrawRadarSprite
 	// plugin::Call<0x4C2D00, unsigned short, float, float, unsigned char>(sprite, x, y, alpha);
@@ -24297,11 +24297,11 @@ plugin_vc\game_vc\CRadar.cpp:
 
 	// CRadar::InitFrontEndMap
 	// plugin::Call<0x4C5B30>();
-	0AA5: call_function 0x4C5B30 num_params 1 pop 1 []
+	0AA5: call_function 0x4C5B30 num_params 0 pop 0
 
 	// CRadar::Initialise
 	// plugin::Call<0x4C6200>();
-	0AA5: call_function 0x4C6200 num_params 1 pop 1 []
+	0AA5: call_function 0x4C6200 num_params 0 pop 0
 
 	// CRadar::LoadAllRadarBlips
 	// plugin::Call<0x4C15D0, unsigned char*, unsigned int>(buf, size);
@@ -24309,11 +24309,11 @@ plugin_vc\game_vc\CRadar.cpp:
 
 	// CRadar::LoadTextures
 	// plugin::Call<0x4C5DC0>();
-	0AA5: call_function 0x4C5DC0 num_params 1 pop 1 []
+	0AA5: call_function 0x4C5DC0 num_params 0 pop 0
 
 	// CRadar::RemoveRadarSections
 	// plugin::Call<0x4C2930>();
-	0AA5: call_function 0x4C2930 num_params 1 pop 1 []
+	0AA5: call_function 0x4C2930 num_params 0 pop 0
 
 	// CRadar::SaveAllRadarBlips
 	// plugin::Call<0x4C16B0, unsigned char*, unsigned int*>(buf, size);
@@ -24345,7 +24345,7 @@ plugin_vc\game_vc\CRadar.cpp:
 
 	// CRadar::Shutdown
 	// plugin::Call<0x4C6030>();
-	0AA5: call_function 0x4C6030 num_params 1 pop 1 []
+	0AA5: call_function 0x4C6030 num_params 0 pop 0
 
 	// CRadar::StreamRadarSections
 	// plugin::Call<0x4C2870, int, int>(x, y);
@@ -24377,7 +24377,7 @@ plugin_vc\game_vc\CRestart.cpp:
 
 	// CRestart::CancelOverrideRestart
 	// plugin::Call<0x4429D0>();
-	0AA5: call_function 0x4429D0 num_params 1 pop 1 []
+	0AA5: call_function 0x4429D0 num_params 0 pop 0
 
 	// CRestart::OverrideNextRestart
 	// plugin::Call<0x4429E0, CVector const&, float>(point, angle);
@@ -24401,7 +24401,7 @@ plugin_vc\game_vc\CRestart.cpp:
 
 	// CRestart::Initialise
 	// plugin::Call<0x443060>();
-	0AA5: call_function 0x443060 num_params 1 pop 1 []
+	0AA5: call_function 0x443060 num_params 0 pop 0
 
 plugin_vc\game_vc\CRouteNode.cpp:
 
@@ -24447,53 +24447,53 @@ plugin_vc\game_vc\cSampleManager.cpp:
 
 	// cSampleManager::IsMP3RadioChannelAvailable
 	// plugin::CallAndReturn<bool, 0x5D80E0>();
-	0AA7: call_function_return 0x5D80E0 num_params 1 pop 1 [] func_ret [bool]
+	0AA7: call_function_return 0x5D80E0 num_params 0 pop 0 func_ret [bool]
 
 plugin_vc\game_vc\CSceneEdit.cpp:
 
 	// CSceneEdit::SelectWeapon
 	// plugin::CallAndReturn<bool, 0x6032E0>();
-	0AA7: call_function_return 0x6032E0 num_params 1 pop 1 [] func_ret [bool]
+	0AA7: call_function_return 0x6032E0 num_params 0 pop 0 func_ret [bool]
 
 	// CSceneEdit::SelectVehicle
 	// plugin::CallAndReturn<bool, 0x603520>();
-	0AA7: call_function_return 0x603520 num_params 1 pop 1 [] func_ret [bool]
+	0AA7: call_function_return 0x603520 num_params 0 pop 0 func_ret [bool]
 
 	// CSceneEdit::SelectActor2
 	// plugin::CallAndReturn<bool, 0x603700>();
-	0AA7: call_function_return 0x603700 num_params 1 pop 1 [] func_ret [bool]
+	0AA7: call_function_return 0x603700 num_params 0 pop 0 func_ret [bool]
 
 	// CSceneEdit::SelectActor
 	// plugin::CallAndReturn<bool, 0x603980>();
-	0AA7: call_function_return 0x603980 num_params 1 pop 1 [] func_ret [bool]
+	0AA7: call_function_return 0x603980 num_params 0 pop 0 func_ret [bool]
 
 	// CSceneEdit::PlayBack
 	// plugin::Call<0x603C10>();
-	0AA5: call_function 0x603C10 num_params 1 pop 1 []
+	0AA5: call_function 0x603C10 num_params 0 pop 0
 
 	// CSceneEdit::ProcessCommand
 	// plugin::Call<0x604500>();
-	0AA5: call_function 0x604500 num_params 1 pop 1 []
+	0AA5: call_function 0x604500 num_params 0 pop 0
 
 	// CSceneEdit::Draw
 	// plugin::Call<0x605DB0>();
-	0AA5: call_function 0x605DB0 num_params 1 pop 1 []
+	0AA5: call_function 0x605DB0 num_params 0 pop 0
 
 	// CSceneEdit::Update
 	// plugin::Call<0x606270>();
-	0AA5: call_function 0x606270 num_params 1 pop 1 []
+	0AA5: call_function 0x606270 num_params 0 pop 0
 
 	// CSceneEdit::ReInitialise
 	// plugin::Call<0x6062F0>();
-	0AA5: call_function 0x6062F0 num_params 1 pop 1 []
+	0AA5: call_function 0x6062F0 num_params 0 pop 0
 
 	// CSceneEdit::InitPlayBack
 	// plugin::Call<0x606470>();
-	0AA5: call_function 0x606470 num_params 1 pop 1 []
+	0AA5: call_function 0x606470 num_params 0 pop 0
 
 	// CSceneEdit::Initialise
 	// plugin::Call<0x6065B0>();
-	0AA5: call_function 0x6065B0 num_params 1 pop 1 []
+	0AA5: call_function 0x6065B0 num_params 0 pop 0
 
 plugin_vc\game_vc\CShadowCamera.cpp:
 
@@ -24542,17 +24542,17 @@ plugin_vc\game_vc\CShinyTexts.cpp:
 
 	// CShinyTexts::Render
 	// plugin::Call<0x571240>();
-	0AA5: call_function 0x571240 num_params 1 pop 1 []
+	0AA5: call_function 0x571240 num_params 0 pop 0
 
 plugin_vc\game_vc\CShotInfo.cpp:
 
 	// CShotInfo::Initialise
 	// plugin::Call<0x5C83B0>();
-	0AA5: call_function 0x5C83B0 num_params 1 pop 1 []
+	0AA5: call_function 0x5C83B0 num_params 0 pop 0
 
 	// CShotInfo::Shutdown
 	// plugin::Call<0x5C8390>();
-	0AA5: call_function 0x5C8390 num_params 1 pop 1 []
+	0AA5: call_function 0x5C8390 num_params 0 pop 0
 
 	// CShotInfo::AddShot
 	// plugin::CallAndReturn<bool, 0x5C8110, CEntity*, eWeaponType, CVector, CVector>(creator, weaponType, origin, target);
@@ -24560,7 +24560,7 @@ plugin_vc\game_vc\CShotInfo.cpp:
 
 	// CShotInfo::Update
 	// plugin::Call<0x5C7E60>();
-	0AA5: call_function 0x5C7E60 num_params 1 pop 1 []
+	0AA5: call_function 0x5C7E60 num_params 0 pop 0
 
 plugin_vc\game_vc\CSimpleModelInfo.cpp:
 
@@ -24857,11 +24857,11 @@ plugin_vc\game_vc\CTheZones.cpp:
 
 	// CTheZones::Init
 	// plugin::Call<0x4DDFA0>();
-	0AA5: call_function 0x4DDFA0 num_params 1 pop 1 []
+	0AA5: call_function 0x4DDFA0 num_params 0 pop 0
 
 	// CTheZones::InitialiseAudioZoneArray
 	// plugin::Call<0x4DC430>();
-	0AA5: call_function 0x4DC430 num_params 1 pop 1 []
+	0AA5: call_function 0x4DC430 num_params 0 pop 0
 
 	// CTheZones::InsertZoneIntoZoneHierRecursive
 	// plugin::CallAndReturn<bool, 0x4DD9D0, CZone*, CZone*>(currentZona, otherZone);
@@ -24881,7 +24881,7 @@ plugin_vc\game_vc\CTheZones.cpp:
 
 	// CTheZones::PostZoneCreation
 	// plugin::CallAndReturn<char, 0x4DDA90>();
-	0AA7: call_function_return 0x4DDA90 num_params 1 pop 1 [] func_ret [char]
+	0AA7: call_function_return 0x4DDA90 num_params 0 pop 0 func_ret [char]
 
 	// CTheZones::SaveAllZones
 	// plugin::Call<0x4DC090, unsigned char*, unsigned int*>(arg0, arg1);
@@ -24909,7 +24909,7 @@ plugin_vc\game_vc\CTheZones.cpp:
 
 	// CTheZones::Update
 	// plugin::Call<0x4DDDF0>();
-	0AA5: call_function 0x4DDDF0 num_params 1 pop 1 []
+	0AA5: call_function 0x4DDDF0 num_params 0 pop 0
 
 	// CTheZones::ZoneIsEntirelyContainedWithinOtherZone
 	// plugin::CallAndReturn<bool, 0x4DD7D0, CZone*, CZone*>(currentZona, otherZone);
@@ -24961,15 +24961,15 @@ plugin_vc\game_vc\CTrain.cpp:
 
 	// CTrain::InitTrains
 	// plugin::Call<0x5B2CA0>();
-	0AA5: call_function 0x5B2CA0 num_params 1 pop 1 []
+	0AA5: call_function 0x5B2CA0 num_params 0 pop 0
 
 	// CTrain::Shutdown
 	// plugin::Call<0x5B2C90>();
-	0AA5: call_function 0x5B2C90 num_params 1 pop 1 []
+	0AA5: call_function 0x5B2C90 num_params 0 pop 0
 
 	// CTrain::UpdateTrains
 	// plugin::Call<0x5B2C80>();
-	0AA5: call_function 0x5B2C80 num_params 1 pop 1 []
+	0AA5: call_function 0x5B2C80 num_params 0 pop 0
 
 plugin_vc\game_vc\cTransmission.cpp:
 
@@ -25013,7 +25013,7 @@ plugin_vc\game_vc\CTxdStore.cpp:
 
 	// CTxdStore::GameShutdown
 	// plugin::Call<0x580F40>();
-	0AA5: call_function 0x580F40 num_params 1 pop 1 []
+	0AA5: call_function 0x580F40 num_params 0 pop 0
 
 	// CTxdStore::GetNumRefs
 	// plugin::CallAndReturn<int, 0x580990, int>(index);
@@ -25033,11 +25033,11 @@ plugin_vc\game_vc\CTxdStore.cpp:
 
 	// CTxdStore::PopCurrentTxd
 	// plugin::Call<0x580AA0>();
-	0AA5: call_function 0x580AA0 num_params 1 pop 1 []
+	0AA5: call_function 0x580AA0 num_params 0 pop 0
 
 	// CTxdStore::PushCurrentTxd
 	// plugin::Call<0x580AC0>();
-	0AA5: call_function 0x580AC0 num_params 1 pop 1 []
+	0AA5: call_function 0x580AC0 num_params 0 pop 0
 
 	// CTxdStore::RemoveRef
 	// plugin::Call<0x580A10, int>(index);
@@ -25061,7 +25061,7 @@ plugin_vc\game_vc\CTxdStore.cpp:
 
 	// CTxdStore::Shutdown
 	// plugin::Call<0x580FF0>();
-	0AA5: call_function 0x580FF0 num_params 1 pop 1 []
+	0AA5: call_function 0x580FF0 num_params 0 pop 0
 
 	// CTxdStore::StartLoadTxd
 	// plugin::CallAndReturn<bool, 0x580BF0, int, RwStream*>(index, stream);
@@ -25069,17 +25069,17 @@ plugin_vc\game_vc\CTxdStore.cpp:
 
 	// CTxdStore::Initialise
 	// plugin::Call<0x581010>();
-	0AA5: call_function 0x581010 num_params 1 pop 1 []
+	0AA5: call_function 0x581010 num_params 0 pop 0
 
 plugin_vc\game_vc\CUserDisplay.cpp:
 
 	// CUserDisplay::Init
 	// plugin::Call<0x4D1490>();
-	0AA5: call_function 0x4D1490 num_params 1 pop 1 []
+	0AA5: call_function 0x4D1490 num_params 0 pop 0
 
 	// CUserDisplay::Process
 	// plugin::Call<0x4D1400>();
-	0AA5: call_function 0x4D1400 num_params 1 pop 1 []
+	0AA5: call_function 0x4D1400 num_params 0 pop 0
 
 plugin_vc\game_vc\CVehicle.cpp:
 
@@ -25374,7 +25374,7 @@ plugin_vc\game_vc\CVehicleModelInfo.cpp:
 
 	// CVehicleModelInfo::DeleteVehicleColourTextures
 	// plugin::Call<0x578C90>();
-	0AA5: call_function 0x578C90 num_params 1 pop 1 []
+	0AA5: call_function 0x578C90 num_params 0 pop 0
 
 	// CVehicleModelInfo::FindEditableMaterialList
 	// plugin::CallMethodAndReturn<int, 0x579390, CVehicleModelInfo *>(this);
@@ -25410,11 +25410,11 @@ plugin_vc\game_vc\CVehicleModelInfo.cpp:
 
 	// CVehicleModelInfo::LoadEnvironmentMaps
 	// plugin::Call<0x578C30>();
-	0AA5: call_function 0x578C30 num_params 1 pop 1 []
+	0AA5: call_function 0x578C30 num_params 0 pop 0
 
 	// CVehicleModelInfo::LoadVehicleColours
 	// plugin::Call<0x578CC0>();
-	0AA5: call_function 0x578CC0 num_params 1 pop 1 []
+	0AA5: call_function 0x578CC0 num_params 0 pop 0
 
 	// CVehicleModelInfo::MoveObjectsCB
 	// plugin::CallAndReturn<RpAtomic*, 0x57A640, RwObject*, void*>(object, data);
@@ -25466,7 +25466,7 @@ plugin_vc\game_vc\CVehicleModelInfo.cpp:
 
 	// CVehicleModelInfo::ShutdownEnvironmentMaps
 	// plugin::Call<0x578BD0>();
-	0AA5: call_function 0x578BD0 num_params 1 pop 1 []
+	0AA5: call_function 0x578BD0 num_params 0 pop 0
 
 	// VehicleModelStore::~VehicleModelStore
 	// plugin::CallMethod<0x560150, VehicleModelStore *>(this);
@@ -25592,15 +25592,15 @@ plugin_vc\game_vc\CWaterCannons.cpp:
 
 	// CWaterCannons::Init
 	// plugin::Call<0x57B2C0>();
-	0AA5: call_function 0x57B2C0 num_params 1 pop 1 []
+	0AA5: call_function 0x57B2C0 num_params 0 pop 0
 
 	// CWaterCannons::Render
 	// plugin::Call<0x57B0E0>();
-	0AA5: call_function 0x57B0E0 num_params 1 pop 1 []
+	0AA5: call_function 0x57B0E0 num_params 0 pop 0
 
 	// CWaterCannons::Update
 	// plugin::Call<0x57B120>();
-	0AA5: call_function 0x57B120 num_params 1 pop 1 []
+	0AA5: call_function 0x57B120 num_params 0 pop 0
 
 	// CWaterCannons::UpdateOne
 	// plugin::Call<0x57B160, unsigned int, CVector*, CVector*>(pCar, posn, moveSpeed);
@@ -25614,11 +25614,11 @@ plugin_vc\game_vc\CWeaponEffects.cpp:
 
 	// CWeaponEffects::ClearCrossHair
 	// plugin::Call<0x5D5050>();
-	0AA5: call_function 0x5D5050 num_params 1 pop 1 []
+	0AA5: call_function 0x5D5050 num_params 0 pop 0
 
 	// CWeaponEffects::Init
 	// plugin::Call<0x5D50B0>();
-	0AA5: call_function 0x5D50B0 num_params 1 pop 1 []
+	0AA5: call_function 0x5D50B0 num_params 0 pop 0
 
 	// CWeaponEffects::MarkTarget
 	// plugin::Call<0x5D5060, CVector, unsigned char, unsigned char, unsigned char, unsigned char, float>(pos, red, green, blue, alpha, size);
@@ -25626,11 +25626,11 @@ plugin_vc\game_vc\CWeaponEffects.cpp:
 
 	// CWeaponEffects::Render
 	// plugin::Call<0x5D4E90>();
-	0AA5: call_function 0x5D4E90 num_params 1 pop 1 []
+	0AA5: call_function 0x5D4E90 num_params 0 pop 0
 
 	// CWeaponEffects::Shutdown
 	// plugin::Call<0x5D5090>();
-	0AA5: call_function 0x5D5090 num_params 1 pop 1 []
+	0AA5: call_function 0x5D5090 num_params 0 pop 0
 
 plugin_vc\game_vc\CWeaponInfo.cpp:
 
@@ -25652,15 +25652,15 @@ plugin_vc\game_vc\CWeaponInfo.cpp:
 
 	// CWeaponInfo::Initialise
 	// plugin::Call<0x5D5750>();
-	0AA5: call_function 0x5D5750 num_params 1 pop 1 []
+	0AA5: call_function 0x5D5750 num_params 0 pop 0
 
 	// CWeaponInfo::LoadWeaponData
 	// plugin::Call<0x5D5250>();
-	0AA5: call_function 0x5D5250 num_params 1 pop 1 []
+	0AA5: call_function 0x5D5250 num_params 0 pop 0
 
 	// CWeaponInfo::Shutdown
 	// plugin::Call<0x5D5730>();
-	0AA5: call_function 0x5D5730 num_params 1 pop 1 []
+	0AA5: call_function 0x5D5730 num_params 0 pop 0
 
 plugin_vc\game_vc\CWeaponModelInfo.cpp:
 
@@ -25684,15 +25684,15 @@ plugin_vc\game_vc\CWeather.cpp:
 
 	// CWeather::AddRain
 	// plugin::Call<0x57C900>();
-	0AA5: call_function 0x57C900 num_params 1 pop 1 []
+	0AA5: call_function 0x57C900 num_params 0 pop 0
 
 	// CWeather::AddSplashesDuringHurricane
 	// plugin::Call<0x57D160>();
-	0AA5: call_function 0x57D160 num_params 1 pop 1 []
+	0AA5: call_function 0x57D160 num_params 0 pop 0
 
 	// CWeather::AddStreamAfterRain
 	// plugin::Call<0x57D340>();
-	0AA5: call_function 0x57D340 num_params 1 pop 1 []
+	0AA5: call_function 0x57D340 num_params 0 pop 0
 
 	// CWeather::ForceWeather
 	// plugin::Call<0x57D570, short>(weather);
@@ -25704,19 +25704,19 @@ plugin_vc\game_vc\CWeather.cpp:
 
 	// CWeather::Init
 	// plugin::Call<0x57E040>();
-	0AA5: call_function 0x57E040 num_params 1 pop 1 []
+	0AA5: call_function 0x57E040 num_params 0 pop 0
 
 	// CWeather::ReleaseWeather
 	// plugin::Call<0x57D540>();
-	0AA5: call_function 0x57D540 num_params 1 pop 1 []
+	0AA5: call_function 0x57D540 num_params 0 pop 0
 
 	// CWeather::RenderRainStreaks
 	// plugin::Call<0x57BF40>();
-	0AA5: call_function 0x57BF40 num_params 1 pop 1 []
+	0AA5: call_function 0x57BF40 num_params 0 pop 0
 
 	// CWeather::Update
 	// plugin::Call<0x57D580>();
-	0AA5: call_function 0x57D580 num_params 1 pop 1 []
+	0AA5: call_function 0x57D580 num_params 0 pop 0
 
 plugin_vc\game_vc\CWindModifiers.cpp:
 
@@ -25734,7 +25734,7 @@ plugin_vc\game_vc\CWorld.cpp:
 
 	// CWorld::AddParticles
 	// plugin::Call<0x4D4BB0>();
-	0AA5: call_function 0x4D4BB0 num_params 1 pop 1 []
+	0AA5: call_function 0x4D4BB0 num_params 0 pop 0
 
 	// CWorld::CallOffChaseForArea
 	// plugin::Call<0x4D3200, float, float, float, float>(x1, y1, x2, y2);
@@ -25758,7 +25758,7 @@ plugin_vc\game_vc\CWorld.cpp:
 
 	// CWorld::ClearForRestart
 	// plugin::Call<0x4DB4A0>();
-	0AA5: call_function 0x4DB4A0 num_params 1 pop 1 []
+	0AA5: call_function 0x4DB4A0 num_params 0 pop 0
 
 	// CWorld::ClearPedsFromArea
 	// plugin::Call<0x4D35C0, float, float, float, float, float, float>(x1, y1, z1, x2, y2, z2);
@@ -25766,7 +25766,7 @@ plugin_vc\game_vc\CWorld.cpp:
 
 	// CWorld::ClearScanCodes
 	// plugin::Call<0x4D7460>();
-	0AA5: call_function 0x4D7460 num_params 1 pop 1 []
+	0AA5: call_function 0x4D7460 num_params 0 pop 0
 
 	// CWorld::ExtinguishAllCarFiresInArea
 	// plugin::Call<0x4D3480, CVector, float>(point, radius);
@@ -25842,7 +25842,7 @@ plugin_vc\game_vc\CWorld.cpp:
 
 	// CWorld::Initialise
 	// plugin::Call<0x4DB9A0>();
-	0AA5: call_function 0x4DB9A0 num_params 1 pop 1 []
+	0AA5: call_function 0x4DB9A0 num_params 0 pop 0
 
 	// CWorld::IsWanderPathClear
 	// plugin::CallAndReturn<bool, 0x4D2620, CVector const&, CVector const&, float, int>(origin, target, arg2, arg3);
@@ -25850,7 +25850,7 @@ plugin_vc\game_vc\CWorld.cpp:
 
 	// CWorld::Process
 	// plugin::Call<0x4D7500>();
-	0AA5: call_function 0x4D7500 num_params 1 pop 1 []
+	0AA5: call_function 0x4D7500 num_params 0 pop 0
 
 	// CWorld::ProcessLineOfSight
 	// plugin::CallAndReturn<bool, 0x4D92D0, CVector const&, CVector const&, CColPoint&, CEntity*&, bool, bool, bool, bool, bool, bool, bool, bool>(origin, target, outColPoint, outEntity, buildings, vehicles, peds, objects, dummies, doSeeThroughCheck, doCameraIgnoreCheck, doShootThroughCheck);
@@ -25878,11 +25878,11 @@ plugin_vc\game_vc\CWorld.cpp:
 
 	// CWorld::RemoveFallenCars
 	// plugin::Call<0x4D48A0>();
-	0AA5: call_function 0x4D48A0 num_params 1 pop 1 []
+	0AA5: call_function 0x4D48A0 num_params 0 pop 0
 
 	// CWorld::RemoveFallenPeds
 	// plugin::Call<0x4D4A40>();
-	0AA5: call_function 0x4D4A40 num_params 1 pop 1 []
+	0AA5: call_function 0x4D4A40 num_params 0 pop 0
 
 	// CWorld::RemoveReferencesToDeletedObject
 	// plugin::Call<0x4D5090, CEntity*>(entity);
@@ -25890,7 +25890,7 @@ plugin_vc\game_vc\CWorld.cpp:
 
 	// CWorld::RepositionCertainDynamicObjects
 	// plugin::Call<0x4D4850>();
-	0AA5: call_function 0x4D4850 num_params 1 pop 1 []
+	0AA5: call_function 0x4D4850 num_params 0 pop 0
 
 	// CWorld::RepositionOneObject
 	// plugin::Call<0x4D43A0, CEntity*>(entity);
@@ -25914,11 +25914,11 @@ plugin_vc\game_vc\CWorld.cpp:
 
 	// CWorld::ShutDown
 	// plugin::Call<0x4DB590>();
-	0AA5: call_function 0x4DB590 num_params 1 pop 1 []
+	0AA5: call_function 0x4DB590 num_params 0 pop 0
 
 	// CWorld::StopAllLawEnforcersInTheirTracks
 	// plugin::Call<0x4D25B0>();
-	0AA5: call_function 0x4D25B0 num_params 1 pop 1 []
+	0AA5: call_function 0x4D25B0 num_params 0 pop 0
 
 	// CWorld::TestSphereAgainstSectorList
 	// plugin::CallAndReturn<CEntity*, 0x4D3C40, CPtrList&, CVector, float, CEntity*, bool>(list, sphereCenter, sphereRadius, ignoreEntity, doCameraIgnoreCheck);

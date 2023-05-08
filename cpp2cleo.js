@@ -163,7 +163,7 @@ function getParams(line) {
   params.push(cur);
   assertNumParams(params);
 
-  return params.map((x) => x.trim());
+  return params.filter(Boolean).map((x) => x.trim());
 }
 
 function assertNumParams(num) {
