@@ -153,22 +153,22 @@ for (let i = 0; i < lines.length; i++) {
     }
     curFile = line.substring(line.indexOf("plugin_")).replace(":", "");
 
-    const paths = curFile.split('\\');
+    const paths = curFile.split("\\");
     if (paths.length < 3) {
       throw new Error(`Invalid path ${curFile}`);
     }
-    const [namespace,game] = paths;
+    const [namespace, game] = paths;
     if (namespace === "plugin_II") {
       skipFile = true;
       continue;
     } else {
       skipFile = false;
     }
-    const file= paths.at(-1);
+    const file = paths.at(-1);
     toc[namespace] ??= {};
     toc[namespace][game] ??= [];
     toc[namespace][game].push(file);
-    
+
     output += "\n### " + curFile;
   } else {
     continue;
@@ -184,11 +184,12 @@ for (const n of Object.keys(toc)) {
   for (const g of Object.keys(toc[n])) {
     tocs += `  - ${g}\n`;
     for (const f of toc[n][g]) {
-      tocs += `    - [${f}](#${n}\\${g}\\${f})\n`;
+      let href = [n, g, f].map((x) => x.toLowerCase().replace(/\./g, ""));
+      tocs += `    - [${f}](#${href.join("")})\n`;
     }
   }
 }
-fs.writeFileSync("cleo-calls.md", tocs+output, "utf8");
+fs.writeFileSync("cleo-calls.md", tocs + output, "utf8");
 
 function assertAddress(s) {
   if (!s.startsWith("0x")) {
