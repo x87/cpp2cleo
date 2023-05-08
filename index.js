@@ -1,3 +1,5 @@
+const showdown = require("showdown");
+const prettier = require("prettier");
 const { map } = require("./addr");
 
 const fs = require("fs");
@@ -180,16 +182,25 @@ for (let i = 0; i < lines.length; i++) {
 // console.log(toc);
 let tocs = "";
 for (const n of Object.keys(toc)) {
-  tocs += `- ${n}\n`;
+  tocs += `* ${n}\n`;
   for (const g of Object.keys(toc[n])) {
-    tocs += `  - ${g}\n`;
+    tocs += `  * ${g}\n`;
     for (const f of toc[n][g]) {
       let href = [n, g, f].map((x) => x.toLowerCase().replace(/\./g, ""));
-      tocs += `    - [${f}](#${href.join("")})\n`;
+      tocs += `      * [${f}](#${href.join("")})\n`;
     }
   }
 }
-fs.writeFileSync("cleo-calls.md", tocs + output, "utf8");
+
+const result = tocs + output;
+const converter = new showdown.Converter({
+  literalMidWordUnderscores: true,
+  completeHTMLDocument: true,
+  disableForced4SpacesIndentedSublists: true,
+});
+
+fs.writeFileSync("cleo-calls.md", prettier.format(result, { parser: "markdown" }), "utf8");
+fs.writeFileSync("cleo-calls.html", converter.makeHtml(result), "utf8");
 
 function assertAddress(s) {
   if (!s.startsWith("0x")) {

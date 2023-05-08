@@ -1,0 +1,24 @@
+{
+  "name": "cpp-to-cleo",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node --max-old-space-size=8096 index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/x87/cpp2cleo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/x87/cpp2cleo/issues"
+  },
+  "homepage": "https://github.com/x87/cpp2cleo#readme",
+  "dependencies": {
+    "prettier": "^2.8.8",
+    "showdown": "^2.1.0"
+  }
+}
