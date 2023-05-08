@@ -200,7 +200,7 @@ const converter = new showdown.Converter({
 });
 
 fs.writeFileSync("cleo-calls.md", prettier.format(result, { parser: "markdown" }), "utf8");
-fs.writeFileSync("cleo-calls.html", converter.makeHtml(result), "utf8");
+fs.writeFileSync("index.html", converter.makeHtml(result), "utf8");
 
 function assertAddress(s) {
   if (!s.startsWith("0x")) {
