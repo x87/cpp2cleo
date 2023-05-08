@@ -5,7 +5,7 @@ const file = fs.readFileSync("input.txt", "utf8");
 const lines = file.split("\n");
 let output = "";
 let curFile = "";
-
+let isPreOpen = false;
 for (let i = 0; i < lines.length; i++) {
   const line = lines[i];
   if (line.includes("plugin::")) {
@@ -25,8 +25,12 @@ for (let i = 0; i < lines.length; i++) {
       }
       name = prevLine.split("(")[0].split(" ").at(-1).trim();
     }
-
-    output += `\n\t// ${name}\n\t// ` + line.substring(line.indexOf("plugin::")).trimStart();
+    if (isPreOpen) {
+      output += "</pre>";
+      isPreOpen = false;
+    }
+    output += `\n#### ${name}\n<pre>\n` + line.substring(line.indexOf("plugin::")).trimStart();
+    isPreOpen = true;
 
     const type = between(line, "<", ">");
     const types = type.split(",").map((p) => p.trim());
@@ -39,7 +43,7 @@ for (let i = 0; i < lines.length; i++) {
 
       const params = getParams(line);
       const pop = line.includes("plugin::CallStd<") ? 0 : params.length;
-      output += `\n\t0AA5: call_function ${address} num_params ${params.length} pop ${pop}`;
+      output += `\n0AA5: call_function ${address} num_params ${params.length} pop ${pop}`;
 
       for (const param of params) {
         output += ` [${param}]`;
@@ -53,7 +57,7 @@ for (let i = 0; i < lines.length; i++) {
 
       const params = getParams(line);
       const pop = line.includes("plugin::CallStdAndReturn<") ? 0 : params.length;
-      output += `\n\t0AA7: call_function_return ${address} num_params ${params.length} pop ${pop}`;
+      output += `\n0AA7: call_function_return ${address} num_params ${params.length} pop ${pop}`;
       for (const param of params) {
         output += ` [${param}]`;
       }
@@ -69,7 +73,7 @@ for (let i = 0; i < lines.length; i++) {
         console.error(`Expected value but got null or undefined. Line: ${line}`);
         continue;
       }
-      output += `\n\t0AA6: call_method ${address} struct [${className}] num_params ${params.length} pop 0`;
+      output += `\n0AA6: call_method ${address} struct [${className}] num_params ${params.length} pop 0`;
       for (const param of params) {
         output += ` [${param}]`;
       }
@@ -83,7 +87,7 @@ for (let i = 0; i < lines.length; i++) {
         console.error(`Expected value but got null or undefined. Line: ${line}`);
         continue;
       }
-      output += `\n\t0AA8: call_method_return ${address} struct [${className}] num_params ${params.length} pop 0`;
+      output += `\n0AA8: call_method_return ${address} struct [${className}] num_params ${params.length} pop 0`;
       for (const param of params) {
         output += ` [${param}]`;
       }
@@ -108,7 +112,7 @@ for (let i = 0; i < lines.length; i++) {
         console.error(`Expected value but got null or undefined. Line: ${line}`);
         continue;
       }
-      output += `\n\t0AA6: call_method ${address} struct [${className}] num_params ${params.length} pop 0`;
+      output += `\n0AA6: call_method ${address} struct [${className}] num_params ${params.length} pop 0`;
       for (const param of params) {
         output += ` [${param}]`;
       }
@@ -133,15 +137,19 @@ for (let i = 0; i < lines.length; i++) {
         console.error(`Expected value but got null or undefined. Line: ${line}`);
         continue;
       }
-      output += `\n\t0AA8: call_method_return ${address} struct [${className}] num_params ${params.length} pop 0`;
+      output += `\n0AA8: call_method_return ${address} struct [${className}] num_params ${params.length} pop 0`;
       for (const param of params) {
         output += ` [${param}]`;
       }
       output += ` func_ret [${ret}]`;
     }
   } else if (line.includes("plugin_")) {
-    output += "\n" + line.substring(line.indexOf("plugin_"));
-    curFile = line.replace(":", "");
+    if (isPreOpen) {
+      output += "</pre>";
+      isPreOpen = false;
+    }
+    curFile = line.substring(line.indexOf("plugin_")).replace(":", "");
+    output += "\n### " + curFile;
   } else {
     continue;
   }
@@ -149,7 +157,7 @@ for (let i = 0; i < lines.length; i++) {
   output += "\n";
 }
 
-fs.writeFileSync("cleo-calls.txt", output, "utf8");
+fs.writeFileSync("cleo-calls.md", output, "utf8");
 
 function assertAddress(s) {
   if (!s.startsWith("0x")) {
