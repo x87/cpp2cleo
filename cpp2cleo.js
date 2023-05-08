@@ -90,6 +90,30 @@ for (let i = 0; i < lines.length; i++) {
       output += ` func_ret [${ret}]`;
     }
 
+    if (line.includes("plugin::CallMethodDynGlobal")) {
+      // assertDyn(line); // todo: ctor_gaddr
+      let params = getParams(line);
+      const [gaddrof] = params;
+      params = params.slice(2); // this and address
+      if (!gaddrof.startsWith("gaddrof")) {
+        continue;
+      }
+      let varName = between(gaddrof, "(", ")").split(",")[0];
+      if (!map[curFile][varName]) {
+        throw new Error(`${varName} is not defined in ${curFile}`);
+      }
+      let address = map[curFile][varName];
+      assertAddress(address);
+      if (!className) {
+        console.error(`Expected value but got null or undefined. Line: ${line}`);
+        continue;
+      }
+      output += `\n\t0AA6: call_method ${address} struct [${className}] num_params ${params.length} pop 0`;
+      for (const param of params) {
+        output += ` [${param}]`;
+      }
+    }
+
     if (line.includes("plugin::CallMethodAndReturnDynGlobal")) {
       assertDyn(line);
       let params = getParams(line);
@@ -140,10 +164,24 @@ function assertDyn(s) {
 }
 
 function getParams(line) {
-  const paramLine = between(line, "(", ")");
+  // skip generics <>
+  let closePos = -1;
+  let angle = 0;
+  for (let i = 0; i < line.length; i++) {
+    const c = line[i];
+    if (c === "<") {
+      angle++;
+    } else if (c === ">") {
+      angle--;
+      if (angle === 0) {
+        closePos = i;
+        break;
+      }
+    }
+  }
+  const paramLine = between(line.substring(closePos + 1), "(", ")");
 
   // split paramLine by , ignoring , inside parenthesis
-
   let params = [];
   let cur = "";
   let paren = 0;
