@@ -1,10 +1,11 @@
-const showdown = require("showdown");
-const prettier = require("prettier");
-const { map } = require("./addr");
+const { join } = require("path");
+const showdown = require(join(__dirname, "showdown.min.js"));
+const { map } = require(join(__dirname, "addr.js"));
 
 const fs = require("fs");
-const file = fs.readFileSync("input.txt", "utf8");
+const file = fs.readFileSync(join(__dirname, "input.txt"), "utf8");
 const lines = file.split("\n");
+
 let output = "";
 let curFile = "";
 let isPreOpen = false;
@@ -199,7 +200,6 @@ const converter = new showdown.Converter({
   disableForced4SpacesIndentedSublists: true,
 });
 
-fs.writeFileSync("cleo-calls.md", prettier.format(result, { parser: "markdown" }), "utf8");
 fs.writeFileSync("index.html", converter.makeHtml(result), "utf8");
 
 function assertAddress(s) {

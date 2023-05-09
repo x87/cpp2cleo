@@ -1,7 +1,6 @@
-
-
 const fs = require("fs");
-const file = fs.readFileSync("addr.txt", "utf8");
+const { join } = require("path");
+const file = fs.readFileSync(join(__dirname, "addr.txt"), "utf8");
 const lines = file.split("\n");
 
 let map = {};
@@ -19,4 +18,4 @@ for (let i = 0; i < lines.length; i++) {
 
 // fs.writeFileSync("addr.json", JSON.stringify(map, null, 2));
 
-module.exports = {map};
+module.exports = { map };
