@@ -50,10 +50,7 @@ for (let i = 0; i < lines.length; i++) {
       const params = getParams(line);
       const pop = line.includes("plugin::CallStd<") ? 0 : params.length;
       output += `\n0AA5: call_function ${address} num_params ${params.length} pop ${pop}`;
-
-      for (const param of params) {
-        output += ` [${param}]`;
-      }
+      output += stringifyParams(params);
     }
     // 0AA7 cdecl num=pop
     // 0AA7 stdcall pop=0
@@ -64,9 +61,7 @@ for (let i = 0; i < lines.length; i++) {
       const params = getParams(line);
       const pop = line.includes("plugin::CallStdAndReturn<") ? 0 : params.length;
       output += `\n0AA7: call_function_return ${address} num_params ${params.length} pop ${pop}`;
-      for (const param of params) {
-        output += ` [${param}]`;
-      }
+      output += stringifyParams(params);
       output += ` func_ret [${ret}]`;
     }
     // 0AA6 thiscall pop 0
@@ -80,9 +75,7 @@ for (let i = 0; i < lines.length; i++) {
         continue;
       }
       output += `\n0AA6: call_method ${address} struct [${className}] num_params ${params.length} pop 0`;
-      for (const param of params) {
-        output += ` [${param}]`;
-      }
+      output += stringifyParams(params);
     }
     // 0AA8 thiscall pop 0
     if (line.includes("plugin::CallMethodAndReturn<")) {
@@ -94,9 +87,7 @@ for (let i = 0; i < lines.length; i++) {
         continue;
       }
       output += `\n0AA8: call_method_return ${address} struct [${className}] num_params ${params.length} pop 0`;
-      for (const param of params) {
-        output += ` [${param}]`;
-      }
+      output += stringifyParams(params);
       output += ` func_ret [${ret}]`;
     }
 
@@ -119,9 +110,7 @@ for (let i = 0; i < lines.length; i++) {
         continue;
       }
       output += `\n0AA6: call_method ${address} struct [${className}] num_params ${params.length} pop 0`;
-      for (const param of params) {
-        output += ` [${param}]`;
-      }
+      output += stringifyParams(params);
     }
 
     if (line.includes("plugin::CallMethodAndReturnDynGlobal")) {
@@ -144,9 +133,7 @@ for (let i = 0; i < lines.length; i++) {
         continue;
       }
       output += `\n0AA8: call_method_return ${address} struct [${className}] num_params ${params.length} pop 0`;
-      for (const param of params) {
-        output += ` [${param}]`;
-      }
+      output += stringifyParams(params);
       output += ` func_ret [${ret}]`;
     }
   } else if (line.includes("plugin_")) {
@@ -263,4 +250,11 @@ function assertNumParams(num) {
 
 function between(line, startChar, endChar) {
   return line.substring(line.indexOf(startChar) + 1, line.lastIndexOf(endChar));
+}
+
+function stringifyParams(params) {
+  if (params.length === 0) {
+    return "";
+  }
+  return " " + params.reverse().map(x => `[${x}]`).join(" ");
 }
