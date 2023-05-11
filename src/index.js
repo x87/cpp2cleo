@@ -49,8 +49,7 @@ for (let i = 0; i < lines.length; i++) {
 
       const params = getParams(line);
       const pop = line.includes("plugin::CallStd<") ? 0 : params.length;
-      output += `\n0AA5: call_function ${address} num_params ${params.length} pop ${pop}`;
-      output += stringifyParams(params);
+      output += _0AA5({ address, params, pop });
     }
     // 0AA7 cdecl num=pop
     // 0AA7 stdcall pop=0
@@ -60,9 +59,7 @@ for (let i = 0; i < lines.length; i++) {
 
       const params = getParams(line);
       const pop = line.includes("plugin::CallStdAndReturn<") ? 0 : params.length;
-      output += `\n0AA7: call_function_return ${address} num_params ${params.length} pop ${pop}`;
-      output += stringifyParams(params);
-      output += ` func_ret [${ret}]`;
+      output += _0AA7({ address, params, ret, pop });
     }
     // 0AA6 thiscall pop 0
     if (line.includes("plugin::CallMethod<")) {
@@ -74,8 +71,7 @@ for (let i = 0; i < lines.length; i++) {
         console.error(`Expected value but got null or undefined. Line: ${line}`);
         continue;
       }
-      output += `\n0AA6: call_method ${address} struct [${className}] num_params ${params.length} pop 0`;
-      output += stringifyParams(params);
+      output += _0AA6({ address, className, params });
     }
     // 0AA8 thiscall pop 0
     if (line.includes("plugin::CallMethodAndReturn<")) {
@@ -86,9 +82,19 @@ for (let i = 0; i < lines.length; i++) {
         console.error(`Expected value but got null or undefined. Line: ${line}`);
         continue;
       }
-      output += `\n0AA8: call_method_return ${address} struct [${className}] num_params ${params.length} pop 0`;
-      output += stringifyParams(params);
-      output += ` func_ret [${ret}]`;
+      output += _0AA8({ address, className, params, ret });
+    }
+
+    if (line.includes("plugin::CallAndReturnDynGlobal")) {
+      let params = getParams(line);
+      const [gaddrof] = params;
+      params = params.slice(1); // address
+      if (!gaddrof.startsWith("gaddrof")) {
+        continue;
+      }
+      let address = findAddressByName(gaddrof, curFile);
+      const [ret] = types;
+      output += _0AA7({ address, params, ret });
     }
 
     if (line.includes("plugin::CallMethodDynGlobal")) {
@@ -99,18 +105,12 @@ for (let i = 0; i < lines.length; i++) {
       if (!gaddrof.startsWith("gaddrof")) {
         continue;
       }
-      let varName = between(gaddrof, "(", ")").split(",")[0];
-      if (!map[curFile][varName]) {
-        throw new Error(`${varName} is not defined in ${curFile}`);
-      }
-      let address = map[curFile][varName];
-      assertAddress(address);
+      let address = findAddressByName(gaddrof, curFile);
       if (!className) {
         console.error(`Expected value but got null or undefined. Line: ${line}`);
         continue;
       }
-      output += `\n0AA6: call_method ${address} struct [${className}] num_params ${params.length} pop 0`;
-      output += stringifyParams(params);
+      output += _0AA6({ address, className, params });
     }
 
     if (line.includes("plugin::CallMethodAndReturnDynGlobal")) {
@@ -121,20 +121,14 @@ for (let i = 0; i < lines.length; i++) {
       if (!gaddrof.startsWith("gaddrof")) {
         throw new Error(line);
       }
-      let varName = between(gaddrof, "(", ")").split(",")[0];
-      if (!map[curFile][varName]) {
-        throw new Error(`${varName} is not defined in ${curFile}`);
-      }
-      let address = map[curFile][varName];
+      let address = findAddressByName(gaddrof, curFile);
       const [ret] = types;
-      assertAddress(address);
+
       if (!className) {
         console.error(`Expected value but got null or undefined. Line: ${line}`);
         continue;
       }
-      output += `\n0AA8: call_method_return ${address} struct [${className}] num_params ${params.length} pop 0`;
-      output += stringifyParams(params);
-      output += ` func_ret [${ret}]`;
+      output += _0AA8({ address, className, params, ret });
     }
   } else if (line.includes("plugin_")) {
     if (isPreOpen) {
@@ -253,8 +247,48 @@ function between(line, startChar, endChar) {
 }
 
 function stringifyParams(params) {
-  if (params.length === 0) {
-    return "";
+  return concat(...params.reverse().map((x) => `[${x}]`));
+}
+
+function findAddressByName(gaddrof, curFile) {
+  let varName = between(gaddrof, "(", ")").split(",")[0];
+  if (!map[curFile]?.[varName]) {
+    throw new Error(`${varName} is not defined in ${curFile}`);
   }
-  return " " + params.reverse().map(x => `[${x}]`).join(" ");
+  let address = map[curFile][varName];
+  assertAddress(address);
+  return address;
+}
+
+function _0AA5({ address, params, pop = params.length }) {
+  return [`\n0AA5: call_function ${address} num_params ${params.length} pop ${pop}`, stringifyParams(params)]
+    .filter(Boolean)
+    .join(" ");
+}
+
+function _0AA6({ address, className, params }) {
+  return concat(
+    `\n0AA6: call_method ${address} struct [${className}] num_params ${params.length} pop 0`,
+    stringifyParams(params)
+  );
+}
+
+function _0AA7({ address, params, ret, pop = params.length }) {
+  return concat(
+    `\n0AA7: call_function_return ${address} num_params ${params.length} pop ${pop}`,
+    stringifyParams(params),
+    `func_ret [${ret}]`
+  );
+}
+
+function _0AA8({ address, className, params, ret }) {
+  return concat(
+    `\n0AA8: call_method_return ${address} struct [${className}] num_params ${params.length} pop 0`,
+    stringifyParams(params),
+    `func_ret [${ret}]`
+  );
+}
+
+function concat(...elems) {
+  return elems.filter(Boolean).join(" ");
 }

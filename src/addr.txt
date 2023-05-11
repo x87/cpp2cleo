@@ -373,7 +373,7 @@ CCarGenerator::Process: 0x542BB0
 CCarGenerator::Setup: 0x542C40
 CCarGenerator::SwitchOff: 0x542690
 CCarGenerator::SwitchOn: 0x5426A0
-plugin_III\game_III\CChat.cpp:
+plugin_III\game_III\CCheat.cpp
 WeaponCheat: 0x490D90
 HealthCheat: 0x490E70
 TankCheat: 0x490EE0
@@ -2032,7 +2032,7 @@ CXtraCompsModelInfo::CreateInstance: 0x50C3B0
 CXtraCompsModelInfo::SetClump: 0x524BA0
 plugin_III\game_III\CZone.cpp
 CZone::GetTranslatedName: 0x4B5DD0
-plugin_III\game_III\GenricGameStorage.cpp:
+plugin_III\game_III\GenericGameStorage.cpp
 GenericSave: 0x58F8D0
 GenericLoad: 0x590A00
 ReadInSizeofSaveFileBuffer: 0x591910
@@ -2049,7 +2049,7 @@ GetNameOfSavedGame: 0x591B60
 CheckDataNotCorrupt: 0x591B70
 RestoreForStartLoad: 0x591D60
 align4bytes: 0x591E80
-plugin_III\game_III\NodName.cpp:
+plugin_III\game_III\NodeName.cpp
 NodeNameConstructor: 0x527010
 NodeNameDestructor: 0x527030
 NodeNameCopy: 0x527040
@@ -2063,7 +2063,7 @@ RenderBuffer::ClearRenderBuffer: 0x517620
 RenderBuffer::RenderStuffInBuffer: 0x5177C0
 RenderBuffer::StartStoring: 0x517640
 RenderBuffer::StopStoring: 0x5176B0
-plugin_III\game_III\RpAimBlend.cpp:
+plugin_III\game_III\RpAnimBlend.cpp
 RpAnimBlendClumpUpdateAnimations: 0x4024B0
 FrameUpdateCallBack: 0x4025F0
 FrameUpdateCallBackWithVelocityExtraction: 0x4028B0
@@ -3495,7 +3495,7 @@ CTrafficLights::ShouldCarStopForLight: 0x465C10
 plugin_vc\game_vc\CWindModifiers.cpp
 CWindModifiers::FindWindModifier: 0x629C90
 CWindModifiers::RegisterOne: 0x629E90
-plugin_vc\game_vc\NodName.cpp:
+plugin_vc\game_vc\NodeName.cpp
 GetFrameNodeName: 0x580600
 NodeNamePluginAttach: 0x580620
 NodeNameStreamGetSize: 0x580670
