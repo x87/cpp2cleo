@@ -5,12 +5,22 @@ const { map } = require(join(__dirname, "addr.js"));
 const fs = require("fs");
 const file = fs.readFileSync(join(__dirname, "input.txt"), "utf8");
 const lines = file.split("\n");
+const filenames = {};
+
+const writer = fs.createWriteStream("index.html", { flags: "w", encoding: "utf8" });
+const md = new showdown.Converter({
+  literalMidWordUnderscores: true,
+  disableForced4SpacesIndentedSublists: true,
+  noHeaderId: true,
+});
+
+writer.write(`<!DOCTYPE HTML><html><head><meta charset="utf-8"></head><body>`);
+writeMd(generateToc());
 
 let output = "";
 let curFile = "";
 let isPreOpen = false;
 let skipFile = false;
-let toc = {};
 
 for (let i = 0; i < lines.length; i++) {
   const line = lines[i];
@@ -134,26 +144,17 @@ for (let i = 0; i < lines.length; i++) {
     if (isPreOpen) {
       output += "</pre>";
       isPreOpen = false;
+      writeMd(output);
+      output = "";
     }
-    curFile = line.substring(line.indexOf("plugin_")).replace(":", "");
-
-    const paths = curFile.split("\\");
-    if (paths.length < 3) {
-      throw new Error(`Invalid path ${curFile}`);
-    }
-    const [namespace, game] = paths;
-    if (namespace === "plugin_II") {
+    if (filenames[i]) {
+      curFile = filenames[i];
+      writeMd(`\n### ${filenames[i]}`, true);
+      skipFile = false;
+    } else {
       skipFile = true;
       continue;
-    } else {
-      skipFile = false;
     }
-    const file = paths.at(-1);
-    toc[namespace] ??= {};
-    toc[namespace][game] ??= [];
-    toc[namespace][game].push(file);
-
-    output += "\n### " + curFile;
   } else {
     continue;
   }
@@ -161,27 +162,47 @@ for (let i = 0; i < lines.length; i++) {
   output += "\n";
 }
 
-// console.log(toc);
-let tocs = "";
-for (const n of Object.keys(toc)) {
-  tocs += `* ${n}\n`;
-  for (const g of Object.keys(toc[n])) {
-    tocs += `  * ${g}\n`;
-    for (const f of toc[n][g]) {
-      let href = [n, g, f].map((x) => x.toLowerCase().replace(/\./g, ""));
-      tocs += `      * [${f}](#${href.join("")})\n`;
+writer.write(`</body></html>`);
+writer.end();
+
+//------------------ functions ------------------//
+
+function generateToc() {
+  let toc = {};
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
+    if (line.includes("plugin_")) {
+      let curFile = line.substring(line.indexOf("plugin_")).replace(":", "");
+
+      const paths = curFile.split("\\");
+      if (paths.length < 3) {
+        throw new Error(`Invalid path ${curFile}`);
+      }
+      const [namespace, game] = paths;
+      if (namespace === "plugin_II") {
+        continue;
+      }
+      const file = paths.at(-1);
+      toc[namespace] ??= {};
+      toc[namespace][game] ??= [];
+      toc[namespace][game].push(file);
+
+      filenames[i] = curFile;
     }
   }
+  let tocs = "";
+  for (const n of Object.keys(toc)) {
+    tocs += `* ${n}\n`;
+    for (const g of Object.keys(toc[n])) {
+      tocs += `  * ${g}\n`;
+      for (const f of toc[n][g]) {
+        let href = [n, g, f].map((x) => x.toLowerCase().replace(/\./g, ""));
+        tocs += `      * [${f}](#${href.join("")})\n`;
+      }
+    }
+  }
+  return tocs;
 }
-
-const result = tocs + output;
-const converter = new showdown.Converter({
-  literalMidWordUnderscores: true,
-  completeHTMLDocument: true,
-  disableForced4SpacesIndentedSublists: true,
-});
-
-fs.writeFileSync("index.html", converter.makeHtml(result), "utf8");
 
 function assertAddress(s) {
   if (!s.startsWith("0x")) {
@@ -291,4 +312,9 @@ function _0AA8({ address, className, params, ret }) {
 
 function concat(...elems) {
   return elems.filter(Boolean).join(" ");
+}
+
+function writeMd(content, withHeader = false) {
+  md.setOption("noHeaderId", !withHeader);
+  writer.write(md.makeHtml(content));
 }
