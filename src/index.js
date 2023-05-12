@@ -14,7 +14,15 @@ const md = new showdown.Converter({
   noHeaderId: true,
 });
 
-writer.write(`<!DOCTYPE HTML><html><head><meta charset="utf-8"></head><body>`);
+writer.write(
+  `<!DOCTYPE HTML>
+    <html>
+      <head>
+        <meta charset="utf-8">
+        <style>p {font-family: monospace; }</style>
+      </head>
+      <body>`
+);
 writeMd(generateToc());
 
 let output = "";
@@ -41,11 +49,7 @@ for (let i = 0; i < lines.length; i++) {
       }
       name = prevLine.split("(")[0].split(" ").at(-1).trim();
     }
-    if (isPreOpen) {
-      output += "</pre>";
-      isPreOpen = false;
-    }
-    output += `\n#### ${name}\n<pre>\n` + line.substring(line.indexOf("plugin::")).trimStart();
+    output += `\n#### ${name}\n\n${line.substring(line.indexOf("plugin::")).trimStart()}\n`;
     isPreOpen = true;
 
     const type = between(line, "<", ">");
@@ -142,7 +146,6 @@ for (let i = 0; i < lines.length; i++) {
     }
   } else if (line.includes("plugin_")) {
     if (isPreOpen) {
-      output += "</pre>";
       isPreOpen = false;
       writeMd(output);
       output = "";
