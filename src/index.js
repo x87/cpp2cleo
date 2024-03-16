@@ -6,6 +6,7 @@ const fs = require("fs");
 const file = fs.readFileSync(join(__dirname, "input.txt"), "utf8");
 const lines = file.split("\n");
 const filenames = {};
+const uniq = {};
 
 const writer = fs.createWriteStream("index.html", { flags: "w", encoding: "utf8" });
 const md = new showdown.Converter({
@@ -16,12 +17,12 @@ const md = new showdown.Converter({
 
 writer.write(
   `<!DOCTYPE HTML>
-    <html>
-      <head>
-        <meta charset="utf-8">
-        <style>p {font-family: monospace; }</style>
-      </head>
-      <body>`
+<html>
+<head>
+<meta charset="utf-8">
+<style>p {font-family: monospace; }</style>
+</head>
+<body>`
 );
 writeMd(generateToc());
 
@@ -64,6 +65,7 @@ for (let i = 0; i < lines.length; i++) {
       const params = getParams(line);
       const pop = line.includes("plugin::CallStd<") ? 0 : params.length;
       output += _0AA5({ address, params, pop });
+      output += _0AA5_new({ address, params, pop, name });
     }
     // 0AA7 cdecl num=pop
     // 0AA7 stdcall pop=0
@@ -74,6 +76,7 @@ for (let i = 0; i < lines.length; i++) {
       const params = getParams(line);
       const pop = line.includes("plugin::CallStdAndReturn<") ? 0 : params.length;
       output += _0AA7({ address, params, ret, pop });
+      output += _0AA7_new({ address, params, ret, pop, name });
     }
     // 0AA6 thiscall pop 0
     if (line.includes("plugin::CallMethod<")) {
@@ -86,6 +89,7 @@ for (let i = 0; i < lines.length; i++) {
         continue;
       }
       output += _0AA6({ address, className, params });
+      output += _0AA6_new({ address, className, params, name });
     }
     // 0AA8 thiscall pop 0
     if (line.includes("plugin::CallMethodAndReturn<")) {
@@ -97,6 +101,7 @@ for (let i = 0; i < lines.length; i++) {
         continue;
       }
       output += _0AA8({ address, className, params, ret });
+      output += _0AA8_new({ address, className, params, ret, name });
     }
 
     if (line.includes("plugin::CallAndReturnDynGlobal")) {
@@ -109,6 +114,8 @@ for (let i = 0; i < lines.length; i++) {
       let address = findAddressByName(gaddrof, curFile);
       const [ret] = types;
       output += _0AA7({ address, params, ret });
+      output += _0AA7_new({ address, params, ret, name });
+
     }
 
     if (line.includes("plugin::CallMethodDynGlobal")) {
@@ -125,6 +132,7 @@ for (let i = 0; i < lines.length; i++) {
         continue;
       }
       output += _0AA6({ address, className, params });
+      output += _0AA6_new({ address, className, params, name });
     }
 
     if (line.includes("plugin::CallMethodAndReturnDynGlobal")) {
@@ -207,10 +215,17 @@ function generateToc() {
   return tocs;
 }
 
-function assertAddress(s) {
-  if (!s.startsWith("0x")) {
-    throw new Error(`error: address must start with 0x, got ${s}`);
+function assertAddress(addr) {
+  if (!addr.startsWith("0x")) {
+    throw new Error(`error: address must start with 0x, got ${addr}`);
   }
+
+  let ns = curFile.split("\\").at(0);
+  uniq[ns] ??= new Set();
+  if (uniq[ns].has(addr)) {
+    console.log(`duplicate address ${addr} for ${ns}`);
+  }
+  uniq[ns].add(addr);
 }
 
 function assertDyn(s) {
@@ -270,8 +285,9 @@ function between(line, startChar, endChar) {
   return line.substring(line.indexOf(startChar) + 1, line.lastIndexOf(endChar));
 }
 
-function stringifyParams(params) {
-  return concat(...params.reverse().map((x) => `[${x}]`));
+function stringifyParams(params, bracketify = true) {
+  // return concat(...params.reverse().map((x) => `[${x}]`));
+  return bracketify ? concat(' ', ...params.map((x) => `[${x}]`)) : concat(', ', ...params);
 }
 
 function findAddressByName(gaddrof, curFile) {
@@ -285,39 +301,58 @@ function findAddressByName(gaddrof, curFile) {
 }
 
 function _0AA5({ address, params, pop = params.length }) {
-  return [`\n0AA5: call_function ${address} num_params ${params.length} pop ${pop}`, stringifyParams(params)]
-    .filter(Boolean)
-    .join(" ");
+  return concat(' ' ,`\n0AA5: call_function ${address} num_params ${params.length} pop ${pop}`, stringifyParams(params));
+}
+
+function _0AA5_new({ address, params, pop = params.length, name }) {
+  return `\n\ndefine function ${name2scm(name)}&lt;${params.length === pop ? "cdecl" : "stdcall"}, ${address}&gt;(${stringifyParams(params, false)})`;
 }
 
 function _0AA6({ address, className, params }) {
-  return concat(
+  return concat(' ',
     `\n0AA6: call_method ${address} struct [${className}] num_params ${params.length} pop 0`,
     stringifyParams(params)
   );
 }
 
+function _0AA6_new({ address, className, params, name }) {
+  return `\n\ndefine function ${name2scm(name)}&lt;thiscall, ${address}&gt;(${stringifyParams(params, false)})`;
+}
+
 function _0AA7({ address, params, ret, pop = params.length }) {
-  return concat(
+  return concat(' ',
     `\n0AA7: call_function_return ${address} num_params ${params.length} pop ${pop}`,
     stringifyParams(params),
     `func_ret [${ret}]`
   );
 }
 
+function _0AA7_new({ address, params, ret, pop = params.length, name }) {
+  return `\n\ndefine function ${name2scm(name)}&lt;${params.length === pop ? "cdecl" : "stdcall"}, ${address}&gt;(${stringifyParams(params, false)}): ${ret === 'float' ? 'float': 'int'}`;
+}
+
+
 function _0AA8({ address, className, params, ret }) {
-  return concat(
+  return concat(' ',
     `\n0AA8: call_method_return ${address} struct [${className}] num_params ${params.length} pop 0`,
     stringifyParams(params),
     `func_ret [${ret}]`
   );
 }
 
-function concat(...elems) {
-  return elems.filter(Boolean).join(" ");
+function _0AA8_new({ address, className, params, ret, pop = params.length, name }) {
+  return `\n\ndefine function ${name2scm(name)}&lt;thiscall, ${address}&gt;(${stringifyParams(params, false)}): ${ret === 'float' ? 'float': 'int'}`;
+}
+
+function concat(sep, ...elems) {
+  return elems.filter(Boolean).join(sep);
 }
 
 function writeMd(content, withHeader = false) {
   md.setOption("noHeaderId", !withHeader);
   writer.write(md.makeHtml(content));
+}
+
+function name2scm(name) {
+  return name.replace(/:/g, "_").replace(/^\*/, '');
 }
