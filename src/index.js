@@ -317,7 +317,7 @@ function _0AA6({ address, className, params }) {
 }
 
 function _0AA6_new({ address, className, params, name }) {
-  return `\n\ndefine function ${name2scm(name)}&lt;thiscall, ${address}&gt;(${stringifyParams(params, false)})`;
+  return `\n\ndefine function ${name2scm(name)}&lt;thiscall, ${address}&gt;(${stringifyParams(['struct: int', ...params], false)})`;
 }
 
 function _0AA7({ address, params, ret, pop = params.length }) {
@@ -342,7 +342,7 @@ function _0AA8({ address, className, params, ret }) {
 }
 
 function _0AA8_new({ address, className, params, ret, pop = params.length, name }) {
-  return `\n\ndefine function ${name2scm(name)}&lt;thiscall, ${address}&gt;(${stringifyParams(params, false)}): ${ret === 'float' ? 'float': 'int'}`;
+  return `\n\ndefine function ${name2scm(name)}&lt;thiscall, ${address}&gt;(${stringifyParams(['struct: int', ...params], false)}): ${ret === 'float' ? 'float': 'int'}`;
 }
 
 function concat(sep, ...elems) {
