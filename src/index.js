@@ -151,6 +151,7 @@ for (let i = 0; i < lines.length; i++) {
         continue;
       }
       output += _0AA8({ address, className, params, ret });
+      output += _0AA8_new({ address, className, params, ret, name });
     }
   } else if (line.includes("plugin_")) {
     if (isPreOpen) {
