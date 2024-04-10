@@ -306,7 +306,7 @@ function _0AA5({ address, params, pop = params.length }) {
 }
 
 function _0AA5_new({ address, params, pop = params.length, name }) {
-  return `\n\function ${name2scm(name)}&lt;${params.length === pop ? "cdecl" : "stdcall"}, ${address}&gt;(${stringifyParams(params, false)})`;
+  return `\n\nfunction ${name2scm(name)}&lt;${params.length === pop ? "cdecl" : "stdcall"}, ${address}&gt;(${stringifyParams(params, false)})`;
 }
 
 function _0AA6({ address, className, params }) {
@@ -317,7 +317,7 @@ function _0AA6({ address, className, params }) {
 }
 
 function _0AA6_new({ address, className, params, name }) {
-  return `\n\function ${name2scm(name)}&lt;thiscall, ${address}&gt;(${stringifyParams(['struct: int', ...params], false)})`;
+  return `\n\nfunction ${name2scm(name)}&lt;thiscall, ${address}&gt;(${stringifyParams(['struct: int', ...params], false)})`;
 }
 
 function _0AA7({ address, params, ret, pop = params.length }) {
@@ -329,7 +329,7 @@ function _0AA7({ address, params, ret, pop = params.length }) {
 }
 
 function _0AA7_new({ address, params, ret, pop = params.length, name }) {
-  return `\n\function ${name2scm(name)}&lt;${params.length === pop ? "cdecl" : "stdcall"}, ${address}&gt;(${stringifyParams(params, false)}): ${ret === 'float' ? 'float': 'int'}`;
+  return `\n\nfunction ${name2scm(name)}&lt;${params.length === pop ? "cdecl" : "stdcall"}, ${address}&gt;(${stringifyParams(params, false)}): ${ret === 'float' ? 'float': 'int'}`;
 }
 
 
@@ -342,7 +342,7 @@ function _0AA8({ address, className, params, ret }) {
 }
 
 function _0AA8_new({ address, className, params, ret, pop = params.length, name }) {
-  return `\n\function ${name2scm(name)}&lt;thiscall, ${address}&gt;(${stringifyParams(['struct: int', ...params], false)}): ${ret === 'float' ? 'float': 'int'}`;
+  return `\n\nfunction ${name2scm(name)}&lt;thiscall, ${address}&gt;(${stringifyParams(['struct: int', ...params], false)}): ${ret === 'float' ? 'float': 'int'}`;
 }
 
 function concat(sep, ...elems) {
