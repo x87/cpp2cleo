@@ -302,47 +302,47 @@ function findAddressByName(gaddrof, curFile) {
 }
 
 function _0AA5({ address, params, pop = params.length }) {
-  return concat(' ' ,`\n0AA5: call_function ${address} num_params ${params.length} pop ${pop}`, stringifyParams(params));
+  return concat(' ' ,`\n0AA5: call_function ${address} num_params ${params.length} pop ${pop}`, stringifyParams(params.reverse()));
 }
 
 function _0AA5_new({ address, params, pop = params.length, name }) {
-  return `\n\ndefine function ${name2scm(name)}&lt;${params.length === pop ? "cdecl" : "stdcall"}, ${address}&gt;(${stringifyParams(params, false)})`;
+  return `\n\function ${name2scm(name)}&lt;${params.length === pop ? "cdecl" : "stdcall"}, ${address}&gt;(${stringifyParams(params, false)})`;
 }
 
 function _0AA6({ address, className, params }) {
   return concat(' ',
     `\n0AA6: call_method ${address} struct [${className}] num_params ${params.length} pop 0`,
-    stringifyParams(params)
+    stringifyParams(params.reverse())
   );
 }
 
 function _0AA6_new({ address, className, params, name }) {
-  return `\n\ndefine function ${name2scm(name)}&lt;thiscall, ${address}&gt;(${stringifyParams(['struct: int', ...params], false)})`;
+  return `\n\function ${name2scm(name)}&lt;thiscall, ${address}&gt;(${stringifyParams(['struct: int', ...params], false)})`;
 }
 
 function _0AA7({ address, params, ret, pop = params.length }) {
   return concat(' ',
     `\n0AA7: call_function_return ${address} num_params ${params.length} pop ${pop}`,
-    stringifyParams(params),
+    stringifyParams(params.reverse()),
     `func_ret [${ret}]`
   );
 }
 
 function _0AA7_new({ address, params, ret, pop = params.length, name }) {
-  return `\n\ndefine function ${name2scm(name)}&lt;${params.length === pop ? "cdecl" : "stdcall"}, ${address}&gt;(${stringifyParams(params, false)}): ${ret === 'float' ? 'float': 'int'}`;
+  return `\n\function ${name2scm(name)}&lt;${params.length === pop ? "cdecl" : "stdcall"}, ${address}&gt;(${stringifyParams(params, false)}): ${ret === 'float' ? 'float': 'int'}`;
 }
 
 
 function _0AA8({ address, className, params, ret }) {
   return concat(' ',
     `\n0AA8: call_method_return ${address} struct [${className}] num_params ${params.length} pop 0`,
-    stringifyParams(params),
+    stringifyParams(params.reverse()),
     `func_ret [${ret}]`
   );
 }
 
 function _0AA8_new({ address, className, params, ret, pop = params.length, name }) {
-  return `\n\ndefine function ${name2scm(name)}&lt;thiscall, ${address}&gt;(${stringifyParams(['struct: int', ...params], false)}): ${ret === 'float' ? 'float': 'int'}`;
+  return `\n\function ${name2scm(name)}&lt;thiscall, ${address}&gt;(${stringifyParams(['struct: int', ...params], false)}): ${ret === 'float' ? 'float': 'int'}`;
 }
 
 function concat(sep, ...elems) {
