@@ -302,7 +302,7 @@ function findAddressByName(gaddrof, curFile) {
 }
 
 function _0AA5({ address, params, pop = params.length }) {
-  return concat(' ' ,`\n0AA5: call_function ${address} num_params ${params.length} pop ${pop}`, stringifyParams(params.reverse()));
+  return concat(' ' ,`\n0AA5: call_function ${address} num_params ${params.length} pop ${pop}`, stringifyParams(params.toReversed()));
 }
 
 function _0AA5_new({ address, params, pop = params.length, name }) {
@@ -312,7 +312,7 @@ function _0AA5_new({ address, params, pop = params.length, name }) {
 function _0AA6({ address, className, params }) {
   return concat(' ',
     `\n0AA6: call_method ${address} struct [${className}] num_params ${params.length} pop 0`,
-    stringifyParams(params.reverse())
+    stringifyParams(params.toReversed())
   );
 }
 
@@ -323,7 +323,7 @@ function _0AA6_new({ address, className, params, name }) {
 function _0AA7({ address, params, ret, pop = params.length }) {
   return concat(' ',
     `\n0AA7: call_function_return ${address} num_params ${params.length} pop ${pop}`,
-    stringifyParams(params.reverse()),
+    stringifyParams(params.toReversed()),
     `func_ret [${ret}]`
   );
 }
@@ -336,7 +336,7 @@ function _0AA7_new({ address, params, ret, pop = params.length, name }) {
 function _0AA8({ address, className, params, ret }) {
   return concat(' ',
     `\n0AA8: call_method_return ${address} struct [${className}] num_params ${params.length} pop 0`,
-    stringifyParams(params.reverse()),
+    stringifyParams(params.toReversed()),
     `func_ret [${ret}]`
   );
 }
