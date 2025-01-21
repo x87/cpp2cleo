@@ -2,70 +2,66 @@
 <html>
 <head>
 <meta charset="utf-8">
-
 <style>
     body {
+        display: flex;
+        flex-direction: column;
         background-color: rgb(20, 20, 20);
         color: rgb(200, 240, 240);
         font-size: 13pt;
     }
+
     a {
         color: rgb(225, 225, 88);
     }
+
     p {
         font-family: monospace;
-        margin-left: 16px;
+        margin-left: 2em;
     }
-    h1, h2, h3, h4 {
-        border-radius: 7px;
+
+    h3, h4, summary {
+        border-radius: 7px 0px 0px 7px;
         padding-block: 2px;
         padding-inline: 4px;
+        margin-block: 4px;
+        width: 100%;
     }
-    h1 {
-        font-size: 1.5em;
-        counter-reset: count2;
-        counter-increment: count1 1;
-    }
-    
-    h2 {
-        position: sticky;
-        top: 0px;
-        background-color: rgb(0, 94, 93);
-        font-size: 1.4em;
-        margin-left: 2px;
-        counter-reset: count3;
-        counter-increment: count2 1;
-    }
+
     h3 {
-        position: sticky;
-        top: calc(1.4em + 2px);
         background-color: rgb(0, 101, 49);
         font-size: 1.3em;
-        margin-left: 4px;
         counter-reset: count4;
         counter-increment: count3 1;
+        margin-left: 0.5em;
     }
-    h4 {
-        background-color: rgb(0, 70, 107);
-        font-size: 1.2em;
-        margin-left: 6px;
-        counter-increment: count4 1;
-    }
-    h1::before {
-        content: counter(count1) '.';
-        margin-right: 8px;
-    }
-    h2::before {
-        content: counter(count2) '.';
-        margin-right: 8px;
-    }
+
     h3::before {
         content: counter(count3) '.';
         margin-right: 8px;
     }
+
+    h4 {
+        background-color: rgb(0, 70, 107);
+        font-size: 1.2em;
+        counter-increment: count4 1;
+        margin-left: 1em;
+    }
+
     h4::before {
         content: counter(count4) '.';
         margin-right: 8px;
+    }
+
+    .game {
+        background-color: rgb(0, 94, 93);
+        font-size: 1.4em;
+        counter-reset: count3;
+    }
+    
+    details[open] > .game {
+        position: sticky;
+        top: 0px;
     }
 </style>
 </head>
@@ -683,7 +679,9 @@
 <li><a href="#plugin_vcgame_vcmetacpointlighth">meta.CPointLight.h</a></li>
 <li><a href="#plugin_vcgame_vcmetacroutenodeh">meta.CRouteNode.h</a></li>
 <li><a href="#plugin_vcgame_vcmetacwindmodifiersh">meta.CWindModifiers.h</a></li></ul></li></ul></li>
-</ul><h3 id="plugin_iiigame_iiic_pcsavecpp">plugin_III\game_III\C_PcSave.cpp</h3><h4>C_PcSave::DeleteSlot</h4>
+</ul>
+<details><summary class='game'>GTA III</summary>
+<h3 id="plugin_iiigame_iiic_pcsavecpp">plugin_III\game_III\C_PcSave.cpp</h3><h4>C_PcSave::DeleteSlot</h4>
 <p>plugin::CallMethodAndReturnDynGlobal<bool, C_PcSave *, int>(gaddrof(C_PcSave::DeleteSlot), this, slot);</p>
 <p>0AA8: call_method_return 0x5922F0 struct [C_PcSave] num_params 1 pop 0 [slot] func_ret [bool]</p>
 <p>function C_PcSave__DeleteSlot&lt;thiscall, 0x5922F0&gt;(struct: int, slot): int</p>
@@ -9540,7 +9538,11 @@
 <h4> </h4>
 <p>plugin::CallMethodDynGlobal<CWeapon *>(dtor_gaddr(CWeapon), obj);</p>
 <h4> </h4>
-<p>plugin::CallMethodDynGlobal<CWeapon *>(dtor_gaddr(CWeapon), &amp;objArray[i]);</p><h3 id="plugin_sagame_sac_pcsavecpp">plugin_sa\game_sa\C_PcSave.cpp</h3><h4>C_PcSave::PopulateSlotInfo</h4>
+<p>plugin::CallMethodDynGlobal<CWeapon *>(dtor_gaddr(CWeapon), &amp;objArray[i]);</p>
+
+</details><details><summary class='game'>GTA: San Andreas</summary>
+
+<h3 id="plugin_sagame_sac_pcsavecpp">plugin_sa\game_sa\C_PcSave.cpp</h3><h4>C_PcSave::PopulateSlotInfo</h4>
 <p>plugin::CallMethod<0x619140, C_PcSave*>(this);</p>
 <p>0AA6: call_method 0x619140 struct [C_PcSave] num_params 0 pop 0</p>
 <p>function C_PcSave__PopulateSlotInfo&lt;thiscall, 0x619140&gt;(struct: int)</p>
@@ -18866,7 +18868,11 @@
 <h4> </h4>
 <p>plugin::CallMethodDynGlobal<CPedGroupMembership *>(dtor_gaddr(CPedGroupMembership), obj);</p>
 <h4> </h4>
-<p>plugin::CallMethodDynGlobal<CPedGroupMembership *>(dtor_gaddr(CPedGroupMembership), &amp;objArray[i]);</p><h3 id="plugin_vcgame_vcc_pcsavecpp">plugin_vc\game_vc\C_PcSave.cpp</h3><h4>C_PcSave::DeleteSlot</h4>
+<p>plugin::CallMethodDynGlobal<CPedGroupMembership *>(dtor_gaddr(CPedGroupMembership), &amp;objArray[i]);</p>
+
+</details><details><summary class='game'>GTA: Vice City</summary>
+
+<h3 id="plugin_vcgame_vcc_pcsavecpp">plugin_vc\game_vc\C_PcSave.cpp</h3><h4>C_PcSave::DeleteSlot</h4>
 <p>plugin::CallMethodAndReturnDynGlobal<bool, C_PcSave *, int>(gaddrof(C_PcSave::DeleteSlot), this, slot);</p>
 <p>0AA8: call_method_return 0x61D430 struct [C_PcSave] num_params 1 pop 0 [slot] func_ret [bool]</p>
 <p>function C_PcSave__DeleteSlot&lt;thiscall, 0x61D430&gt;(struct: int, slot): int</p>
@@ -24832,4 +24838,6 @@
 <h4>*&gt;</h4>
 <p>plugin::CallMethodDynGlobal<CRouteNode *>(ctor_gaddr(CRouteNode), obj);</p>
 <h4> </h4>
-<p>plugin::CallMethodDynGlobal<CRouteNode *>(ctor_gaddr(CRouteNode), &amp;objArray[i]);</p><h3 id="plugin_vcgame_vcmetametacwindmodifiersh">plugin_vc\game_vc\meta\meta.CWindModifiers.h</h3></body></html>
+<p>plugin::CallMethodDynGlobal<CRouteNode *>(ctor_gaddr(CRouteNode), &amp;objArray[i]);</p><h3 id="plugin_vcgame_vcmetametacwindmodifiersh">plugin_vc\game_vc\meta\meta.CWindModifiers.h</h3>
+
+</body></html>
